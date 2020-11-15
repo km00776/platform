@@ -1,11 +1,14 @@
-import { render } from '@testing-library/react';
-import {Fragment} from 'react';
-import myButton from './testbutton';
+import PersonalButton from './PersonalButton';
+
 
 const LoginScreen = () => {
     return(
-        <myButton />
-    )
+    <div className='mainColor'>
+        <h1 className="intro"> Please Login</h1>
+        <PersonalButton label='check tests remaining' className="testsRemainingButton"></PersonalButton> 
+        <PersonalButton label="Login" className="loginLocation"></PersonalButton>
+    </div>
+    );
     
 }
 

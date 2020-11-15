@@ -1,14 +1,15 @@
 
-import {Component, Fragment} from  'react';
+import {Component} from  'react';
 import LoginScreen from './components/LoginScreen';
-import testButton from './components/testbutton';
+import './index.css';
+
 
 export default class App extends Component {
         render() {
-            return(
-                <testButton />
-               
-              
+            return(  
+            <div className= "mainColor">
+                <LoginScreen />
+            </div>
             )
         }
 }
