@@ -1,56 +1,94 @@
-h2.intro {
-  text-align: center;
-  font-weight: 700;
-  font-size: 50px;
-  color: yellowgreen;
+div.intro {
+    text-align: center;
+    position: absolute;
+    bottom: 40;
+    top: 10rem;
+    right: 0;
+    left: 0;
+    color: #00324d;
 }
 
-div.big {
-  position: fixed;
+h2.font {
+    font-weight: 700;
+    font-size: 50px;
+}
+
+div.testsRemainingButton {
+  position: absolute;
   bottom: 0;
-  top: 140;
-  width: 150%;
-  padding: 15px 80px;
-  margin: 4px 3px;
+  top: 10;
+  right: 20;
+  left: 0;
+  font-size: 50px;
+  right: 0;
+  padding: 15px 15px;
+  margin-left: 40;
 }
 
 img {
-  float: right;
-  top: 0;
+  position: absolute;
+  top: 1rem;
+  bottom: 40;
+  right: 0;
+  left: 10;
+  
+  
 }
 
-div.big2 {
+div.loginButton {
   position: absolute;
   bottom: 0;
   top: 10;
   left: 20;
   font-size: 50px;
   right: 0;
-  text-align: center;
   padding: 15px 15px;
-  margin-right: auto;
+  margin-right: 40;
+}
+
+div.textContainer {
+    position: absolute;
+    text-align: center;
+    right:20;
+    left: 0;
+    top: 18rem;
+    margin: 30px auto;
+    padding: 15px 15px 20px 30px;
 }
 
 div.container {
   position: relative;
-  margin: 30px auto;
+  margin: 40px auto;
   padding: 500px 500px 200px;
-  width: 310px;
-  background: white;
-  border-radius: 3px;
-  -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5),
-    0 1px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  background: whitesmoke;
+  border-radius: 5px;
+ 
 }
-p.text {
-  text-align: absolute;
+p.placeholder {
+  vertical-align: 20px;
   font-size: 28px;
   font-weight: 700;
-  color: yellowgreen;
+  color: #00324d;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 1em 0;
+  float: left;
 }
 
-input {
-  width: 500px;
-  left: 20;
-  right: 10;
+input.loginInput {
+  width: 600px;
+  margin-left: 82px;
+  color: #00324d; 
 }
+
+input.passwordInput {
+    width: 600px;
+    margin-left: 30px; 
+    color: #00324d; 
+}
+button.a1:hover{
+    background-color: red;
+}
+
+

@@ -2,7 +2,7 @@
    
    const PersonalButton = (props) => {
         return (
-            <button className={props.className} class="ui negative button">{props.label}</button>
+            <button style={{backgroundColor: '#00324d', hover: 'yellow'}} className="positive ui button">{props.label}</button>
         )   
     }
 
