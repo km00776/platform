@@ -1,0 +1,19 @@
+body {
+  background-color: #00283d;
+}
+
+h1.intro {
+  position: relative;
+  transition: 0.5s ease;
+  top: 191px;
+  left: 420px;
+  right: 300px;
+  bottom: -191px;
+  color: yellowgreen;
+}
+
+input {
+  width: 195px;
+  left: 0;
+  right: 10;
+}

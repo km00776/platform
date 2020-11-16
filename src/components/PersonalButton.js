@@ -2,7 +2,7 @@
    
    const PersonalButton = (props) => {
         return (
-            <button className={props.className} class="ui grey button">{props.label}</button>
+            <button className={props.className} class="ui negative button">{props.label}</button>
         )   
     }
 
