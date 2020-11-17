@@ -7,9 +7,7 @@ const LoginScreen = () => {
     return(
     <Fragment>
         <div className={styles.container}>
-        <div className={styles.big2}><PersonalButton className={styles.big2} label="Login"></PersonalButton></div>
-
-
+                  <div className={styles.big2}><PersonalButton className={styles.big2} label="Login"></PersonalButton></div>
         </div>
         {/* <h2 className={styles.intro}>Please Login</h2>
         <img style={styles.img} src="https://www.englishlanguagetesting.co.uk/wp-content/uploads/2018/04/Password_CMYKxxxhdpi.png" height="200"/>
