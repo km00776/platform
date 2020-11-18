@@ -1,8 +1,9 @@
+import styles from '../App.module.scss';
 
    
    const PersonalButton = (props) => {
         return (
-            <button className={props.className} class="ui negative button">{props.label}</button>
+            <button className="btn"><span>{props.label}</span></button>
         )   
     }
 
