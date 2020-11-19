@@ -10,12 +10,11 @@ const LoginScreen = () => {
                 <img className={styles.img} alt="hello" src="https://passwordplatform.englishlanguagetesting.co.uk/Images/Password-logo-bg.jpg" height="200"/>
                 <div className={styles.intro}><h2 className={styles.font}>Please Login</h2></div>
                 <div className={styles.textContainer}>
-                    <p className={styles.placeholder}>Login:<input className={styles.loginInput}></input></p>
-                    <p className={styles.placeholder}>Password:<input className={styles.passwordInput}></input></p> 
+                    <p className={styles.placeholder}>Login:<input placeholder='Login' className={styles.loginInput}></input></p>
+                    <p className={styles.placeholder}>Password:<input placeholder='Password' type='password' className={styles.passwordInput}></input></p> 
                 </div>
                 <div className={styles.testsRemainingButton}><PersonalButton label="Check tests remaining"></PersonalButton></div>
                 <div className={styles.loginButton}><PersonalButton label="Login"></PersonalButton></div>
-             
             </div>
           
         </Fragment>
