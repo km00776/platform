@@ -1,28 +1,31 @@
-import PersonalButton from './PersonalButton';
 import '../index.scss';
-import styles from '../App.module.scss';
 import { Fragment } from 'react';
-import { Checkbox } from 'semantic-ui-react';
+import styles from '../styles/TestCodeStyle.module.scss';
+import PersonalButton from './PersonalButton';
 
 
 const AllocationScreen = () => {
-    return(
-    <Fragment>
-        <PersonalButton label="QUESTION AUTHORING"/>
-        <PersonalButton label="TEST BUILD"/>
-        <PersonalButton label="CLIENT SETUP"/>
-        <PersonalButton label="TEST CODE ALLOCATION"/>
-        <PersonalButton label="RESULTS & CERTIFICATES"/>
-        <PersonalButton label="REPORTING"/>
-        <PersonalButton label="CMS"/>
-        <PersonalButton label="LOGOUT"/>
-        <h1>Clients</h1><PersonalButton label="Search"></PersonalButton>
-        <p>Find <input></input> </p>
-        <p>All<Checkbox></Checkbox></p> <p>Yes<Checkbox></Checkbox></p> 
-        <p>Yes<Checkbox></Checkbox></p>
-        <p>No<Checkbox></Checkbox></p>
-        <hr />
-    </Fragment>)
+    return (
+        <Fragment>
+            <h1>Clients </h1>
+            <div className={styles.container2}>
+                <label className={styles.space3} for="find">Find:</label>
+                <input className={styles.search} id="find" name="find"></input>
+            </div>
+            <div className={styles.container}>
+                <p className={styles.archived}>Is archived</p>
+                <div className={styles.test}>
+                    <label className={styles.space} for="box1">All</label>
+                    <input className={styles.space} type="checkbox" id="box1" name="box1" value="All"></input>
+                    <label className={styles.space} for="box1">Yes</label>
+                    <input className={styles.space} type="checkbox" id="box1" name="box1" value="Yes"></input>
+                    <label className={styles.space} for="box1">No</label>
+                    <input className={styles.space} type="checkbox" id="box1" name="box1" value="No"></input>
+                </div>
+                <PersonalButton label="Search"></PersonalButton>
+            </div>
+            <br></br>
+        </Fragment>)
 }
 
 export default AllocationScreen

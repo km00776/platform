@@ -1,0 +1,54 @@
+label.space {
+    margin-right: 8px;
+    font-size: large;
+ 
+    
+}
+
+input.space {
+    margin-right: 20px;
+    
+  
+}
+
+div.container {
+    position: absolute;
+    left: 100rem;
+    right: 0;
+    bottom: 70rem;
+    top: 4.5rem;
+    font-weight: 700;
+    float: left;
+}
+
+div.container2 {
+    position: absolute;
+    left: 0;
+    right: 20;
+    bottom: 70rem;
+    top: 4.5rem;
+    float: right; 
+}
+
+
+
+p.archived {
+    float: left;
+    margin-left: -10rem;
+    font-size: large;
+    font-weight: 700;
+    text-align: justify;
+    margin-top: -3px;
+}
+
+label.space3 {
+    float: left;
+    margin-right: 30px;
+    font-size: large;
+    font-weight: 700;
+}
+
+input.search {
+    width: 500px;
+    margin-left: 20px;
+}
