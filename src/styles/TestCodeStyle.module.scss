@@ -17,12 +17,18 @@ div.container {
   left: 80rem;
   right: 0;
   bottom: 70rem;
-  top: 9.5rem;
+  top: 12.5rem;
   font-weight: 700;
   float: left;
 }
 
+div.line {
+  line-height: 12;
+}
+
 h1.heading {
+  top: 3rem;
+  position: relative;
   font-weight: 400;
   font-size: 40px;
   color: #00324d;
@@ -32,8 +38,8 @@ div.container2 {
   position: absolute;
   left: 0;
   right: 20;
-  bottom: 30rem;
-  top: 9.5rem;
+  bottom: 0;
+  top: 12.5rem;
   float: right;
 }
 
@@ -43,7 +49,7 @@ p.archived {
   font-size: large;
   font-weight: 700;
   text-align: justify;
-  margin-top: -3px;
+
   color: #00324d;
 }
 
@@ -75,7 +81,7 @@ input.search {
   transition-duration: 0.4s;
   cursor: pointer;
   right: 0.5rem;
-  top: -0.5rem;
+  top: 1rem;
 }
 
 .btn:hover {
