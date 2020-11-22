@@ -65,8 +65,6 @@ div.container {
   border-radius: 5px;
 }
 
-
-
 p.placeholder {
   vertical-align: 20px;
   font-size: 28px;
@@ -100,56 +98,4 @@ input.passwordInput {
 input.passwordInput:focus {
   background-color: #00324d;
   color: white;
-}
-
-button {
-  background-color: #00283d;
-  border: none;
-  color: white;
-  padding: 15px 40px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 3px;
-  cursor: pointer;
-  border-radius: 12px;
-  transition-duration: 0.4s;
-}
-
-button:hover {
-  background-color: darkblue;
-  padding: 20px 20px 20px;
-  transition: 0.9s;
-}
-
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button span:after {
-  content: "\00bb";
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: -webkit-transform 0.6s cubic-bezier(0.08, 0.35, 0.13, 1.02),
-    opacity 0.4s;
-}
-
-.button:hover span {
-  padding-right: 25px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  background-color: #f7c2f9;
-  -webkit-transform: scaleY(1);
-  transform: scaleY(1);
-  transition: -webkit-transform 0.6s cubic-bezier(0.08, 0.35, 0.13, 1.02),
-    opacity 0.4s;
-  transition: transform 0.6s cubic-bezier(0.08, 0.35, 0.13, 1.02), opacity;
 }

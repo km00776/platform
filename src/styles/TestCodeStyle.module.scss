@@ -1,54 +1,84 @@
 label.space {
-    margin-right: 8px;
-    font-size: large;
- 
-    
+  margin-right: 8px;
+  font-size: large;
+  color: #00324d;
+}
+
+body {
+  background-color: whitesmoke;
 }
 
 input.space {
-    margin-right: 20px;
-    
-  
+  margin-right: 20px;
 }
 
 div.container {
-    position: absolute;
-    left: 100rem;
-    right: 0;
-    bottom: 70rem;
-    top: 4.5rem;
-    font-weight: 700;
-    float: left;
+  position: absolute;
+  left: 80rem;
+  right: 0;
+  bottom: 70rem;
+  top: 9.5rem;
+  font-weight: 700;
+  float: left;
+}
+
+h1.heading {
+  font-weight: 400;
+  font-size: 40px;
+  color: #00324d;
 }
 
 div.container2 {
-    position: absolute;
-    left: 0;
-    right: 20;
-    bottom: 70rem;
-    top: 4.5rem;
-    float: right; 
+  position: absolute;
+  left: 0;
+  right: 20;
+  bottom: 30rem;
+  top: 9.5rem;
+  float: right;
 }
 
-
-
 p.archived {
-    float: left;
-    margin-left: -10rem;
-    font-size: large;
-    font-weight: 700;
-    text-align: justify;
-    margin-top: -3px;
+  float: left;
+  margin-left: -10rem;
+  font-size: large;
+  font-weight: 700;
+  text-align: justify;
+  margin-top: -3px;
+  color: #00324d;
 }
 
 label.space3 {
-    float: left;
-    margin-right: 30px;
-    font-size: large;
-    font-weight: 700;
+  float: left;
+  margin-right: 30px;
+  font-size: large;
+  font-weight: 700;
+  color: #00324d;
 }
 
 input.search {
-    width: 500px;
-    margin-left: 20px;
+  width: 300px;
+  margin-left: 20px;
+  color: #00324d;
+}
+
+.btn {
+  position: absolute;
+  background-color: #00324d; /* Green */
+  border: none;
+  color: white;
+  padding: 6px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  right: 0.5rem;
+  top: -0.5rem;
+}
+
+.btn:hover {
+  background-color: #008cba;
+  color: white;
 }
