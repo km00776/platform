@@ -1,8 +1,20 @@
 .t {
-  position: absolute;
+  position: relative;
   background-color: #00324d;
-  color: red;
-  top: 0rem;
-  padding: 5px;
+  color: white;
+  top: 2rem;
+  padding: 10px 20px;
+  margin: 1px ;
+  text-align: center;
+  display: inline-block;
+  border: none;
+  width: 16rem;
+
+  cursor: pointer;
   /* Green */
+}
+.t:hover {
+  background-color: #008cba;
+  color: white;
+  
 }

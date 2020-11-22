@@ -1,9 +1,12 @@
+import styles from '../styles/Footer.module.scss';
+
 const Footer = () => {
-    return(<div>
-        <button className={styles.btn}>SEARCH</button>
-        <button className={styles.btn}>SEARCH</button>
-        <button className={styles.btn}>SEARCH</button>
-    </div>)
+    return(
+    <div className={styles.container}>
+       <p> © 2014 – 2020 English Language Testing Ltd </p>
+      </div>
+      
+    );
 }
 
 export default Footer;

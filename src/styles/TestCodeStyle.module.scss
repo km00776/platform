@@ -17,19 +17,24 @@ div.container {
   left: 80rem;
   right: 0;
   bottom: 70rem;
-  top: 12.5rem;
+  top: 14.5rem;
   font-weight: 700;
   float: left;
 }
 
 div.line {
-  line-height: 12;
+  line-height: 9;
+}
+
+div.checkbox {
+  position: absolute;
+  top: 0.3rem;
 }
 
 h1.heading {
   top: 3rem;
   position: relative;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 40px;
   color: #00324d;
 }
@@ -39,7 +44,7 @@ div.container2 {
   left: 0;
   right: 20;
   bottom: 0;
-  top: 12.5rem;
+  top: 14.5rem;
   float: right;
 }
 
