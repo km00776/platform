@@ -16,10 +16,10 @@ label.space {
 
   div.container {
     position: absolute;
-    left: 80rem;
-    right: 0;
-    bottom: 70rem;
-    top: 14.5rem;
+    left: 1000px;
+    right: 0px;
+    bottom: 0px;
+    top: 200px;
     font-weight: 700;
     float: left;
   }
@@ -30,7 +30,7 @@ label.space {
 
   div.checkbox {
     position: absolute;
-    top: 0.3rem;
+    top: 5px;
   }
 
   h1.heading {
@@ -76,7 +76,7 @@ label.space {
 
   .btn {
     position: absolute;
-    background-color: orangered; 
+    background-color: red; 
     border: none;
     color: white;
     padding: 6px 32px;
@@ -84,10 +84,11 @@ label.space {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    font-weight: 700;
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
-    right: 0.5rem;
+    right: 30px;
     top: 10px;
   }
 
