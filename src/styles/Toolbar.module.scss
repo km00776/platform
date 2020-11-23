@@ -9,6 +9,7 @@
   display: inline-block;
   border: none;
   width: 16rem;
+  font-weight: 400;
 
   cursor: pointer;
   /* Green */
@@ -16,5 +17,6 @@
 .t:hover {
   background-color: #008cba;
   color: white;
-  
+  transition-duration: 0.4s;
+
 }
