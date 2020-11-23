@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-@media screen {
-  label.space {
-    margin-right: 8px;
-    font-size: large;
-    color: #00324d;
-  }
-=======
 
 @media screen {
 label.space {
@@ -13,7 +5,6 @@ label.space {
   font-size: large;
   color: #00324d;
 }
->>>>>>> eca6b596c619a0f69ef6ca21242e019ffc365365
 
   body {
     background-color: whitesmoke;
@@ -43,7 +34,7 @@ label.space {
   }
 
   h1.heading {
-    top: 1rem;
+    top: 30px;
     position: relative;
     font-weight: 700;
     font-size: 40px;
@@ -55,13 +46,13 @@ label.space {
     left: 0;
     right: 20;
     bottom: 0;
-    top: 14.5rem;
+    top: 200px;
     float: right;
   }
 
   p.archived {
     float: left;
-    margin-left: -10rem;
+    margin-left: -200px;
     font-size: large;
     font-weight: 700;
     text-align: justify;
@@ -85,7 +76,7 @@ label.space {
 
   .btn {
     position: absolute;
-    background-color: #00324d; /* Green */
+    background-color: orangered; 
     border: none;
     color: white;
     padding: 6px 32px;
@@ -97,12 +88,11 @@ label.space {
     transition-duration: 0.4s;
     cursor: pointer;
     right: 0.5rem;
-    top: 3rem;
+    top: 10px;
   }
 
   .btn:hover {
-    background-color: #008cba;
+    background-color: yellowgreen;
     color: white;
   }
-}
 }
