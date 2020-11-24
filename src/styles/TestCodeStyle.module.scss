@@ -1,19 +1,9 @@
-<<<<<<< HEAD
 @media screen {
   label.space {
     margin-right: 8px;
     font-size: large;
     color: #00324d;
   }
-=======
-
-@media screen {
-label.space {
-  margin-right: 8px;
-  font-size: large;
-  color: #00324d;
-}
->>>>>>> 374dce72064d023ff74aee93b336531666c0f255
 
   body {
     background-color: whitesmoke;
@@ -39,7 +29,7 @@ label.space {
 
   div.checkbox {
     position: absolute;
-    top: 0.3rem;
+    top: 5px;
   }
 
   h1.heading {
@@ -85,7 +75,7 @@ label.space {
 
   .btn {
     position: absolute;
-    background-color: orangered; 
+    background-color: orangered;
     border: none;
     color: white;
     padding: 6px 32px;
@@ -97,7 +87,7 @@ label.space {
     transition-duration: 0.4s;
     cursor: pointer;
     right: 0.5rem;
-    top: 10px;
+    top: 40px;
   }
 
   .btn:hover {
