@@ -27,7 +27,7 @@ const AllocationScreen = () => {
                 <button className={styles.btn}>SEARCH</button>
             </div>
             <div className={styles.line}><br /></div>
-            <hr></hr>
+            <hr className={styles.white}></hr>
             <Footer />
         </Fragment>
             
