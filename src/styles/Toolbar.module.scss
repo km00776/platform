@@ -1,3 +1,4 @@
+@media screen and (max-width: 1920px) {
 .t {
   position: relative;
   background-color: whitesmoke;
@@ -10,8 +11,8 @@
   border: none;
   border-color: red;
   width: 12%;
-  font-weight: 500;
-  font-size: 12px;
+  font-weight: 400;
+  font-size: 14px;
 
   cursor: pointer;
   /* Green */
@@ -20,4 +21,6 @@
   background-color: #008cba;
   color: white;
   transition-duration: 0.4s;
+}
+
 }
