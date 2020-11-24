@@ -1,16 +1,17 @@
 div.container {
   position: fixed;
   bottom: 0;
-  background-color:  #00324d;
+  background-color:  whitesmoke;
   left: 0;
   right: 0;
-  height: 30px;
-  color: white;
+  height: -1vh;
+  color: black;
 } 
 
 p.license {
-    margin-top:  20%;
+    margin-top:  0.2vw;
     bottom: 0;
     text-align: justify;
     font-size: 15px;
+    color:  #00324d;
 }
