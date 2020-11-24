@@ -15,7 +15,7 @@ const AllocationScreen = () => {
                 <input className={styles.search} id="find" name="find"></input>
             </div>
             <div className={styles.container}>
-                <p className={styles.archived}>Is archived</p>
+                <p className={styles.archived}>Is archived?</p>
                 <div className={styles.checkbox}>
                     <label className={styles.space} for="box1">All</label>
                     <input className={styles.space} type="radio" id="box1" name="box1" value="All"></input>
