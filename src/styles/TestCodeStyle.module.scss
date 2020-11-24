@@ -1,9 +1,19 @@
+<<<<<<< HEAD
 @media screen {
   label.space {
     margin-right: 8px;
     font-size: large;
     color: #00324d;
   }
+=======
+
+@media screen {
+label.space {
+  margin-right: 8px;
+  font-size: large;
+  color: #00324d;
+}
+>>>>>>> 374dce72064d023ff74aee93b336531666c0f255
 
   body {
     background-color: whitesmoke;
@@ -33,7 +43,7 @@
   }
 
   h1.heading {
-    top: 1rem;
+    top: 30px;
     position: relative;
     font-weight: 700;
     font-size: 40px;
@@ -45,13 +55,13 @@
     left: 0;
     right: 20;
     bottom: 0;
-    top: 14.5rem;
+    top: 200px;
     float: right;
   }
 
   p.archived {
     float: left;
-    margin-left: -10rem;
+    margin-left: -200px;
     font-size: large;
     font-weight: 700;
     text-align: justify;
@@ -75,7 +85,7 @@
 
   .btn {
     position: absolute;
-    background-color: #00324d; /* Green */
+    background-color: orangered; 
     border: none;
     color: white;
     padding: 6px 32px;
@@ -87,11 +97,11 @@
     transition-duration: 0.4s;
     cursor: pointer;
     right: 0.5rem;
-    top: 3rem;
+    top: 10px;
   }
 
   .btn:hover {
-    background-color: #008cba;
+    background-color: yellowgreen;
     color: white;
   }
 }
