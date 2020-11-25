@@ -33,7 +33,7 @@
 
   div.checkbox {
     position: absolute;
-    top: 0.4vh;
+    top: 0.1vh;
     color: whitesmoke;
   }
 
@@ -59,8 +59,8 @@
     margin-left: -20vh;
     font-size: large;
     font-weight: 700;
-    text-align: justify;
-
+    text-align: center;
+    margin-top: -0.36vh;
     color: whitesmoke;
   }
 
@@ -92,8 +92,8 @@
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
-    right: 30px;
-    top: 2vh;
+    right: 1vh;
+    top: 4vh;
   }
 
   .btn:hover {

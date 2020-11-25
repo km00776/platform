@@ -8,7 +8,7 @@ const AllocationScreen = () => {
         <Fragment>
            <ToolBar /> 
             <h1 className={styles.heading}>Clients</h1>
-            <img className={styles.img} alt="hello" src="https://passwordplatform.englishlanguagetesting.co.uk/Images/Password-logo-bg.jpg" height="140"/>
+            <img className={styles.img} alt="hello" src="https://passwordplatform.englishlanguagetesting.co.uk/Images/Password-logo-bg.jpg" height="100"/>
 
             <div className={styles.container2}>
                 <label className={styles.space3} for="find">Find:</label>
@@ -27,7 +27,7 @@ const AllocationScreen = () => {
                 <button className={styles.btn}>SEARCH</button>
             </div>
             <div className={styles.line}><br /></div>
-           
+            <hr></hr>
             <Footer />
         </Fragment>
             
