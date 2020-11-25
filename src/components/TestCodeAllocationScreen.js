@@ -6,7 +6,7 @@ import Footer from './Footer';
 const AllocationScreen = () => {
     return (
         <Fragment>
-          <ToolBar />
+          {/* <ToolBar /> */}
             <h1 className={styles.heading}>Clients</h1>
             <img className={styles.img} alt="hello" src="https://passwordplatform.englishlanguagetesting.co.uk/Images/Password-logo-bg.jpg" height="140"/>
 
@@ -27,7 +27,7 @@ const AllocationScreen = () => {
                 <button className={styles.btn}>SEARCH</button>
             </div>
             <div className={styles.line}><br /></div>
-            
+           
             <Footer />
         </Fragment>
             
