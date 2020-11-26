@@ -1,105 +1,214 @@
-label.space {
-  margin-right: 1vh;
-  font-size: large;
-  color: #00324d;
-}
+@media screen and (max-height: 1920px) {
+  label.space {
+    margin-right: 1vh;
+    font-size: large;
+    color: #00324d;
+  }
 
-body {
-  background-color: #00324d;
-}
+  body {
+    background-color: #00324d;
+  }
 
-input.space {
-  margin-right: 3vh;
-}
+  input.space {
+    margin-right: 3vh;
+  }
 
-label.space {
-  color: whitesmoke;
-}
+  label.space {
+    color: whitesmoke;
+  }
 
-div.container {
-  position: absolute;
-  left: 60vw;
-  right: 0vw;
-  bottom: 0vw;
-  top: 21vh;
-  font-weight: 700;
-  float: left;
-}
+  div.container {
+    position: absolute;
+    left: 60vw;
+    right: 0vw;
+    bottom: 0vw;
+    top: 21vh;
+    font-weight: 700;
+    float: left;
+  }
 
-div.line {
-  line-height: 9;
-}
+  div.line {
+    line-height: 9;
+  }
 
-div.checkbox {
-  position: absolute;
-  top: 0.1vh;
-  color: whitesmoke;
-}
+  div.checkbox {
+    position: absolute;
+    top: 0.1vh;
+    color: whitesmoke;
+  }
 
-h1.heading {
-  top: 2vh;
-  position: relative;
-  font-weight: 700;
-  font-size: 40px;
-  color: whitesmoke;
-}
+  h1.heading {
+    top: 2vh;
+    position: relative;
+    font-weight: 700;
+    font-size: 40px;
+    color: whitesmoke;
+  }
 
-div.container2 {
-  position: absolute;
-  left: 0;
-  right: 20;
-  bottom: 0;
-  top: 21vh;
-  float: right;
-}
+  div.container2 {
+    position: absolute;
+    left: 0;
+    right: 20;
+    bottom: 0;
+    top: 21vh;
+    float: right;
+  }
 
-p.archived {
-  float: left;
-  margin-left: -20vh;
-  font-size: large;
-  font-weight: 700;
-  text-align: center;
-  margin-top: -0.36vh;
-  color: whitesmoke;
-}
+  p.archived {
+    float: left;
+    margin-left: -20vh;
+    font-size: large;
+    font-weight: 700;
+    text-align: center;
+    margin-top: -0.36vh;
+    color: whitesmoke;
+  }
 
-label.space3 {
-  float: left;
-  margin-right: 2vw;
-  font-size: large;
-  font-weight: 700;
-  color: whitesmoke;
-}
+  label.space3 {
+    float: left;
+    margin-right: 2vw;
+    font-size: large;
+    font-weight: 700;
+    color: whitesmoke;
+  }
 
-hr.white {
-  margin-top: 2%;
-}
+  hr.white {
+  }
 
-input.search {
-  width: 300px;
-  margin-top: -1vh;
-  color: #00324d;
-}
+  input.search {
+    width: 300px;
+    margin-top: -1vh;
+    color: #00324d;
+  }
 
-.btn {
-  position: absolute;
-  background-color: whitesmoke;
-  border: none;
-  color: #00324d;
-  padding: 6px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  font-weight: 700;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  right: 1vh;
-  top: 4vh;
-}
+  .btn {
+    position: absolute;
+    background-color: whitesmoke;
+    border: none;
+    color: #00324d;
+    padding: 6px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    right: 1vh;
+    top: 4vh;
+  }
 
-.btn:hover {
-  background-color: yellowgreen;
-  color: white;
+  .btn:hover {
+    background-color: yellowgreen;
+    color: white;
+  }
+
+  @media screen and (min-width: 1440px) {
+    label.space {
+      margin-right: 1vh;
+      font-size: large;
+      color: #00324d;
+    }
+
+    body {
+      background-color: #00324d;
+    }
+
+    input.space {
+      margin-right: 3vh;
+    }
+
+    label.space {
+      color: whitesmoke;
+    }
+
+    div.container {
+      position: absolute;
+      left: 60vw;
+      right: 0vw;
+      bottom: 0vw;
+      top: 21vh;
+      font-weight: 700;
+      float: left;
+    }
+
+    div.line {
+      line-height: 9;
+    }
+
+    div.checkbox {
+      position: absolute;
+      top: 0.1vh;
+      color: whitesmoke;
+    }
+
+    h1.heading {
+      top: 2vh;
+      position: relative;
+      font-weight: 700;
+      font-size: 40px;
+      color: whitesmoke;
+    }
+
+    div.container2 {
+      position: absolute;
+      left: 0;
+      right: 20;
+      bottom: 0;
+      top: 21vh;
+      float: right;
+    }
+
+    p.archived {
+      float: left;
+      margin-left: -20vh;
+      font-size: large;
+      font-weight: 700;
+      text-align: center;
+      margin-top: -0.36vh;
+      color: whitesmoke;
+    }
+
+    label.space3 {
+      float: left;
+      margin-right: 2vw;
+      font-size: large;
+      font-weight: 700;
+      color: whitesmoke;
+    }
+
+    hr.white {
+      margin-top: 2%;
+    }
+
+    input.search {
+      width: 300px;
+      margin-top: -1vh;
+      color: #00324d;
+    }
+
+    .btn {
+      position: absolute;
+      background-color: whitesmoke;
+      border: none;
+      color: #00324d;
+      padding: 6px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 700;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      right: 1vh;
+      top: 4vh;
+    }
+
+    .btn:hover {
+      background-color: yellowgreen;
+      color: white;
+    }
+  }
 }
