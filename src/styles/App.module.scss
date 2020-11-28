@@ -13,16 +13,24 @@ h2.font {
   font-size: 50px;
 }
 
-div.testsRemainingButton {
+button.testsRemainingButton {
   position: absolute;
   bottom: 0;
   top: 10;
   right: 20;
   left: 0;
-  font-size: 50px;
-  right: 0;
-  padding: 15px 15px;
-  margin-left: 40;
+  background-color: #00324d; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  width: 20rem;
 }
 
 img {
@@ -34,16 +42,40 @@ img {
   mix-blend-mode: multiply;
 }
 
-div.loginButton {
+button.loginButton {
   position: absolute;
   bottom: 0;
   top: 10;
   left: 20;
-  font-size: 50px;
+  font-size: 25px;
   right: 0;
-  padding: 15px 15px;
-  margin-right: 40;
-  border-width: 3px;
+  background-color: #00324d; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 20rem;
+
+  border-radius: 12px;
+}
+
+button.loginButton:hover {
+  background-color: #3498db;
+  padding: 10px 10px 10px 10px;
+  transition-duration: 0.4s;
+  width: 14rem;
+}
+
+button.testsRemainingButton:hover {
+  background-color: #3498db;
+  padding: 10px 10px 10px 10px;
+  transition-duration: 0.4s;
+  width: 14rem;
 }
 
 div.textContainer {

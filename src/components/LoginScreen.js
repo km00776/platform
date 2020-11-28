@@ -13,8 +13,8 @@ const LoginScreen = () => {
                     <p className={styles.placeholder}>Login:<input placeholder='Login' className={styles.loginInput}></input></p>
                     <p className={styles.placeholder}>Password:<input placeholder='Password' type='password' className={styles.passwordInput}></input></p> 
                 </div>
-                <div className={styles.testsRemainingButton}><PersonalButton label="Check tests remaining"></PersonalButton></div>
-                <div className={styles.loginButton}><PersonalButton label="Login"></PersonalButton></div>
+                <PersonalButton className={styles.testsRemainingButton} label="Check tests remaining"></PersonalButton>
+                <PersonalButton className={styles.loginButton} label="Login"></PersonalButton>
             </div>
           
         </Fragment>

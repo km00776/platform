@@ -1,8 +1,8 @@
-
+ 
    
    const PersonalButton = (props) => {
         return (
-            <button className="btn"><span>{props.label}</span></button>
+            <button className={props.className}><span>{props.label}</span></button>
         )   
     }
 
