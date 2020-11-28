@@ -4,7 +4,7 @@ div.container {
   background-color:  whitesmoke;
   left: 0;
   right: 0;
-  height: -1vh;
+  height: 2.5vh;
   color: black;
 } 
 
@@ -14,4 +14,7 @@ p.license {
     text-align: justify;
     font-size: 15px;
     color:  #00324d;
+}
+span.log {
+  font-weight: 800;
 }

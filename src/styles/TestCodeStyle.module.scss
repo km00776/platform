@@ -27,9 +27,51 @@
     float: left;
   }
 
-  div.line {
-    line-height: 9;
+  table.clientsTable {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    color: #00324d;
+    background-color: whitesmoke;
+    font-weight: 600;
+    font-size: 14px;
   }
+  th.clientsTable {
+    border: 1px solid black;
+    padding: 8px;
+    padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #008cba;
+  color: white;
+}
+  }
+
+  td.clientsTable {
+    border: 1px solid black;
+    padding: 8px;
+  }
+  thead.clientsTable {
+    border: 1px solid black;
+    padding: 8px;
+  }
+
+  tr.clientsTable:nth-child(even) {
+    background-color: whitesmoke;
+  }
+
+  tr.clientsTable:hover {
+    background-color: #ddd;
+  }
+
+  thead.clientsTable {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+  }
+  
 
   div.checkbox {
     position: absolute;
@@ -72,10 +114,7 @@
     color: whitesmoke;
   }
 
-  hr.white {
-    position: relative;
-    top: 32px;
-  }
+ 
 
   input.search {
     width: 300px;
@@ -135,9 +174,7 @@
       float: left;
     }
 
-    div.line {
-      line-height: 9;
-    }
+  
 
     div.checkbox {
       position: absolute;
@@ -147,7 +184,7 @@
 
     h1.heading {
       top: 2vh;
-      position: relative;
+      position: fixed;
       font-weight: 700;
       font-size: 40px;
       color: whitesmoke;
@@ -180,10 +217,7 @@
       color: whitesmoke;
     }
 
-    hr.white {
-      position: relative;
-      top: -1px;
-    }
+    
 
     input.search {
       width: 300px;
@@ -213,5 +247,7 @@
       background-color: yellowgreen;
       color: white;
     }
+
+  
   }
-}
+

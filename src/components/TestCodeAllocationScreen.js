@@ -1,14 +1,39 @@
-import { Fragment } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import styles from '../styles/TestCodeStyle.module.scss';
 import ToolBar from './ToolBar';
 import Footer from './Footer';
 
 const AllocationScreen = () => {
+    const [clients, setClients] = useState([]);
+
+
+    const getClients = async () => {
+        try {
+            const response = await fetch("http://localhost:3001");
+            const jsonData = await response.json();
+
+            setClients(jsonData);
+
+        }
+        catch (err) {
+            console.error(err.message);
+
+        }
+    }
+
+    useEffect(() => {
+        getClients();
+    }, []);
+
+
+
+
     return (
         <Fragment>
-           <ToolBar /> 
+            {" "}
+            <ToolBar />
             <h1 className={styles.heading}>Clients</h1>
-            <img className={styles.img} alt="hello" src="https://passwordplatform.englishlanguagetesting.co.uk/Images/Password-logo-bg.jpg" height="100"/>
+            <img className={styles.img} alt="hello" src="https://passwordplatform.englishlanguagetesting.co.uk/Images/Password-logo-bg.jpg" height="100" />
 
             <div className={styles.container2}>
                 <label className={styles.space3} for="find">Find:</label>
@@ -26,12 +51,39 @@ const AllocationScreen = () => {
                 </div>
                 <button className={styles.btn}>SEARCH</button>
             </div>
-            <div className={styles.line}><br /></div>
-            <hr className={styles.white}></hr>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+           
+           
+            <br></br>
+            <hr></hr>
+            <table className={styles.clientsTable}>
+            <thead className={styles.clientsTable}>
+                <tr>
+                    <th className={styles.clientsTable}>Name</th>
+                    <th className={styles.clientsTable}>Archive</th>
+             
+                </tr>
+            </thead>
+            <tbody>
+            {clients.map(client => (
+            <tr className={styles.clientsTable} key={client.client_id}>
+              <td className={styles.clientsTable}>{client.name}</td>
+              <td className={styles.clientsTable}>Archived</td>
+           
+            </tr>
+          ))}
+            </tbody>
+            </table>
             <Footer />
         </Fragment>
-            
-        )
+
+    )
 }
 
 export default AllocationScreen
