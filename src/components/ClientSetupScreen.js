@@ -1,66 +1,49 @@
 import { Fragment, useEffect, useState } from 'react';
-import styles from '../styles/TestCodeStyle.module.scss';
+import styles from '../styles/ClientSetup.module.scss';
 import ToolBar from './ToolBar';
 import Footer from './Footer';
 
 
 const ClientSetup = () => {
-    return(
-        <Fragment>
-        <ToolBar />
-        <h1 className={styles.heading}>Clients</h1>
-        <img className={styles.img} alt="hello" src="https://passwordplatform.englishlanguagetesting.co.uk/Images/Password-logo-bg.jpg" height="100" />
+    return (
 
-        <div className={styles.container2}>
-            <label className={styles.space3} for="find">Find:</label>
-            <input className={styles.search} id="find" name="find"></input>
-        </div>
-        <div className={styles.container}>
-            <p className={styles.archived}>Is archived?</p>
-            <div className={styles.checkbox}>
-                <label className={styles.space} for="box1">All</label>
-                <input className={styles.space} type="radio" id="box1" name="box1" value="All"></input>
-                <label className={styles.space} for="box1">Yes</label>
-                <input className={styles.space} type="radio" id="box1" name="box1" value="Yes"></input>
-                <label className={styles.space} for="box1">No</label>
-                <input className={styles.space} type="radio" id="box1" name="box1" value="No"></input>
+        <div>
+            <ToolBar />
+            <header>
+                <h1 className={styles.heading}>Clients</h1>
+                <img className={styles.img} alt="hello" src="https://passwordplatform.englishlanguagetesting.co.uk/Images/Password-logo-bg.jpg" height="100" />
+            </header>
+            <div className={styles.container}>
+                <div className={styles.leftside}>
+                    <div className={styles.find}>
+                        <label className={styles.findLabel} for="find">Find</label>
+                        <input className={styles.findInput} id="find" name="find"></input>
+                    </div>
+                    <div className={styles.type}>
+                        <label className={styles.typeLabel} for="type">Type</label>
+                        <select className={styles.typeInput} id="type" name="type">
+                            <option value="TestCentre">Test Centre</option>
+                            <option value="University">University</option>
+                        </select>
+                    </div>
+                    <body>
+                        <p classname={styles.Active}>Active</p>
+                        <div className={styles.checkbox}>
+                            <label className={styles.space} for="box1">All</label>
+                            <input className={styles.space} type="radio" id="box1" name="box1" value="All"></input>
+                            <label className={styles.space} for="box1">Yes</label>
+                            <input className={styles.space} type="radio" id="box1" name="box1" value="Yes"></input>
+                            <label className={styles.space} for="box1">No</label>
+                            <input className={styles.space} type="radio" id="box1" name="box1" value="No"></input>
+                        </div>
+                    </body>
+                </div>
+                <div className={styles.rightside}>
+
+                </div>
             </div>
-            <button className={styles.btn}>SEARCH</button>
+            <Footer />
         </div>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-       
-        <br></br>
-        <hr></hr>
-        <table className={styles.clientsTable}>
-        <thead className={styles.clientsTable}>
-            <tr>
-                <th className={styles.clientsTable}>Name</th>
-                <th className={styles.clientsTable}>Archive</th>
-         
-            </tr>
-        </thead>
-        <tbody>
-        {clients.map(client => (
-        <tr className={styles.clientsTable} key={client.client_id}>
-          <td className={styles.clientsTable}>{client.name}</td>
-          <td className={styles.clientsTable}>Archived</td>
-       
-        </tr>
-      ))}
-        </tbody>
-        </table>
-        <Footer />
-    </Fragment>
 
     );
 }

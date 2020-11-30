@@ -34,7 +34,6 @@ const AllocationScreen = () => {
             <ToolBar />
             <h1 className={styles.heading}>Clients</h1>
             <img className={styles.img} alt="hello" src="https://passwordplatform.englishlanguagetesting.co.uk/Images/Password-logo-bg.jpg" height="100" />
-
             <div className={styles.container2}>
                 <label className={styles.space3} for="find">Find:</label>
                 <input className={styles.search} id="find" name="find"></input>
@@ -63,8 +62,8 @@ const AllocationScreen = () => {
             <tbody>
             {clients.map(client => (
             <tr className={styles.clientsTable} key={client.client_id}>
-              <td className={styles.clientsTable}>{client.name}</td>
-              <td className={styles.clientsTable}>Archived</td>
+              <td className={styles.clientsTable}><a href="">{client.name}</a></td>
+              <td className={styles.clientsTable}><a href="www.google.co.uk">Archived </a></td>
     
             </tr>
           ))}

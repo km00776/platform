@@ -1,0 +1,68 @@
+h1.heading {
+    top: 2vh;
+    position: relative;
+    font-weight: 700;
+    font-size: 40px;
+    color: whitesmoke;
+  }
+
+  div.type {
+      position: relative;
+      margin-top: 10px;
+      float: left;
+ 
+  }
+
+  div.checkbox {
+    position: absolute;
+    top: 9vh;
+    color: whitesmoke;
+  }
+
+  label.space {
+    margin-right: 3vh;
+  }
+
+  input.space {
+      
+  }
+
+  div.find {
+    position: fixed;
+    margin-top: -2rem;
+   
+}
+  
+  label.findLabel {
+    float: left;
+    margin-right: 2vw;
+    font-size: large;
+    font-weight: 700;
+    color: whitesmoke;
+    margin-top: 9vh;
+    position: relative;
+  }
+
+  input.findInput {
+    width: 30vh;
+    margin-top:  9vh;
+    color: #00324d;
+    position: relative;
+  }
+
+  label.typeLabel {
+    float: left;
+    margin-right: 2vw;
+    font-size: large;
+    font-weight: 700;
+    color: whitesmoke;
+    margin-top: 9vh;
+    position: relative;
+  }
+
+  select.typeInput {
+    width: 30vh;
+    margin-top:  9vh;
+    color: #00324d;
+    position: relative;
+  }

@@ -9,8 +9,8 @@
     background-color: #00324d;
   }
 
-  br.break {
-    line-height: 18rem;
+  div.break {
+    line-height: 12rem;
   }
 
   input.space {
@@ -46,8 +46,8 @@
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: whitesmoke;
-    color: #00324d;
+    background-color: white;
+    color: black;
   }
 }
 
@@ -72,7 +72,7 @@ thead.clientsTable {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #4caf50;
+  background-color: whitesmoke;
   color: white;
 }
 
@@ -117,7 +117,7 @@ label.space3 {
   color: whitesmoke;
 }
 
-input.search {
+select.search {
   width: 300px;
   margin-top: -1vh;
   color: #00324d;
@@ -138,7 +138,7 @@ input.search {
   transition-duration: 0.4s;
   cursor: pointer;
   right: 1vh;
-  top: 4vh;
+  top: 27vh;
 }
 
 .btn:hover {
@@ -225,6 +225,7 @@ input.search {
     width: 300px;
     margin-top: -1vh;
     color: #00324d;
+    
   }
 
   .btn {
