@@ -51,23 +51,13 @@ const AllocationScreen = () => {
                 </div>
                 <button className={styles.btn}>SEARCH</button>
             </div>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-           
-           
-            <br></br>
+           <div className={styles.break}><br /> </div>
             <hr></hr>
             <table className={styles.clientsTable}>
             <thead className={styles.clientsTable}>
                 <tr>
                     <th className={styles.clientsTable}>Name</th>
                     <th className={styles.clientsTable}>Archive</th>
-             
                 </tr>
             </thead>
             <tbody>
@@ -75,7 +65,7 @@ const AllocationScreen = () => {
             <tr className={styles.clientsTable} key={client.client_id}>
               <td className={styles.clientsTable}>{client.name}</td>
               <td className={styles.clientsTable}>Archived</td>
-           
+    
             </tr>
           ))}
             </tbody>

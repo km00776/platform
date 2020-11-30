@@ -9,6 +9,10 @@
     background-color: #00324d;
   }
 
+  br.break {
+    line-height: 18rem;
+  }
+
   input.space {
     margin-right: 3vh;
   }
@@ -40,38 +44,141 @@
     border: 1px solid black;
     padding: 8px;
     padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #008cba;
-  color: white;
-}
-  }
-
-  td.clientsTable {
-    border: 1px solid black;
-    padding: 8px;
-  }
-  thead.clientsTable {
-    border: 1px solid black;
-    padding: 8px;
-  }
-
-  tr.clientsTable:nth-child(even) {
-    background-color: whitesmoke;
-  }
-
-  tr.clientsTable:hover {
-    background-color: #ddd;
-  }
-
-  thead.clientsTable {
-    padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #4CAF50;
-    color: white;
+    background-color: whitesmoke;
+    color: #00324d;
   }
-  
+}
+
+td.clientsTable {
+  border: 1px solid black;
+  padding: 8px;
+}
+thead.clientsTable {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+tr.clientsTable:nth-child(even) {
+  background-color: whitesmoke;
+}
+
+tr.clientsTable:hover {
+  background-color: #ddd;
+}
+
+thead.clientsTable {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4caf50;
+  color: white;
+}
+
+div.checkbox {
+  position: absolute;
+  top: 0.1vh;
+  color: whitesmoke;
+}
+
+h1.heading {
+  top: 2vh;
+  position: relative;
+  font-weight: 700;
+  font-size: 40px;
+  color: whitesmoke;
+}
+
+div.container2 {
+  position: absolute;
+  left: 0;
+  right: 20;
+  bottom: 0;
+  top: 21vh;
+  float: right;
+}
+
+p.archived {
+  float: left;
+  margin-left: -20vh;
+  font-size: large;
+  font-weight: 700;
+  text-align: center;
+  margin-top: -0.36vh;
+  color: whitesmoke;
+}
+
+label.space3 {
+  float: left;
+  margin-right: 2vw;
+  font-size: large;
+  font-weight: 700;
+  color: whitesmoke;
+}
+
+input.search {
+  width: 300px;
+  margin-top: -1vh;
+  color: #00324d;
+}
+
+.btn {
+  position: fixed;
+  background-color: whitesmoke;
+  border: none;
+  color: #00324d;
+  padding: 6px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  right: 1vh;
+  top: 4vh;
+}
+
+.btn:hover {
+  background-color: yellowgreen;
+  color: white;
+}
+
+@media screen and (max-width: 1440px) {
+  label.space {
+    margin-right: 1vh;
+    font-size: large;
+    color: #00324d;
+  }
+
+  body {
+    background-color: #00324d;
+  }
+
+  div.break {
+    position: relative;
+    line-height: 18rem;
+  }
+
+  input.space {
+    margin-right: 3vh;
+  }
+
+  label.space {
+    color: whitesmoke;
+  }
+
+  div.container {
+    position: fixed;
+    left: 60vw;
+    right: 0vw;
+    bottom: 0vw;
+    top: 26vh;
+    font-weight: 700;
+    float: left;
+  }
 
   div.checkbox {
     position: absolute;
@@ -80,8 +187,8 @@
   }
 
   h1.heading {
-    top: 2vh;
-    position: relative;
+    top: 7vh;
+    position: fixed;
     font-weight: 700;
     font-size: 40px;
     color: whitesmoke;
@@ -92,7 +199,7 @@
     left: 0;
     right: 20;
     bottom: 0;
-    top: 21vh;
+    top: 26vh;
     float: right;
   }
 
@@ -114,8 +221,6 @@
     color: whitesmoke;
   }
 
- 
-
   input.search {
     width: 300px;
     margin-top: -1vh;
@@ -123,7 +228,7 @@
   }
 
   .btn {
-    position: absolute;
+    position: fixeda;
     background-color: whitesmoke;
     border: none;
     color: #00324d;
@@ -137,117 +242,11 @@
     transition-duration: 0.4s;
     cursor: pointer;
     right: 1vh;
-    top: 4vh;
+    top: 30vh;
   }
 
   .btn:hover {
     background-color: yellowgreen;
     color: white;
   }
-
-  @media screen and (max-width: 1440px) {
-    label.space {
-      margin-right: 1vh;
-      font-size: large;
-      color: #00324d;
-    }
-
-    body {
-      background-color: #00324d;
-    }
-
-    input.space {
-      margin-right: 3vh;
-    }
-
-    label.space {
-      color: whitesmoke;
-    }
-
-    div.container {
-      position: absolute;
-      left: 60vw;
-      right: 0vw;
-      bottom: 0vw;
-      top: 21vh;
-      font-weight: 700;
-      float: left;
-    }
-
-  
-
-    div.checkbox {
-      position: absolute;
-      top: 0.1vh;
-      color: whitesmoke;
-    }
-
-    h1.heading {
-      top: 2vh;
-      position: fixed;
-      font-weight: 700;
-      font-size: 40px;
-      color: whitesmoke;
-    }
-
-    div.container2 {
-      position: absolute;
-      left: 0;
-      right: 20;
-      bottom: 0;
-      top: 21vh;
-      float: right;
-    }
-
-    p.archived {
-      float: left;
-      margin-left: -20vh;
-      font-size: large;
-      font-weight: 700;
-      text-align: center;
-      margin-top: -0.36vh;
-      color: whitesmoke;
-    }
-
-    label.space3 {
-      float: left;
-      margin-right: 2vw;
-      font-size: large;
-      font-weight: 700;
-      color: whitesmoke;
-    }
-
-    
-
-    input.search {
-      width: 300px;
-      margin-top: -1vh;
-      color: #00324d;
-    }
-
-    .btn {
-      position: absolute;
-      background-color: whitesmoke;
-      border: none;
-      color: #00324d;
-      padding: 6px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      font-weight: 700;
-      margin: 4px 2px;
-      transition-duration: 0.4s;
-      cursor: pointer;
-      right: 1vh;
-      top: 4vh;
-    }
-
-    .btn:hover {
-      background-color: yellowgreen;
-      color: white;
-    }
-
-  
-  }
-
+}

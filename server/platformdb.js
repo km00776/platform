@@ -9,7 +9,7 @@ const pool = new Pool({
 
 const getClients = () => {
     return new Promise(function(resolve, reject) {
-        pool.query('SELECT * FROM clients', (error, results) => {
+        pool.query('SELECT * FROM clients',  (error, results) => {
             if(error) {
                 reject(error);
             }
