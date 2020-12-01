@@ -11,7 +11,7 @@ const ClientSetup = () => {
             <ToolBar />
             <header>
                 <h1 className={styles.heading}>Clients</h1>
-                <img className={styles.img} alt="hello" src="https://passwordplatform.englishlanguagetesting.co.uk/Images/Password-logo-bg.jpg" height="100" />
+                <img className={styles.passwordLogo} alt="hello" src="https://passwordplatform.englishlanguagetesting.co.uk/Images/Password-logo-bg.jpg" height="100" />
             </header>
             <div className={styles.container}>
                 <div className={styles.leftside}>
@@ -22,20 +22,21 @@ const ClientSetup = () => {
                     <div className={styles.type}>
                         <label className={styles.typeLabel} for="type">Type</label>
                         <select className={styles.typeInput} id="type" name="type">
+                            <option value="All">All</option>
                             <option value="TestCentre">Test Centre</option>
                             <option value="University">University</option>
                         </select>
                     </div>
                     <body>
-                        <p classname={styles.Active}>Active</p>
-                        <div className={styles.checkbox}>
+                    {/* <div className={styles.checkbox}>
+                        <p className={styles.Active}>Is Archived?</p>
                             <label className={styles.space} for="box1">All</label>
                             <input className={styles.space} type="radio" id="box1" name="box1" value="All"></input>
                             <label className={styles.space} for="box1">Yes</label>
                             <input className={styles.space} type="radio" id="box1" name="box1" value="Yes"></input>
                             <label className={styles.space} for="box1">No</label>
                             <input className={styles.space} type="radio" id="box1" name="box1" value="No"></input>
-                        </div>
+                    </div> */}
                     </body>
                 </div>
                 <div className={styles.rightside}>

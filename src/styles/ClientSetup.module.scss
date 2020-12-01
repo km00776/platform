@@ -14,17 +14,27 @@ h1.heading {
   }
 
   div.checkbox {
-    position: absolute;
-    top: 9vh;
+    position: fixed;
     color: whitesmoke;
+    margin-left: -20rem;
+    float: left;
+    margin-top: 140px;
   }
+ 
 
   label.space {
-    margin-right: 3vh;
+    position: relative;
+    font-size: large;
+    margin-right: 10vh;
+    
+    font-weight: 700;
   }
 
   input.space {
-      
+    position: relative;
+    margin-right: 6vh;
+    
+    font-weight: 700;
   }
 
   div.find {
@@ -47,7 +57,7 @@ h1.heading {
     width: 30vh;
     margin-top:  9vh;
     color: #00324d;
-    position: relative;
+    position: fixed;
   }
 
   label.typeLabel {
@@ -65,4 +75,14 @@ h1.heading {
     margin-top:  9vh;
     color: #00324d;
     position: relative;
+  }
+
+  p.Active {
+    font-size: large;
+    color: white;
+    float: left;
+    margin-left: -6rem;
+    margin-top: -0.7vh;
+    position: fixed;
+    font-weight: 700;
   }
