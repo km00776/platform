@@ -16,36 +16,39 @@ h1.heading {
   div.checkbox {
     position: fixed;
     color: whitesmoke;
-    margin-left: -20rem;
-    float: left;
-    margin-top: 140px;
+    margin-left: -16rem;
+    
+    margin-top: 197px;
   }
  
 
   label.space {
     position: relative;
     font-size: large;
-    margin-right: 10vh;
-    
+    margin-right: 2vh;
+    margin-top: 9vh;
     font-weight: 700;
   }
 
   input.space {
     position: relative;
-    margin-right: 6vh;
-    
+    margin-right: 2vh;
     font-weight: 700;
   }
 
   div.find {
     position: fixed;
-    margin-top: -2rem;
-   
+    margin-top: -2rem; 
+}
+
+div.rightside {
+  float: right;
 }
   
   label.findLabel {
     float: left;
     margin-right: 2vw;
+    right: -1vh;
     font-size: large;
     font-weight: 700;
     color: whitesmoke;
@@ -63,6 +66,7 @@ h1.heading {
   label.typeLabel {
     float: left;
     margin-right: 2vw;
+    right: -1vh;
     font-size: large;
     font-weight: 700;
     color: whitesmoke;
@@ -77,12 +81,49 @@ h1.heading {
     position: relative;
   }
 
-  p.Active {
+  p.Archived {
     font-size: large;
     color: white;
-    float: left;
-    margin-left: -6rem;
-    margin-top: -0.7vh;
+
+    margin-left: -25.5rem;
+    margin-top: 20vh;
     position: fixed;
     font-weight: 700;
   }
+
+//   div.calender {
+//     position: relative;
+//     right: 0px;
+//     bottom: 200px;
+//     height: 100%;
+//     width: 100%;
+//     left: 200px;
+//     right: 0px;
+//   }
+
+input.dateTo {
+        position: absolute;
+        margin-top: 14.5vh;
+        margin-left: -22vh;
+        width: 10vh;
+        
+}
+
+
+input.dateFrom{
+    position: absolute; 
+    margin-top: 14.5vh;
+    margin-left: -9vh;
+    width: 10vh;
+}
+
+  p.dateCreated {
+    font-size: large;
+    color: white;
+    font-weight: 700;
+    position: fixed;
+    margin-top: 140px;
+    margin-left: -37vh;
+    float: left;
+  }
+
