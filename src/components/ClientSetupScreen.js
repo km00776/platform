@@ -22,6 +22,7 @@ const ClientSetup = () => {
                     <div className={styles.type}>
                         <label className={styles.typeLabel} for="type">Type</label>
                         <select className={styles.typeInput} id="type" name="type">
+                            <option value="All">All</option>
                             <option value="TestCentre">Test Centre</option>
                             <option value="University">University</option>
                         </select>
