@@ -6,12 +6,11 @@ import Footer from './Footer';
 
 const ClientSetup = () => {
     return (
-
         <div>
             <ToolBar />
             <header>
                 <h1 className={styles.heading}>Clients</h1>
-                <img className={styles.img} alt="hello" src="https://passwordplatform.englishlanguagetesting.co.uk/Images/Password-logo-bg.jpg" height="100" />
+                <img className={styles.passwordLogo} alt="hello" src="https://passwordplatform.englishlanguagetesting.co.uk/Images/Password-logo-bg.jpg" height="100" />
             </header>
             <div className={styles.container}>
                 <div className={styles.leftside}>
@@ -28,8 +27,14 @@ const ClientSetup = () => {
                         </select>
                     </div>
                     <body>
-                        <p classname={styles.Active}>Active</p>
+                        <div className={styles.calender}>
+                            <p className={styles.dateCreated}>Date Created</p>
+                            <input className={styles.dateFrom}></input>
+                            <input className={styles.dateTo}></input>
+                        </div>
+                        <p className={styles.Archived}>Is Archived?</p>
                         <div className={styles.checkbox}>
+
                             <label className={styles.space} for="box1">All</label>
                             <input className={styles.space} type="radio" id="box1" name="box1" value="All"></input>
                             <label className={styles.space} for="box1">Yes</label>
@@ -40,7 +45,23 @@ const ClientSetup = () => {
                     </body>
                 </div>
                 <div className={styles.rightside}>
-
+                    <div className={styles.name}>
+                        <label className={styles.nameLabel} for="name">Find</label>
+                        <input className={styles.nameInput} id="name" name="name"></input>
+                    </div>
+                    <div className={styles.Country}>
+                        <label className={styles.countryLabel} for="name">Country</label>
+                        <input className={styles.countryInput} id="name" name="name"></input>
+                    </div>
+                    <div className={styles.ActiveCheckbox}>
+                        <label className={styles.countryLabel} for="name">Active</label>
+                        <label className={styles.space} for="box1">All</label>
+                        <input className={styles.space} type="radio" id="box1" name="box1" value="All"></input>
+                        <label className={styles.space} for="box1">Yes</label>
+                        <input className={styles.space} type="radio" id="box1" name="box1" value="Yes"></input>
+                        <label className={styles.space} for="box1">No</label>
+                        <input className={styles.space} type="radio" id="box1" name="box1" value="No"></input>
+                    </div>
                 </div>
             </div>
             <Footer />
