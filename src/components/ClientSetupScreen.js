@@ -31,19 +31,19 @@ const ClientSetup = () => {
                                 <input className={styles.dateFrom}></input>
                                 <input className={styles.dateTo}></input>
                         </div>
-        
-                        {/* <div className={styles.checkbox}>
+                        <div className={styles.ArchivedContainer}>
                             <p className={styles.Archived}>Is Archived?</p>
-                            <label className={styles.space} for="box1">All</label>
-                            <input className={styles.space} type="radio" id="box1" name="box1" value="All"></input>
-                            <label className={styles.space} for="box1">Yes</label>
-                            <input className={styles.space} type="radio" id="box1" name="box1" value="Yes"></input>
-                            <label className={styles.space} for="box1">No</label>
-                            <input className={styles.space} type="radio" id="box1" name="box1" value="No"></input>
-                        </div> */}
-                    
+                                {/* <div className={styles.ArchivedCheckbox}>
+                                    <label className={styles.space} for="box1">All</label>
+                                    <input className={styles.space} type="radio" id="box1" name="box1" value="All"></input>
+                                    <label className={styles.space} for="box1">Yes</label>
+                                    <input className={styles.space} type="radio" id="box1" name="box1" value="Yes"></input>
+                                    <label className={styles.space} for="box1">No</label>
+                                    <input className={styles.space} type="radio" id="box1" name="box1" value="No"></input>F
+                                </div> */}
+                        </div>
                 </div>
-                <div className={styles.rightside}>
+                {/* <div className={styles.rightside}>
                     <div className={styles.name}>
                         <label className={styles.nameLabel} for="name">Find</label>
                         <input className={styles.nameInput} id="name" name="name"></input>
@@ -61,7 +61,7 @@ const ClientSetup = () => {
                         <label className={styles.space} for="box1">No</label>
                         <input className={styles.space} type="radio" id="box1" name="box1" value="No"></input>
                     </div>
-                </div>
+                </div> */}
             </div>
             <Footer />
         </div>
