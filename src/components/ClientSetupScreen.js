@@ -26,23 +26,22 @@ const ClientSetup = () => {
                             <option value="University">University</option>
                         </select>
                     </div>
-                    <body>
                         <div className={styles.calender}>
                             <p className={styles.dateCreated}>Date Created</p>
-                            <input className={styles.dateFrom}></input>
-                            <input className={styles.dateTo}></input>
+                                <input className={styles.dateFrom}></input>
+                                <input className={styles.dateTo}></input>
                         </div>
-                        <p className={styles.Archived}>Is Archived?</p>
-                        <div className={styles.checkbox}>
-
+        
+                        {/* <div className={styles.checkbox}>
+                            <p className={styles.Archived}>Is Archived?</p>
                             <label className={styles.space} for="box1">All</label>
                             <input className={styles.space} type="radio" id="box1" name="box1" value="All"></input>
                             <label className={styles.space} for="box1">Yes</label>
                             <input className={styles.space} type="radio" id="box1" name="box1" value="Yes"></input>
                             <label className={styles.space} for="box1">No</label>
                             <input className={styles.space} type="radio" id="box1" name="box1" value="No"></input>
-                        </div>
-                    </body>
+                        </div> */}
+                    
                 </div>
                 <div className={styles.rightside}>
                     <div className={styles.name}>
