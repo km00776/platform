@@ -4,6 +4,7 @@ h1.heading {
   font-weight: 700;
   font-size: 40px;
   color: whitesmoke;
+  left: 1vh;
 }
 
 div.leftside {
@@ -19,29 +20,39 @@ div.type {
 div.ArchivedCheckbox {
   position: relative;
   color: whitesmoke;
-  margin-left: 2px;
-  margin-top: 12.5vh;
-  margin-bottom: 2vh;
-  overflow: hidden;
+  top: 127px;
+  left: 30px;
+ 
 }
 
 label.space {
   position: relative;
   font-size: large;
-  margin-right: 3vh;
-  bottom: 0;
-  margin-top: 4vh;
-  overflow: hidden;
   font-weight: 700;
+  margin-right: 10px;
 }
 
 input.space {
   position: relative;
-  margin-right: 2vh;
   font-weight: 700;
-  margin-top: -2vh;
-  margin-bottom: 30px;
-  overflow: hidden;
+  margin-right: 30px;
+}
+
+p.Active {
+  font-size: large;
+  color: white;
+  left: 9px;
+  top: 20px;
+  position: relative;
+  font-weight: 700;
+  float: left;
+}
+
+div.ActiveCheckbox {
+  position: relative;
+  color: whitesmoke;
+  top: 23px;
+  left: 40px;
 }
 
 div.find {
@@ -99,22 +110,21 @@ select.typeInput {
 }
 
 div.ArchivedContainer {
-  position: fixed;
-  float: left;
-  margin-top: 5.5vh;
-  margin-left: 16vh;
+  position: relative;
+  bottom: 100px;
+  right: 1400px;
+
 }
 
 p.Archived {
   font-size: large;
   color: white;
-  right: 0;
-  margin-left: -15vh;
-  margin-top: 100px;
-  margin-bottom: 30px;
+  left: 900px;
+  top: 120px;
   position: relative;
   font-weight: 700;
-  float: left;
+  float: right;
+ 
 }
 
 div.calender {

@@ -26,14 +26,14 @@ const ClientSetup = () => {
                             <option value="University">University</option>
                         </select>
                     </div>
-                        <div className={styles.ArchivedContainer}>
-                            <p className={styles.Archived}>Active</p>
-                                <div className={styles.ArchivedCheckbox}>
+                        <div className={styles.Container}>
+                            <p className={styles.Active}>Active</p>
+                                <div className={styles.ActiveCheckbox}>
                                     <label className={styles.space} for="box1">All</label>
                                     <input className={styles.space} type="radio" id="box1" name="box1" value="All"></input>
                                     <label className={styles.space} for="box1">Yes</label>
                                     <input className={styles.space} type="radio" id="box1" name="box1" value="Yes"></input>
-                                      <label className={styles.space} for="box1">No</label>
+                                    <label className={styles.space} for="box1">No</label>
                                     <input className={styles.space} type="radio" id="box1" name="box1" value="No"></input>
                                 </div>
                         </div>
@@ -54,16 +54,15 @@ const ClientSetup = () => {
                     </div>
                     <div className={styles.ArchivedContainer}>
                             <p className={styles.Archived}>Is Archived</p>
-                                <div className={styles.ArchivedCheckbox}>
+                                {/*<div className={styles.ArchivedCheckbox}>
                                     <label className={styles.space} for="box1">All</label>
                                     <input className={styles.space} type="radio" id="box1" name="box1" value="All"></input>
                                     <label className={styles.space} for="box1">Yes</label>
                                     <input className={styles.space} type="radio" id="box1" name="box1" value="Yes"></input>
-                                      <label className={styles.space} for="box1">No</label>
+                                    <label className={styles.space} for="box1">No</label>
                                     <input className={styles.space} type="radio" id="box1" name="box1" value="No"></input>
-                                </div>
+                                </div> */}
                         </div>
-                    
                 </div>
             </div>
             <Footer />
