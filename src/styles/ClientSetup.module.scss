@@ -124,8 +124,9 @@ select.typeInput {
 
 div.ArchivedContainer {
   position: relative;
-  bottom: 100px;
-  right: 1400px;
+  float: left;
+  right: 300px;
+  top: 30px;
 }
 
 div.ActiveContainer {
@@ -135,12 +136,10 @@ div.ActiveContainer {
 
 p.Archived {
   font-size: large;
-  color: white;
-  right: -898px;
-  top: 130px;
-  position: relative;
+  color: white;  
+  position: absolute;
   font-weight: 700;
-  float: right;
+
 }
 
 div.calender {
