@@ -9,6 +9,9 @@ h1.heading {
 
 div.leftside {
   float: left;
+
+  position: relative;
+  top: 3px;
 }
 
 div.type {
@@ -20,22 +23,30 @@ div.type {
 div.ArchivedCheckbox {
   position: relative;
   color: whitesmoke;
-  top: 127px;
-  left: 30px;
- 
+  top: 10px;
+  left: 1000px;
+  float: right;
 }
 
-label.space {
+label.archivedtickbox {
   position: relative;
   font-size: large;
   font-weight: 700;
   margin-right: 10px;
 }
 
-input.space {
+input.archivedtickbox {
   position: relative;
   font-weight: 700;
   margin-right: 30px;
+}
+
+input.countryInput {
+  width: 30vh;
+  left: 10px;
+  color: #00324d;
+  position: relative;
+  top: 5px;
 }
 
 p.Active {
@@ -62,6 +73,8 @@ div.find {
 
 div.rightside {
   float: right;
+  top: 3px;
+  position: relative;
 }
 
 label.findLabel {
@@ -84,7 +97,7 @@ input.findInput {
 
 div.name {
   position: relative;
-  margin-top: 50px;
+  top: 20px;
 }
 div.Country {
   position: relative;
@@ -113,18 +126,21 @@ div.ArchivedContainer {
   position: relative;
   bottom: 100px;
   right: 1400px;
+}
 
+div.ActiveContainer {
+  top: 30px;
+  position: relative;
 }
 
 p.Archived {
   font-size: large;
   color: white;
-  left: 900px;
-  top: 120px;
+  right: -898px;
+  top: 130px;
   position: relative;
   font-weight: 700;
   float: right;
- 
 }
 
 div.calender {
@@ -135,37 +151,18 @@ div.calender {
 
 input.dateTo {
   position: relative;
-  margin-top: 20px;
-  margin-left: 3vw;
+  bottom: 3px;
   width: 10vh;
   float: left;
+  left: 30px;
 }
 
 input.dateFrom {
   position: relative;
-  margin-top: 20px;
-  margin-left: 3vw;
+  bottom: 3px;
   float: left;
   width: 10vh;
-}
-
-label.nameLabel {
-  font-size: large;
-  color: white;
-  font-weight: 700;
-  position: relative;
-  margin-top: 20px;
-  margin-left: 1vh;
-  float: left;
-}
-
-input.countryInput {
-  font-size: large;
-  color: white;
-  font-weight: 700;
-  position: relative;
-  margin-top: 20px;
-  margin-left: 1vh;
+  left: 14px;
 }
 
 label.countryLabel {
@@ -173,18 +170,24 @@ label.countryLabel {
   color: white;
   font-weight: 700;
   position: relative;
-  margin-top: 20px;
-  margin-left: 1vh;
+  top: 5px;
 }
 
-input.nameInput {
+label.nameLabel {
   font-size: large;
   color: white;
   font-weight: 700;
   position: relative;
-  margin-top: 20px;
-  margin-left: 1vh;
+  top: 23px;
   float: left;
+}
+
+input.nameInput {
+  width: 30vh;
+  top: 24px;
+  left: 27px;
+  color: #00324d;
+  position: relative;
 }
 
 p.dateCreated {
@@ -192,7 +195,6 @@ p.dateCreated {
   color: white;
   font-weight: 700;
   position: relative;
-  margin-top: 20px;
-  margin-left: 1vh;
+  bottom: 4px;
   float: left;
 }
