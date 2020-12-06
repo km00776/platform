@@ -29,12 +29,12 @@ const ClientSetup = () => {
                         <div className={styles.ActiveContainer}>
                             <p className={styles.Active}>Active</p>
                                 <div className={styles.ActiveCheckbox}>
-                                    <label className={styles.archivedtickbox} for="box1">All</label>
-                                    <input className={styles.archivedtickbox} type="radio" id="box1" name="box1" value="All"></input>
-                                    <label className={styles.archivedtickbox} for="box1">Yes</label>
-                                    <input className={styles.archivedtickbox} type="radio" id="box1" name="box1" value="Yes"></input>
-                                    <label className={styles.archivedtickbox} for="box1">No</label>
-                                    <input className={styles.archivedtickbox} type="radio" id="box1" name="box1" value="No"></input>
+                                    <label className={styles.activetickbox} for="box1">All</label>
+                                    <input className={styles.activetickbox} type="radio" id="box1" name="box1" value="All"></input>
+                                    <label className={styles.activetickbox} for="box1">Yes</label>
+                                    <input className={styles.activetickbox} type="radio" id="box1" name="box1" value="Yes"></input>
+                                    <label className={styles.activetickbox} for="box1">No</label>
+                                    <input className={styles.activetickbox} type="radio" id="box1" name="box1" value="No"></input>
                                 </div>
                         </div>
                 </div>
@@ -55,12 +55,12 @@ const ClientSetup = () => {
                     <div className={styles.ArchivedContainer}>
                             <p className={styles.Archived}>Is Archived</p>
                                 <div className={styles.ArchivedCheckbox}>
-                                    <label className={styles} for="box1">All</label>
-                                    <input className={styles} type="radio" id="box1" name="box1" value="All"></input>
-                                    <label className={styles} for="box2">Yes</label>
-                                    <input className={styles} type="radio" id="box1" name="box2" value="Yes"></input>
-                                    <label className={styles} for="box3">No</label>
-                                    <input className={styles} type="radio" id="box1" name="box3" value="No"></input>
+                                    <label className={styles.archivedtickbox} for="box1">All</label>
+                                    <input className={styles.archivedtickbox} type="radio" id="box1" name="box1" value="All"></input>
+                                    <label className={styles.archivedtickbox} for="box2">Yes</label>
+                                    <input className={styles.archivedtickbox} type="radio" id="box1" name="box2" value="Yes"></input>
+                                    <label className={styles.archivedtickbox} for="box3">No</label>
+                                    <input className={styles.archivedtickbox} type="radio" id="box1" name="box3" value="No"></input>
                                 </div>
                         </div>
                 </div>

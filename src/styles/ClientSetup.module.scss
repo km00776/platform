@@ -23,19 +23,19 @@ div.type {
 div.ArchivedCheckbox {
   position: relative;
   color: whitesmoke;
-  top: 10px;
-  left: 1000px;
+  top: 3px;
+  left: 120px;
   float: right;
 }
 
-label.archivedtickbox {
+label.activetickbox {
   position: relative;
   font-size: large;
   font-weight: 700;
   margin-right: 10px;
 }
 
-input.archivedtickbox {
+input.activetickbox {
   position: relative;
   font-weight: 700;
   margin-right: 30px;
@@ -126,12 +126,26 @@ div.ArchivedContainer {
   position: relative;
   float: left;
   right: 300px;
-  top: 30px;
+  top: 45px;
 }
 
 div.ActiveContainer {
   top: 30px;
   position: relative;
+}
+
+label.archivedtickbox {
+  position: relative;
+  font-size: large;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+input.archivedtickbox {
+  position: relative;
+  font-weight: 700;
+  margin-right: 30px;
+  
 }
 
 p.Archived {
