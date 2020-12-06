@@ -16,28 +16,32 @@ div.type {
   float: left;
 }
 
-div.ArchivedContainer {
+div.ArchivedCheckbox {
   position: relative;
   color: whitesmoke;
   margin-left: 2px;
-  margin-top: -90px;
-  float: left;
+  margin-top: 12.5vh;
+  margin-bottom: 2vh;
+  overflow: hidden;
 }
 
 label.space {
   position: relative;
   font-size: large;
   margin-right: 3vh;
-  top: -39px;
   bottom: 0;
+  margin-top: 4vh;
+  overflow: hidden;
   font-weight: 700;
 }
 
 input.space {
   position: relative;
-  margin-right: 3vh;
+  margin-right: 2vh;
   font-weight: 700;
-  top: -39px;
+  margin-top: -2vh;
+  margin-bottom: 30px;
+  overflow: hidden;
 }
 
 div.find {
@@ -67,6 +71,15 @@ input.findInput {
   position: relative;
 }
 
+div.name {
+  position: relative;
+  margin-top: 50px;
+}
+div.Country {
+  position: relative;
+  margin-top: 50px;
+}
+
 label.typeLabel {
   float: left;
   margin-right: 2vw;
@@ -86,19 +99,20 @@ select.typeInput {
 }
 
 div.ArchivedContainer {
-  position: relative;
+  position: fixed;
   float: left;
-  margin-top: -9vh;
-  margin-left: 0.2vh;
-  margin-right: 3vh;
+  margin-top: 5.5vh;
+  margin-left: 16vh;
 }
 
 p.Archived {
   font-size: large;
   color: white;
-  margin-left: -7.5vw;
-  margin-top: 14vh;
-  position: fixed;
+  right: 0;
+  margin-left: -15vh;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  position: relative;
   font-weight: 700;
   float: left;
 }
@@ -106,6 +120,7 @@ p.Archived {
 div.calender {
   position: relative;
   margin-top: 23px;
+  margin-right: 39vh;
 }
 
 input.dateTo {
@@ -122,6 +137,44 @@ input.dateFrom {
   margin-left: 3vw;
   float: left;
   width: 10vh;
+}
+
+label.nameLabel {
+  font-size: large;
+  color: white;
+  font-weight: 700;
+  position: relative;
+  margin-top: 20px;
+  margin-left: 1vh;
+  float: left;
+}
+
+input.countryInput {
+  font-size: large;
+  color: white;
+  font-weight: 700;
+  position: relative;
+  margin-top: 20px;
+  margin-left: 1vh;
+}
+
+label.countryLabel {
+  font-size: large;
+  color: white;
+  font-weight: 700;
+  position: relative;
+  margin-top: 20px;
+  margin-left: 1vh;
+}
+
+input.nameInput {
+  font-size: large;
+  color: white;
+  font-weight: 700;
+  position: relative;
+  margin-top: 20px;
+  margin-left: 1vh;
+  float: left;
 }
 
 p.dateCreated {
