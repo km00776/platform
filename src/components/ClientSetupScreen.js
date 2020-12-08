@@ -62,7 +62,16 @@ const ClientSetup = () => {
                                     <label className={styles.archivedtickbox} for="box3">No</label>
                                     <input className={styles.archivedtickbox} type="radio" id="box1" name="box3" value="No"></input>
                                 </div>
-                        </div>
+                    </div>
+                    <div className={styles.queryContainer}>
+                        <button className={styles.searchBtn}>SEARCH</button>
+                        <button className={styles.clearBtn}>CLEAR</button>
+                    </div>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <hr/>
                 </div>
             </div>
             <Footer />
