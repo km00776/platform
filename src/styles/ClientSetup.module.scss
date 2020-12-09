@@ -23,8 +23,8 @@ div.type {
 div.ArchivedCheckbox {
   position: relative;
   color: whitesmoke;
-  top: 3px;
-  left: 120px;
+  top: 0.5vh;
+  left: 21vh;
   float: right;
 }
 
@@ -60,7 +60,7 @@ div.queryContainer {
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-  right: 150px;
+  right: 1vh;
   width: 140px;
 }
 .searchBtn:hover {
@@ -82,6 +82,7 @@ div.queryContainer {
   margin: 4px 2px;
   width: 140px;
   transition-duration: 0.4s;
+  left: -8vh;
   cursor: pointer;
 }
 .clearBtn:hover {
@@ -174,7 +175,7 @@ div.ArchivedContainer {
   position: relative;
   float: left;
   right: 300px;
-  top: 45px;
+  top: 7vh;
 }
 
 div.ActiveContainer {
@@ -193,21 +194,21 @@ input.archivedtickbox {
   position: relative;
   font-weight: 700;
   margin-right: 30px;
-  
 }
 
 p.Archived {
   font-size: large;
-  color: white;  
+  color: white;
   position: absolute;
   font-weight: 700;
-
+  left: 3.4vh;
 }
 
 div.calender {
   position: relative;
   margin-top: 23px;
-  margin-right: 39vh;
+  right: 112.5vh;
+  float: left;
 }
 
 input.dateTo {
