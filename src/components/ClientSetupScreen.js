@@ -5,6 +5,25 @@ import Footer from './Footer';
 
 
 const ClientSetup = () => {
+    const [clients, setClients] = useState([]);
+
+    const getClients = async () => {
+        try {
+            const response = await fetch("http://localhost:3001");
+            const jsonData = await response.json();
+
+            setClients(jsonData);
+        }
+        catch (err) {
+            console.error(err.message);
+        }
+    }
+
+    useEffect(() => {
+        getClients();
+    }, [])
+
+
     return (
         <div>
             <ToolBar />
@@ -26,17 +45,17 @@ const ClientSetup = () => {
                             <option value="University">University</option>
                         </select>
                     </div>
-                        <div className={styles.ActiveContainer}>
-                            <p className={styles.Active}>Active</p>
-                                <div className={styles.ActiveCheckbox}>
-                                    <label className={styles.activetickbox} for="box1">All</label>
-                                    <input className={styles.activetickbox} type="radio" id="box1" name="box1" value="All"></input>
-                                    <label className={styles.activetickbox} for="box1">Yes</label>
-                                    <input className={styles.activetickbox} type="radio" id="box1" name="box1" value="Yes"></input>
-                                    <label className={styles.activetickbox} for="box1">No</label>
-                                    <input className={styles.activetickbox} type="radio" id="box1" name="box1" value="No"></input>
-                                </div>
+                    <div className={styles.ActiveContainer}>
+                        <p className={styles.Active}>Active</p>
+                        <div className={styles.ActiveCheckbox}>
+                            <label className={styles.activetickbox} for="box1">All</label>
+                            <input className={styles.activetickbox} type="radio" id="box1" name="box1" value="All"></input>
+                            <label className={styles.activetickbox} for="box1">Yes</label>
+                            <input className={styles.activetickbox} type="radio" id="box1" name="box1" value="Yes"></input>
+                            <label className={styles.activetickbox} for="box1">No</label>
+                            <input className={styles.activetickbox} type="radio" id="box1" name="box1" value="No"></input>
                         </div>
+                    </div>
                 </div>
                 <div className={styles.rightside}>
                     <div className={styles.name}>
@@ -48,20 +67,20 @@ const ClientSetup = () => {
                         <input className={styles.countryInput} id="name" name="name"></input>
                     </div>
                     <div className={styles.calender}>
-                            <p className={styles.dateCreated}>Date Created</p>
-                                <input className={styles.dateFrom}></input>
-                                <input className={styles.dateTo}></input>
+                        <p className={styles.dateCreated}>Date Created</p>
+                        <input className={styles.dateFrom}></input>
+                        <input className={styles.dateTo}></input>
                     </div>
                     <div className={styles.ArchivedContainer}>
-                            <p className={styles.Archived}>Is Archived</p>
-                                <div className={styles.ArchivedCheckbox}>
-                                    <label className={styles.archivedtickbox} for="box1">All</label>
-                                    <input className={styles.archivedtickbox} type="radio" id="box1" name="box1" value="All"></input>
-                                    <label className={styles.archivedtickbox} for="box2">Yes</label>
-                                    <input className={styles.archivedtickbox} type="radio" id="box1" name="box2" value="Yes"></input>
-                                    <label className={styles.archivedtickbox} for="box3">No</label>
-                                    <input className={styles.archivedtickbox} type="radio" id="box1" name="box3" value="No"></input>
-                                </div>
+                        <p className={styles.Archived}>Is Archived</p>
+                        <div className={styles.ArchivedCheckbox}>
+                            <label className={styles.archivedtickbox} for="box1">All</label>
+                            <input className={styles.archivedtickbox} type="radio" id="box1" name="box1" value="All"></input>
+                            <label className={styles.archivedtickbox} for="box2">Yes</label>
+                            <input className={styles.archivedtickbox} type="radio" id="box1" name="box2" value="Yes"></input>
+                            <label className={styles.archivedtickbox} for="box3">No</label>
+                            <input className={styles.archivedtickbox} type="radio" id="box1" name="box3" value="No"></input>
+                        </div>
                     </div>
                     <div className={styles.queryContainer}>
                         <button className={styles.searchBtn}>SEARCH</button>
@@ -71,9 +90,51 @@ const ClientSetup = () => {
                     <br></br>
                     <br></br>
                     <br></br>
-                    
+
+                </div>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <hr></hr>
+                <table className={styles.clientsTable}>
+                    <thead className={styles.clientsTable}>
+                        <tr>
+                            <th className={styles.clientsTable}>Name</th>
+                            <th className={styles.clientsTable}>Country</th>
+                            <th className={styles.clientsTable}>Date Created</th>
+                            <th className={styles.clientsTable}>Active</th>
+                            <th className={styles.clientsTable}>Archive</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {clients.map(client => (
+                            <tr className={styles.clientsTable} key={client.client_id}>
+                                <td className={styles.clientsTable}><a href="">{client.name}</a></td>
+                                <td className={styles.clientsTable}><a href="www.google.co.uk">{client.country}</a></td>
+                        <td className={styles.clientsTable}><a href="www.google.co.uk">{client.datecreated}</a></td>
+                                <td className={styles.clientsTable}><a href="www.google.co.uk">{client.Active}</a></td>
+                                <td className={styles.clientsTable}><a href="www.google.co.uk">Archived</a></td>
+
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+                <br></br>
+                <div>
+                    <button className={styles.newClientBtn}>ADD NEW</button>
                 </div>
             </div>
+
             <Footer />
         </div>
 
