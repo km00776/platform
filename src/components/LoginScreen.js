@@ -11,7 +11,11 @@ const LoginScreen = () => {
                     <h1 className={styles.heading}>PASSWORD | <span className={styles.h1heading}>PLATFORM</span></h1>
                 </header>
                 <div className={styles.container}>
+                    <h2 className={styles.message}>
+                        PLEASE LOGIN
+                    </h2>
                     <div className={styles.inputBox}>
+                        
                         <div className={styles.login}>
                             <label className={styles.Label}>Login</label>
                             <br></br>
@@ -25,8 +29,8 @@ const LoginScreen = () => {
                         </div>
                     </div>
                     <div className={styles.b1}>
-                    <PersonalButton className={styles.testsRemainingButton} label="Check tests remaining"></PersonalButton>
                     <PersonalButton className={styles.loginButton} label="Login"></PersonalButton> 
+                    <PersonalButton className={styles.testsRemainingButton} label="Check tests remaining"></PersonalButton>
                 </div>
 
                     {/* <img className={styles.img} alt="hello" src="https://passwordplatform.englishlanguagetesting.co.uk/Images/Password-logo-bg.jpg" height="200"/>

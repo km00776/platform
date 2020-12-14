@@ -14,9 +14,9 @@ h2.font {
 }
 
 button.testsRemainingButton {
-  background-color: gray; /* Green */
+  background-color: lightblue; /* Green */
   border: none;
-  color: white;
+  color: #00324d;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -43,9 +43,9 @@ img {
 }
 
 button.loginButton {
-  background-color:grey; /* Green */
+  background-color:lightblue; /* Green */
   border: none;
-  color: white;
+  color: #00324d;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -61,10 +61,27 @@ button.loginButton {
   width: 100%;
 }
 
+button.loginButton:hover {
+  background-color: darkgrey;
+}
+button.testsRemainingButton:hover {
+  background-color: darkgrey;
+}
+
 div.b1 {
   position: relative;
-  top: 14vh;
+  top: 9vh;
   left: 25%;
+}
+
+h2.message {
+  text-align: center;
+  top: 3vh;
+  position: relative;
+  font-family: sans-serif;
+  font-size: 24px;
+  color: 	#00324d;
+  font-weight: 600;
 }
 
 div.inputBox {
@@ -72,7 +89,7 @@ div.inputBox {
   position: relative;
   left: 20%;
   right: 50%;
-  top: 20%;
+  top: 12%;
 }
 
 input.Input {
@@ -89,7 +106,7 @@ input.Input {
 
 label.Label {
   font-weight: 800;
-  color: black;
+  color: #00324d;
   position: relative;
   right: 20%;
   font-size: 15px;
@@ -128,12 +145,12 @@ h1.heading {
   position: relative;
   font-weight: 800;
   font-family: sans-serif;
-  color: black;
+  color: #00324d;
   font-size: 28px;
 }
 
 span.h1heading {
-  color:gray;
+  color:#00324d;
 }
 
 
