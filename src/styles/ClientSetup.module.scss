@@ -9,14 +9,13 @@ h1.heading {
 
 div.leftside {
   float: left;
-
   position: relative;
   top: 3px;
 }
 
 div.type {
   position: relative;
-  margin-top: 10px;
+  margin-top: -7vh;
   float: left;
 }
 
@@ -48,32 +47,30 @@ th.clientsTable {
   color: black;
 }
 
-
 td.clientsTable {
-border: 1px solid black;
-padding: 8px;
+  border: 1px solid black;
+  padding: 8px;
 }
 thead.clientsTable {
-border: 1px solid black;
-padding: 8px;
+  border: 1px solid black;
+  padding: 8px;
 }
 
 tr.clientsTable:nth-child(even) {
-background-color: whitesmoke;
+  background-color: whitesmoke;
 }
 
 tr.clientsTable:hover {
-background-color: #ddd;
+  background-color: #ddd;
 }
 
 thead.clientsTable {
-padding-top: 12px;
-padding-bottom: 12px;
-text-align: left;
-background-color: whitesmoke;
-color: white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: whitesmoke;
+  color: white;
 }
-
 
 label.activetickbox {
   position: relative;
@@ -91,11 +88,11 @@ input.activetickbox {
 div.queryContainer {
   position: relative;
   top: 10vh;
-  display:block;
+  display: block;
 }
 
 button.newClientBtn {
-  position: fixed;
+  position: relative;
   background-color: whitesmoke;
   border: none;
   color: #00324d;
@@ -110,7 +107,9 @@ button.newClientBtn {
   cursor: pointer;
   right: 1vh;
   width: 160px;
-  display:block;
+  display: block;
+  float: right;
+  bottom: 4vh;
 }
 
 button.newClientBtn:hover {
@@ -119,7 +118,7 @@ button.newClientBtn:hover {
 }
 
 button.searchBtn {
-  position: fixed;
+  position: relative;
   background-color: whitesmoke;
   border: none;
   color: #00324d;
@@ -132,9 +131,10 @@ button.searchBtn {
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-  right: 1vh;
+  left: 7vh;
   width: 140px;
-  display:block;
+  display: block;
+  top: 2vh;
 }
 
 button.searchBtn:hover {
@@ -156,10 +156,10 @@ button.clearBtn {
   margin: 4px 2px;
   width: 140px;
   transition-duration: 0.4s;
-  right: 4vw;
+  left: 12vw;
   cursor: pointer;
-  display:block;
-  bottom: 1.6vh;
+  display: block;
+  bottom: 2.1vh;
 }
 button.clearBtn:hover {
   background-color: yellowgreen;
@@ -192,7 +192,7 @@ div.ActiveCheckbox {
 }
 
 div.find {
-  position: fixed;
+  position: relative;
   margin-top: -2rem;
 }
 
@@ -238,6 +238,7 @@ label.typeLabel {
   color: whitesmoke;
   margin-top: 9vh;
   position: relative;
+  display: block;
 }
 
 select.typeInput {
@@ -278,9 +279,8 @@ p.Archived {
   color: white;
   position: absolute;
   font-weight: 700;
-  right: 5.5vw;
+  left: -1.5vw;
   float: left;
-  margin-left: auto;
 }
 
 div.calender {
