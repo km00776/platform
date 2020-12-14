@@ -130,11 +130,14 @@ const ClientSetup = () => {
                     </tbody>
                 </table>
                 <br></br>
-                <div>
+                <br></br>
+                <br></br>
+                <br></br>
+                
+            </div>
+            <div>
                     <button className={styles.newClientBtn}>ADD NEW</button>
                 </div>
-            </div>
-
             <Footer />
         </div>
 

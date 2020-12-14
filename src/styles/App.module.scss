@@ -14,23 +14,23 @@ h2.font {
 }
 
 button.testsRemainingButton {
-  position: absolute;
-  bottom: 0;
-  top: 10;
-  right: 20;
-  left: 0;
-  background-color: #00324d; /* Green */
+  background-color: gray; /* Green */
   border: none;
   color: white;
-  padding: 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-size: 13px;
+  margin: 1px 2px;
   cursor: pointer;
-  border-radius: 12px;
-  width: 20rem;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-family: system-ui;
+  font-weight: 500;
+  
+  right: 25%;
+  position: relative;
+  width: 100%;
 }
 
 img {
@@ -43,40 +43,60 @@ img {
 }
 
 button.loginButton {
-  position: absolute;
-  bottom: 0;
-  top: 10;
-  left: 20;
-  font-size: 25px;
-  right: 0;
-  background-color: #00324d; /* Green */
+  background-color:grey; /* Green */
   border: none;
   color: white;
-  padding: 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-size: 13px;
+  margin: 5px 2px;
   cursor: pointer;
-  width: 20rem;
-
-  border-radius: 12px;
+  padding: 12px 15px;
+  right: 25%;
+  position: relative;
+  border-radius: 4px;
+  font-family: system-ui;
+  font-weight: 500;
+  width: 100%;
 }
 
-button.loginButton:hover {
-  background-color: #3498db;
-  padding: 10px 10px 10px 10px;
-  transition-duration: 0.4s;
-  width: 14rem;
+div.b1 {
+  position: relative;
+  top: 14vh;
+  left: 25%;
 }
 
-button.testsRemainingButton:hover {
-  background-color: #3498db;
-  padding: 10px 10px 10px 10px;
-  transition-duration: 0.4s;
-  width: 14rem;
+div.inputBox {
+  margin: auto;
+  position: relative;
+  left: 20%;
+  right: 50%;
+  top: 20%;
 }
+
+input.Input {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  position: relative;
+  right: 20%;
+}
+
+label.Label {
+  font-weight: 800;
+  color: black;
+  position: relative;
+  right: 20%;
+  font-size: 15px;
+ 
+ 
+}
+
 
 div.textContainer {
   position: absolute;
@@ -89,13 +109,33 @@ div.textContainer {
 }
 
 div.container {
-  position: relative;
-  margin: 40px auto;
-  padding: 520px 600px 200px 600px;
-  width: 300px;
-  background: whitesmoke;
+ margin: auto;
+ padding: 20px;
+ left: 50%;
+ top: 50%;
+ transform: translate(-50%, -50%);
+ position: absolute;
+  width: 24%;
+  background: white;
   border-radius: 5px;
+  box-shadow: 0  0 7px grey;
+  height: 45%;
 }
+
+h1.heading {
+  text-align: center;
+  top: 17vh;
+  position: relative;
+  font-weight: 800;
+  font-family: sans-serif;
+  color: black;
+  font-size: 28px;
+}
+
+span.h1heading {
+  color:gray;
+}
+
 
 p.placeholder {
   vertical-align: 20px;

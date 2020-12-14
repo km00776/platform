@@ -9,14 +9,13 @@ h1.heading {
 
 div.leftside {
   float: left;
-
   position: relative;
   top: 3px;
 }
 
 div.type {
   position: relative;
-  margin-top: 10px;
+  margin-top: -7vh;
   float: left;
 }
 
@@ -48,32 +47,30 @@ th.clientsTable {
   color: black;
 }
 
-
 td.clientsTable {
-border: 1px solid black;
-padding: 8px;
+  border: 1px solid black;
+  padding: 8px;
 }
 thead.clientsTable {
-border: 1px solid black;
-padding: 8px;
+  border: 1px solid black;
+  padding: 8px;
 }
 
 tr.clientsTable:nth-child(even) {
-background-color: whitesmoke;
+  background-color: whitesmoke;
 }
 
 tr.clientsTable:hover {
-background-color: #ddd;
+  background-color: #ddd;
 }
 
 thead.clientsTable {
-padding-top: 12px;
-padding-bottom: 12px;
-text-align: left;
-background-color: whitesmoke;
-color: white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: whitesmoke;
+  color: white;
 }
-
 
 label.activetickbox {
   position: relative;
@@ -90,59 +87,12 @@ input.activetickbox {
 
 div.queryContainer {
   position: relative;
-  top: 10vh;
-  display:block;
+  top: 11.5vh;
+  display: block;
+  left: 12.8vw;
 }
 
 button.newClientBtn {
-  position: fixed;
-  background-color: whitesmoke;
-  border: none;
-  color: #00324d;
-  padding: 6px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  font-weight: 700;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  right: 1vh;
-  width: 160px;
-  display:block;
-}
-
-button.newClientBtn:hover {
-  background-color: yellowgreen;
-  color: white;
-}
-
-button.searchBtn {
-  position: fixed;
-  background-color: whitesmoke;
-  border: none;
-  color: #00324d;
-  padding: 6px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  font-weight: 700;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  right: 1vh;
-  width: 140px;
-  display:block;
-}
-
-button.searchBtn:hover {
-  background-color: yellowgreen;
-  color: white;
-}
-
-button.clearBtn {
   position: relative;
   background-color: whitesmoke;
   border: none;
@@ -154,12 +104,63 @@ button.clearBtn {
   font-size: 16px;
   font-weight: 700;
   margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  left: 0vw;
+  width: 160px;
+  display: block;
+  float: right;
+  bottom: 4vh;
+}
+
+button.newClientBtn:hover {
+  background-color: yellowgreen;
+  color: white;
+}
+
+button.searchBtn {
+  position: absolute;
+  background-color: whitesmoke;
+  border: none;
+  color: #00324d;
+  padding: 6px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  left: 9vh;
+  width: 140px;
+  display: block;
+  
+}
+
+button.searchBtn:hover {
+  background-color: yellowgreen;
+  color: white;
+}
+
+button.clearBtn {
+  position: absolute;
+  background-color: whitesmoke;
+  border: none;
+  color: #00324d;
+  padding: 6px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 4px 2px;
   width: 140px;
   transition-duration: 0.4s;
-  right: 4vw;
+  left: 12vw;
   cursor: pointer;
-  display:block;
-  bottom: 1.6vh;
+  display: block;
+
 }
 button.clearBtn:hover {
   background-color: yellowgreen;
@@ -192,7 +193,7 @@ div.ActiveCheckbox {
 }
 
 div.find {
-  position: fixed;
+  position: relative;
   margin-top: -2rem;
 }
 
@@ -238,6 +239,7 @@ label.typeLabel {
   color: whitesmoke;
   margin-top: 9vh;
   position: relative;
+  display: block;
 }
 
 select.typeInput {
@@ -275,12 +277,11 @@ input.archivedtickbox {
 
 p.Archived {
   font-size: large;
-  color: white;
-  position: absolute;
+  color: whitesmoke;
+  position: relative;
   font-weight: 700;
-  right: 5.5vw;
-  float: left;
-  margin-left: auto;
+  right: 10.3vw;
+  float: right;
 }
 
 div.calender {
