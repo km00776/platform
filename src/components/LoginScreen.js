@@ -12,18 +12,17 @@ const LoginScreen = () => {
                 </header>
                 <div className={styles.container}>
                     <h2 className={styles.message}>
-                        PLEASE LOGIN
+                    <i class="lock icon"></i> LOGIN
                     </h2>
                     <div className={styles.inputBox}>
-                        
                         <div className={styles.login}>
-                            <label className={styles.Label}>Login</label>
+                            <label className={styles.Label}><i class="info circle icon"></i>Login</label>
                             <br></br>
                             <input className={styles.Input}></input>
                         </div>
                         <br></br>
                         <div className={styles.remaining}>
-                            <label className={styles.Label}>Password</label>
+                            <label className={styles.Label}><i class="info circle icon"></i>Password</label>
                             <br></br>
                             <input className={styles.Input}></input>
                         </div>
@@ -33,14 +32,8 @@ const LoginScreen = () => {
                     <PersonalButton className={styles.testsRemainingButton} label="Check tests remaining"></PersonalButton>
                 </div>
 
-                    {/* <img className={styles.img} alt="hello" src="https://passwordplatform.englishlanguagetesting.co.uk/Images/Password-logo-bg.jpg" height="200"/>
-                <div className={styles.intro}><h2 className={styles.font}>Please Login</h2></div>
-                <div className={styles.textContainer}>
-                    <p className={styles.placeholder}>Login:<input placeholder='Login' className={styles.loginInput}></input></p>
-                    <p className={styles.placeholder}>Password:<input placeholder='Password' type='password' className={styles.passwordInput}></input></p> 
-                </div>
-                <PersonalButton className={styles.testsRemainingButton} label="Check tests remaining"></PersonalButton>
-                <PersonalButton className={styles.loginButton} label="Login"></PersonalButton> */}
+                    <img className={styles.img} alt="hello" src="https://cdn.sanity.io/images/0b678gck/buoy-public-site/24f1ea58017f046d2dacdf37eff31e97830efd32-2000x1400.png" height="140"/>
+                
                 </div>
             </div>
         </Fragment>
