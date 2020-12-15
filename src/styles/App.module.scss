@@ -27,7 +27,7 @@ button.testsRemainingButton {
   border-radius: 4px;
   font-family: system-ui;
   font-weight: 500;
-  
+
   right: 25%;
   position: relative;
   width: 100%;
@@ -35,15 +35,15 @@ button.testsRemainingButton {
 
 img {
   position: absolute;
-  top: 0rem;
+  top: 75%;
   bottom: 40;
   right: 0;
-  left: 10;
+  left: 25%;
   mix-blend-mode: multiply;
 }
 
 button.loginButton {
-  background-color:lightblue; /* Green */
+  background-color: lightblue; /* Green */
   border: none;
   color: #00324d;
   text-align: center;
@@ -70,7 +70,7 @@ button.testsRemainingButton:hover {
 
 div.b1 {
   position: relative;
-  top: 9vh;
+  top: 12%;
   left: 25%;
 }
 
@@ -80,7 +80,7 @@ h2.message {
   position: relative;
   font-family: sans-serif;
   font-size: 24px;
-  color: 	#00324d;
+  color: #00324d;
   font-weight: 600;
 }
 
@@ -89,7 +89,7 @@ div.inputBox {
   position: relative;
   left: 20%;
   right: 50%;
-  top: 12%;
+  top: 10%;
 }
 
 input.Input {
@@ -104,44 +104,51 @@ input.Input {
   right: 20%;
 }
 
+p.terms {
+  font-size: 11px;
+  color: black;
+  text-align: center;
+  position: relative;
+  float: left;
+}
+
+
 label.Label {
   font-weight: 800;
   color: #00324d;
   position: relative;
   right: 20%;
   font-size: 15px;
- 
- 
 }
 
-
 div.textContainer {
-  position: absolute;
+  position: relative;
   text-align: center;
   right: 20;
   left: 0;
+  display: inline-block;
   top: 18rem;
   margin: 30px auto;
   padding: 15px 15px 20px 30px;
 }
 
 div.container {
- margin: auto;
- padding: 20px;
- left: 50%;
- top: 50%;
- transform: translate(-50%, -50%);
- position: absolute;
-  width: 24%;
+  margin: auto;
+  padding: 20px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 30%;
   background: white;
   border-radius: 5px;
-  box-shadow: 0  0 7px grey;
-  height: 45%;
+  box-shadow: 1px 1px 4px 0px grey;
+  height: 60%;
 }
 
 h1.heading {
   text-align: center;
-  top: 17vh;
+  margin-top: 90px;
   position: relative;
   font-weight: 800;
   font-family: sans-serif;
@@ -150,9 +157,8 @@ h1.heading {
 }
 
 span.h1heading {
-  color:#00324d;
+  color: darkcyan;
 }
-
 
 p.placeholder {
   vertical-align: 20px;
@@ -175,6 +181,18 @@ input.loginInput {
 input.loginInput:focus {
   background-color: #00324d;
   color: white;
+}
+
+div.termsContainer {
+  position: relative;
+  float: left;
+  
+
+  padding: 10px 20px 100px 90%;
+  background-color:rgba(244,240,236, 0.9);
+
+  border-radius: 5px;
+ 
 }
 
 input.passwordInput {
