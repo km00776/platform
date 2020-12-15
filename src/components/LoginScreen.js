@@ -11,9 +11,9 @@ const LoginScreen = () => {
                     <h1 className={styles.heading}>PASSWORD | <span className={styles.h1heading}>PLATFORM</span></h1>
                 </header>
                 <div className={styles.container}>
-                    <h2 className={styles.message}>
+                    {/* <h2 className={styles.message}>
                         PLEASE LOGIN
-                    </h2>
+                    </h2> */}
                     <div className={styles.inputBox}>
                         
                         <div className={styles.login}>
