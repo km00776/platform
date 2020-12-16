@@ -39,7 +39,7 @@ const LoginScreen = () => {
                 
                 </div>
             </div>
-            <Contact />
+            <PersonalButton className={styles.support} label='GET IN TOUCH' />
         </Fragment>
     );
 
@@ -48,18 +48,12 @@ const LoginScreen = () => {
 const Terms = () => {
     return(
      <div className={styles.termsContainer}><span className={styles.info}><i class="exclamation circle icon"></i>Terms & Conditions</span>
-<br></br>
+        <br></br>
          Any test taker that fails to agree to abide by these terms and conditions will not be allowed to take a Password test and subsequently should they fail to abide by them may not receive a Password test result from English Language Testing Ltd (ELT), may have their result cancelled, may be reported to regulatory authorities globally and may be liable to legal action and/ or prosecution.
     </div>)
 }
 
-const Contact = () => {
-    return (
-    <div className={styles.chatContainer}>
 
-    </div>
-    );
-}
 
 
 

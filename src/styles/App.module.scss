@@ -62,10 +62,10 @@ button.loginButton {
 }
 
 button.loginButton:hover {
-  background-color: darkgrey;
+  background-color: lightseagreen;
 }
 button.testsRemainingButton:hover {
-  background-color: darkgrey;
+  background-color: lightseagreen;
 }
 
 div.b1 {
@@ -130,6 +130,7 @@ div.termsContainer {
   color: rgba(225, 243, 255, 0.6);
   margin: 10% auto;
   padding: 3px 10px 15px 3px;
+  overflow: hidden;
 }
 
 div.container {
@@ -144,6 +145,31 @@ div.container {
   border-radius: 5px;
   box-shadow: 1px 1px 4px 0px grey;
   height: 70%;
+  overflow: hidden;
+}
+
+button.support {
+  background-color: lightseagreen; /* Green */
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  padding: 14px 40px;
+  border-radius: 15px 15px 10px 10px;
+  margin-top: 45.5%;
+  position: fixed;
+  font-weight: 600;
+  float: inline-end;
+  margin-left: 86%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button.support:hover {
+  background-color: lightsteelblue;
 }
 
 h1.heading {
@@ -157,7 +183,7 @@ h1.heading {
 }
 
 span.h1heading {
-  color: darkcyan;
+  color: lightseagreen;
 }
 
 p.placeholder {
