@@ -32,7 +32,7 @@ const LoginScreen = () => {
                     <PersonalButton className={styles.testsRemainingButton} label="Check tests remaining"></PersonalButton>
                 </div>
 
-                    <img className={styles.img} alt="hello" src="https://cdn.sanity.io/images/0b678gck/buoy-public-site/24f1ea58017f046d2dacdf37eff31e97830efd32-2000x1400.png" height="140"/>
+                    
                 
                 </div>
             </div>
