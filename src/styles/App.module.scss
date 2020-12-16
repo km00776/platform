@@ -33,6 +33,27 @@ button.testsRemainingButton {
   width: 100%;
 }
 
+input.termsBox {
+  position: relative;
+  top: 2px;
+  right: 5px;
+  font-size: 15px;
+}
+
+span.info {
+  bottom: 10px;
+  position: relative;
+  color: red;
+}
+
+a.link {
+  color: red;
+}
+
+p {
+  color: grey;
+}
+
 img {
   position: absolute;
   top: 75%;
@@ -126,10 +147,10 @@ div.termsContainer {
   right: 20;
   left: 0;
   display: inline-block;
-  bottom: 9%;
+  bottom: 10%;
   color: rgba(225, 243, 255, 0.6);
   margin: 10% auto;
-  padding: 3px 10px 15px 3px;
+  padding: 3px 25px 25px 3px;
   overflow: hidden;
 }
 
@@ -215,18 +236,19 @@ input.loginInput:focus {
 div.termsContainer {
   position: relative;
   color: Black;
-  text-align: justify;
-  padding: 0.3% 5% 5%;
+  text-align: center;
+  padding: 0.3% 8% 5%;
   background-color: rgba(225, 243, 255, 0.6);
   border-radius: 15px;
-  bottom: 2%;
+  bottom: 1%;
   font-size: 11px;
 }
 span.info {
   position: relative;
-  font-weight: 700;
+  font-weight: 900;
   text-align: center;
   font-size: 11px;
+  top: 3px;
 }
 
 input.passwordInput {

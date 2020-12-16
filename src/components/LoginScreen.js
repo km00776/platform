@@ -47,9 +47,17 @@ const LoginScreen = () => {
  
 const Terms = () => {
     return(
-     <div className={styles.termsContainer}><span className={styles.info}><i class="exclamation circle icon"></i>Terms & Conditions</span>
+     <div className={styles.termsContainer}>
+         <span className={styles.info}>
+             <input className={styles.termsBox} type="checkbox" id="box1" name="box1" value="All">
+                 </input>
+                 <i class="exclamation circle icon"></i>
+                <a  className={styles.link} href="https://alpha.englishlanguagetesting.co.uk/terms-and-conditions-for-a-password-test/"> English Language Testing Ltd’s terms and conditions for taking a Password test</a>
+
+</span>
         <br></br>
-         Any test taker that fails to agree to abide by these terms and conditions will not be allowed to take a Password test and subsequently should they fail to abide by them may not receive a Password test result from English Language Testing Ltd (ELT), may have their result cancelled, may be reported to regulatory authorities globally and may be liable to legal action and/ or prosecution.
+        <br></br>
+         <p>Any test taker that fails to agree to abide by these terms and conditions will not be allowed to take a Password test and subsequently should they fail to abide by them may not receive a Password test result from English Language Testing Ltd (ELT), may have their result cancelled, may be reported to regulatory authorities globally and may be liable to legal action and/ or prosecution.</p>
     </div>)
 }
 
