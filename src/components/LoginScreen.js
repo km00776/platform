@@ -21,10 +21,10 @@ const LoginScreen = () => {
                             <input className={styles.Input}></input>
                         </div>
                         <br></br>
-                        <div className={styles.remaining}>
-                            <label className={styles.Label}><i class="info circle icon"></i>Password</label>
+                        <div className={styles.Password}>
+                            <label className={styles.Label}><i class="eye icon"></i>Password</label>
                             <br></br>
-                            <input className={styles.Input}></input>
+                            <input type="password" className={styles.Input}></input>
                         </div>
                     </div>
                     <div className={styles.b1}>
@@ -36,14 +36,9 @@ const LoginScreen = () => {
                     <br></br>
                     <br></br>
                     <Terms />
-                
                 </div>
             </div>
-            <button className={styles.support}>
-                hi
-                <i class="envelope icon"></i>
-                
-            </button>
+           <Support />
         </Fragment>
         
     );
@@ -57,7 +52,7 @@ const Terms = () => {
              <input className={styles.termsBox} type="checkbox" id="box1" name="box1" value="All">
                  </input>
                  <i class="exclamation circle icon"></i>
-                <a  className={styles.link} href="https://alpha.englishlanguagetesting.co.uk/terms-and-conditions-for-a-password-test/"> English Language Testing Ltd’s terms and conditions for taking a Password test</a>
+                <a  className={styles.link} href="https://alpha.englishlanguagetesting.co.uk/terms-and-conditions-for-a-password-test/">English Language Testing Ltd’s terms and conditions for taking a Password test</a>
 
 </span>
         <br></br>
@@ -66,7 +61,14 @@ const Terms = () => {
     </div>)
 }
 
-
+const Support = () => {
+    return (<div>
+         <button className={styles.support}> 
+                <i className={styles.icon} class="bullhorn icon"></i>
+                    Support
+            </button>
+    </div>)
+}
 
 
 
