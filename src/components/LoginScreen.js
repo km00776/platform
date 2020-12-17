@@ -39,8 +39,13 @@ const LoginScreen = () => {
                 
                 </div>
             </div>
-            <PersonalButton className={styles.support} label='GET IN TOUCH' />
+            <button className={styles.support}>
+                hi
+                <i class="envelope icon"></i>
+                
+            </button>
         </Fragment>
+        
     );
 
 }

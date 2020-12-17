@@ -149,23 +149,22 @@ div.container {
 }
 
 button.support {
-  background-color: lightseagreen; /* Green */
+  background-color: lightskyblue; /* Green */
   border: none;
-  color: black;
-  text-align: center;
+  color: red;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+  font-size: 8px;
   margin: 4px 2px;
   cursor: pointer;
-  padding: 14px 40px;
+  padding: 20px 100% 50px;
   border-radius: 15px 15px 10px 10px;
   margin-top: 45.5%;
-  position: fixed;
-  font-weight: 600;
-  float: inline-end;
+  position: relative;
+  font-weight: 400;
+  text-align: left;
   margin-left: 86%;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 button.support:hover {
