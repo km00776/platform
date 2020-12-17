@@ -22,7 +22,7 @@ const LoginScreen = () => {
                         </div>
                         <br></br>
                         <div className={styles.Password}>
-                            <label className={styles.Label}><i class="eye icon"></i>Password</label>
+                            <label className={styles.Label}><i class="info circle icon"></i>Password</label>
                             <br></br>
                             <input type="password" className={styles.Input}></input>
                         </div>
@@ -48,6 +48,7 @@ const LoginScreen = () => {
 const Terms = () => {
     return(
      <div className={styles.termsContainer}>
+         <br></br>
          <span className={styles.info}>
              <input className={styles.termsBox} type="checkbox" id="box1" name="box1" value="All">
                  </input>

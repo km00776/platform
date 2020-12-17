@@ -40,7 +40,7 @@ input.termsBox {
 }
 
 span.info {
-  bottom: 10px;
+  top: 3%;
   position: relative;
   color: red;
 }
@@ -147,30 +147,30 @@ div.container {
   top: 55%;
   transform: translate(-50%, -50%);
   position: fixed;
-  width: 30%;
+  width: 25%;
   background: white;
   border-radius: 5px;
   box-shadow: 1px 1px 4px 0px grey;
-  height: 70%;
+  height: 65%;
   overflow: hidden;
 }
 
 button.support {
   background-color: lightseagreen; /* Green */
   border: none;
-  color: whitesmoke;
+  color: #00324d;
   text-decoration: none;
   font-size: 20px;
   text-align: center;
   cursor: pointer;
-  box-shadow: 9px 12px 12px 9px grey;
+  box-shadow: 1px 3px 2px 1px grey;
   padding: 1% 4% 1% 4%;
   margin-top: 47%;
   position: fixed;
-  border-radius: 20px 10px 8px 5px;
+  border-radius: 25px 25px 2px 2px;
   font-weight: 400;
   text-align: left;
-  margin-left: 86%;
+  margin-left: 85%;
   font-weight: 500;
   bottom: 0%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -194,7 +194,7 @@ h1.heading {
   font-family: sans-serif;
   color: #00324d;
   font-size: 28px;
-  margin-left: 38.5%;
+  margin-left: 40.5%;
 }
 
 span.h1heading {
@@ -234,7 +234,7 @@ div.termsContainer {
   padding: 0.3% 8% 5%;
   background-color: rgba(225, 243, 255, 0.6);
   border-radius: 15px;
-  bottom: 2%;
+  bottom: 8%;
   left: 4%;
   right: 3%;
   font-size: 11px;
