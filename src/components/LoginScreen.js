@@ -12,7 +12,7 @@ const LoginScreen = () => {
                     
                 </header>
                 <div className={styles.container}>
-                <img className={styles.image} src="https://i.imgur.com/KXK11hV.png" height="100"></img>
+                {/* <img className={styles.image} src="https://i.imgur.com/KXK11hV.png" height="100"></img> */}
                     <h2 className={styles.message}>
                     <i class="lock icon"></i> LOGIN
                     </h2>
