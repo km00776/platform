@@ -147,11 +147,11 @@ div.container {
   top: 55%;
   transform: translate(-50%, -50%);
   position: fixed;
-  width: 25%;
+  width: 30%;
   background: white;
   border-radius: 5px;
   box-shadow: 1px 1px 4px 0px grey;
-  height: 65%;
+  height: 70%;
   overflow: hidden;
 }
 
@@ -188,13 +188,19 @@ i.icon {
 
 h1.heading {
   text-align: center;
-  margin-top: 90px;
+  margin-top: 5%;
   position: fixed;
   font-weight: 800;
   font-family: sans-serif;
   color: #00324d;
   font-size: 28px;
-  margin-left: 40.5%;
+  margin-left: 38.5%;
+}
+
+img.image {
+  position: fixed;
+  top: 0.4%;
+  left: 87%;
 }
 
 span.h1heading {
@@ -231,13 +237,14 @@ div.termsContainer {
   position: fixed;
   color: Black;
   text-align: justify;
-  padding: 0.3% 8% 5%;
+  padding: 0.1% 6% 5%;
   background-color: rgba(225, 243, 255, 0.6);
   border-radius: 15px;
-  bottom: 8%;
+  bottom: 1%;
   left: 4%;
   right: 3%;
   font-size: 11px;
+  overflow: hidden;
 }
 span.info {
   position: relative;

@@ -9,8 +9,10 @@ const LoginScreen = () => {
             <div>
                 <header>
                     <h1 className={styles.heading}>PASSWORD | <span className={styles.h1heading}>PLATFORM</span></h1>
+                    
                 </header>
                 <div className={styles.container}>
+                <img className={styles.image} src="https://i.imgur.com/KXK11hV.png" height="100"></img>
                     <h2 className={styles.message}>
                     <i class="lock icon"></i> LOGIN
                     </h2>
@@ -48,7 +50,7 @@ const LoginScreen = () => {
 const Terms = () => {
     return(
      <div className={styles.termsContainer}>
-         <br></br>
+ 
          <span className={styles.info}>
              <input className={styles.termsBox} type="checkbox" id="box1" name="box1" value="All">
                  </input>
