@@ -68,7 +68,7 @@ const Support = () => {
     return (<div>
          <button className={styles.support}> 
                 <i className={styles.icon} class="bullhorn icon"></i>
-                    Support
+                    <p className={styles.supportText}>Support</p>
             </button>
     </div>)
 }

@@ -147,7 +147,7 @@ div.container {
   top: 55%;
   transform: translate(-50%, -50%);
   position: fixed;
-  width: 30%;
+  width: 450px;
   background: white;
   border-radius: 5px;
   box-shadow: 1px 1px 4px 0px grey;
@@ -161,11 +161,11 @@ button.support {
   color: #00324d;
   text-decoration: none;
   font-size: 20px;
-  text-align: center;
+  text-align: justify;
   cursor: pointer;
   box-shadow: 1px 3px 2px 1px grey;
   padding: 1% 4% 1% 4%;
-  margin-top: 47%;
+  margin-top: 49%;
   position: fixed;
   border-radius: 25px 25px 2px 2px;
   font-weight: 400;
@@ -173,6 +173,7 @@ button.support {
   margin-left: 85%;
   font-weight: 500;
   bottom: 0%;
+  height: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -188,13 +189,13 @@ i.icon {
 
 h1.heading {
   text-align: center;
-  margin-top: 5%;
+  margin-top: 7%;
   position: fixed;
   font-weight: 800;
   font-family: sans-serif;
   color: #00324d;
   font-size: 28px;
-  margin-left: 38.5%;
+  margin-left: 40.5%;
 }
 
 img.image {
