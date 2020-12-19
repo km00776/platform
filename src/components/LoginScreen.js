@@ -6,9 +6,12 @@ import { useState, useEffect } from 'react';
 
 
 const LoginScreen = () => {
+    const [container, setContainer] = useState(false);
 
+    function handleClick(){
+        setContainer(true);
+     }
 
-   
     return (
         <Fragment>
             <div>
@@ -45,7 +48,9 @@ const LoginScreen = () => {
                     <Terms />
                 </div>
             </div>
-           <SupportButton  />
+           <button onClick={handleClick}>
+               
+           </button>
             
         </Fragment>
 
@@ -85,11 +90,12 @@ const Terms = () => {
 }
 
 const SupportButton = () => {
-    return (<div>
-        <button id="button" className={styles.support}>
-            <p className={styles.supportText}>Support</p>
+    return (
+       <button>
+            <div className={styles.support}>
+            </div>
         </button>
-    </div>);
+   );
 }
 
 const SupportForm = () => {
