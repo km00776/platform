@@ -155,10 +155,13 @@ div.container {
   overflow: hidden;
 }
 
+icon.bullhorn icon {
+  color: red;
+}
+
 button.support {
-  background-color: lightseagreen; /* Green */
+  background-color: #ed1c24; /* Green */
   border: none;
-  color: #00324d;
   text-decoration: none;
   font-size: 20px;
   text-align: justify;
@@ -172,29 +175,59 @@ button.support {
   text-align: left;
   margin-left: 85%;
   font-weight: 500;
-  bottom: 0%;
+  bottom: 0.2%;
   height: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 button.support:hover {
-  background-color: lightskyblue;
+  background-color: lightcoral; 
 }
 
-i.icon {
-  position: absolute;
-  margin-left: 3px;
-  float: left;
+div.formContainer {
+  background-color: orange; /* Green */
+  border: none;
+  text-decoration: none;
+  font-size: 20px;
+  text-align: justify;
+  cursor: pointer;
+  box-shadow: 1px 3px 2px 1px grey;
+  padding: 1% 4% 1% 4%;
+  margin-top: 49%;
+  position: fixed;
+  border-radius: 25px 25px 2px 2px;
+  font-weight: 400;
+  text-align: left;
+  margin-left: 85%;
+  font-weight: 500;
+  bottom: 10%;
+ 
+  height: 100px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+i.fa fa-ellipsis-h {
+   
 }
 
 h1.heading {
   text-align: center;
-  margin-top: 60px;
-  position: relative;
+  margin-top: 150px;
+  position: fixed;
   font-weight: 800;
   font-family: sans-serif;
   color: #00324d;
   font-size: 28px;
+  margin-left: 779px;
+}
+
+p.supportText {
+  display: inline;
+  position: relative;
+  bottom: 9px;
+  color: white;
+  font-weight: 800;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 img.image {
@@ -218,8 +251,7 @@ p.placeholder {
   float: left;
 }
 
-div.chatContainer {
-}
+
 
 input.loginInput {
   width: 600px;
