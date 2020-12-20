@@ -3,21 +3,29 @@ import '../index.scss';
 import styles from '../styles/App.module.scss';
 import { Fragment } from 'react';
 import { useState, useEffect } from 'react';
+import ContactForm from './ContactForm';
 
 
 const LoginScreen = () => {
-    const [container, setContainer] = useState(false);
+    const [visiblility, setVisiblility] = useState(false);
 
-    function handleClick(){
-        setContainer(true);
-     }
+    function handleClick(visiblility) {
+    if(visiblility === false) {
+        setVisiblility(true);
+         console.log("hello");
+    }
+    else {
+        setVisiblility(false);
+    }
+         
+    }
+    
 
     return (
         <Fragment>
             <div>
                 <header>
                     <h1 className={styles.heading}>PASSWORD | <span className={styles.h1heading}>PLATFORM</span></h1>
-
                 </header>
                 <div className={styles.container}>
                     {/* <img className={styles.image} src="https://i.imgur.com/KXK11hV.png" height="100"></img> */}
@@ -48,9 +56,8 @@ const LoginScreen = () => {
                     <Terms />
                 </div>
             </div>
-           <button onClick={handleClick}>
-               
-           </button>
+            
+           <ContactForm onClick={() => handleClick(visiblility)} visiblility = {visiblility} />
             
         </Fragment>
 
@@ -59,20 +66,7 @@ const LoginScreen = () => {
 
     }
 
-    function isButtonClicked(e) {
-        e.preventDefault();
 
-        if(document.getElementById('button').clicked === true) {
-            return(
-            true,
-            <SupportForm />
-
-            );
-        }
-        else {
-            return(false, <SupportButton />);
-        }
-    }
 
 const Terms = () => {
     return (
@@ -89,21 +83,8 @@ const Terms = () => {
         </div>)
 }
 
-const SupportButton = () => {
-    return (
-       <button>
-            <div className={styles.support}>
-            </div>
-        </button>
-   );
-}
+   
 
-const SupportForm = () => {
-    return (
-    <div className={styles.formContainer}>
-        Testing
-    </div>)
-}
 
 
 

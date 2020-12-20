@@ -159,12 +159,12 @@ icon.bullhorn icon {
   color: red;
 }
 
-div.support {
+button.support {
   background-color: #ed1c24; /* Green */
   border: none;
   text-decoration: none;
   font-size: 20px;
-  text-align: justify;
+  text-align: center;
   cursor: pointer;
   box-shadow: 1px 3px 2px 1px grey;
   padding: 1% 4% 1% 4%;
@@ -173,23 +173,24 @@ div.support {
   border-radius: 25px 25px 2px 2px;
   font-weight: 400;
   text-align: left;
-  margin-left: 85%;
+  margin-left: 80%;
   font-weight: 500;
   bottom: 0.2%;
-  height: 20px;
+  height: 40px;
+  width: 250px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-div.support:hover {
-  background-color: lightcoral; 
+button.support:hover {
+  background-color: lightcoral;
 }
 
 div.formContainer {
-  background-color: orange; /* Green */
+  background-color: white; /* Green */
   border: none;
   text-decoration: none;
   font-size: 20px;
-  text-align: justify;
+  text-align: center;
   cursor: pointer;
   box-shadow: 1px 3px 2px 1px grey;
   padding: 1% 4% 1% 4%;
@@ -198,36 +199,49 @@ div.formContainer {
   border-radius: 25px 25px 2px 2px;
   font-weight: 400;
   text-align: left;
-  margin-left: 85%;
+  margin-left: 75%;
   font-weight: 500;
   bottom: 10%;
- 
-  height: 100px;
+  width: 300px;
+  height: 500px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+div.headingFormContainer {
+  width: 302px;
+  position: fixed;
+  background-color: royalblue;
+  height: 80px;
+  bottom: 500px;
+  padding: 1% 4% 1% 4%;
+  border-radius: 25px 25px 2px 2px;
+  right: 54px;
+  text-align: center;
+}
+
 i.fa fa-ellipsis-h {
-   
 }
 
 h1.heading {
   text-align: center;
-  margin-top: 150px;
-  position: fixed;
+  margin-top: 60px;
+  position: relative;
   font-weight: 800;
   font-family: sans-serif;
   color: #00324d;
   font-size: 28px;
-  margin-left: 779px;
+  margin-left: 10px;
 }
 
 p.supportText {
   display: inline;
   position: relative;
-  bottom: 9px;
+  bottom: 7px;
   color: white;
   font-weight: 800;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  left: 20px;
 }
 
 img.image {
@@ -250,8 +264,6 @@ p.placeholder {
   margin: 0 0 1em 0;
   float: left;
 }
-
-
 
 input.loginInput {
   width: 600px;
