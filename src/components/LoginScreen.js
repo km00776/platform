@@ -16,6 +16,7 @@ const LoginScreen = () => {
     }
     else {
         setVisiblility(false);
+        console.log("bye");
     }
          
     }

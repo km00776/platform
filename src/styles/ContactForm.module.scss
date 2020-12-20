@@ -1,12 +1,12 @@
 p.supportText {
   display: inline;
   position: relative;
-  bottom: 7px;
-  color: white;
-  font-weight: 800;
+  bottom: 10px;
+  color: #00324d;
+  font-weight: 600;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
-  left: 20px;
+  
 }
 
 button.support {
@@ -51,13 +51,13 @@ div.formContainer {
   text-align: left;
   margin-left: 75%;
   font-weight: 500;
-  bottom: 10%;
+  bottom: 0.2%;
   width: 261px;
   height: 500px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  transition: none 0s, ease 0s !important;
+  transition: none 0s, ease 4s !important;
   transition-property: none !important;
-  transition-duration: 0s !important;
+  transition-duration: 2s !important;
   transition-timing-function: ease !important;
   transition-delay: 0s !important;
   box-sizing: border-box;
@@ -65,12 +65,18 @@ div.formContainer {
 
 div.headingFormContainer {
   width: 261px;
-  position: fixed;
+  position: relative;
   background-color: lightblue;
   height: 80px;
-  bottom: 500px;
+  bottom: 20px;
   padding: 1% 4% 1% 4%;
   border-radius: 25px 25px 2px 2px;
-  right: 95px;
+  right: 76px;
   text-align: center;
+}
+
+h2.contact  {
+  top: 20px;
+  position:relative;
+  color: #00324d;
 }

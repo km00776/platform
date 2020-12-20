@@ -159,78 +159,17 @@ icon.bullhorn icon {
   color: red;
 }
 
-button.support {
-  background-color: #ed1c24; /* Green */
-  border: none;
-  text-decoration: none;
-  font-size: 20px;
-  text-align: center;
-  cursor: pointer;
-  box-shadow: 1px 3px 2px 1px grey;
-  padding: 1% 4% 1% 4%;
-  margin-top: 49%;
-  position: fixed;
-  border-radius: 25px 25px 2px 2px;
-  font-weight: 400;
-  text-align: left;
-  margin-left: 80%;
-  font-weight: 500;
-  bottom: 0.2%;
-  height: 40px;
-  width: 250px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
 
-button.support:hover {
-  background-color: lightcoral;
-}
-
-div.formContainer {
-  background-color: white; /* Green */
-  border: none;
-  text-decoration: none;
-  font-size: 20px;
-  text-align: center;
-  cursor: pointer;
-  box-shadow: 1px 3px 2px 1px grey;
-  padding: 1% 4% 1% 4%;
-  margin-top: 49%;
-  position: fixed;
-  border-radius: 25px 25px 2px 2px;
-  font-weight: 400;
-  text-align: left;
-  margin-left: 75%;
-  font-weight: 500;
-  bottom: 10%;
-  width: 300px;
-  height: 500px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-div.headingFormContainer {
-  width: 302px;
-  position: fixed;
-  background-color: royalblue;
-  height: 80px;
-  bottom: 500px;
-  padding: 1% 4% 1% 4%;
-  border-radius: 25px 25px 2px 2px;
-  right: 54px;
-  text-align: center;
-}
-
-i.fa fa-ellipsis-h {
-}
 
 h1.heading {
   text-align: center;
-  margin-top: 60px;
-  position: relative;
+  margin-top: 8%;
+  position: fixed;
   font-weight: 800;
   font-family: sans-serif;
   color: #00324d;
   font-size: 28px;
-  margin-left: 10px;
+  margin-left: 40.5%;
 }
 
 p.supportText {
