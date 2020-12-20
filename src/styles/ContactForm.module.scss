@@ -37,7 +37,8 @@ button.support:hover {
 
 div.formContainer {
   background-color: white; /* Green */
-  border: none;
+  
+  border-top: 200px gold;
   text-decoration: none;
   font-size: 20px;
   text-align: center;
@@ -65,13 +66,13 @@ div.formContainer {
 
 div.headingFormContainer {
   width: 261px;
-  position: fixed;
+  position: relative;
   background-color: lightblue;
   height: 80px;
   bottom: 20px;
   padding: 1% 4% 1% 4%;
   border-radius: 25px 25px 2px 2px;
-  right: 77px;
+  right: 72%;
   text-align: center;
   box-shadow: 2px 2px 2px 1px grey;
 }
