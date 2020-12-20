@@ -65,14 +65,15 @@ div.formContainer {
 
 div.headingFormContainer {
   width: 261px;
-  position: relative;
+  position: fixed;
   background-color: lightblue;
   height: 80px;
   bottom: 20px;
   padding: 1% 4% 1% 4%;
   border-radius: 25px 25px 2px 2px;
-  right: 76px;
+  right: 77px;
   text-align: center;
+  box-shadow: 2px 2px 2px 1px grey;
 }
 
 h2.contact  {
