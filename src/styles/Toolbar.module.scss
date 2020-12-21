@@ -1,8 +1,8 @@
 @media screen and (max-width: 1920px) {
   .t {
     position: relative;
-    background-color: whitesmoke;
-    color: #00324d;
+    background-color: black;
+    color: whitesmoke;
     top: 10%;
     padding: 10px 10px;
     margin: 2px;
@@ -17,7 +17,7 @@
     /* Green */
   }
   .t:hover {
-    background-color: #008cba;
+    background-color: white;
     color: white;
     transition-duration: 0.4s;
   }
@@ -26,7 +26,7 @@
 @media screen and (max-width: 1440px) {
   .t {
     position: relative;
-    background-color: whitesmoke;
+    background-color: #00FA9A;
     color: #00324d;
     top: 10%;
     padding: 10px 6px;

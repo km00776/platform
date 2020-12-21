@@ -29,7 +29,7 @@ const ClientSetup = () => {
             <ToolBar />
             <header>
                 <h1 className={styles.heading}>Clients</h1>
-                <img className={styles.passwordLogo} alt="hello" src="https://passwordplatform.englishlanguagetesting.co.uk/Images/Password-logo-bg.jpg" height="100" />
+                {/* <img className={styles.passwordLogo} alt="hello" src="https://passwordplatform.englishlanguagetesting.co.uk/Images/Password-logo-bg.jpg" height="100" /> */}
             </header>
             <div className={styles.container}>
                 <div className={styles.leftside}>
