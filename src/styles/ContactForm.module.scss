@@ -1,12 +1,40 @@
 p.supportText {
-  display: inline;
   position: relative;
   bottom: 10px;
   color: #00324d;
   font-weight: 600;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
-  
+}
+
+div.formInput {
+  position: relative;
+  right: 10px;
+}
+
+label.Label {
+  font-weight: 800;
+  color: #00324d;
+  position: relative;
+  right: 20%;
+  font-size: 15px;
+  display: flex;
+  width: 140px;
+  text-align: right;
+  flex-basis: 100px;
+}
+
+input.Input {
+  width: 100%;
+  flex-basis: 100px;
+  margin: 8px 0;
+  display: flex;
+  flex-wrap: 100px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  float: left;
 }
 
 button.support {
@@ -65,19 +93,20 @@ div.formContainer {
 
 div.headingFormContainer {
   width: 261px;
-  position: fixed;
+  position: relative;
   background-color: lightblue;
   height: 80px;
   bottom: 20px;
   padding: 1% 4% 1% 4%;
   border-radius: 25px 25px 2px 2px;
-  right: 77px;
+
+  right: 58px;
   text-align: center;
   box-shadow: 2px 2px 2px 1px grey;
 }
 
-h2.contact  {
+h2.contact {
   top: 20px;
-  position:relative;
+  position: relative;
   color: #00324d;
 }
