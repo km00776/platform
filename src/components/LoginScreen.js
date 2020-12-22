@@ -27,9 +27,10 @@ const LoginScreen = () => {
             <div>
                 <header>
                     <h1 className={styles.heading}>PASSWORD | <span className={styles.h1heading}>PLATFORM</span></h1>
+                    <img className={styles.image} alt="nothing" src="https://www.englishlanguagetesting.co.uk/wp-content/uploads/2018/04/Password_CMYKxxxhdpi.png" height="200"></img>
                 </header>
                 <div className={styles.container}>
-                    {/* <img className={styles.image} src="https://i.imgur.com/KXK11hV.png" height="100"></img> */}
+                    
                     <h2 className={styles.message}>
                         <i class="lock icon"></i> LOGIN
                     </h2>
