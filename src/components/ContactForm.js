@@ -24,7 +24,7 @@ return (
     <div className={styles.headingFormContainer}>
        <h2 className={styles.contact}><i onClick={props.onClick}class="chevron circle down icon"></i>Contact</h2> 
     </div>
-    <div>
+    {/* <div>
         <i class="envelope icon"></i>
         <div className={styles.formInput}>
                     <div className={styles.name}>
@@ -54,7 +54,7 @@ return (
         </div>
             
         
-    </div>
+    </div> */}
 </div>)
 
                 }

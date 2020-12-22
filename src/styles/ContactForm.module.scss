@@ -1,7 +1,7 @@
 p.supportText {
   position: relative;
   bottom: 10px;
-  color: #00324d;
+  color: black;
   font-weight: 600;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
@@ -14,7 +14,7 @@ div.formInput {
 
 label.Label {
   font-weight: 800;
-  color: #00324d;
+  color: Black;
   position: relative;
   right: 20%;
   font-size: 15px;
@@ -38,7 +38,7 @@ input.Input {
 }
 
 button.support {
-  background-color: lightblue; /* Green */
+  background-color: lightgreen; /* Green */
   border: none;
   text-decoration: none;
   font-size: 20px;
@@ -55,17 +55,16 @@ button.support {
   font-weight: 500;
   bottom: 0.2%;
   height: 40px;
-  width: 250px;
+  width: 300px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 button.support:hover {
-  background-color: lightcoral;
+  background-color: lightgreen;
 }
 
 div.formContainer {
-  background-color: white; /* Green */
-  
+  background-color: lavenderblush; /* Green */
   border-top: 200px gold;
   text-decoration: none;
   font-size: 20px;
@@ -81,7 +80,7 @@ div.formContainer {
   margin-left: 75%;
   font-weight: 500;
   bottom: 0.2%;
-  width: 261px;
+  width: 300px;
   height: 500px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   transition: none 0s, ease 4s !important;
@@ -93,15 +92,15 @@ div.formContainer {
 }
 
 div.headingFormContainer {
-  width: 261px;
-  position: relative;
-  background-color: lightblue;
+  width: 300px;
+  position: fixed;
+  background-color: lightgreen;
   height: 80px;
-  bottom: 20px;
+  bottom: 430px;
   padding: 1% 4% 1% 4%;
   border-radius: 25px 25px 2px 2px;
 
-  right: 58px;
+  right: 180px;
   text-align: center;
   box-shadow: 2px 2px 2px 1px grey;
 }
@@ -109,5 +108,5 @@ div.headingFormContainer {
 h2.contact {
   top: 20px;
   position: relative;
-  color: #00324d;
+  color: black;
 }

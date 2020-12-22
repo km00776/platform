@@ -3,7 +3,7 @@ h1.heading {
   position: relative;
   font-weight: 700;
   font-size: 40px;
-  color:  black;
+  color: black;
   left: 1vh;
 }
 
@@ -18,10 +18,12 @@ div.type {
   margin-top: -7vh;
   float: left;
 }
-
+body {
+  background-color: #00fa9a;
+}
 div.ArchivedCheckbox {
   position: relative;
-  color:  black;
+  color: black;
   top: 0.3vh;
   left: 9vw;
   display: block;
@@ -36,9 +38,8 @@ table.clientsTable {
   background-color: white		;
   font-weight: 600;
   font-size: 14px;
-  box-shadow: 10px 0px 10px -5px black, -10px 0px 10px -5px black;
-
-
+  box-shadow: #00324d 30px;
+  border-radius: 4px;
 }
 th.clientsTable {
   border: 1px solid black;
@@ -46,8 +47,8 @@ th.clientsTable {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: white	;
-  color:  black;
+  background-color: white;
+  color: black;
 }
 
 th.clientsTable:first-of-type {
@@ -64,11 +65,11 @@ th.clientsTable:last-of-type td:last-of-type {
 }
 
 td.clientsTable {
-  border: 1px solid  black;
+  border: 1px solid black;
   padding: 8px;
 }
 thead.clientsTable {
-  border: 1px solid  white;
+  border: 1px solid white;
   padding: 8px;
 }
 
@@ -85,9 +86,8 @@ thead.clientsTable {
   padding-bottom: 12px;
   text-align: left;
   background-color: whitesmoke;
-  color:  black;
+  color: black;
   border-collapse: separate;
-
 }
 
 label.activetickbox {
@@ -133,7 +133,7 @@ button.newClientBtn {
 
 button.newClientBtn:hover {
   background-color: whitesmoke;
-  color:  whitesmoke;
+  color: whitesmoke;
 }
 
 button.searchBtn {
@@ -157,7 +157,7 @@ button.searchBtn {
 
 button.searchBtn:hover {
   background-color: white;
-  color:  black;
+  color: black;
 }
 
 button.clearBtn {
@@ -193,7 +193,7 @@ input.countryInput {
 
 p.Active {
   font-size: large;
-  color:  black;
+  color: black;
   left: 9px;
   top: 20px;
   position: relative;
@@ -203,7 +203,7 @@ p.Active {
 
 div.ActiveCheckbox {
   position: relative;
-  color:  black;
+  color: black;
   top: 23px;
   left: 40px;
 }
@@ -225,7 +225,7 @@ label.findLabel {
   right: -1vh;
   font-size: large;
   font-weight: 700;
-  color:  black;
+  color: black;
   margin-top: 9vh;
   position: relative;
 }
@@ -252,7 +252,7 @@ label.typeLabel {
   right: -1vh;
   font-size: large;
   font-weight: 700;
-  color:  black;
+  color: black;
   margin-top: 9vh;
   position: relative;
   display: block;
@@ -293,7 +293,7 @@ input.archivedtickbox {
 
 p.Archived {
   font-size: large;
-  color:  black;
+  color: black;
   position: relative;
   font-weight: 700;
   right: 10.3vw;
@@ -325,7 +325,7 @@ input.dateFrom {
 
 label.countryLabel {
   font-size: large;
-  color:  black;
+  color: black;
   font-weight: 700;
   position: relative;
   top: 5px;
@@ -333,7 +333,7 @@ label.countryLabel {
 
 label.nameLabel {
   font-size: large;
-  color:  black;
+  color: black;
   font-weight: 700;
   position: relative;
   top: 23px;
@@ -350,7 +350,7 @@ input.nameInput {
 
 p.dateCreated {
   font-size: large;
-  color:  black;
+  color: black;
   font-weight: 700;
   position: relative;
   bottom: 0.5vh;
