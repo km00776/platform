@@ -70,7 +70,7 @@ div.formContainer {
   font-size: 20px;
   text-align: center;
   cursor: pointer;
-  box-shadow: 1px 3px 2px 1px grey;
+  box-shadow: 1px 1px 1px 1px black;
   padding: 1% 4% 1% 4%;
   margin-top: 49%;
   position: fixed;
@@ -93,16 +93,16 @@ div.formContainer {
 
 div.headingFormContainer {
   width: 300px;
-  position: fixed;
+  position: absolute;
   background-color: lightgreen;
-  height: 80px;
-  bottom: 430px;
+  height: 70px;
+  bottom: 435px;
   padding: 1% 4% 1% 4%;
   border-radius: 25px 25px 2px 2px;
 
-  right: 180px;
+  right: 0.4px;
   text-align: center;
-  box-shadow: 2px 2px 2px 1px grey;
+  box-shadow: 1px 1px 1px 1px black;
 }
 
 h2.contact {
