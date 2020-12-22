@@ -135,6 +135,7 @@ const ClientSetup = () => {
                 <br></br>
                 
             </div>
+            
             <div>
                     <button className={styles.newClientBtn}>ADD NEW</button>
                 </div>
