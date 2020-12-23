@@ -58,7 +58,6 @@ img.image {
   top: 75%;
   bottom: 40;
   margin-left: 135px;
-  
 }
 
 button.loginButton {
@@ -105,7 +104,7 @@ h2.message {
   position: relative;
   font-family: sans-serif;
   font-size: 24px;
-  color: #001B3A;
+  color: #001b3a;
   font-weight: 600;
 }
 
@@ -139,7 +138,7 @@ p.terms {
 
 label.Label {
   font-weight: 800;
-  color: #001B3A;
+  color: #001b3a;
   position: relative;
   right: 20%;
   font-size: 15px;
@@ -188,9 +187,10 @@ p.supportText {
 }
 
 img.image {
-  position: fixed;
+  position: absolute;
   top: 0.4%;
-  left: 87%;
+  float: left;
+  right: 3px;
 }
 
 span.h1heading {
