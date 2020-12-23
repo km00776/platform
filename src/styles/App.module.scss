@@ -43,14 +43,19 @@ span.info {
   top: 3%;
   position: relative;
   color: red;
+  position: relative;
+  font-weight: 900;
+  text-align: center;
+  font-size: 11px;
+  top: 3px;
 }
 
 a.link {
   color: red;
 }
 
-p {
-  color: grey;
+p.termsMessage{
+  color: gray;
 }
 
 img.image {
@@ -194,7 +199,7 @@ img.image {
 }
 
 span.h1heading {
-  color: yellowgreen;
+  color: #00FA9A;
 }
 
 p.placeholder {
@@ -229,17 +234,11 @@ div.termsContainer {
   border-radius: 15px;
   bottom: 30px;
   left: 4%;
-  right: 3%;
+  right: 4%;
   font-size: 11px;
   overflow: hidden;
 }
-span.info {
-  position: relative;
-  font-weight: 900;
-  text-align: center;
-  font-size: 11px;
-  top: 3px;
-}
+
 
 input.passwordInput {
   width: 600px;
