@@ -14,7 +14,7 @@ div.formInput {
 
 label.Label {
   font-weight: 800;
-  color: #001B3A;
+  color: #001b3a;
   position: relative;
   right: 20%;
   font-size: 15px;
@@ -38,7 +38,7 @@ input.Input {
 }
 
 button.support {
-  background-color: #d6e03e; /* Green */
+  background-color: yellow; /* Green */
   border: none;
   text-decoration: none;
   font-size: 20px;
@@ -60,7 +60,7 @@ button.support {
 }
 
 button.support:hover {
-  background-color: lightgreen;
+  background-color: orange;
 }
 
 div.formContainer {
@@ -94,7 +94,7 @@ div.formContainer {
 div.headingFormContainer {
   width: 300px;
   position: absolute;
-  background-color: #d6e03e;
+  background-color: yellow;
   height: 70px;
   bottom: 435px;
   padding: 1% 4% 1% 4%;
