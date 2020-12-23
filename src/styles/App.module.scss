@@ -14,9 +14,9 @@ h2.font {
 }
 
 button.testsRemainingButton {
-  background: #00224B 40%; /* Green */
+  background: #00224b 40%; /* Green */
   border: none;
-  color: black;
+  color: white;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -63,9 +63,9 @@ img {
 }
 
 button.loginButton {
-  background: #00224B 40%; /* Green */
+  background: #00224b 40%; /* Green */
   border: none;
-  color: black;
+  color: white;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -84,14 +84,14 @@ button.loginButton:active::after {
   padding: 0;
   margin: 0;
   opacity: 1;
-  transition: 0s
+  transition: 0s;
 }
 
 button.loginButton:hover {
-  background-color: lightseagreen;
+  background-color: lightgreen;
 }
 button.testsRemainingButton:hover {
-  background-color: lightseagreen;
+  background-color: lightgreen;
 }
 
 div.b1 {
