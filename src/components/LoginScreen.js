@@ -9,7 +9,7 @@ import ContactForm from './ContactForm';
 const LoginScreen = () => {
     const [visiblility, setVisiblility] = useState(false);
 
-    function handleClick(visiblility) {
+function handleClick(visiblility) {
     if(visiblility === false) {
         setVisiblility(true);
          console.log("hello");
