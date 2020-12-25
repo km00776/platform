@@ -7,21 +7,17 @@ p.supportText {
   text-align: center;
 }
 
-
-
-
 div.contactDetails {
-  position: absolute;
-  float: left;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 div.name {
-  float: left;
-  left: 10px;
-  top: 130px;
-  position: absolute;
-  white-space: nowrap;
+  position: relative;
 }
+
 
 div.institutionName {
   float: left;
