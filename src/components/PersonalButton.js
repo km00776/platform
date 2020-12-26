@@ -1,9 +1,33 @@
  
-   
-   const PersonalButton = (props) => {
-        return (
-            <button className={props.className}><span>{props.label}</span></button>
-        )   
-    }
+ import React from 'react';
+ import Button from '@material-ui/core/Button';
+ import styles from '../styles/App.module.scss';
+ import {
+    fade,
+    ThemeProvider,
+    withStyles,
+    makeStyles,
+    createMuiTheme,
+  } from '@material-ui/core/styles';
+  import { green, purple } from '@material-ui/core/colors';
 
-    export default PersonalButton;
+
+
+ 
+const theme3 = createMuiTheme({      
+    typography: {
+      button: {
+        textTransform: 'none'
+      }
+    }
+  });
+ 
+ export default function DisableElevation(props) {
+    return(
+    <ThemeProvider theme={theme3}>
+      <Button size="Medium" label={props.label} className={props.className} variant="contained" color="primary">
+           {props.label}
+      </Button>
+      </ThemeProvider>
+    );
+  }

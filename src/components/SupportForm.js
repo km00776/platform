@@ -4,13 +4,13 @@ import Button from '@material-ui/core/Button';
 import PropTypes from "prop-types";
 import clsx from "clsx";
 import {
-  fade,
+  
   ThemeProvider,
-  withStyles,
+
   makeStyles,
   createMuiTheme,
-} from '@material-ui/core/styles';import TextField from '@material-ui/core/TextField';
-import styles from '../styles/ContactForm.module.scss';
+} from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
 
 
 
@@ -34,6 +34,11 @@ const useStyles = makeStyles((theme) => ({
     palette: {
       primary: {
         main: '#00224b'
+      },
+      typography: {
+        button: {
+          textTransform: 'none'
+        }
       }
     },
   });
@@ -43,6 +48,11 @@ const useStyles = makeStyles((theme) => ({
       primary: {
         main: '#00fa9a'
       },
+      typography: {
+        button: {
+          textTransform: 'none'
+        }
+      }
     
     },
   }); 
@@ -66,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
             label="Your Name" 
             variant="filled"
         />
-        <TextField className={styles.TextField} id="filled-basic" label="University/institution" variant="filled" /> 
+        <TextField id="filled-basic" label="University/institution" variant="filled" /> 
         <TextField color='red' id="filled-basic" label="Your Email" variant="filled" />
         <TextField color='red' id="filled-basic" label="Login Code" variant="filled" />
         <TextField 
@@ -86,7 +96,7 @@ const useStyles = makeStyles((theme) => ({
   
     return (
       <div className={classes.root}>
-      <ThemeProvider theme= {theme2}>
+      <ThemeProvider theme={theme2}>
         <Button color="primary" variant="contained">Submit</Button>
       </ThemeProvider>
       </div>

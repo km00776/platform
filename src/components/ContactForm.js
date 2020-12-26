@@ -32,7 +32,7 @@ const SupportForm = (props) => {
             <div className={styles.submitBtn}>
             <ContainedButtons />
             </div>
-            
+
         </div>)
 
 }

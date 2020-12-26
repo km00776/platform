@@ -1,10 +1,10 @@
-import PersonalButton from './PersonalButton';
+
 import '../index.scss';
 import styles from '../styles/App.module.scss';
 import { Fragment } from 'react';
 import { useState, useEffect } from 'react';
 import ContactForm from './ContactForm';
-
+import DisableElevation from './PersonalButton';
 
 const LoginScreen = () => {
     const [visiblility, setVisiblility] = useState(false);
@@ -48,8 +48,8 @@ function handleClick(visiblility) {
                         </div>
                     </div>
                     <div className={styles.b1}>
-                        <PersonalButton className={styles.loginButton} label="Login"></PersonalButton>
-                        <PersonalButton className={styles.testsRemainingButton} label="Check tests remaining"></PersonalButton>
+                        <DisableElevation className={styles.loginButton} label="Login"></DisableElevation>
+                        <DisableElevation className={styles.testsRemainingButton} label="Check Tests Remaining"></DisableElevation>
                     </div>
                     <br></br>
                     <br></br>
