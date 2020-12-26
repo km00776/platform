@@ -1,13 +1,10 @@
 
 
 import styles from '../styles/ContactForm.module.scss';
-import {BasicTextFields} from './UI/SupportForm.js';
-
-
+import {BasicTextFields, ContainedButtons} from './SupportForm';
 
 
 const ContactForm = (props) => {
-
     return (
         // if true render supportForm otherwise, render the button
         <div>{props.visiblility ? <SupportForm onClick={props.onClick} /> : <SupportButton onClick={props.onClick} />}</div>
@@ -30,7 +27,12 @@ const SupportForm = (props) => {
             </div>
             <div className={styles.contactDetails}>
                 <BasicTextFields />
+                
             </div>
+            <div className={styles.submitBtn}>
+            <ContainedButtons />
+            </div>
+            
         </div>)
 
 }
