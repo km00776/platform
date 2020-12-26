@@ -9,12 +9,17 @@
     makeStyles,
     createMuiTheme,
   } from '@material-ui/core/styles';
-  import { green, purple } from '@material-ui/core/colors';
+  
 
 
 
  
 const theme3 = createMuiTheme({      
+    palette: {
+        primary: {
+            main: '#4079FB'
+        }
+    },
     typography: {
       button: {
         textTransform: 'none'
@@ -25,8 +30,8 @@ const theme3 = createMuiTheme({
  export default function DisableElevation(props) {
     return(
     <ThemeProvider theme={theme3}>
-      <Button size="Medium" label={props.label} className={props.className} variant="contained" color="primary">
-           {props.label}
+      <Button className={styles.me} size="Medium" label={props.label} color = 'primary' className={props.className} variant="contained">
+            {props.label}
       </Button>
       </ThemeProvider>
     );

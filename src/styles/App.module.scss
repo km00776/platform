@@ -88,6 +88,14 @@ button.loginButton {
   transition: background 0.8s;
 }
 
+button.loginButton:hover {
+  background: rgb(51, 75, 214);
+}
+
+button.testsRemainingButton:hover {
+  background: rgb(51, 75, 214);
+}
+
 div.b1 {
   position: relative;
   top: 12%;
@@ -190,7 +198,7 @@ img.image {
 }
 
 span.h1heading {
-  color: #00fa9a;
+  color: #fbfb40;
 }
 
 p.placeholder {

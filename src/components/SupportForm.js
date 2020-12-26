@@ -2,12 +2,12 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import {
   ThemeProvider,
+  MuiThemeProvider,
   makeStyles,
   createMuiTheme,
 } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-
-
+import styles from '../styles/App.module.scss';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -20,9 +20,7 @@ const useStyles = makeStyles((theme) => ({
         borderColor: 'white',
         },
     },
-      button: {
-        textTransform: "none"
-      }
+
   
            
     }
@@ -44,15 +42,15 @@ const useStyles = makeStyles((theme) => ({
   const theme2 = createMuiTheme({
     palette: {
       primary: {
-        main: '#00fa9a'
+        main: '#fbfb40'
       },
-      typography: {
-        button: {
-          textTransform: 'none'
-        }
-      }
-    
+      
     },
+    typography: {
+      button: {
+        textTransform: 'none'
+      }
+    }
   }); 
   
 
@@ -63,9 +61,6 @@ const useStyles = makeStyles((theme) => ({
   const handleChange = (event) => {
     setValue(event.target.value);
   };
-
-
-
     return (
     <form className={classes.root} noValidate autoComplete="off">
       <ThemeProvider theme={theme}>
@@ -94,9 +89,9 @@ const useStyles = makeStyles((theme) => ({
   
     return (
       <div className={classes.root}>
-      <ThemeProvider theme={theme2}>
-        <Button  className={classes.button} color="primary" variant="contained">SUBMIT</Button>
-      </ThemeProvider>
+      <MuiThemeProvider theme={theme2}>
+        <Button color="primary" variant="contained">SUBMIT</Button>
+      </MuiThemeProvider>
       </div>
     );
   }
