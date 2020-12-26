@@ -1,12 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Button from '@material-ui/core/Button';
-import PropTypes from "prop-types";
-import clsx from "clsx";
 import {
-  
   ThemeProvider,
-
   makeStyles,
   createMuiTheme,
 } from '@material-ui/core/styles';
@@ -25,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
         borderColor: 'white',
         },
     },
+      button: {
+        textTransform: "none"
+      }
   
            
     }
@@ -76,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
             label="Your Name" 
             variant="filled"
         />
-        <TextField id="filled-basic" label="University/institution" variant="filled" /> 
+        <TextField id="filled-basic" label="University/Institution" variant="filled" /> 
         <TextField color='red' id="filled-basic" label="Your Email" variant="filled" />
         <TextField color='red' id="filled-basic" label="Login Code" variant="filled" />
         <TextField 
@@ -97,7 +95,7 @@ const useStyles = makeStyles((theme) => ({
     return (
       <div className={classes.root}>
       <ThemeProvider theme={theme2}>
-        <Button color="primary" variant="contained">Submit</Button>
+        <Button  className={classes.button} color="primary" variant="contained">SUBMIT</Button>
       </ThemeProvider>
       </div>
     );
