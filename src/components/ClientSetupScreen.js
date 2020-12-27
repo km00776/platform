@@ -2,6 +2,7 @@ import { Fragment, useEffect, useState } from 'react';
 import styles from '../styles/ClientSetup.module.scss';
 import ToolBar from './ToolBar';
 import Footer from './Footer';
+import PermanentDrawerLeft from './DrawerComponent';
 
 
 const ClientSetup = () => {
@@ -25,9 +26,11 @@ const ClientSetup = () => {
 
 
     return (
+    <body className={styles.clientBackground}>
         <div>
-            
+            <PermanentDrawerLeft />
         </div>
+    </body>
 
     );
 }

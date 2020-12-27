@@ -1,5 +1,5 @@
 
-import '../index.scss';
+
 import styles from '../styles/App.module.scss';
 import { Fragment } from 'react';
 import { useState, useEffect } from 'react';
