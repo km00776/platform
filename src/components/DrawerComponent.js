@@ -34,7 +34,9 @@ import Grid from "@material-ui/core/Grid";
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import Collapse from '@material-ui/core/Collapse';
-import StarBorder from '@material-ui/icons/StarBorder';
+import Box from '@material-ui/core/Box';
+import { IconButton } from '@material-ui/core';
+import Badge from '@material-ui/core/Badge';
 
 
 const drawerWidth = 240;
@@ -50,13 +52,17 @@ const useStyles = makeStyles((theme) => ({
 
 
   },
+  icon: {
+    minWidth: '30px',
+    color: '#00324d'
+  },
 
   nested: {
     paddingLeft: theme.spacing(4),
   },
   drawerPaper: {
     width: drawerWidth,
-    backgroundColor: '#00224b',
+    backgroundColor: '#2E3B55',
     color: 'White',
 
   },
@@ -64,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
     backgroundColor: 'Red',
-    color: '#00324d',
+    color: '#2E3B55',
     padding: theme.spacing(3),
 
   },
@@ -76,19 +82,48 @@ const useStyles = makeStyles((theme) => ({
 export function PermanentDrawerLeft() {
 
   const classes = useStyles();
-  const [open, setOpen] = React.useState(true);
 
-  const handleClick = () => {
-    setOpen(!open);
+  const [questionAuthoring, openQuestionAuthoring] = React.useState(false);
+  const [testBuild, openTestBuild] = React.useState(false);
+  const [reporting, openReporting] = React.useState(false);
+  const [cms, openCMS] = React.useState(false);
+
+
+  const handleQuestionAuthoringClick = () => {
+    openQuestionAuthoring(!questionAuthoring);
+  };
+  const handleTestBuildClick = () => {
+    openTestBuild(!testBuild);
+  };
+  const handleReportingClick = () => {
+    openReporting(!reporting);
+  };
+  const handleCMSClick = () => {
+    openCMS(!cms);
   };
 
 
+
+
   return (
-
-
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar />
+      <AppBar style={{ background: '#2E3B55', minWidth: '10px' }}>
+        <Toolbar>
+          <Box display='flex' flexGrow={1}>
+
+          </Box>
+        <div className={styles.mailIcon} > 
+          <Badge badgeContent={4} color="primary">
+            
+            <MailIcon   />
+            
+          </Badge>
+         
+        </div>
+        <CancelPresentationIcon />
+        </Toolbar>
+      </AppBar>
 
       <Drawer
         className={classes.drawer}
@@ -102,71 +137,316 @@ export function PermanentDrawerLeft() {
         <div className={classes.toolbar} />
         <Divider />
         <List>
-          <ListItem button key='Question Authoring'>
-            <ListItemText primary='Question Authoring' />
-            <ContactSupportIcon />
+          <ListItem button onClick={() => handleQuestionAuthoringClick()} key='Question Authoring'>
+            <ListItemIcon style={{ color: 'White' }} >
+              <ContactSupportIcon />
+            </ListItemIcon>
+            <ListItemText primary='Question Authoring'
+
+            />
           </ListItem>
-          <br></br>
-          <ListItem button onClick={handleClick} key='Test Build'>
-            <ListItemText primary='Test Build' />
-            <BuildIcon />
-          </ListItem>
-          <Collapse in={open} timeout="auto" unmountOnExit>
+          <Collapse in={questionAuthoring} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
               <ListItem button className={classes.nested}>
                 <ListItemIcon>
                   <BuildIcon />
                 </ListItemIcon>
-                <ListItemText primary="Starred" />
+                <ListItemText primary="Status" />
+              </ListItem>
+            </List>
+          </Collapse>
+          <Collapse in={questionAuthoring} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItem button className={classes.nested}>
+                <ListItemIcon>
+                  <BuildIcon />
+                </ListItemIcon>
+                <ListItemText primary="Knowledge" />
+              </ListItem>
+            </List>
+          </Collapse>
+          <Collapse in={questionAuthoring} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItem button className={classes.nested}>
+                <ListItemIcon>
+                  <BuildIcon />
+                </ListItemIcon>
+                <ListItemText primary="Reading" />
+              </ListItem>
+            </List>
+          </Collapse>
+          <Collapse in={questionAuthoring} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItem button className={classes.nested}>
+                <ListItemIcon>
+                  <BuildIcon />
+                </ListItemIcon>
+                <ListItemText primary="Writing" />
+              </ListItem>
+            </List>
+          </Collapse>
+          <Collapse in={questionAuthoring} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItem button className={classes.nested}>
+                <ListItemIcon>
+                  <BuildIcon />
+                </ListItemIcon>
+                <ListItemText primary="Listening" />
+              </ListItem>
+            </List>
+          </Collapse>
+          <Collapse in={questionAuthoring} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItem button className={classes.nested}>
+                <ListItemIcon>
+                  <BuildIcon />
+                </ListItemIcon>
+                <ListItemText primary="Speaking" />
+              </ListItem>
+            </List>
+          </Collapse>
+          <Collapse in={questionAuthoring} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItem button className={classes.nested}>
+                <ListItemIcon>
+                  <BuildIcon />
+                </ListItemIcon>
+                <ListItemText primary="Maths" />
+              </ListItem>
+            </List>
+          </Collapse>
+          <br></br>
+          <ListItem button onClick={handleTestBuildClick} key='Test Build'>
+            <ListItemIcon style={{ color: 'White' }}>
+              <BuildIcon />
+            </ListItemIcon>
+            <ListItemText primary='Test Build' />
+          </ListItem>
+          <Collapse in={testBuild} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItem button className={classes.nested}>
+                <ListItemIcon>
+                  <BuildIcon />
+                </ListItemIcon>
+                <ListItemText primary="Test Modules" />
+              </ListItem>
+            </List>
+          </Collapse>
+          <Collapse in={testBuild} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItem button className={classes.nested}>
+                <ListItemIcon>
+                  <BuildIcon />
+                </ListItemIcon>
+                <ListItemText primary="Tests" />
               </ListItem>
             </List>
           </Collapse>
           <br></br>
           <ListItem button key='Client Setup'>
+            <ListItemIcon style={{ color: 'White' }} >
+              <GroupWorkIcon />
+            </ListItemIcon>
             <ListItemText primary='Client Setup' />
-            <GroupWorkIcon />
           </ListItem>
           <br></br>
           <ListItem button key='Test Code Allocation'>
+            <ListItemIcon style={{ color: 'White' }} >
+              <SortByAlphaIcon />
+            </ListItemIcon>
             <ListItemText primary='Test Code Allocation' />
-            <SortByAlphaIcon />
           </ListItem>
           <br></br>
           <ListItem button key='Results & Certificates'>
+            <ListItemIcon style={{ color: 'White' }} >
+              <InsertDriveFileIcon />
+            </ListItemIcon>
             <ListItemText primary='Results & Certificates' />
-            <InsertDriveFileIcon />
           </ListItem>
           <br></br>
-          <ListItem button key='Reporting'>
+          <ListItem button onClick={handleReportingClick} key='Reporting'>
+            <ListItemIcon style={{ color: 'White' }} >
+              <ReportIcon />
+            </ListItemIcon>
             <ListItemText primary='Reporting' />
-            <ReportIcon />
           </ListItem>
+          <Collapse in={reporting} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItem button className={classes.nested}>
+                <ListItemIcon>
+                  <BuildIcon />
+                </ListItemIcon>
+                <ListItemText primary="Question Performance" />
+              </ListItem>
+            </List>
+          </Collapse>
+          <Collapse in={reporting} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItem button className={classes.nested}>
+                <ListItemIcon>
+                  <BuildIcon />
+                </ListItemIcon>
+                <ListItemText primary="Pilot Question Performance" />
+              </ListItem>
+            </List>
+          </Collapse>
+          <Collapse in={reporting} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItem button className={classes.nested}>
+                <ListItemIcon>
+                  <BuildIcon />
+                </ListItemIcon>
+                <ListItemText primary="Test Taker Performance Overview" />
+              </ListItem>
+            </List>
+          </Collapse>
+          <Collapse in={reporting} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItem button className={classes.nested}>
+                <ListItemIcon>
+                  <BuildIcon />
+                </ListItemIcon>
+                <ListItemText primary="Test Taker Performance Detailed" />
+              </ListItem>
+            </List>
+          </Collapse>
           <br></br>
-          <ListItem button key='CMS'>
+          <ListItem button onClick={handleCMSClick} key='CMS'>
+            <ListItemIcon style={{ color: 'White' }} >
+              <StorageIcon />
+            </ListItemIcon>
             <ListItemText primary='CMS' />
-            <StorageIcon />
           </ListItem>
+          <Collapse in={cms} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItem button className={classes.nested}>
+                <ListItemIcon>
+                  <BuildIcon />
+                </ListItemIcon>
+                <ListItemText primary="Question Layouts" />
+              </ListItem>
+            </List>
+          </Collapse>
+          <Collapse in={cms} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItem button className={classes.nested}>
+                <ListItemIcon>
+                  <BuildIcon />
+                </ListItemIcon>
+                <ListItemText primary="Information Screens" />
+              </ListItem>
+            </List>
+          </Collapse>
+          <Collapse in={cms} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItem button className={classes.nested}>
+                <ListItemIcon>
+                  <BuildIcon />
+                </ListItemIcon>
+                <ListItemText primary="Test Variants" />
+              </ListItem>
+            </List>
+          </Collapse>
+          <Collapse in={cms} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItem button className={classes.nested}>
+                <ListItemIcon>
+                  <BuildIcon />
+                </ListItemIcon>
+                <ListItemText primary="Client Types" />
+              </ListItem>
+            </List>
+          </Collapse>
+          <Collapse in={cms} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItem button className={classes.nested}>
+                <ListItemIcon>
+                  <BuildIcon />
+                </ListItemIcon>
+                <ListItemText primary="Administrators" />
+              </ListItem>
+            </List>
+          </Collapse>
+          <Collapse in={cms} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItem button className={classes.nested}>
+                <ListItemIcon>
+                  <BuildIcon />
+                </ListItemIcon>
+                <ListItemText primary="Default Certificate" />
+              </ListItem>
+            </List>
+          </Collapse>
+          <Collapse in={cms} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItem button className={classes.nested}>
+                <ListItemIcon>
+                  <BuildIcon />
+                </ListItemIcon>
+                <ListItemText primary="Results" />
+              </ListItem>
+            </List>
+          </Collapse>
+          <Collapse in={cms} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItem button className={classes.nested}>
+                <ListItemIcon>
+                  <BuildIcon />
+                </ListItemIcon>
+                <ListItemText primary="Content Blocks" />
+              </ListItem>
+            </List>
+          </Collapse>
+          <Collapse in={cms} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItem button className={classes.nested}>
+                <ListItemIcon>
+                  <BuildIcon />
+                </ListItemIcon>
+                <ListItemText primary="Auto Complete" />
+              </ListItem>
+            </List>
+          </Collapse>
+          <Collapse in={cms} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItem button className={classes.nested}>
+                <ListItemIcon>
+                  <BuildIcon />
+                </ListItemIcon>
+                <ListItemText primary="Assign Marker" />
+              </ListItem>
+            </List>
+          </Collapse>
           <br></br>
           <Divider />
           <ListItem button key='Inbox'>
+            <ListItemIcon style={{ color: 'White' }} >
+              <MailIcon />
+            </ListItemIcon>
             <ListItemText primary='Inbox' />
-            <MailIcon />
           </ListItem>
           <br></br>
           <ListItem button key='Notes'>
+            <ListItemIcon style={{ color: 'White' }} >
+              <NoteAddIcon />
+            </ListItemIcon>
             <ListItemText primary='Notes' />
-            <NoteAddIcon />
           </ListItem>
           <br></br>
           <ListItem button key='Invoices'>
+            <ListItemIcon style={{ color: 'White' }} >
+              <ReceiptIcon />
+            </ListItemIcon>
             <ListItemText primary='Invoices' />
-            <ReceiptIcon />
           </ListItem>
           <br></br>
           <Divider></Divider>
           <ListItem button key='Logout'>
+            <ListItemIcon style={{ color: 'White' }} >
+              <CancelPresentationIcon />
+            </ListItemIcon>
             <ListItemText primary='Logout' />
-            <CancelPresentationIcon />
+
           </ListItem>
         </List>
 
