@@ -108,20 +108,19 @@ export function PermanentDrawerLeft() {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar style={{ background: '#2E3B55', minWidth: '10px' }}>
+      <AppBar style={{ background: '#2E3B55',  }}>
         <Toolbar>
           <Box display='flex' flexGrow={1}>
 
           </Box>
-        <div className={styles.mailIcon} > 
-          <Badge badgeContent={4} color="primary">
-            
-            <MailIcon   />
-            
-          </Badge>
-         
-        </div>
-        <CancelPresentationIcon />
+          <div className={styles.mailIcon}>
+            <ListItem button>
+              <Badge badgeContent={4} color="primary">
+                <MailIcon />
+              </Badge>
+            </ListItem>
+          </div>
+          
         </Toolbar>
       </AppBar>
 
