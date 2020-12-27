@@ -10,7 +10,7 @@ import ContactForm from './components/ContactForm';
 export default class App extends Component {
         render() {
             return(  
-            <div>
+            <div id="body">
               <ClientSetup   />
               
 
