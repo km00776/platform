@@ -80,7 +80,7 @@ export function SimplePaper() {
 
   return (
     <div className={classes.root}>
-
+    <div>
       <Paper style={{ backgroundColor: 'white' }} elevation={8}>
         <TrendingUpIcon style={{ fontSize: 118, color: 'lightgreen' }} />
         <h2 className={styles.papertext}>Total Clients</h2>
@@ -97,7 +97,7 @@ export function SimplePaper() {
         
       </Paper>
 
-
+      </div>
     </div>
   );
 }
