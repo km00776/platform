@@ -76,9 +76,14 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerPaper: {
     width: drawerWidth,
-    backgroundColor: '#2E3B55',
+    backgroundColor: '#357EC7',
     color: 'White',
 
+  },
+
+  customBadge: {
+    backgroundColor: "#00AFD7",
+    color: "white"
   },
 
   content: {
@@ -122,29 +127,29 @@ export function PermanentDrawerLeft() {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar style={{ background: '#2E3B55',  }}>
+      <AppBar style={{ background: 'whitesmoke',  }}>
         <Toolbar>
           <Box display='flex' flexGrow={1}>
           </Box>
           <div className={styles.mailIcon} >
             <ListItem button>
-              <Badge badgeContent={5} color="primary">
-                <MailIcon />
+              <Badge badgeContent={5} color = 'secondary'>
+                <MailIcon style={{color: 'black'}}  />
+              </Badge>
+            </ListItem>
+          </div>
+        
+          <div>
+            <ListItem button>
+            <Badge badgeContent={9} color = 'secondary'>
+              <NotificationsIcon style={{color: 'black'}} />
               </Badge>
             </ListItem>
           </div>
           <div>
           <ListItem button>
-            
-            <CancelPresentationIcon />
+            <CancelPresentationIcon style={{color: 'black'}} />
           </ListItem>
-          </div>
-          <div>
-            <ListItem button>
-            <Badge badgeContent={9} color="primary">
-              <NotificationsIcon />
-              </Badge>
-            </ListItem>
           </div>
         </Toolbar>
       </AppBar>
@@ -239,7 +244,7 @@ export function PermanentDrawerLeft() {
               </ListItem>
             </List>
           </Collapse>
-        
+        <br></br>
           <ListItem button onClick={handleTestBuildClick} key='Test Build'>
             <ListItemIcon style={{ color: 'White' }}>
               <BuildIcon />
@@ -280,7 +285,7 @@ export function PermanentDrawerLeft() {
             </ListItemIcon>
             <ListItemText primary='Test Code Allocation' />
           </ListItem>
-          
+          <br></br>
           <ListItem button key='Results & Certificates'>
             <ListItemIcon style={{ color: 'White' }} >
               <InsertDriveFileIcon />
