@@ -239,7 +239,7 @@ export function PermanentDrawerLeft() {
               </ListItem>
             </List>
           </Collapse>
-          <br></br>
+        
           <ListItem button onClick={handleTestBuildClick} key='Test Build'>
             <ListItemIcon style={{ color: 'White' }}>
               <BuildIcon />
@@ -280,7 +280,7 @@ export function PermanentDrawerLeft() {
             </ListItemIcon>
             <ListItemText primary='Test Code Allocation' />
           </ListItem>
-          <br></br>
+          
           <ListItem button key='Results & Certificates'>
             <ListItemIcon style={{ color: 'White' }} >
               <InsertDriveFileIcon />
