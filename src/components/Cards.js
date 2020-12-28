@@ -8,7 +8,7 @@ import SchoolIcon from '@material-ui/icons/School';
 import TrendingUpIcon from '@material-ui/icons/TrendingUp';
 import Divider from '@material-ui/core/Divider';
 import BasicTable from './tableClients';
-
+import ContainedButtons from './reuseableButton';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -108,7 +108,9 @@ export function SimplePaper2() {
     return (
       <div className={classes2.root}>
         
-        <Paper style={{backgroundColor: '#2E3B55'}}elevation={6}> </Paper>
+        <Paper style={{backgroundColor: '#2E3B55'}}elevation={6}> 
+            <ContainedButtons />
+        </Paper>
      
   
        
@@ -123,7 +125,7 @@ export function SimplePaper2() {
       <div className={classes3.root}>
         
         <Paper style={{backgroundColor: '#2E3B55'}}elevation={6}> 
-        <BasicTable/>
+        {/* <BasicTable/> */}
         <div className={styles.Pagination}>
       
         <BasicPagination />
