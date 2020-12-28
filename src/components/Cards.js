@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'wrap',
     '& > *': {
       marginLeft: '28px',
-      minWidth: '165vh',
+      minWidth: '84vw',
      
     
       marginTop: '20px',
