@@ -36,7 +36,7 @@ const useStyles2 = makeStyles((theme) => ({
     '& > *': {
       margin: theme.spacing(3),
       width: '135vh',
-      height: theme.spacing(60),
+      height: theme.spacing(40),
       marginLeft: '28px'
     },
     position: 'fixed'
