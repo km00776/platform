@@ -26,7 +26,7 @@ const ClientSetup = () => {
 
 
     return (
-    <body className={styles.clientBackground}>
+    <body style={{"background-color:grey"}}>
         <div>
             <PermanentDrawerLeft />
         </div>

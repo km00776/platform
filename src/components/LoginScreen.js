@@ -24,6 +24,7 @@ function handleClick(visiblility) {
 
     return (
         <Fragment>
+        <body className={styles.test1}>
             <div>
                 <header>
                     <h1 className={styles.heading}>PASSWORD | <span className={styles.h1heading}>PLATFORM</span></h1>
@@ -60,7 +61,7 @@ function handleClick(visiblility) {
             </div>
             
            <ContactForm onClick={() => handleClick(visiblility)} visiblility = {visiblility} />
-            
+           </body>
         </Fragment>
 
     );
@@ -72,6 +73,7 @@ function handleClick(visiblility) {
 
 const Terms = () => {
     return (
+    
         <div className={styles.termsContainer}>
             <span className={styles.info}>
                 <input className={styles.termsBox} type="checkbox" id="box1" name="box1" value="All">

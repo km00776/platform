@@ -79,7 +79,7 @@ export default function PermanentDrawerLeft() {
         <div className={classes.toolbar} />
         <Divider />
         <List>
-          {['Question Authoring', 'Test Build', 'Client Setup', 'Test Code Allocation', 'Results & Certificates', 'Reporting', 'CMS'].map((text, index) => (
+          {['Question Authoring', 'Test Build', 'Client Setup', 'Test Code Allocation', 'Results & Certificates', 'Reporting', 'CMS'].map((text) => (
             <ListItem button key={text}>
               <ListItemText primary={text} />
             </ListItem>
