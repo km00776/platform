@@ -10,22 +10,27 @@ import Divider from '@material-ui/core/Divider';
 import BasicTable from './tableClients';
 import ContainedButtons from './reuseableButton';
 import ImportContactsIcon from '@material-ui/icons/ImportContacts';
+import { sizing } from '@material-ui/system';
+import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexWrap: 'wrap',
     '& > *': {
-      marginLeft: '28px',
-      minWidth: '20vw',
-     
-    
-      marginTop: '4vh',
-      display:'inline-block'
+      margin: theme.spacing(3),
+      
+      height: theme.spacing(10),
+      
+
+
 
     },
-    position: 'relative'
+   
   },
+  position: 'relative'
+
+
 
 }));
 
@@ -35,9 +40,9 @@ const useStyles2 = makeStyles((theme) => ({
     flexWrap: 'wrap',
     '& > *': {
       margin: theme.spacing(3),
-      width: '165vh',
+      width: '30px',
       height: theme.spacing(40),
-      marginLeft: '28px'
+
     },
     position: 'absolute'
   },
@@ -83,27 +88,20 @@ export function SimplePaper() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <div className={styles.t3}> 
-      <Paper style={{ backgroundColor: 'white', height: '140px' }} elevation={4}> 
-        <TrendingUpIcon style={{ fontSize: 118, color: '#00FF00	' }} />
-        {/* <h2 className={styles.papertext}>Total Clients</h2> */}
-         </Paper>
-      </div>
-      <div  className={styles.t2}> 
-      <Paper style={{ backgroundColor: 'white', height: '140px' }} elevation={4}>
-        <ImportContactsIcon style={{ fontSize: 100, color: '#FF1493	' }} />
-        {/* <h2 className={styles.papertext2}>Total University Clients</h2> */}
-      </Paper>
-      </div>
-      <div  className={styles.t1}>
-      <Paper style={{ backgroundColor: 'white', height: '140px' }} elevation={4}>
-        <SchoolIcon style={{ fontSize: 100, color: '#FF4500' }} />
-        {/* <h2 className={styles.papertext3}>Total School Clients</h2> */}
-      </Paper>
-      </div> 
+    
+      <div className={classes.root}>
 
-    </div>
+      
+          <Paper className={styles.root} style={{ backgroundColor: 'black'}} elevation={4}>
+
+            {/* <h2 className={styles.papertext}>Total Clients</h2> */}
+          </Paper>
+      
+
+
+
+      </div>
+    
   );
 }
 

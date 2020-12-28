@@ -15,7 +15,7 @@ h2.papertext {
   font-size: 1.4rem;
   float: right;
   right: 100px;
-  color:  #2e3b55;
+  color: #2e3b55;
 }
 h2.papertext2 {
   position: relative;
@@ -42,9 +42,10 @@ h2.papertext3 {
 }
 .clientsData {
   position: absolute;
-  float: left;
+
   top: 130px;
-  left: 256px;
+  left: 285px;
+  width: 100%;
   color: black;
 }
 
@@ -52,4 +53,10 @@ div.Pagination {
   position: relative;
   top: 410px;
   float: right;
+}
+
+.root {
+  width: 84%;
+
+  position: relative;
 }
