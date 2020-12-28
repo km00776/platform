@@ -1,7 +1,7 @@
 
+import Footer from './Footer';
 
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
@@ -13,12 +13,9 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import styles from '../styles/ClientSetup.module.scss';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
+import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
 import MailIcon from '@material-ui/icons/Mail';
-import {
-  ThemeProvider,
-  createMuiTheme,
-} from '@material-ui/core/styles';
+import {makeStyles, ThemeProvider, createMuiTheme} from '@material-ui/core/styles';
 import CancelPresentationIcon from '@material-ui/icons/CancelPresentation';
 import ReportIcon from '@material-ui/icons/Report';
 import InsertDriveFileIcon from '@material-ui/icons/InsertDriveFile';
@@ -29,14 +26,31 @@ import SortByAlphaIcon from '@material-ui/icons/SortByAlpha';
 import GroupWorkIcon from '@material-ui/icons/GroupWork';
 import BuildIcon from '@material-ui/icons/Build';
 import ContactSupportIcon from '@material-ui/icons/ContactSupport';
-import MuiAppbar from "@material-ui/core/AppBar";
-import Grid from "@material-ui/core/Grid";
-import ExpandLess from '@material-ui/icons/ExpandLess';
-import ExpandMore from '@material-ui/icons/ExpandMore';
 import Collapse from '@material-ui/core/Collapse';
 import Box from '@material-ui/core/Box';
-import { IconButton } from '@material-ui/core';
+import ViewStreamIcon from '@material-ui/icons/ViewStream';
+import BorderColorIcon from '@material-ui/icons/BorderColor';
 import Badge from '@material-ui/core/Badge';
+import CompareArrowsIcon from '@material-ui/icons/CompareArrows';
+import InfoIcon from '@material-ui/icons/Info';
+import BookIcon from '@material-ui/icons/Book';
+import CreateIcon from '@material-ui/icons/Create';
+import HearingIcon from '@material-ui/icons/Hearing';
+import RecordVoiceOverIcon from '@material-ui/icons/RecordVoiceOver';
+import FunctionsIcon from '@material-ui/icons/Functions';
+import ViewModuleIcon from '@material-ui/icons/ViewModule';
+import LinearScaleIcon from '@material-ui/icons/LinearScale';
+import AirplanemodeActiveIcon from '@material-ui/icons/AirplanemodeActive';
+import PersonIcon from '@material-ui/icons/Person';
+import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
+import WebIcon from '@material-ui/icons/Web';
+import ColorLensIcon from '@material-ui/icons/ColorLens';
+import VibrationIcon from '@material-ui/icons/Vibration';
+import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
+import CardMembershipIcon from '@material-ui/icons/CardMembership';
+import ScoreIcon from '@material-ui/icons/Score';
+import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+import NotificationsIcon from '@material-ui/icons/Notifications';
 
 
 const drawerWidth = 240;
@@ -111,16 +125,27 @@ export function PermanentDrawerLeft() {
       <AppBar style={{ background: '#2E3B55',  }}>
         <Toolbar>
           <Box display='flex' flexGrow={1}>
-
           </Box>
           <div className={styles.mailIcon} >
             <ListItem button>
-              <Badge badgeContent={4} color="primary">
+              <Badge badgeContent={5} color="primary">
                 <MailIcon />
               </Badge>
             </ListItem>
           </div>
-          
+          <div>
+          <ListItem button>
+            
+            <CancelPresentationIcon />
+          </ListItem>
+          </div>
+          <div>
+            <ListItem button>
+            <Badge badgeContent={9} color="primary">
+              <NotificationsIcon />
+              </Badge>
+            </ListItem>
+          </div>
         </Toolbar>
       </AppBar>
 
@@ -148,7 +173,7 @@ export function PermanentDrawerLeft() {
             <List component="div" disablePadding>
               <ListItem button className={classes.nested}>
                 <ListItemIcon>
-                  <BuildIcon />
+                  <CompareArrowsIcon />
                 </ListItemIcon>
                 <ListItemText primary="Status" />
               </ListItem>
@@ -158,7 +183,7 @@ export function PermanentDrawerLeft() {
             <List component="div" disablePadding>
               <ListItem button className={classes.nested}>
                 <ListItemIcon>
-                  <BuildIcon />
+                  <InfoIcon />
                 </ListItemIcon>
                 <ListItemText primary="Knowledge" />
               </ListItem>
@@ -168,7 +193,7 @@ export function PermanentDrawerLeft() {
             <List component="div" disablePadding>
               <ListItem button className={classes.nested}>
                 <ListItemIcon>
-                  <BuildIcon />
+                  <BookIcon />
                 </ListItemIcon>
                 <ListItemText primary="Reading" />
               </ListItem>
@@ -178,7 +203,7 @@ export function PermanentDrawerLeft() {
             <List component="div" disablePadding>
               <ListItem button className={classes.nested}>
                 <ListItemIcon>
-                  <BuildIcon />
+                  <CreateIcon />
                 </ListItemIcon>
                 <ListItemText primary="Writing" />
               </ListItem>
@@ -188,7 +213,7 @@ export function PermanentDrawerLeft() {
             <List component="div" disablePadding>
               <ListItem button className={classes.nested}>
                 <ListItemIcon>
-                  <BuildIcon />
+                  <HearingIcon />
                 </ListItemIcon>
                 <ListItemText primary="Listening" />
               </ListItem>
@@ -198,7 +223,7 @@ export function PermanentDrawerLeft() {
             <List component="div" disablePadding>
               <ListItem button className={classes.nested}>
                 <ListItemIcon>
-                  <BuildIcon />
+                  <RecordVoiceOverIcon />
                 </ListItemIcon>
                 <ListItemText primary="Speaking" />
               </ListItem>
@@ -208,7 +233,7 @@ export function PermanentDrawerLeft() {
             <List component="div" disablePadding>
               <ListItem button className={classes.nested}>
                 <ListItemIcon>
-                  <BuildIcon />
+                  <FunctionsIcon />
                 </ListItemIcon>
                 <ListItemText primary="Maths" />
               </ListItem>
@@ -225,7 +250,7 @@ export function PermanentDrawerLeft() {
             <List component="div" disablePadding>
               <ListItem button className={classes.nested}>
                 <ListItemIcon>
-                  <BuildIcon />
+                  <ViewModuleIcon />
                 </ListItemIcon>
                 <ListItemText primary="Test Modules" />
               </ListItem>
@@ -235,7 +260,7 @@ export function PermanentDrawerLeft() {
             <List component="div" disablePadding>
               <ListItem button className={classes.nested}>
                 <ListItemIcon>
-                  <BuildIcon />
+                  <BookIcon />
                 </ListItemIcon>
                 <ListItemText primary="Tests" />
               </ListItem>
@@ -273,7 +298,7 @@ export function PermanentDrawerLeft() {
             <List component="div" disablePadding>
               <ListItem button className={classes.nested}>
                 <ListItemIcon>
-                  <BuildIcon />
+                  <LinearScaleIcon />
                 </ListItemIcon>
                 <ListItemText primary="Question Performance" />
               </ListItem>
@@ -283,7 +308,7 @@ export function PermanentDrawerLeft() {
             <List component="div" disablePadding>
               <ListItem button className={classes.nested}>
                 <ListItemIcon>
-                  <BuildIcon />
+                <AirplanemodeActiveIcon />
                 </ListItemIcon>
                 <ListItemText primary="Pilot Question Performance" />
               </ListItem>
@@ -293,7 +318,7 @@ export function PermanentDrawerLeft() {
             <List component="div" disablePadding>
               <ListItem button className={classes.nested}>
                 <ListItemIcon>
-                  <BuildIcon />
+                  <PersonIcon />
                 </ListItemIcon>
                 <ListItemText primary="Test Taker Performance Overview" />
               </ListItem>
@@ -303,7 +328,7 @@ export function PermanentDrawerLeft() {
             <List component="div" disablePadding>
               <ListItem button className={classes.nested}>
                 <ListItemIcon>
-                  <BuildIcon />
+                   <LocalLibraryIcon />
                 </ListItemIcon>
                 <ListItemText primary="Test Taker Performance Detailed" />
               </ListItem>
@@ -320,7 +345,7 @@ export function PermanentDrawerLeft() {
             <List component="div" disablePadding>
               <ListItem button className={classes.nested}>
                 <ListItemIcon>
-                  <BuildIcon />
+                  <ColorLensIcon/>
                 </ListItemIcon>
                 <ListItemText primary="Question Layouts" />
               </ListItem>
@@ -330,7 +355,7 @@ export function PermanentDrawerLeft() {
             <List component="div" disablePadding>
               <ListItem button className={classes.nested}>
                 <ListItemIcon>
-                  <BuildIcon />
+                  <WebIcon />
                 </ListItemIcon>
                 <ListItemText primary="Information Screens" />
               </ListItem>
@@ -340,7 +365,7 @@ export function PermanentDrawerLeft() {
             <List component="div" disablePadding>
               <ListItem button className={classes.nested}>
                 <ListItemIcon>
-                  <BuildIcon />
+                  <VibrationIcon />
                 </ListItemIcon>
                 <ListItemText primary="Test Variants" />
               </ListItem>
@@ -350,7 +375,7 @@ export function PermanentDrawerLeft() {
             <List component="div" disablePadding>
               <ListItem button className={classes.nested}>
                 <ListItemIcon>
-                  <BuildIcon />
+                  <AssignmentIndIcon/>
                 </ListItemIcon>
                 <ListItemText primary="Client Types" />
               </ListItem>
@@ -360,7 +385,7 @@ export function PermanentDrawerLeft() {
             <List component="div" disablePadding>
               <ListItem button className={classes.nested}>
                 <ListItemIcon>
-                  <BuildIcon />
+                  <SupervisorAccountIcon />
                 </ListItemIcon>
                 <ListItemText primary="Administrators" />
               </ListItem>
@@ -370,7 +395,7 @@ export function PermanentDrawerLeft() {
             <List component="div" disablePadding>
               <ListItem button className={classes.nested}>
                 <ListItemIcon>
-                  <BuildIcon />
+                  <CardMembershipIcon />
                 </ListItemIcon>
                 <ListItemText primary="Default Certificate" />
               </ListItem>
@@ -380,7 +405,7 @@ export function PermanentDrawerLeft() {
             <List component="div" disablePadding>
               <ListItem button className={classes.nested}>
                 <ListItemIcon>
-                  <BuildIcon />
+                  <ScoreIcon />
                 </ListItemIcon>
                 <ListItemText primary="Results" />
               </ListItem>
@@ -390,7 +415,7 @@ export function PermanentDrawerLeft() {
             <List component="div" disablePadding>
               <ListItem button className={classes.nested}>
                 <ListItemIcon>
-                  <BuildIcon />
+                  <ViewStreamIcon />
                 </ListItemIcon>
                 <ListItemText primary="Content Blocks" />
               </ListItem>
@@ -400,7 +425,7 @@ export function PermanentDrawerLeft() {
             <List component="div" disablePadding>
               <ListItem button className={classes.nested}>
                 <ListItemIcon>
-                  <BuildIcon />
+                  <CheckCircleIcon />
                 </ListItemIcon>
                 <ListItemText primary="Auto Complete" />
               </ListItem>
@@ -410,7 +435,7 @@ export function PermanentDrawerLeft() {
             <List component="div" disablePadding>
               <ListItem button className={classes.nested}>
                 <ListItemIcon>
-                  <BuildIcon />
+                  <BorderColorIcon />
                 </ListItemIcon>
                 <ListItemText primary="Assign Marker" />
               </ListItem>
@@ -448,10 +473,9 @@ export function PermanentDrawerLeft() {
 
           </ListItem>
         </List>
-
-
       </Drawer>
-
+   
+     
     </div>
 
   );
