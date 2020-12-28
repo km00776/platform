@@ -5,9 +5,8 @@ div.class {
   position: absolute;
 }
 div.fullContainer {
-  position: relative;
-  margin: auto;
-  right: 70px;
+ position: relative;
+ left: 100px;
 
 }
 div.mailIcon {
@@ -40,15 +39,14 @@ h2.papertext3 {
 }
 .clientsHeading {
   position: absolute;
-  float: left;
-  top: 10vh;
-  left: 20.6vw;
+  top: 12vh;
+  left: 24.6vh;
   color: #2e3b55;
 }
 div.clientsData {
   position: absolute;
-  top: 20vh;
-  left: 20.2vw;
+  top: 22vh;
+  left: 12.2vw;
   color: black;
   width: 100%;
   margin: auto;
@@ -56,8 +54,8 @@ div.clientsData {
 
 div.clientsData2 {
   position: absolute;
-  top: 19%;
-  right: 10px;
+  top: 21%;
+  left: 14vw;
   color: black;
   width: 100%;
 }
@@ -66,8 +64,4 @@ div.Pagination {
   position: relative;
   top: 410px;
   float: right;
-}
-
-.root {
-  width: 25.2vw;
 }
