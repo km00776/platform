@@ -17,14 +17,14 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'wrap',
     '& > *': {
       marginLeft: '28px',
-      minWidth: '84vw',
+      minWidth: '20vw',
      
     
-      marginTop: '20px',
+      marginTop: '4vh',
       display:'inline-block'
 
     },
-    position: 'absolute'
+    position: 'relative'
   },
 
 }));
