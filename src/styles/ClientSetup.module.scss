@@ -1,9 +1,55 @@
 div.class {
   background: lightsteelblue;
-  min-height: 100vh;
+  min-height: 100vw;
+  min-width: 100vw;
+  position: absolute;
 }
 
 div.mailIcon {
-  right: 70px;
+  right: 135px;
   position: absolute;
+}
+h2.papertext {
+  position: relative;
+  bottom: 3px;
+  font-size: 1.4rem;
+  float: right;
+  right: 100px;
+  color: white;
+}
+h2.papertext2 {
+  position: relative;
+  bottom: 3px;
+  font-size: 1.4rem;
+  float: right;
+  right: 14px;
+  color: white;
+}
+h2.papertext3 {
+  position: relative;
+  bottom: 3px;
+  font-size: 1.4rem;
+  float: right;
+  right: 45px;
+  color: white;
+}
+.clientsHeading {
+  position: absolute;
+  float: left;
+  top: 90px;
+  left: 280px;
+  color: #2e3b55;
+}
+.clientsData {
+  position: absolute;
+  float: left;
+  top: 130px;
+  left: 256px;
+  color: black;
+}
+
+div.Pagination {
+  position: relative;
+  top: 410px;
+  float: right;
 }

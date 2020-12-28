@@ -1,4 +1,5 @@
 
+import Footer from './Footer';
 
 import React from 'react';
 import Drawer from '@material-ui/core/Drawer';
@@ -49,6 +50,8 @@ import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 import CardMembershipIcon from '@material-ui/icons/CardMembership';
 import ScoreIcon from '@material-ui/icons/Score';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+import NotificationsIcon from '@material-ui/icons/Notifications';
+
 
 const drawerWidth = 240;
 
@@ -122,19 +125,26 @@ export function PermanentDrawerLeft() {
       <AppBar style={{ background: '#2E3B55',  }}>
         <Toolbar>
           <Box display='flex' flexGrow={1}>
-
           </Box>
           <div className={styles.mailIcon}>
             <ListItem button>
-              <Badge badgeContent={1000} color="primary">
+              <Badge badgeContent={5} color="primary">
                 <MailIcon />
               </Badge>
             </ListItem>
           </div>
           <div>
           <ListItem button>
+            
             <CancelPresentationIcon />
           </ListItem>
+          </div>
+          <div>
+            <ListItem button>
+            <Badge badgeContent={9} color="primary">
+              <NotificationsIcon />
+              </Badge>
+            </ListItem>
           </div>
         </Toolbar>
       </AppBar>
@@ -463,10 +473,9 @@ export function PermanentDrawerLeft() {
 
           </ListItem>
         </List>
-
-
       </Drawer>
-
+   
+     
     </div>
 
   );
