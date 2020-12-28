@@ -16,12 +16,15 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexWrap: 'wrap',
     '& > *': {
-      margin: theme.spacing(3),
-      width: '500px',
-      height: '150px'
+      marginLeft: '28px',
+      width: '42vh',
+     
+      marginRight: '10px',
+      marginTop: '20px',
+      display:'inline-block'
 
     },
-    position: 'relative'
+    position: 'fixed'
   },
 
 }));
@@ -32,10 +35,10 @@ const useStyles2 = makeStyles((theme) => ({
     flexWrap: 'wrap',
     '& > *': {
       margin: theme.spacing(3),
-      width: theme.spacing(199),
+      width: theme.spacing(159),
       height: theme.spacing(60),
     },
-    position: 'relative'
+    position: 'absolute'
   },
 
 }));
