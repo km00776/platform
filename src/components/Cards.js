@@ -17,14 +17,14 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'wrap',
     '& > *': {
       marginLeft: '28px',
-      width: '42vh',
+      minWidth: '165vh',
      
-      marginRight: '10px',
+    
       marginTop: '20px',
       display:'inline-block'
 
     },
-    position: 'fixed'
+    position: 'absolute'
   },
 
 }));
@@ -35,8 +35,9 @@ const useStyles2 = makeStyles((theme) => ({
     flexWrap: 'wrap',
     '& > *': {
       margin: theme.spacing(3),
-      width: theme.spacing(159),
-      height: theme.spacing(60),
+      width: '165vh',
+      height: theme.spacing(40),
+      marginLeft: '28px'
     },
     position: 'absolute'
   },
@@ -84,19 +85,19 @@ export function SimplePaper() {
   return (
     <div className={classes.root}>
       <div className={styles.t3}> 
-      <Paper style={{ backgroundColor: 'white', height: '140px' }} elevation={6}> 
+      <Paper style={{ backgroundColor: 'white', height: '140px' }} elevation={4}> 
         <TrendingUpIcon style={{ fontSize: 118, color: '#00FF00	' }} />
         {/* <h2 className={styles.papertext}>Total Clients</h2> */}
          </Paper>
       </div>
       <div  className={styles.t2}> 
-      <Paper style={{ backgroundColor: 'white', height: '140px' }} elevation={6}>
+      <Paper style={{ backgroundColor: 'white', height: '140px' }} elevation={4}>
         <ImportContactsIcon style={{ fontSize: 100, color: '#FF1493	' }} />
         {/* <h2 className={styles.papertext2}>Total University Clients</h2> */}
       </Paper>
       </div>
       <div  className={styles.t1}>
-      <Paper style={{ backgroundColor: 'white', height: '140px' }} elevation={6}>
+      <Paper style={{ backgroundColor: 'white', height: '140px' }} elevation={4}>
         <SchoolIcon style={{ fontSize: 100, color: '#FF4500' }} />
         {/* <h2 className={styles.papertext3}>Total School Clients</h2> */}
       </Paper>
@@ -112,7 +113,7 @@ export function SimplePaper2() {
   return (
     <div className={classes2.root}>
 
-      <Paper style={{ backgroundColor: 'white' }} elevation={6}>
+      <Paper style={{ backgroundColor: 'white' }} elevation={4}>
         {/* <ContainedButtons /> */}
       </Paper>
 
