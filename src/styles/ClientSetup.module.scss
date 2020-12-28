@@ -1,4 +1,9 @@
-html,
-body {
-  background: whitesmoke;
+div.class {
+  background: lightsteelblue;
+  min-height: 100vh;
+}
+
+div.mailIcon {
+  right: 70px;
+  position: absolute;
 }

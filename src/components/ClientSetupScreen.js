@@ -2,7 +2,8 @@ import { Fragment, useEffect, useState } from 'react';
 import styles from '../styles/ClientSetup.module.scss';
 import ToolBar from './ToolBar';
 import Footer from './Footer';
-import PermanentDrawerLeft from './DrawerComponent';
+import {PermanentDrawerLeft} from './DrawerComponent';
+
 
 
 const ClientSetup = () => {
@@ -25,13 +26,10 @@ const ClientSetup = () => {
     }, [])
 
 
-    return (
-    <body style={{"background-color:grey"}}>
-        <div>
+return (
+    <div className={styles.class}> 
             <PermanentDrawerLeft />
-        </div>
-    </body>
-
+            </div>
     );
 }
 
