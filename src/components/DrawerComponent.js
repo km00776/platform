@@ -113,7 +113,7 @@ export function PermanentDrawerLeft() {
           <Box display='flex' flexGrow={1}>
 
           </Box>
-          <div className={styles.mailIcon}>
+          <div className={styles.mailIcon} >
             <ListItem button>
               <Badge badgeContent={4} color="primary">
                 <MailIcon />
