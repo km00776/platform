@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
       height: theme.spacing(20),
     },
   },
-  position: 'absolute'
+ 
 }));
 
 const useStyles2 = makeStyles((theme) => ({

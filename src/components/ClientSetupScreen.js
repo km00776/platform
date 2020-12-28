@@ -49,6 +49,7 @@ const ClientSetup = () => {
     return (
         <div className={styles.class}>
             <PermanentDrawerLeft />
+        <div className={styles.fullContainer}> 
             <div className={styles.clientsHeading}>
                 <ThemeProvider theme={theme}>
                     <Typography variant="h5">
@@ -58,9 +59,9 @@ const ClientSetup = () => {
                 
             </div>
             <div className={styles.clientsData}>
-                <SimplePaper />
-                
+                <SimplePaper /> 
             </div>
+        </div>
             {/* <div className={styles.clientsData2}>
                 <SimplePaper2 />
             </div> */}
