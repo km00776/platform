@@ -12,7 +12,7 @@ import ContainedButtons from './reuseableButton';
 import ImportContactsIcon from '@material-ui/icons/ImportContacts';
 import { sizing } from '@material-ui/system';
 import Box from '@material-ui/core/Box';
-import { WrapText } from 'material-ui-icons';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -60,7 +60,7 @@ const useStyles2 = makeStyles((theme) => ({
         position: 'relative'
       },
       [theme.breakpoints.only('xl')]: {
-        width: theme.spacing(180),
+        width: theme.spacing(183.8),
         height: theme.spacing(80),
         position: 'relative'
       },
