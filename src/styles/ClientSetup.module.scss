@@ -34,20 +34,30 @@ h2.papertext3 {
   color: #2e3b55;
 }
 .clientsHeading {
-  position: absolute;
+  position: relative;
   float: left;
   top: 90px;
-  left: 280px;
+  left: 295px;
   color: #2e3b55;
 }
-.clientsData {
+div.clientsData {
   position: absolute;
-
-  top: 130px;
-  left: 285px;
-  width: 100%;
+  top: 10%;
+  left: 275px;
   color: black;
+  width: 100%;
+  margin: auto;
 }
+
+div.clientsData2 {
+  position: absolute;
+  top: 19%;
+  left: 260px;
+  color: black;
+  width: 100%;
+  margin: auto;
+}
+
 
 div.Pagination {
   position: relative;
@@ -56,7 +66,5 @@ div.Pagination {
 }
 
 .root {
-  width: 80gi%;
-
-  position: relative;
+  width: 520px; 
 }
