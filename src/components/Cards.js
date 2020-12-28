@@ -16,9 +16,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexWrap: 'wrap',
     '& > *': {
-      margin: theme.spacing(3),
-      width: theme.spacing(62),
-      height: theme.spacing(15),
+      margin: theme.spacing(1),
+      width: '25.5vw',
+      display: 'inline-block',
+      height: '45vh'
 
     },
     position: 'relative'
@@ -35,7 +36,7 @@ const useStyles2 = makeStyles((theme) => ({
       width: theme.spacing(198),
       height: theme.spacing(30),
     },
-    position: 'relative'
+    position: 'absolute'
   },
 
 }));
@@ -80,24 +81,25 @@ export function SimplePaper() {
 
   return (
     <div className={classes.root}>
-    <div>
-      <Paper style={{ backgroundColor: 'white' }} elevation={8}>
-        <TrendingUpIcon style={{ fontSize: 118, color: 'lightgreen' }} />
-        <h2 className={styles.papertext}>Total Clients</h2>
-
-      </Paper>
-      <Paper style={{ backgroundColor: 'white' }} elevation={8}>
-        <ImportContactsIcon style={{ fontSize: 100, color: 'lightskyblue' }} />
-        <h2 className={styles.papertext2}>Total University Clients</h2>
-      
-      </Paper>
-      <Paper style={{ backgroundColor: 'white' }} elevation={8}>
-        <SchoolIcon style={{ fontSize: 100, color: '#fed8b1' }} />
-        <h2 className={styles.papertext3}>Total School Clients</h2>
-        
-      </Paper>
-
+      <div className={styles.t3}> 
+      <Paper style={{ backgroundColor: 'white', height: '140px' }} elevation={8}> 
+        {/* <TrendingUpIcon style={{ fontSize: 118, color: 'lightgreen' }} />
+        <h2 className={styles.papertext}>Total Clients</h2> */}
+         </Paper>
       </div>
+      <div  className={styles.t2}> 
+      <Paper style={{ backgroundColor: 'white', height: '140px' }} elevation={8}>
+        {/* <ImportContactsIcon style={{ fontSize: 100, color: 'lightskyblue' }} />
+        <h2 className={styles.papertext2}>Total University Clients</h2> */}
+      </Paper>
+      </div>
+      <div  className={styles.t1}>
+      <Paper style={{ backgroundColor: 'white', height: '140px' }} elevation={8}>
+        {/* <SchoolIcon style={{ fontSize: 100, color: '#fed8b1' }} />
+        <h2 className={styles.papertext3}>Total School Clients</h2> */}
+      </Paper>
+      </div> 
+
     </div>
   );
 }
