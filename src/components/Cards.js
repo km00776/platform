@@ -35,10 +35,11 @@ const useStyles2 = makeStyles((theme) => ({
     flexWrap: 'wrap',
     '& > *': {
       margin: theme.spacing(3),
-      width: theme.spacing(159),
+      width: '135vh',
       height: theme.spacing(60),
+      marginLeft: '28px'
     },
-    position: 'absolute'
+    position: 'fixed'
   },
 
 }));
