@@ -64,9 +64,9 @@ const useStyles2 = makeStyles((theme) => ({
         height: theme.spacing(40),
         position: 'relative'
       },
-   
+
     },
-    
+
   },
 
 }));
@@ -110,20 +110,20 @@ export function SimplePaper() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Paper  style={{ backgroundColor: 'white' }} elevation={4}>
-      <TrendingUpIcon style={{fontSize: 90, color: '#66bb6a'   }} />
+      <Paper style={{ backgroundColor: 'white' }} elevation={4}>
+        <TrendingUpIcon style={{ fontSize: 90, color: '#66bb6a' }} />
         <h2 className={styles.papertext}></h2>
         {/* <Divider />
         <h3 className={styles.totalClients}>80</h3> */}
       </Paper>
-      <Paper  style={{ backgroundColor: 'white' }} elevation={4}>
-      <ImportContactsIcon style={{fontSize: 60, color: '#536dfe'   }}/>
+      <Paper style={{ backgroundColor: 'white' }} elevation={4}>
+        <ImportContactsIcon style={{ fontSize: 60, color: '#536dfe' }} />
         {/* <h2 className={styles.papertext2}>Total University</h2> */}
         {/* <Divider />
         <h3 className={styles.totalUniversityClients}>80</h3> */}
       </Paper>
-      <Paper  style={{ backgroundColor: 'white' }} elevation={4}>
-      <SchoolIcon style={{fontSize: 60, color: '#ec407a'   }}/>
+      <Paper style={{ backgroundColor: 'white' }} elevation={4}>
+        <SchoolIcon style={{ fontSize: 60, color: '#ec407a' }} />
         {/* <h2 className={styles.papertext3}>Total School</h2>
         <Divider />
         <h3 className={styles.totalSchoolClients}>80</h3> */}
@@ -138,35 +138,32 @@ export function SimplePaper2() {
 
   return (
     <div className={classes2.root}>
-
       <Paper style={{ backgroundColor: 'white' }} elevation={4}>
-          {/* <input></input> */}
+        <div className={styles.leftContainer}>
           <div className={styles.findContainer}>
-          <label>Find</label>
-          <input></input>
+            <label className={styles.findLabel}>Find</label>
+            <input className={styles.findInput}></input>
+          </div>
+          <div className={styles.nameContainer}>
+            <label className={styles.nameLabel}>Name</label>
+            
+          </div>
+        </div>
+        <div className={styles.rightContainer}>
+          <div className={styles.findContainer}>
+            <label>Country</label>
+            <input></input>
           </div>
           <div className={styles.findContainer}>
-          <label>Name</label>
-          <input></input>
+            <label for="find">Type</label>
+            <select name="Type" id="Type">
+              <option value="All">All</option>
+              <option value="University">University</option>
+              <option value="College">College</option>
+            </select>
           </div>
-          {/* <div className={styles.findContainer}>
-          <label>Country</label>
-          <input></input>
-          </div>
-          <div className={styles.findContainer}>
-          <label for="find">Type</label>
-          <select name="Type" id="Type">
-            <option value="All">All</option>
-            <option value="University">University</option>
-            <option value="College">College</option>
-        </select>
-          
-          </div>   */}
-          {/* <input></input>
-          <br></br>
-          <input></input> */}
+        </div>
 
-         {/* <ContainedButtons />  */}
       </Paper>
 
 

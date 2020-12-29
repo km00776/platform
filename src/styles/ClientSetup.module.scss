@@ -13,17 +13,54 @@ div.mailIcon {
   position: absolute;
 }
 
-label {
-  font-weight: 800;
-  color: #001b3a;
-  position: relative;
-  left: 70px;
+label.nameLabel {
+  font-weight: 700;
+  position: absolute;
+  left: 370px;
   font-size: 15px;
+  color: #2e3b55;
+  top: 70px;
+}
+input.nameInput {
+  position: relative;
+  right: 30% ;
+  width: 300px;
+  top: 2.5px;
+}
+
+label.findLabel {
+  font-weight: 700;
+  position: absolute;
+  left: 370px;
+  font-size: 15px;
+  color: #2e3b55;
+  bottom: 10px;
+}
+
+input.findInput {
+  position: relative;
+  left: 430px;
+  width: 300px;
+  top: 2.5px;
 }
 div.findContainer {
-  top: 20px;
-  position: relative;
+  top: 40px;
+  position: absolute;
   right: 35px;
+}
+div.nameContainer {
+  top: 40px;
+  position: absolute;
+  right: 35px;
+}
+input.nameInput {
+  position: relative;
+  left: 105px;
+}
+
+div.leftContainer {
+  position: absolute;
+  float: left;
 }
 
 input {
