@@ -5,9 +5,8 @@ div.class {
   position: absolute;
 }
 div.fullContainer {
- position: relative;
- left: 100px;
-
+  position: relative;
+  left: 100px;
 }
 div.mailIcon {
   right: 135px;
@@ -64,4 +63,74 @@ div.Pagination {
   position: relative;
   top: 410px;
   float: right;
+}
+
+// this is for my mac
+@media screen and (max-width: 1440px) {
+  div.class {
+    background: white;
+    min-height: 100vw;
+    min-width: 100vw;
+    position: absolute;
+  }
+  div.fullContainer {
+    position: relative;
+    left: 100px;
+  }
+  div.mailIcon {
+    right: 135px;
+    position: absolute;
+  }
+  h2.papertext {
+    position: relative;
+    top: 10px;
+    font-size: 2rem;
+    float: right;
+    right: 59px;
+    color: #2e3b55;
+  }
+  h2.papertext2 {
+    position: relative;
+    bottom: 3px;
+    font-size: 2rem;
+    float: right;
+    left: 45px;
+    color: #2e3b55;
+  }
+  h2.papertext3 {
+    position: relative;
+    bottom: 20px;
+    font-size: 2rem;
+    float: right;
+    right: 45px;
+    color: #2e3b55;
+  }
+  .clientsHeading {
+    position: absolute;
+    top: 12vh;
+    left: 24.6vh;
+    color: #2e3b55;
+  }
+  div.clientsData {
+    position: absolute;
+    top: 22vh;
+    left: 13.9vw;
+    color: black;
+    width: 100%;
+    margin: auto;
+  }
+
+  div.clientsData2 {
+    position: absolute;
+    top: 26%;
+    left: 20.8vw;
+    color: black;
+    width: 100%;
+  }
+
+  div.Pagination {
+    position: relative;
+    top: 410px;
+    float: right;
+  }
 }

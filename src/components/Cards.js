@@ -12,6 +12,7 @@ import ContainedButtons from './reuseableButton';
 import ImportContactsIcon from '@material-ui/icons/ImportContacts';
 import { sizing } from '@material-ui/system';
 import Box from '@material-ui/core/Box';
+import { WrapText } from 'material-ui-icons';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,8 +24,9 @@ const useStyles = makeStyles((theme) => ({
         height: theme.spacing(40),
         margin: theme.spacing(3),
       },
+      // this is for my mac 1440 x 900p
       [theme.breakpoints.only('lg')]: {
-        width: theme.spacing(50),
+        width: theme.spacing(43),
         height: theme.spacing(20),
         margin: theme.spacing(1),
         position: 'relative',
@@ -35,38 +37,34 @@ const useStyles = makeStyles((theme) => ({
         height: theme.spacing(20),
         margin: theme.spacing(1),
         position: 'relative',
-        
-        
-
       },
-     
-    
-
     },
   },
 
 }));
 
 const useStyles2 = makeStyles((theme) => ({
-  root1: {
+  root: {
     display: 'flex',
     flexWrap: 'wrap',
     '& > *': {
-      
       [theme.breakpoints.down('md')]: {
-        width: theme.spacing(138),
+        width: theme.spacing(10),
         height: theme.spacing(40),
         margin: theme.spacing(3),
       },
-      [theme.breakpoints.down('xl')]: {
-        width: theme.spacing(184),
-        height: theme.spacing(80),
-      
-        marginLeft: theme.spacing(9)
+      [theme.breakpoints.only('lg')]: {
+        width: theme.spacing(132.8),
+        height: theme.spacing(40),
+        margin: theme.spacing(1),
+        position: 'relative'
       },
-     position: 'absolute'
-    
-
+      [theme.breakpoints.only('xl')]: {
+        width: theme.spacing(180),
+        height: theme.spacing(80),
+        position: 'relative'
+      },
+   
     },
     
   },
@@ -113,13 +111,17 @@ export function SimplePaper() {
   return (
     <div className={classes.root}>
       <Paper  style={{ backgroundColor: 'white' }} elevation={4}>
-        {/* <h2 className={styles.papertext}>Total Clients</h2> */}
+      <TrendingUpIcon style={{fontSize: 120, color: '#66bb6a'   }} />
+        <h2 className={styles.papertext}>Total Clients</h2>
       </Paper>
       <Paper  style={{ backgroundColor: 'white' }} elevation={4}>
-        {/* <h2 className={styles.papertext}>Total Clients</h2> */}
+      <ImportContactsIcon style={{fontSize: 100, color: '#536dfe'   }}/>
+      
+        <h2 className={styles.papertext2}>Total University Clients</h2>
       </Paper>
       <Paper  style={{ backgroundColor: 'white' }} elevation={4}>
-        {/* <h2 className={styles.papertext}>Total Clients</h2> */}
+      <SchoolIcon style={{fontSize: 100, color: '#ec407a'   }}/>
+        <h2 className={styles.papertext3}>Total School Clients</h2>
       </Paper>
     </div>
 
@@ -130,7 +132,7 @@ export function SimplePaper2() {
   const classes2 = useStyles2();
 
   return (
-    <div className={classes2.root1}>
+    <div className={classes2.root}>
 
       <Paper style={{ backgroundColor: 'white' }} elevation={4}>
         {/* <ContainedButtons /> */}
