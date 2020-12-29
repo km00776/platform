@@ -16,15 +16,12 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexWrap: 'wrap',
     '& > *': {
-      marginLeft: '28px',
-      minWidth: '84vw',
-     
-    
+      minWidth: '77vw',
       marginTop: '20px',
-      display:'inline-block'
+        
 
     },
-    position: 'absolute'
+    position: 'relative'
   },
 
 }));
@@ -35,9 +32,9 @@ const useStyles2 = makeStyles((theme) => ({
     flexWrap: 'wrap',
     '& > *': {
       margin: theme.spacing(3),
-      width: '165vh',
+      width: '30px',
       height: theme.spacing(40),
-      marginLeft: '28px'
+      
     },
     position: 'absolute'
   },
@@ -85,7 +82,7 @@ export function SimplePaper() {
   return (
     <div className={classes.root}>
       <div className={styles.t3}> 
-      <Paper style={{ backgroundColor: 'white', height: '140px' }} elevation={4}> 
+      <Paper style={{ backgroundColor: 'white'}} elevation={4}> 
         <TrendingUpIcon style={{ fontSize: 118, color: '#00FF00	' }} />
         {/* <h2 className={styles.papertext}>Total Clients</h2> */}
          </Paper>

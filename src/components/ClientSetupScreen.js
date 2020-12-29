@@ -57,19 +57,8 @@ const ClientSetup = () => {
                 </ThemeProvider>
             </div>
             <div className={styles.clientsData}>
-                <br></br>
-                <SimplePaper />
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-               {/* <SimplePaper2 />  */}
-                {/* <SimplePaper3 />  */}
+               <SimplePaper />
+                
 
 
             </div>
