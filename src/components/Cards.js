@@ -123,18 +123,18 @@ export function SimplePaper() {
       <Paper style={{ backgroundColor: 'white' }} elevation={4}>
         <EqualizerIcon style={{ fontSize: 70, color: '#66bb6a' }} />
         <h2 className={styles.papertext}>10,000</h2>
-        <h3 className={styles.totalClients}>Total Clients</h3>
+        <h3 className={styles.totalClients}>Total Clients</h3> 
       </Paper>
       <Paper style={{ backgroundColor: 'white' }} elevation={4}>
         <ImportContactsIcon style={{ fontSize: 60, color: '#536dfe' }} />
         <h2 className={styles.papertext2}>30,000</h2>
-
-        <h3 className={styles.totalUniversityClients}>Total University/College Clients</h3>
+        {/* <Divider />
+        <h3 className={styles.totalUniversityClients}>Total University/College Clients</h3> */}
       </Paper>
       <Paper style={{ backgroundColor: 'white' }} elevation={4}>
         <SchoolIcon style={{ fontSize: 60, color: '#ec407a' }} />
-        <h2 className={styles.papertext3}>54,302</h2>
-
+         <h2 className={styles.papertext3}>54,302</h2>
+        
       </Paper>
     </div>
 
@@ -241,7 +241,8 @@ export function SimplePaper3() {
       <Paper style={{ backgroundColor: 'white' }} elevation={4}>
         {/* <BasicTable/> */}
         <div className={styles.Pagination}>
-          <BasicPagination />
+
+          {/* <BasicPagination /> */}
         </div>
       </Paper>
 
