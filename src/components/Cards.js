@@ -61,7 +61,7 @@ const useStyles2 = makeStyles((theme) => ({
       },
       [theme.breakpoints.only('xl')]: {
         width: theme.spacing(183.8),
-        height: theme.spacing(80),
+        height: theme.spacing(40),
         position: 'relative'
       },
    
@@ -114,19 +114,19 @@ export function SimplePaper() {
       <TrendingUpIcon style={{fontSize: 120, color: '#66bb6a'   }} />
         <h2 className={styles.papertext}>Total Clients</h2>
         <Divider />
-        <h3 className={styles.totalClients}>40</h3>
+        <h3 className={styles.totalClients}>80</h3>
       </Paper>
       <Paper  style={{ backgroundColor: 'white' }} elevation={4}>
       <ImportContactsIcon style={{fontSize: 120, color: '#536dfe'   }}/>
         <h2 className={styles.papertext2}>Total University</h2>
         <Divider />
-        <h3 className={styles.totalUniversityClients}>800</h3>
+        <h3 className={styles.totalUniversityClients}>80</h3>
       </Paper>
       <Paper  style={{ backgroundColor: 'white' }} elevation={4}>
       <SchoolIcon style={{fontSize: 120, color: '#ec407a'   }}/>
         <h2 className={styles.papertext3}>Total School</h2>
         <Divider />
-        <h3 className={styles.totalSchoolClients}>100</h3>
+        <h3 className={styles.totalSchoolClients}>80</h3>
       </Paper>
     </div>
 
@@ -140,7 +140,7 @@ export function SimplePaper2() {
     <div className={classes2.root}>
 
       <Paper style={{ backgroundColor: 'white' }} elevation={4}>
-        {/* <ContainedButtons /> */}
+         {/* <ContainedButtons />  */}
       </Paper>
 
 

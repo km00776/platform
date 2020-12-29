@@ -12,28 +12,55 @@ div.mailIcon {
   right: 135px;
   position: absolute;
 }
+
+h3.totalClients {
+  position: relative;
+  bottom: 25px;
+  font-size: 1.8rem;
+  float: right;
+  right: 220px;
+  color: #2e3b55;
+}
+h3.totalUniversityClients {
+  position: relative;
+  bottom: 25px;
+  font-size: 1.8rem;
+  float: right;
+  right: 220px;
+  color: #2e3b55;
+}
+h3.totalSchoolClients {
+  position: relative;
+  bottom: 25px;
+  font-size: 1.8rem;
+  float: right;
+  right: 220px;
+  color: #2e3b55;
+}
+
 h2.papertext {
   position: relative;
-  bottom: 3px;
-  font-size: 1.4rem;
+  top: 10px;
+  font-size: 2rem;
   float: right;
-  right: 100px;
+  right: 185px;
   color: #2e3b55;
 }
 h2.papertext2 {
   position: relative;
-  bottom: 3px;
-  font-size: 1.4rem;
+  top: 10px;
+  font-size: 2rem;
+  right: 138px;
   float: right;
-  right: 14px;
   color: #2e3b55;
+  display: inline-block;
 }
 h2.papertext3 {
   position: relative;
-  bottom: 3px;
-  font-size: 1.4rem;
+  top: 10px;
+  font-size: 2rem;
   float: right;
-  right: 45px;
+  right: 180px;
   color: #2e3b55;
 }
 .clientsHeading {
