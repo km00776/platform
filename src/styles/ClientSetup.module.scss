@@ -73,6 +73,32 @@ div.Pagination {
     min-width: 100vw;
     position: absolute;
   }
+
+  h3.totalClients {
+    position: relative;
+    bottom: 25px;
+    font-size: 1.8rem;
+    float: right;
+    right: 150px;
+    color: #2e3b55;
+  }
+  h3.totalUniversityClients {
+    position: relative;
+    bottom: 25px;
+    font-size: 1.8rem;
+    float: right;
+    right: 150px;
+    color: #2e3b55;
+  }
+  h3.totalSchoolClients {
+    position: relative;
+    bottom: 25px;
+    font-size: 1.8rem;
+    float: right;
+    right: 150px;
+    color: #2e3b55;
+  }
+
   div.fullContainer {
     position: relative;
     left: 100px;
@@ -91,18 +117,18 @@ div.Pagination {
   }
   h2.papertext2 {
     position: relative;
-    bottom: 3px;
+    top: 10px;
     font-size: 2rem;
-    float: right;
-    left: 45px;
+    right: 12px;
     color: #2e3b55;
+    display: inline-block;
   }
   h2.papertext3 {
     position: relative;
-    bottom: 20px;
+    top: 10px;
     font-size: 2rem;
     float: right;
-    right: 45px;
+    right: 55px;
     color: #2e3b55;
   }
   .clientsHeading {

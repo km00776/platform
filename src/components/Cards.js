@@ -113,15 +113,20 @@ export function SimplePaper() {
       <Paper  style={{ backgroundColor: 'white' }} elevation={4}>
       <TrendingUpIcon style={{fontSize: 120, color: '#66bb6a'   }} />
         <h2 className={styles.papertext}>Total Clients</h2>
+        <Divider />
+        <h3 className={styles.totalClients}>40</h3>
       </Paper>
       <Paper  style={{ backgroundColor: 'white' }} elevation={4}>
-      <ImportContactsIcon style={{fontSize: 100, color: '#536dfe'   }}/>
-      
-        <h2 className={styles.papertext2}>Total University Clients</h2>
+      <ImportContactsIcon style={{fontSize: 120, color: '#536dfe'   }}/>
+        <h2 className={styles.papertext2}>Total University</h2>
+        <Divider />
+        <h3 className={styles.totalUniversityClients}>800</h3>
       </Paper>
       <Paper  style={{ backgroundColor: 'white' }} elevation={4}>
-      <SchoolIcon style={{fontSize: 100, color: '#ec407a'   }}/>
-        <h2 className={styles.papertext3}>Total School Clients</h2>
+      <SchoolIcon style={{fontSize: 120, color: '#ec407a'   }}/>
+        <h2 className={styles.papertext3}>Total School</h2>
+        <Divider />
+        <h3 className={styles.totalSchoolClients}>100</h3>
       </Paper>
     </div>
 
