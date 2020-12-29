@@ -18,20 +18,12 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexWrap: 'wrap',
     '& > *': {
-      margin: theme.spacing(3),
-      
-      height: theme.spacing(10),
-      
-
-
-
+      margin: theme.spacing(1),
+        
+      height: theme.spacing(20),
     },
-   
   },
-  position: 'relative'
-
-
-
+  position: 'absolute'
 }));
 
 const useStyles2 = makeStyles((theme) => ({
@@ -40,7 +32,7 @@ const useStyles2 = makeStyles((theme) => ({
     flexWrap: 'wrap',
     '& > *': {
       margin: theme.spacing(3),
-      width: '30px',
+      width: '82.82vw',
       height: theme.spacing(40),
 
     },
@@ -92,11 +84,22 @@ export function SimplePaper() {
       <div className={classes.root}>
 
       
-          <Paper className={styles.root} style={{ backgroundColor: 'black'}} elevation={4}>
+          <Paper className={styles.root} style={{ backgroundColor: 'white'}} elevation={4}>
 
             {/* <h2 className={styles.papertext}>Total Clients</h2> */}
           </Paper>
-      
+          
+          <Paper className={styles.root} style={{ backgroundColor: 'white'}} elevation={4}>
+
+            {/* <h2 className={styles.papertext}>Total Clients</h2> */}
+          </Paper>
+          
+          <Paper className={styles.root} style={{ backgroundColor: 'white'}} elevation={4}>
+
+            {/* <h2 className={styles.papertext}>Total Clients</h2> */}
+          </Paper>
+          
+
 
 
 

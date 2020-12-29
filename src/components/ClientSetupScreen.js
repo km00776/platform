@@ -55,15 +55,16 @@ const ClientSetup = () => {
                         Clients
                     </Typography>
                 </ThemeProvider>
+                
             </div>
             <div className={styles.clientsData}>
-               <SimplePaper />
+                <SimplePaper />
                 
-
-
             </div>
-
-
+            {/* <div className={styles.clientsData2}>
+                <SimplePaper2 />
+            </div> */}
+            
             <Footer />
         </div>
 
