@@ -13,6 +13,47 @@ div.mailIcon {
   position: absolute;
 }
 
+label {
+  font-weight: 800;
+  color: #001b3a;
+  position: relative;
+  left: 70px;
+  font-size: 15px;
+}
+div.findContainer {
+  top: 20px;
+  position: relative;
+  right: 35px;
+}
+
+input {
+  width: 34%;
+  padding: 6px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  position: relative;
+  left: 8%;
+  top: 4%;
+  border-color: blue;
+}
+
+select {
+  width: 19.7%;
+  padding: 6px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  position: relative;
+  left: 8%;
+  top: 4%;
+  border-color: blue;
+}
+
 h3.totalClients {
   position: relative;
   bottom: 25px;
@@ -53,7 +94,6 @@ h2.papertext2 {
   right: 138px;
   float: right;
   color: #2e3b55;
-  display: inline-block;
 }
 h2.papertext3 {
   position: relative;

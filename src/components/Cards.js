@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
       },
       // this is for my mac 1440 x 900p
       [theme.breakpoints.only('lg')]: {
-        width: theme.spacing(43),
+        width: theme.spacing(44),
         height: theme.spacing(20),
         margin: theme.spacing(1),
         position: 'relative',
@@ -54,8 +54,8 @@ const useStyles2 = makeStyles((theme) => ({
         margin: theme.spacing(3),
       },
       [theme.breakpoints.only('lg')]: {
-        width: theme.spacing(132.8),
-        height: theme.spacing(40),
+        width: theme.spacing(135.8),
+        height: theme.spacing(30),
         margin: theme.spacing(1),
         position: 'relative'
       },
@@ -111,22 +111,22 @@ export function SimplePaper() {
   return (
     <div className={classes.root}>
       <Paper  style={{ backgroundColor: 'white' }} elevation={4}>
-      <TrendingUpIcon style={{fontSize: 120, color: '#66bb6a'   }} />
-        <h2 className={styles.papertext}>Total Clients</h2>
-        <Divider />
-        <h3 className={styles.totalClients}>80</h3>
+      <TrendingUpIcon style={{fontSize: 90, color: '#66bb6a'   }} />
+        <h2 className={styles.papertext}></h2>
+        {/* <Divider />
+        <h3 className={styles.totalClients}>80</h3> */}
       </Paper>
       <Paper  style={{ backgroundColor: 'white' }} elevation={4}>
-      <ImportContactsIcon style={{fontSize: 120, color: '#536dfe'   }}/>
-        <h2 className={styles.papertext2}>Total University</h2>
-        <Divider />
-        <h3 className={styles.totalUniversityClients}>80</h3>
+      <ImportContactsIcon style={{fontSize: 60, color: '#536dfe'   }}/>
+        {/* <h2 className={styles.papertext2}>Total University</h2> */}
+        {/* <Divider />
+        <h3 className={styles.totalUniversityClients}>80</h3> */}
       </Paper>
       <Paper  style={{ backgroundColor: 'white' }} elevation={4}>
-      <SchoolIcon style={{fontSize: 120, color: '#ec407a'   }}/>
-        <h2 className={styles.papertext3}>Total School</h2>
+      <SchoolIcon style={{fontSize: 60, color: '#ec407a'   }}/>
+        {/* <h2 className={styles.papertext3}>Total School</h2>
         <Divider />
-        <h3 className={styles.totalSchoolClients}>80</h3>
+        <h3 className={styles.totalSchoolClients}>80</h3> */}
       </Paper>
     </div>
 
@@ -140,6 +140,32 @@ export function SimplePaper2() {
     <div className={classes2.root}>
 
       <Paper style={{ backgroundColor: 'white' }} elevation={4}>
+          {/* <input></input> */}
+          <div className={styles.findContainer}>
+          <label>Find</label>
+          <input></input>
+          </div>
+          <div className={styles.findContainer}>
+          <label>Name</label>
+          <input></input>
+          </div>
+          {/* <div className={styles.findContainer}>
+          <label>Country</label>
+          <input></input>
+          </div>
+          <div className={styles.findContainer}>
+          <label for="find">Type</label>
+          <select name="Type" id="Type">
+            <option value="All">All</option>
+            <option value="University">University</option>
+            <option value="College">College</option>
+        </select>
+          
+          </div>   */}
+          {/* <input></input>
+          <br></br>
+          <input></input> */}
+
          {/* <ContainedButtons />  */}
       </Paper>
 
