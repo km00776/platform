@@ -65,9 +65,9 @@ const ClientSetup = () => {
             <div className={styles.clientsData2}>
                 <SimplePaper2 />
             </div>
-            {/* <div className={styles.clientsData2}>
+            <div className={styles.clientsDatabase}>
                 <SimplePaper3/>
-            </div> */}
+            </div>
             
             <Footer />
         </div>
