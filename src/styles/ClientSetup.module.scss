@@ -4,90 +4,22 @@ div.class {
   min-width: 100vw;
   position: absolute;
 }
-div.fullContainer {
-  position: relative;
-  left: 100px;
-}
+
 div.mailIcon {
   right: 135px;
   position: absolute;
 }
 
-label.nameLabel {
-  font-weight: 700;
-  position: absolute;
-  left: 370px;
-  font-size: 15px;
-  color: #2e3b55;
-  top: 70px;
-}
-input.nameInput {
-  position: relative;
-  right: 30% ;
-  width: 300px;
-  top: 2.5px;
-}
-
-label.findLabel {
-  font-weight: 700;
-  position: absolute;
-  left: 370px;
-  font-size: 15px;
-  color: #2e3b55;
-  bottom: 10px;
-}
-
-input.findInput {
-  position: relative;
-  left: 430px;
-  width: 300px;
-  top: 2.5px;
-}
-div.findContainer {
-  top: 40px;
-  position: absolute;
-  right: 35px;
-}
-div.nameContainer {
-  top: 40px;
-  position: absolute;
-  right: 35px;
-}
-input.nameInput {
-  position: relative;
-  left: 105px;
-}
-
-div.leftContainer {
-  position: absolute;
-  float: left;
-}
-
-input {
-  width: 34%;
-  padding: 6px 10px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  position: relative;
-  left: 8%;
-  top: 4%;
-  border-color: blue;
-}
-
 select {
-  width: 19.7%;
+  width: 300px;
   padding: 6px 10px;
   margin: 8px 0;
-  display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
   position: relative;
-  left: 8%;
-  top: 4%;
+  left: 90px;
+  top: 17px;
   border-color: blue;
 }
 
@@ -262,5 +194,102 @@ div.Pagination {
     position: relative;
     top: 410px;
     float: right;
+  }
+
+  label.nameLabel {
+    font-weight: 700;
+    position: relative;
+    left: 70px;
+    font-size: 15px;
+    color: #2e3b55;
+    top: 4px;
+  }
+  div.nameInput {
+    position: relative;
+    left: 20px;
+  }
+
+  div.labelFind {
+    font-weight: 700;
+    position: relative;
+    left: 35px;
+    font-size: 15px;
+    color: #2e3b55;
+    top: 50px;
+  }
+  div.labelActive {
+    font-weight: 700;
+    position: relative;
+    left: 35px;
+    font-size: 15px;
+    color: #2e3b55;
+    top: 50px;
+  }
+
+  div.labelName {
+    font-weight: 700;
+    position: relative;
+    left: 35px;
+    font-size: 15px;
+    color: #2e3b55;
+    top: 50px;
+  }
+
+  div.inputFind {
+    position: relative;
+    left: 90px;
+    width: 300px;
+    top: 26px;
+  }
+  div.inputName {
+    position: relative;
+    left: 90px;
+    width: 300px;
+    top: 26px;
+  }
+  div.findContainer {
+    top: 40px;
+    position: relative;
+    right: 35px;
+  }
+  div.nameContainer {
+    top: 40px;
+    position: relative;
+    right: 35px;
+  }
+  input.nameInput {
+    position: relative;
+    left: 105px;
+  }
+
+  input {
+    width: 100%;
+    padding: 6px 10px;
+    display: inline-block;
+    border: 1px solid blue;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  div.leftContainer {
+    position: relative;
+    float: left;
+  }
+  div.rightContainer {
+    position: relative;
+    float: left;
+  }
+
+  select {
+    width: 300px;
+    padding: 6px 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    position: relative;
+    left: 90px;
+    top: 17px;
+    border-color: blue;
   }
 }

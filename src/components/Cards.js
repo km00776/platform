@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Pagination from '@material-ui/lab/Pagination';
-import EqualizerIcon from '@material-ui/icons/Equalizer';
+
 import styles from '../styles/ClientSetup.module.scss';
 import SchoolIcon from '@material-ui/icons/School';
 import TrendingUpIcon from '@material-ui/icons/TrendingUp';
@@ -12,7 +12,7 @@ import ContainedButtons from './reuseableButton';
 import ImportContactsIcon from '@material-ui/icons/ImportContacts';
 import { sizing } from '@material-ui/system';
 import Box from '@material-ui/core/Box';
-
+import EqualizerIcon from '@material-ui/icons/Equalizer';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -111,7 +111,7 @@ export function SimplePaper() {
   return (
     <div className={classes.root}>
       <Paper style={{ backgroundColor: 'white' }} elevation={4}>
-        <TrendingUpIcon style={{ fontSize: 90, color: '#66bb6a' }} />
+        <EqualizerIcon style={{ fontSize: 70, color: '#66bb6a' }} />
         <h2 className={styles.papertext}></h2>
         {/* <Divider />
         <h3 className={styles.totalClients}>80</h3> */}
@@ -139,31 +139,40 @@ export function SimplePaper2() {
   return (
     <div className={classes2.root}>
       <Paper style={{ backgroundColor: 'white' }} elevation={4}>
-        <div className={styles.leftContainer}>
-          <div className={styles.findContainer}>
-            <label className={styles.findLabel}>Find</label>
-            <input className={styles.findInput}></input>
-          </div>
-          <div className={styles.nameContainer}>
-            <label className={styles.nameLabel}>Name</label>
+         <div className={styles.leftContainer}>
+          <div className={styles.find}>
+            <div className={styles.labelFind}>
+                <label>Find</label>
+            </div>
+            <div className={styles.inputFind}>
+                <input></input>
+            </div>
+            </div>
+            <div className={styles.name}>
+            <div className={styles.labelName}>
+                <label>Name</label>
+            </div>
+            <div className={styles.inputName}>
+                <input></input>
+            </div>
+            </div>
+            <div className={styles.active}>
+              <div className={styles.labelActive}>
+                <label>Active</label>
+              </div>
+              <div classname={styles.inputActive}>
+              <select>
+              <option value="0">All</option>
+              <option value="1">Yes</option>
+              <option value="2">No</option>
+              </select>
+              </div>
             
-          </div>
-        </div>
-        <div className={styles.rightContainer}>
-          <div className={styles.findContainer}>
-            <label>Country</label>
-            <input></input>
-          </div>
-          <div className={styles.findContainer}>
-            <label for="find">Type</label>
-            <select name="Type" id="Type">
-              <option value="All">All</option>
-              <option value="University">University</option>
-              <option value="College">College</option>
-            </select>
-          </div>
-        </div>
+            </div>
+         </div>
+        <div>
 
+          </div>
       </Paper>
 
 
