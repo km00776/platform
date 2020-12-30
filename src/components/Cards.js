@@ -5,7 +5,7 @@ import Pagination from '@material-ui/lab/Pagination';
 import styles from '../styles/ClientSetup.module.scss';
 import SchoolIcon from '@material-ui/icons/School';
 import Divider from '@material-ui/core/Divider';
-import BasicTable from './tableClients';
+import StickyHeadTable from './tableClients';
 import ContainedButtons from './reuseableButton';
 import ImportContactsIcon from '@material-ui/icons/ImportContacts';
 import Calendar from './Calendar';
@@ -234,21 +234,12 @@ export function SimplePaper2() {
 
 export function SimplePaper3() {
   const classes3 = useStyles3();
-
   return (
     <div className={classes3.root}>
-
       <Paper style={{ backgroundColor: 'white' }} elevation={4}>
-        {/* <br></br>
-       
-       
-       
-       
-        
-         <BasicTable/>  */}
+        <StickyHeadTable />
         <div className={styles.Pagination}>
-
-          {/* <BasicPagination /> */}
+        <ContainedButtons className={styles.clearBtn} label="ADD" />
         </div>
       </Paper>
 

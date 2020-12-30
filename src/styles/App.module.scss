@@ -42,9 +42,9 @@ button.testsRemainingButton {
 }
 
 input.termsBox {
-  position: relative;
-  top: 22px;
-  right: 195px;
+  position: absolute;
+  top: 0.4px;
+  right: 18px;
   font-size: 15px;
  
 }
@@ -53,16 +53,16 @@ span.info {
   top: 3%;
   position: relative;
   color: red;
+  left: 9px;
   font-weight: 900;
   text-align: center;
   font-size: 11px;
-  
 }
 
 a.link {
   color: red;
   position: relative;
-  
+  right: 1px;
 }
 
 p.termsMessage {

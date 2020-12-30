@@ -62,7 +62,7 @@ div.inputFind {
 
 div.Calender {
   position: relative;
-  left: 454px;
+  left: 600px;
   bottom: 170px;
 }
 
@@ -96,7 +96,7 @@ div.Archived {
 div.btn {
   position: relative;
   bottom: 50px;
-  left: 580px;
+  left: 740px;
   display: flex;
 }
 
@@ -107,6 +107,7 @@ div.btn {
 .clearBtn {
   left: 18px;
   position: relative;
+  
 }
 
 div.labelName {
@@ -129,7 +130,7 @@ div.labelActive {
 div.rightContainer {
   float: right;
   position: relative;
-  right: 520px;
+  right: 679px;
   bottom: 164px;
 }
 
@@ -225,8 +226,9 @@ div.clientsData2 {
 
 div.Pagination {
   position: relative;
-  top: 460px;
+  top: 400px;
   float: right;
+  right: 8px;
 }
 
 // this is for my mac
@@ -256,7 +258,7 @@ div.Pagination {
 
   div.clientsDatabase {
     position: absolute;
-    top: 78vh;
+    top: 41.6%;
     left: 21vw;
     color: black;
     width: 100%;
@@ -337,13 +339,13 @@ div.Pagination {
   .clientsHeading {
     position: absolute;
     top: 12vh;
-    left: 36.6vh;
+    left: 21%;
     color: #2e3b55;
     font-weight: 300;
   }
   div.clientsData {
     position: absolute;
-    top: 22vh;
+    top: 12%;
     left: 20.9vw;
     color: black;
     width: 100%;
@@ -352,7 +354,7 @@ div.Pagination {
 
   div.clientsData2 {
     position: absolute;
-    top: 45vh;
+    top: 24%;
     left: 21vw;
     color: black;
     width: 100%;
