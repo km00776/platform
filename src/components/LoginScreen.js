@@ -73,7 +73,7 @@ function handleClick(visiblility) {
 
 const Terms = () => {
     return (
-    
+
         <div className={styles.termsContainer}>
             <span className={styles.info}>
                 <input className={styles.termsBox} type="checkbox" id="box1" name="box1" value="All">

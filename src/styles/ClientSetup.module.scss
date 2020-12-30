@@ -18,9 +18,8 @@ div.clientsDatabase {
   width: 100%;
 }
 
-
 div.labelFind {
-  font-weight: 700;
+  font-weight: 300;
   position: relative;
   left: 35px;
   font-size: 15px;
@@ -29,7 +28,7 @@ div.labelFind {
 }
 
 div.labelCountry {
-  font-weight: 700;
+  font-weight: 300;
   position: relative;
   left: 14px;
   font-size: 15px;
@@ -37,7 +36,7 @@ div.labelCountry {
   top: 50px;
 }
 div.labelArchived {
-  font-weight: 700;
+  font-weight: 300;
   position: relative;
   left: 14px;
   font-size: 15px;
@@ -46,7 +45,7 @@ div.labelArchived {
 }
 
 div.labelType {
-  font-weight: 700;
+  font-weight: 300;
   position: relative;
   left: 14px;
   font-size: 15px;
@@ -63,10 +62,9 @@ div.inputFind {
 
 div.Calender {
   position: relative;
-  left: 494px;
+  left: 454px;
   bottom: 170px;
 }
-
 
 div.inputCountry {
   position: relative;
@@ -80,8 +78,6 @@ div.inputName {
   width: 300px;
   top: 26px;
 }
-
-
 
 input {
   width: 100%;
@@ -98,11 +94,10 @@ div.Archived {
 }
 
 div.btn {
-  position: relative; 
+  position: relative;
   bottom: 50px;
-  left: 730px;
+  left: 580px;
   display: flex;
-  
 }
 
 .searchBtn {
@@ -115,7 +110,7 @@ div.btn {
 }
 
 div.labelName {
-  font-weight: 700;
+  font-weight: 300;
   position: relative;
   left: 35px;
   font-size: 15px;
@@ -124,7 +119,7 @@ div.labelName {
 }
 
 div.labelActive {
-  font-weight: 700;
+  font-weight: 300;
   position: relative;
   left: 35px;
   font-size: 15px;
@@ -157,6 +152,7 @@ h3.totalClients {
   font-size: 1.8rem;
   float: right;
   right: 12px;
+
   color: #2e3b55;
 }
 h3.totalUniversityClients {
@@ -179,24 +175,27 @@ h3.totalSchoolClients {
 h2.papertext {
   position: relative;
   top: 10px;
-  font-size: 4rem;
+  font-size: 3rem;
   float: right;
   right: 185px;
+  font-weight: 300;
   color: #2e3b55;
 }
 h2.papertext2 {
   position: relative;
   top: 10px;
-  font-size: 4rem;
+  font-size: 3rem;
   right: 138px;
   float: right;
+  font-weight: 300;
   color: #2e3b55;
 }
 h2.papertext3 {
   position: relative;
   top: 10px;
-  font-size: 4rem;
+  font-size: 3rem;
   float: right;
+  font-weight: 300;
   right: 180px;
   color: #2e3b55;
 }
@@ -205,6 +204,7 @@ h2.papertext3 {
   top: 12vh;
   left: 34.6vh;
   color: #2e3b55;
+  font-weight: 300;
 }
 div.clientsData {
   position: absolute;
@@ -238,31 +238,70 @@ div.Pagination {
     position: absolute;
   }
 
+  .searchBtn {
+    left: 30px;
+    position: relative;
+  }
+  .clearBtn {
+    left: 18px;
+    position: relative;
+  }
+
+  div.btn {
+    position: relative;
+    bottom: 68px;
+    left: 470px;
+    display: flex;
+  }
+
+  div.clientsDatabase {
+    position: absolute;
+    top: 78vh;
+    left: 21vw;
+    color: black;
+    width: 100%;
+  }
+
+  div.Calender {
+    position: relative;
+    left: 400px;
+    bottom: 170px;
+  }
+
+  div.inputCountry {
+    position: relative;
+    left: 90px;
+    width: 240px;
+    top: 26px;
+  }
+
   h3.totalClients {
     position: relative;
     bottom: 25px;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     float: right;
-    right: 150px;
+    left: 20px;
     color: #2e3b55;
+    font-weight: 300;
   }
   h3.totalUniversityClients {
     position: relative;
-    bottom: 25px;
-    font-size: 1.8rem;
+    top: 17px;
+    font-size: 1.2rem;
     float: right;
-    right: 150px;
+    left: 45px;
+    font-weight: 300;
     color: #2e3b55;
   }
   h3.totalSchoolClients {
     position: relative;
-    bottom: 25px;
-    font-size: 1.8rem;
+    top: 80px;
+    font-size: 1.2rem;
     float: right;
-    right: 150px;
+    left: 40px;
     color: #2e3b55;
+    font-weight: 300;
   }
-
 
   div.mailIcon {
     right: 135px;
@@ -271,32 +310,36 @@ div.Pagination {
   h2.papertext {
     position: relative;
     top: 10px;
-    font-size: 2rem;
+    font-size: 3rem;
     float: right;
-    right: 59px;
+    right: 95px;
     color: #2e3b55;
+    font-weight: 300;
   }
   h2.papertext2 {
     position: relative;
     top: 10px;
-    font-size: 2rem;
-    right: 12px;
+    font-weight: 300;
+    font-size: 3rem;
+    right: 95px;
     color: #2e3b55;
     display: inline-block;
   }
   h2.papertext3 {
     position: relative;
     top: 10px;
-    font-size: 2rem;
+    font-weight: 300;
+    font-size: 3rem;
     float: right;
-    right: 55px;
+    right: 95px;
     color: #2e3b55;
   }
   .clientsHeading {
     position: absolute;
     top: 12vh;
-    left: 38.6vh;
+    left: 36.6vh;
     color: #2e3b55;
+    font-weight: 300;
   }
   div.clientsData {
     position: absolute;
@@ -309,8 +352,8 @@ div.Pagination {
 
   div.clientsData2 {
     position: absolute;
-    top: 26%;
-    left: 20.8vw;
+    top: 45vh;
+    left: 21vw;
     color: black;
     width: 100%;
   }
@@ -322,7 +365,7 @@ div.Pagination {
   }
 
   label.nameLabel {
-    font-weight: 700;
+    font-weight: 300;
     position: relative;
     left: 70px;
     font-size: 15px;
@@ -335,7 +378,7 @@ div.Pagination {
   }
 
   div.labelFind {
-    font-weight: 700;
+    font-weight: 300;
     position: relative;
     left: 35px;
     font-size: 15px;
@@ -343,7 +386,7 @@ div.Pagination {
     top: 50px;
   }
   div.labelActive {
-    font-weight: 700;
+    font-weight: 300;
     position: relative;
     left: 35px;
     font-size: 15px;
@@ -352,7 +395,7 @@ div.Pagination {
   }
 
   div.labelName {
-    font-weight: 700;
+    font-weight: 300;
     position: relative;
     left: 35px;
     font-size: 15px;
@@ -363,13 +406,13 @@ div.Pagination {
   div.inputFind {
     position: relative;
     left: 90px;
-    width: 300px;
+    width: 240px;
     top: 26px;
   }
   div.inputName {
     position: relative;
     left: 90px;
-    width: 300px;
+    width: 240px;
     top: 26px;
   }
   div.findContainer {
@@ -391,7 +434,7 @@ div.Pagination {
     width: 100%;
     padding: 6px 10px;
     display: inline-block;
-    border: 1px solid blue;
+    border: 1px solid grey;
     border-radius: 4px;
     box-sizing: border-box;
   }
@@ -401,12 +444,14 @@ div.Pagination {
     float: left;
   }
   div.rightContainer {
+    float: right;
     position: relative;
-    float: left;
+    right: 420px;
+    top: 2px;
   }
 
   select {
-    width: 300px;
+    width: 240px;
     padding: 6px 10px;
     margin: 8px 0;
     border: 1px solid #ccc;
@@ -415,6 +460,6 @@ div.Pagination {
     position: relative;
     left: 90px;
     top: 17px;
-    border-color: blue;
+    border-color: grey;
   }
 }

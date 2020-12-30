@@ -79,7 +79,7 @@ const useStyles3 = makeStyles((theme) => ({
       },
       [theme.breakpoints.only('lg')]: {
         width: theme.spacing(135.8),
-        height: theme.spacing(30),
+        height: theme.spacing(60),
         margin: theme.spacing(1),
         position: 'relative'
       },
@@ -123,18 +123,18 @@ export function SimplePaper() {
       <Paper style={{ backgroundColor: 'white' }} elevation={4}>
         <EqualizerIcon style={{ fontSize: 70, color: '#66bb6a' }} />
         <h2 className={styles.papertext}>10,000</h2>
-        <h3 className={styles.totalClients}>Total Clients</h3> 
+        {/* <h3 className={styles.totalClients}>Total Clients</h3> */}
       </Paper>
       <Paper style={{ backgroundColor: 'white' }} elevation={4}>
         <ImportContactsIcon style={{ fontSize: 60, color: '#536dfe' }} />
         <h2 className={styles.papertext2}>30,000</h2>
-        {/* <Divider />
-        <h3 className={styles.totalUniversityClients}>Total University/College Clients</h3> */}
+        {/* <h3 className={styles.totalUniversityClients}>Total University Clients</h3> */}
       </Paper>
       <Paper style={{ backgroundColor: 'white' }} elevation={4}>
         <SchoolIcon style={{ fontSize: 60, color: '#ec407a' }} />
-         <h2 className={styles.papertext3}>54,302</h2>
-        
+        <h2 className={styles.papertext3}>54,302</h2>
+        {/* <h3 className={styles.totalSchoolClients}>Total School Clients</h3> */}
+
       </Paper>
     </div>
 
@@ -211,9 +211,9 @@ export function SimplePaper2() {
               </select>
             </div>
           </div>
-          <div className={styles.Calender}>
+           <div className={styles.Calender}>
             <Calendar />
-          </div>
+          </div> 
           <div className={styles.btn}>
             <div className={styles.searchBtn}>
               <ContainedButtons className={styles.searchBtn} label="Search" />
@@ -239,7 +239,13 @@ export function SimplePaper3() {
     <div className={classes3.root}>
 
       <Paper style={{ backgroundColor: 'white' }} elevation={4}>
-        {/* <BasicTable/> */}
+        {/* <br></br>
+       
+       
+       
+       
+        
+         <BasicTable/>  */}
         <div className={styles.Pagination}>
 
           {/* <BasicPagination /> */}

@@ -36,12 +36,12 @@ const ClientSetup = () => {
         },
         typography: {
             fontFamily: 'sans-serif',
-            fontWeight: 700,
+            fontWeight: 600,
         },
 
         [theme.breakpoints.up('md')]: {
             fontSize: '3rem',
-            fontWeight: 550,
+            fontWeight: 500,
         },
     };
 
@@ -65,9 +65,9 @@ const ClientSetup = () => {
             <div className={styles.clientsData2}>
                 <SimplePaper2 />
             </div>
-            <div className={styles.clientsDatabase}>
+             <div className={styles.clientsDatabase}>
                 <SimplePaper3/>
-            </div>
+            </div> 
             
             <Footer />
         </div>

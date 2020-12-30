@@ -25,12 +25,15 @@ export default function MaterialUIPickers() {
     return (
       <MuiPickersUtilsProvider utils={MomentUtils}>
         <Grid container justify="space-around">
-          <KeyboardDatePicker
+          
+          <KeyboardDatePicker style = {{width: "140px"}}
             backgroundColor='White'
             disableToolbar
             variant="inline"
             format="DD/MM/YYYY"
+            
             margin="normal"
+            width="10px"
             id="date-picker-inline"
             label="From"
             value={fromselectedDate}
@@ -39,7 +42,7 @@ export default function MaterialUIPickers() {
               'aria-label': 'change date',
             }}
           />
-           <KeyboardDatePicker
+           <KeyboardDatePicker style = {{width: "140px"}}
             disableToolbar
             variant="inline"
             format="DD/MM/YYYY"
