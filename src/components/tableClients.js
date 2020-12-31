@@ -9,6 +9,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 import { Fragment, useEffect, useState } from 'react';
+
 const StyledTableCell = withStyles((theme) => ({
   head: {
     backgroundColor: '#ec407a',
@@ -27,15 +28,17 @@ const StyledTableRow = withStyles((theme) => ({
   },
 }))(TableRow);
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
 
 
 const useStyles = makeStyles({
   table: {
     minWidth: 700,
+   
   },
+  container: {
+    maxHeight: 373  ,
+  },
+
 });
 
 export default function StickyHeadTable() {
@@ -66,8 +69,8 @@ export default function StickyHeadTable() {
   };
 
   const handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(+event.target.value);
-    setPage(0);
+    setRowsPerPage(4);
+    setPage(event.target.value);
   };
 
   return (
@@ -77,11 +80,11 @@ export default function StickyHeadTable() {
           <TableHead style={{ color: '#ec407a' }}>
             <TableRow>
           
-              <StyledTableCell>Name</StyledTableCell>
-              <StyledTableCell align="right">Country</StyledTableCell>
-              <StyledTableCell align="right">Date Created</StyledTableCell>
-              <StyledTableCell align="right">Active</StyledTableCell>
-              <StyledTableCell align="right">Archive</StyledTableCell>
+              <StyledTableCell align="left">Name</StyledTableCell>
+              <StyledTableCell align="left">Country</StyledTableCell>
+              <StyledTableCell align="left">Date Created</StyledTableCell>
+              <StyledTableCell align="left">Active</StyledTableCell>
+              <StyledTableCell align="left">Archive</StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -90,18 +93,17 @@ export default function StickyHeadTable() {
               <StyledTableCell component="th" scope="row">
                 {row.name}
               </StyledTableCell>
-              <StyledTableCell align="right">Country</StyledTableCell>
-              <StyledTableCell align="right">Date Created</StyledTableCell>
-              <StyledTableCell align="right">Active</StyledTableCell>
-              <StyledTableCell align="right">Archive</StyledTableCell>
-         
+              <StyledTableCell align="left">{row.country}</StyledTableCell>
+              <StyledTableCell align="left">{row.datecreated}</StyledTableCell>
+              <StyledTableCell align="left">Active</StyledTableCell>
+              <StyledTableCell align="left">Archive</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>
         </Table>
       </TableContainer>
       <TablePagination
-        rowsPerPageOptions={[10, 25, 100]}
+        rowsPerPageOptions={[5, 8]}
         component="div"
         count={clients.length}
         rowsPerPage={rowsPerPage}

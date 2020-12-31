@@ -239,7 +239,7 @@ export function SimplePaper3() {
       <Paper style={{ backgroundColor: 'white' }} elevation={4}>
         <StickyHeadTable />
         <div className={styles.Pagination}>
-        <ContainedButtons className={styles.clearBtn} label="ADD" />
+        <ContainedButtons className={styles.addBtn} label="ADD NEW" />
         </div>
       </Paper>
 

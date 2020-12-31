@@ -10,6 +10,14 @@ div.mailIcon {
   position: absolute;
 }
 
+.addBtn {
+  left: 18px;
+  position: absolute;
+  bottom: 90px;
+  white-space: nowrap;
+  text-align: center;
+}
+
 div.clientsDatabase {
   position: absolute;
   top: 35.4%;
@@ -107,7 +115,6 @@ div.btn {
 .clearBtn {
   left: 18px;
   position: relative;
-  
 }
 
 div.labelName {
@@ -362,8 +369,9 @@ div.Pagination {
 
   div.Pagination {
     position: relative;
-    top: 410px;
+    top: 8px;
     float: right;
+    right: 1px;
   }
 
   label.nameLabel {

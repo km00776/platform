@@ -15,7 +15,7 @@ export default function ContainedButtons(props) {
   return (
     <div className={classes.root}>
         <div> 
-      <Button style={{width:"90px", color: 'white', backgroundColor: '#ec407a'}} variant="contained" >
+      <Button style={{width:"90px", color: 'white', backgroundColor: '#ec407a', whiteSpace:"nowrap"}} variant="contained" >
         {props.label}
       </Button>
       </div>
