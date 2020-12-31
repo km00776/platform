@@ -16,13 +16,13 @@ console.log(__dirname);
 console.log(path.join(__dirname, "Client/build"));
 
 app.use(function (req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Origin', 'https://platform2020.herokuapp.com/');
     res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers');
     next();
   });
 
-app.get('/clients', (req, res) => {
+app.get('/t1', (req, res) => {
     platformdb.getClients().then(response => {
         res.status(200).send(response);
     }).catch(error => {

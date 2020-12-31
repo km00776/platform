@@ -50,7 +50,7 @@ export default function StickyHeadTable() {
 
     const getClients = async () => {
         try {
-            const response = await fetch("/clients");
+            const response = await fetch("/t1");
             const jsonData = await response.json();
 
             setClients(jsonData);
