@@ -23,7 +23,7 @@ app.use(function (req, res, next) {
     next();
   });
 
-app.get('/', (req, res) => {
+app.get('/clients', (req, res) => {
     platformdb.getClients().then(response => {
         res.status(200).send(response);
     }).catch(error => {
