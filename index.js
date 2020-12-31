@@ -9,11 +9,11 @@ app.use(express.json());
 
 if (process.env.NODE_ENV === "production") {
     
-    app.use(express.static(path.join(__dirname, "client/build")));
+    app.use(express.static(path.join(__dirname, "Client/build")));
   }
 
 console.log(__dirname);
-console.log(path.join(__dirname, "client/build"));
+console.log(path.join(__dirname, "Client/build"));
 
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
