@@ -1,5 +1,5 @@
 
-CREATE DATABASE platform;
+-- CREATE DATABASE platform;
 
 CREATE TABLE Clients
 (
