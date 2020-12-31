@@ -1,6 +1,7 @@
 
 -- CREATE DATABASE platform;
 
+
 CREATE TABLE Clients
 (
     client_id SERIAL PRIMARY KEY,
