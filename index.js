@@ -9,13 +9,7 @@ app.use(express.json());
 
 if (process.env.NODE_ENV === "production") {
     
-    app.use(express.static("Client/build"));
-
-    
-    app.get('*', (req, res) => {
-      res.sendFile(path.resolve(__dirname, 'Client', 'build', 'index.html'));
-    });
-  
+    app.use(express.static(path.join(__dirname, "Client/build")));
   }
 
 console.log(__dirname);
