@@ -19,17 +19,15 @@ const pool = new Pool({
 //   port: 5432,
 // });
 
-const getClients = () => {
-    return new Promise(function(resolve, reject) {
-        pool.query('SELECT * FROM clients',  (error, results) => {
-            if(error) {
-                reject(error);
-            }
-            resolve(results.rows);
-        })
-    })
-}
+// const getClients = () => {
+//     return new Promise(function(resolve, reject) {
+//         pool.query('SELECT * FROM clients',  (error, results) => {
+//             if(error) {
+//                 reject(error);
+//             }
+//             resolve(results.rows);
+//         })
+//     })
+// }
 
-module.exports = {
-    getClients
-}
+module.exports = pool;
