@@ -9,23 +9,6 @@ import { SimplePaper, SimplePaper2, SimplePaper3 } from './Cards';
 import BasicTable from './tableClients';
 
 const ClientSetup = () => {
-    const [clients, setClients] = useState([]);
-
-    const getClients = async () => {
-        try {
-            const response = await fetch("http://localhost:3001");
-            const jsonData = await response.json();
-
-            setClients(jsonData);
-        }
-        catch (err) {
-            console.error(err.message);
-        }
-    }
-
-    useEffect(() => {
-        getClients();
-    }, [])
 
     const theme = createMuiTheme();
 
