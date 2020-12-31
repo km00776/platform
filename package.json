@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "heroku-postbuild": "cd client && npm install && npm run bulid"
+    "heroku-postbuild": "cd Client && npm install && npm run bulid"
   },
   "author": "",
   "license": "ISC",
