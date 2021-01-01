@@ -9,6 +9,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 import { Fragment, useEffect, useState } from 'react';
+import { createMuiTheme } from '@material-ui/core/styles';
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -28,16 +29,30 @@ const StyledTableRow = withStyles((theme) => ({
   },
 }))(TableRow);
 
-
+const theme = createMuiTheme();
 
 const useStyles = makeStyles({
+  [theme.breakpoints.only('lg')]: {
+  
   table: {
     minWidth: 700,
    
   },
   container: {
-    maxHeight: 373  ,
+    maxHeight: 360  ,
   },
+},
+  [theme.breakpoints.up('xl')]: {
+  
+    table: {
+      minWidth: 700,
+     
+    },
+    container: {
+      maxHeight: 440,
+    },
+  
+  }
 
 });
 
