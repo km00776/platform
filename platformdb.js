@@ -9,7 +9,7 @@ const proConfig = process.env.DATABASE_URL; //heroku addons
 const pool = new Pool({
     connectionString:
       process.env.NODE_ENV === "production" ? proConfig : devConfig,
-      ssl: { rejectUnauthorized: false }
+    //   ssl: { rejectUnauthorized: false }
   });
 
 // const pool = new Pool({
@@ -24,6 +24,7 @@ const pool = new Pool({
 //     return new Promise(function(resolve, reject) {
 //         pool.query('SELECT * FROM clients',  (error, results) => {
 //             if(error) {
+
 //                 reject(error);
 //             }
 //             resolve(results.rows);

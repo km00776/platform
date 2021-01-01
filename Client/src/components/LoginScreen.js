@@ -9,65 +9,65 @@ import DisableElevation from './PersonalButton';
 const LoginScreen = () => {
     const [visiblility, setVisiblility] = useState(false);
 
-function handleClick(visiblility) {
-    if(visiblility === false) {
-        setVisiblility(true);
-         console.log("hello");
+    function handleClick(visiblility) {
+        if (visiblility === false) {
+            setVisiblility(true);
+            console.log("hello");
+        }
+        else {
+            setVisiblility(false);
+            console.log("bye");
+        }
+
     }
-    else {
-        setVisiblility(false);
-        console.log("bye");
-    }
-         
-    }
-    
+
 
     return (
         <Fragment>
-        <body className={styles.test1}>
-            <div>
-                <header>
-                    <h1 className={styles.heading}>PASSWORD | <span className={styles.h1heading}>PLATFORM</span></h1>
-                    <img className={styles.image} alt="nothing" src="https://www.englishlanguagetesting.co.uk/wp-content/uploads/2018/04/Password_CMYKxxxhdpi.png" height="200"></img>
-                </header>
-                <div className={styles.container}>
-                    
-                    <h2 className={styles.message}>
-                        <i class="lock icon"></i> LOGIN
+            <body id="LoginScreen">
+                <div>
+                    <header>
+                        <h1 className={styles.heading}>PASSWORD | <span className={styles.h1heading}>PLATFORM</span></h1>
+                        <img className={styles.image} alt="nothing" src="https://www.englishlanguagetesting.co.uk/wp-content/uploads/2018/04/Password_CMYKxxxhdpi.png" height="200"></img>
+                    </header>
+                    <div className={styles.container}>
+
+                        <h2 className={styles.message}>
+                            <i class="lock icon"></i> LOGIN
                     </h2>
-                    <div className={styles.inputBox}>
-                        <div className={styles.login}>
-                            <label className={styles.Label}><i class="info circle icon"></i>Login</label>
+                        <div className={styles.inputBox}>
+                            <div className={styles.login}>
+                                <label className={styles.Label}><i class="info circle icon"></i>Login</label>
+                                <br></br>
+                                <input className={styles.Input}></input>
+                            </div>
                             <br></br>
-                            <input className={styles.Input}></input>
+                            <div className={styles.Password}>
+                                <label className={styles.Label}><i class="info circle icon"></i>Password</label>
+                                <br></br>
+                                <input type="password" className={styles.Input}></input>
+                            </div>
+                        </div>
+                        <div className={styles.b1}>
+                            <DisableElevation className={styles.loginButton} label="Login"></DisableElevation>
+                            <DisableElevation className={styles.testsRemainingButton} label="Check Tests Remaining"></DisableElevation>
                         </div>
                         <br></br>
-                        <div className={styles.Password}>
-                            <label className={styles.Label}><i class="info circle icon"></i>Password</label>
-                            <br></br>
-                            <input type="password" className={styles.Input}></input>
-                        </div>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <Terms />
                     </div>
-                    <div className={styles.b1}>
-                        <DisableElevation className={styles.loginButton} label="Login"></DisableElevation>
-                        <DisableElevation className={styles.testsRemainingButton} label="Check Tests Remaining"></DisableElevation>
-                    </div>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <Terms />
                 </div>
-            </div>
-            
-           <ContactForm onClick={() => handleClick(visiblility)} visiblility = {visiblility} />
-           </body>
+
+                <ContactForm onClick={() => handleClick(visiblility)} visiblility={visiblility} />
+            </body>
         </Fragment>
 
     );
 
 
-    }
+}
 
 
 
@@ -87,7 +87,7 @@ const Terms = () => {
         </div>)
 }
 
-   
+
 
 
 
