@@ -10,7 +10,8 @@ import ContainedButtons from './reuseableButton';
 import ImportContactsIcon from '@material-ui/icons/ImportContacts';
 import Calendar from './Calendar';
 import EqualizerIcon from '@material-ui/icons/Equalizer';
-
+import MenuItem from '@material-ui/core/MenuItem';
+import {ClientDetailsFields} from './SupportForm';
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -94,26 +95,34 @@ const useStyles3 = makeStyles((theme) => ({
 
 }));
 
-const useStyles4 = makeStyles((theme) => ({
+const contactFormStyle = makeStyles((theme) => ({
   root: {
+    display: 'flex',
+    flexWrap: 'wrap',
     '& > *': {
-      marginTop: theme.spacing(2),
+      [theme.breakpoints.down('md')]: {
+        width: theme.spacing(30),
+        height: theme.spacing(40),
+        margin: theme.spacing(3),
+      },
+      // this is for my mac 1440 x 900p
+      [theme.breakpoints.only('lg')]: {
+        width: theme.spacing(134),
+        height: theme.spacing(115),
+        margin: theme.spacing(1),
+        position: 'relative',
+      },
+      // this is for 1920 x 1080
+      [theme.breakpoints.up('xl')]: {
+        width: theme.spacing(60),
+        height: theme.spacing(20),
+        margin: theme.spacing(1),
+        position: 'relative',
+      },
     },
   },
+
 }));
-
-export function BasicPagination() {
-  const classes4 = useStyles4();
-  return (
-    <div className={classes4.root}>
-
-      <Pagination count={10} color="primary" />
-
-
-    </div>
-  );
-}
-
 
 
 export function SimplePaper() {
@@ -242,9 +251,39 @@ export function SimplePaper3() {
         <ContainedButtons className={styles.addBtn} label="ADD NEW" />
         </div>
       </Paper>
+    </div>
+  );
+}
+
+export function ContactFormContainer() {
+
+  
 
 
-
+  const contactFormClass = contactFormStyle();
+  return (
+    <div className={contactFormClass.root}>
+      <Paper style={{ backgroundColor: 'white' }} elevation={4}>
+        <div> 
+          <ClientDetailsFields label="Name"/>
+          <ClientDetailsFields select label="Type" /> 
+          <ClientDetailsFields label="Email"/>
+          <ClientDetailsFields label="Second Email"/>
+          <ClientDetailsFields label="Address"/>
+          <ClientDetailsFields label="Contact First Name"/>
+          <ClientDetailsFields label="Contact Last Name"/>
+          <ClientDetailsFields label="Job Title"/>
+          <ClientDetailsFields label="Contact Phone"/>
+          <ClientDetailsFields label="Login"/>
+          <ClientDetailsFields label="Password"/>
+          <ClientDetailsFields label="Confirm Password"/>
+          </div>
+          <div className={styles.formBtn}>
+          <ContainedButtons className={styles.cancelBtn} label="CANCEL" />
+          <ContainedButtons className={styles.saveBtn} label="SAVE" />
+          <ContainedButtons className={styles.saveNextBtn} label="SAVE & NEXT" />
+          </div>
+      </Paper>
     </div>
   );
 }
