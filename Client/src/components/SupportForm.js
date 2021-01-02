@@ -1,5 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
+import MenuItem from '@material-ui/core/MenuItem';
+
 import {
   ThemeProvider,
   MuiThemeProvider,
@@ -8,12 +10,30 @@ import {
 } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import styles from '../styles/App.module.scss';
+import { datePickerDefaultProps } from '@material-ui/pickers/constants/prop-types';
 
 const useStyles = makeStyles((theme) => ({
     root: {
       '& > *': {
         margin: theme.spacing(1),
         width: '22.5ch',
+      },
+      '& .MuiOutlinedInput-root': {
+        '& fieldset': {
+        borderColor: 'white',
+        },
+    },
+
+  
+           
+    }
+  }));
+
+  const useStyles2 = makeStyles((theme) => ({
+    root: {
+      '& > *': {
+        margin: theme.spacing(1),
+        width: '150.5ch',
       },
       '& .MuiOutlinedInput-root': {
         '& fieldset': {
@@ -34,7 +54,8 @@ const useStyles = makeStyles((theme) => ({
       typography: {
         button: {
           textTransform: 'none'
-        }
+        },
+        
       }
     },
   });
@@ -44,7 +65,6 @@ const useStyles = makeStyles((theme) => ({
       primary: {
         main: '#fbfb40'
       },
-      
     },
     typography: {
       button: {
@@ -53,6 +73,38 @@ const useStyles = makeStyles((theme) => ({
     }
   }); 
   
+  export function ClientDetailsFields(props) {
+
+    const currencies = [
+      {
+        value: 'University',
+        label: 'University',
+      },
+      {
+        value: 'School',
+        label: 'School',
+      },
+      
+    ];
+
+
+    const classes = useStyles2();
+    return (
+      <form className={classes.root} noValidate autoComplete="off">
+        <ThemeProvider theme={theme}>
+        <TextField id="outlined-basic" select = {props.select} label={props.label} variant="outlined">
+        {currencies.map((option) => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </TextField>
+           </ThemeProvider>
+         </form>
+      );
+
+
+  }
 
   export function BasicTextFields() {
     const classes = useStyles();

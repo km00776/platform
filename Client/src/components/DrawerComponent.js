@@ -51,7 +51,8 @@ import CardMembershipIcon from '@material-ui/icons/CardMembership';
 import ScoreIcon from '@material-ui/icons/Score';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-
+import ChromeReaderModeIcon from '@material-ui/icons/ChromeReaderMode';
+import DescriptionIcon from '@material-ui/icons/Description';
 
 const drawerWidth = 240;
 
@@ -104,6 +105,7 @@ export function PermanentDrawerLeft() {
 
   const [questionAuthoring, openQuestionAuthoring] = React.useState(false);
   const [testBuild, openTestBuild] = React.useState(false);
+  const [ClientSetup, openClientSetup] = React.useState(false);
   const [reporting, openReporting] = React.useState(false);
   const [cms, openCMS] = React.useState(false);
 
@@ -111,6 +113,11 @@ export function PermanentDrawerLeft() {
   const handleQuestionAuthoringClick = () => {
     openQuestionAuthoring(!questionAuthoring);
   };
+
+  const handleClientSetupClick = () => {
+    openClientSetup(!ClientSetup);
+  };
+
   const handleTestBuildClick = () => {
     openTestBuild(!testBuild);
   };
@@ -138,7 +145,6 @@ export function PermanentDrawerLeft() {
               </Badge>
             </ListItem>
           </div>
-        
           <div>
             <ListItem button>
             <Badge badgeContent={9} color = 'secondary'>
@@ -198,7 +204,7 @@ export function PermanentDrawerLeft() {
             <List component="div" disablePadding>
               <ListItem button className={classes.nested}>
                 <ListItemIcon>
-                  <BookIcon />
+                <ChromeReaderModeIcon />
                 </ListItemIcon>
                 <ListItemText primary="Reading" />
               </ListItem>
@@ -272,12 +278,22 @@ export function PermanentDrawerLeft() {
             </List>
           </Collapse>
           <br></br>
-          <ListItem button key='Client Setup'>
+          <ListItem button onClick={handleClientSetupClick} key='Client Setup'>
             <ListItemIcon style={{ color: 'White' }} >
               <GroupWorkIcon />
             </ListItemIcon>
             <ListItemText primary='Client Setup' />
           </ListItem>
+          <Collapse in={ClientSetup} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItem button className={classes.nested}>
+                <ListItemIcon>
+                  <DescriptionIcon />
+                </ListItemIcon>
+                <ListItemText primary="Client Details" />
+              </ListItem>
+            </List>
+          </Collapse>
           <br></br>
           <ListItem button key='Test Code Allocation'>
             <ListItemIcon style={{ color: 'White' }} >
