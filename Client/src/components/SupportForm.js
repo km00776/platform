@@ -74,8 +74,8 @@ const useStyles = makeStyles((theme) => ({
   }); 
   
   export function ClientDetailsFields(props) {
-
-    const currencies = [
+    const classes = useStyles2();
+    const clientType = [
       {
         value: 'University',
         label: 'University',
@@ -86,14 +86,11 @@ const useStyles = makeStyles((theme) => ({
       },
       
     ];
-
-
-    const classes = useStyles2();
     return (
-      <form className={classes.root} noValidate autoComplete="off">
+      <form className={classes.root} Validate autoComplete="off">
         <ThemeProvider theme={theme}>
         <TextField id="outlined-basic" select = {props.select} label={props.label} variant="outlined">
-        {currencies.map((option) => (
+        {clientType.map((option) => (
             <MenuItem key={option.value} value={option.value}>
               {option.label}
             </MenuItem>
@@ -102,8 +99,6 @@ const useStyles = makeStyles((theme) => ({
            </ThemeProvider>
          </form>
       );
-
-
   }
 
   export function BasicTextFields() {

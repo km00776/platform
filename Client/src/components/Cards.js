@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Pagination from '@material-ui/lab/Pagination';
 import styles from '../styles/ClientSetup.module.scss';
+import styles1 from '../styles/ClientDetails.module.scss';
 import SchoolIcon from '@material-ui/icons/School';
 import Divider from '@material-ui/core/Divider';
 import StickyHeadTable from './tableClients';
@@ -12,6 +13,7 @@ import Calendar from './Calendar';
 import EqualizerIcon from '@material-ui/icons/Equalizer';
 import MenuItem from '@material-ui/core/MenuItem';
 import {ClientDetailsFields} from './SupportForm';
+import {useState } from 'react';  
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -255,9 +257,33 @@ export function SimplePaper3() {
   );
 }
 
-export function ContactFormContainer() {
+export function ContactFormContainer(props) {
+  const [Name, setName] = useState("");
+  const [Type, setType] = useState("");
+  const [Email, setEmail] = useState("");
+  const [SecondEmail, setSecondEmail] = useState("");
+  const [Address, setAddress] = useState("");
+  const [Country, setCountry] = useState("");
 
-  
+
+
+const onClickForm = async e => {
+ 
+   try {
+      const body = {Name, Type, Email, SecondEmail, Address, Country};
+      const response  = await fetch("/clients", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(body)
+        });
+   }
+   catch {
+
+   }
+}
+
+
+
 
 
   const contactFormClass = contactFormStyle();
@@ -278,10 +304,10 @@ export function ContactFormContainer() {
           <ClientDetailsFields label="Password"/>
           <ClientDetailsFields label="Confirm Password"/>
           </div>
-          <div className={styles.formBtn}>
-          <ContainedButtons className={styles.cancelBtn} label="CANCEL" />
-          <ContainedButtons className={styles.saveBtn} label="SAVE" />
-          <ContainedButtons className={styles.saveNextBtn} label="SAVE & NEXT" />
+          <div className={styles1.formBtn}>
+          <ContainedButtons className={styles1.cancelBtn} label="CANCEL" />
+          <ContainedButtons onClick={() => onClickForm()}className={styles1.saveBtn} label="SAVE" />
+          <ContainedButtons className={styles1.saveNextBtn} label="SAVE & NEXT" />
           </div>
       </Paper>
     </div>

@@ -15,6 +15,18 @@ if (process.env.NODE_ENV === "production") {
 console.log(__dirname);
 console.log(path.join(__dirname, "Client/build"));
 
+app.post("/clients", async(req,res) => {
+    try {
+        const {Name, Type, Email, SecondEmail, Address, Country} = req.body
+        const newClient = await pool.query(
+            "INSERT INTO clients (Name, Type, Email, SecondEmail, Address, Country) VALUES($1, $2, $3, $4, $5, $6) RETURNING *", [Name, Type, Email, SecondEmail, Address, Country]
+        );
+        res.json(newClient.rows);
+    }
+    catch(err) {
+        console.error(err.message);
+    }
+})
 
 
 app.get("/clients", async (req, res) => {

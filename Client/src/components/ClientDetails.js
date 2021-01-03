@@ -3,11 +3,20 @@ import { PermanentDrawerLeft } from './DrawerComponent';
 import {ContactFormContainer} from './Cards';
 import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+import {useState } from 'react';
 
 
 
 
 const ClientDetails = () => {
+    const [Name, setName] = useState("");
+    const [Type, setType] = useState("");
+    const [Email, setEmail] = useState("");
+    const [SecondEmail, setSecondEmail] = useState("");
+    const [Address, setAddress] = useState("");
+    const [Country, setCountry] = useState("");
+
+
 
   const theme = createMuiTheme();
 
@@ -41,7 +50,7 @@ const ClientDetails = () => {
           </div>
           <div className={styles.container}>
                   <ContactFormContainer/>
-                </div>
+        </div>
       
          
       </div>

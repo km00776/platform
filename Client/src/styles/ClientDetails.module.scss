@@ -21,12 +21,11 @@ div.container {
   left: 300px;
   color: #2e3b55;
 }
-button.cancelBtn {
-  display: inline-block;
-}
-button.saveBtn {
-  display: inline-block;
-}
-button.saveNextBtn {
-  display: inline-block;
+
+.formBtn {
+  display: flex;
+  position: relative;
+  top: 20px;
+  float: right;
+  right: 35%;
 }
