@@ -11,7 +11,7 @@ import ClientDetails from './components/ClientDetails';
 export default class App extends Component {
         render() {
             return(  
-            
+            // should be now
               <ClientDetails    />
               
 
