@@ -267,12 +267,12 @@ export function ContactFormContainer(props) {
     <div className={contactFormClass.root}>
       <Paper style={{ backgroundColor: 'white' }} elevation={4}>
         <div> 
-          <ClientDetailsFields onChange={e => setName(e.target.value)} type="text" label="Name"/>
+          <ClientDetailsFields  type="text" label="Name"/>
           <ContainedButtons className={styles1.saveBtn} label="SAVE" />
           </div>
           <div className={styles1.formBtn}>
           <ContainedButtons className={styles1.cancelBtn} label="CANCEL" />
-          <ContainedButtons onClick={() => onClickForm()}className={styles1.saveBtn} label="SAVE" />
+          <ContainedButtons className={styles1.saveBtn} label="SAVE" />
           <ContainedButtons className={styles1.saveNextBtn} label="SAVE & NEXT" />
           </div>
       </Paper>
