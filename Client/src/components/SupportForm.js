@@ -87,6 +87,7 @@ export function ClientDetailsFields(props) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body)
       });
+      console.log(body);
       window.location = "/";
     }
     catch (err) {
@@ -117,7 +118,12 @@ export function ClientDetailsFields(props) {
               {option.label}
             </MenuItem>
           ))} */}
+
+
+
+
         </TextField>
+        <ContainedButtons  label="SAVE" />
       </ThemeProvider>
     </form>
   );

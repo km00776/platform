@@ -134,7 +134,7 @@ export function PermanentDrawerLeft() {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar style={{ background: 'whitesmoke',  }}>
+      <AppBar style={{ background: 'rgb(241, 243, 245)',  }}>
         <Toolbar>
           <Box display='flex' flexGrow={1}>
           </Box>
