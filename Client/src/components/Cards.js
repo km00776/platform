@@ -258,30 +258,6 @@ export function SimplePaper3() {
 }
 
 export function ContactFormContainer(props) {
-  const [Name, setName] = useState("");
-  const [Type, setType] = useState("");
-  const [Email, setEmail] = useState("");
-  const [SecondEmail, setSecondEmail] = useState("");
-  const [Address, setAddress] = useState("");
-  const [Country, setCountry] = useState("");
-
-
-
-const onClickForm = async e => {
- 
-   try {
-      const body = {Name, Type, Email, SecondEmail, Address, Country};
-      const response  = await fetch("/clients", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(body)
-        });
-   }
-   catch {
-
-   }
-}
-
 
 
 
@@ -291,18 +267,8 @@ const onClickForm = async e => {
     <div className={contactFormClass.root}>
       <Paper style={{ backgroundColor: 'white' }} elevation={4}>
         <div> 
-          <ClientDetailsFields label="Name"/>
-          <ClientDetailsFields select label="Type" /> 
-          <ClientDetailsFields label="Email"/>
-          <ClientDetailsFields label="Second Email"/>
-          <ClientDetailsFields label="Address"/>
-          <ClientDetailsFields label="Contact First Name"/>
-          <ClientDetailsFields label="Contact Last Name"/>
-          <ClientDetailsFields label="Job Title"/>
-          <ClientDetailsFields label="Contact Phone"/>
-          <ClientDetailsFields label="Login"/>
-          <ClientDetailsFields label="Password"/>
-          <ClientDetailsFields label="Confirm Password"/>
+          <ClientDetailsFields onChange={e => setName(e.target.value)} type="text" label="Name"/>
+          <ContainedButtons className={styles1.saveBtn} label="SAVE" />
           </div>
           <div className={styles1.formBtn}>
           <ContainedButtons className={styles1.cancelBtn} label="CANCEL" />

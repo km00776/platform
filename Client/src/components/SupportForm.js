@@ -74,6 +74,30 @@ const useStyles = makeStyles((theme) => ({
   }); 
   
   export function ClientDetailsFields(props) {
+
+  const [Name, setName] = useState("");
+  
+
+
+
+const onClickForm = async e => {
+  e.preventDefault();
+   try {
+      const body = {Name};
+      const response  = await fetch("/clients", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(body)
+        });
+        window.location = "/";
+   }
+   catch(err) {
+      console.log(err.message);
+   }
+}
+
+
+
     const classes = useStyles2();
     const clientType = [
       {
@@ -87,14 +111,14 @@ const useStyles = makeStyles((theme) => ({
       
     ];
     return (
-      <form className={classes.root} Validate autoComplete="off">
+      <form onSubmit={onClickForm}className={classes.root} Validate autoComplete="off">
         <ThemeProvider theme={theme}>
-        <TextField id="outlined-basic" select = {props.select} label={props.label} variant="outlined">
-        {clientType.map((option) => (
+        <TextField id="outlined-basic" select={props.select} value={Name} onChange={e => setName(e.target.value)} label={props.label} variant="outlined">
+        {/* {clientType.map((option) => (
             <MenuItem key={option.value} value={option.value}>
               {option.label}
             </MenuItem>
-          ))}
+          ))} */}
         </TextField>
            </ThemeProvider>
          </form>

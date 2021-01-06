@@ -17,11 +17,11 @@ console.log(path.join(__dirname, "Client/build"));
 
 app.post("/clients", async(req,res) => {
     try {
-        const {Name, Type, Email, SecondEmail, Address, Country} = req.body
+        const {name, type, email, secondemail, address, country} = req.body;
         const newClient = await pool.query(
-            "INSERT INTO clients (Name, Type, Email, SecondEmail, Address, Country) VALUES($1, $2, $3, $4, $5, $6) RETURNING *", [Name, Type, Email, SecondEmail, Address, Country]
+            "INSERT INTO clients (name, type, email, secondemail, address, country) VALUES($1, $2, $3, $4, $5, $6) RETURNING *", [name, type, email, secondemail, address, country]
         );
-        res.json(newClient.rows);
+        res.json(newClient.rows[0]);
     }
     catch(err) {
         console.error(err.message);
@@ -32,7 +32,6 @@ app.post("/clients", async(req,res) => {
 app.get("/clients", async (req, res) => {
     try {
         const allClients = await pool.query("SELECT * FROM clients");
-
         res.json(allClients.rows);
     } catch (err) {
         console.error(err.message);
