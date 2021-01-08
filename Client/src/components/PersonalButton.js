@@ -30,7 +30,7 @@ const theme3 = createMuiTheme({
  export default function DisableElevation(props) {
     return(
     <ThemeProvider theme={theme3}>
-      <Button className={styles.me} size="Medium" label={props.label} color = 'primary' className={props.className} variant="contained">
+      <Button className={styles.me} onClick={props.onClick} size="Medium" label={props.label} color = 'primary' className={props.className} variant="contained">
             {props.label}
       </Button>
       </ThemeProvider>
