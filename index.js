@@ -40,7 +40,7 @@ app.get("/clients", async (req, res) => {
 });
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname))
-})
+});
 
 app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`)

@@ -13,12 +13,11 @@ h2.font {
   font-size: 50px;
 }
 
-
-html, body {
-  background: linear-gradient(45deg, #001b3a 40%, #00224b 40%);
-  height: 100%;
-  width: 100%;
-}
+// html, body {
+//   background: linear-gradient(45deg, #001b3a 40%, #00224b 40%);
+//   height: 100%;
+//   width: 100%;
+// }
 
 button.testsRemainingButton {
   background: #00224b 40%; /* Green */
@@ -46,7 +45,6 @@ input.termsBox {
   top: 0.4px;
   right: 18px;
   font-size: 15px;
- 
 }
 
 span.info {
@@ -245,7 +243,6 @@ div.termsContainer {
   right: 4%;
   font-size: 11px;
   overflow: hidden;
-  
 }
 
 input.passwordInput {
