@@ -6,10 +6,5 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 
 ReactDOM.render(
-<Router>
-    <div className="App">
-       
-        <Routes />
-    </div>
-</Router>, 
+<App />,
 document.getElementById('root'));
