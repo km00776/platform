@@ -4,10 +4,6 @@ import 'semantic-ui-css/semantic.min.css'
 import Routes from './components/Router'
 import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
+import history from './components/History';
 
-ReactDOM.render(<Router>
-    <div className="App">
-       
-        <Routes />
-    </div>
-</Router>, document.getElementById('root'));
+ReactDOM.render(<Router history={history}> <App /> </Router>, document.getElementById('root'));

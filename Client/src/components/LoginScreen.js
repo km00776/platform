@@ -5,7 +5,7 @@ import { Fragment } from 'react';
 import { useState, useEffect } from 'react';
 import ContactForm from './ContactForm';
 import DisableElevation from './PersonalButton';
-import history from './History';
+import History from './History';
 
 const LoginScreen = () => {
     const [visiblility, setVisiblility] = useState(false);
@@ -50,7 +50,7 @@ const LoginScreen = () => {
                         </div>
                         <div className={styles.b1}>
                             <form>
-                                <DisableElevation onClick={() => history.push('/ClientDetails')} className={styles.loginButton} label="Login"></DisableElevation>
+                                <DisableElevation onClick={() => History.push('/ClientSetup')} className={styles.loginButton} label="Login"></DisableElevation>
                                 <DisableElevation className={styles.testsRemainingButton} label="Check Tests Remaining"></DisableElevation>
                             </form>
                         </div>
