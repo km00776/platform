@@ -1,4 +1,4 @@
-import {React,useState}  from 'react';
+import {useState}  from 'react';
 import Button from '@material-ui/core/Button';
 
 import MenuItem from '@material-ui/core/MenuItem';
@@ -131,7 +131,7 @@ export function ClientDetailsFields(props) {
 
 export function BasicTextFields() {
   const classes = useStyles();
-  const [value, setValue] = React.useState('');
+  const [value, setValue] = useState('');
 
   const handleChange = (event) => {
     setValue(event.target.value);

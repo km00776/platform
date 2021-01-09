@@ -50,7 +50,7 @@ const LoginScreen = () => {
                         </div>
                         <div className={styles.b1}>
                             <form>
-                                <DisableElevation onClick={() => history.push('/ClientDetails')}className={styles.loginButton} label="Login"></DisableElevation>
+                                <DisableElevation onClick={() => history.push('/ClientDetails')} className={styles.loginButton} label="Login"></DisableElevation>
                                 <DisableElevation className={styles.testsRemainingButton} label="Check Tests Remaining"></DisableElevation>
                             </form>
                         </div>
@@ -77,6 +77,7 @@ const Terms = () => {
     return (
 
         <div className={styles.termsContainer}>
+            <br></br>
             <span className={styles.info}>
                 <input className={styles.termsBox} type="checkbox" id="box1" name="box1" value="All">
                 </input>
