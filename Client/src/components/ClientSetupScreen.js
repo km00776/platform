@@ -8,7 +8,7 @@ import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/sty
 import { SimplePaper, SimplePaper2, SimplePaper3 } from './Cards';
 import BasicTable from './tableClients';
 
-const ClientSetup = () => {
+const ClientSetup = (props) => {
 
     const theme = createMuiTheme();
 
@@ -49,7 +49,7 @@ const ClientSetup = () => {
                 <SimplePaper2 />
             </div>
              <div className={styles.clientsDatabase}>
-                <SimplePaper3/>
+                <SimplePaper3  />
             </div> 
             
             <Footer />
