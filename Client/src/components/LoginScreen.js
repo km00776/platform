@@ -50,7 +50,7 @@ const LoginScreen = () => {
                         </div>
                         <div className={styles.b1}>
                             <form>
-                                <DisableElevation onClick={() => history.push('/ClientDetails')} className={styles.loginButton} label="Login"></DisableElevation>
+                                <DisableElevation onClick={() => history.push('/ClientSetup')} className={styles.loginButton} label="Login"></DisableElevation>
                                 <DisableElevation className={styles.testsRemainingButton} label="Check Tests Remaining"></DisableElevation>
                             </form>
                         </div>
