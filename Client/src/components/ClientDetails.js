@@ -8,13 +8,15 @@ import {useState } from 'react';
 
 
 
-const ClientDetails = () => {
+const ClientDetails = (props) => {
     const [Name, setName] = useState("");
     const [Type, setType] = useState("");
     const [Email, setEmail] = useState("");
     const [SecondEmail, setSecondEmail] = useState("");
     const [Address, setAddress] = useState("");
     const [Country, setCountry] = useState("");
+
+    
 
 
 
@@ -49,7 +51,7 @@ const ClientDetails = () => {
                 
           </div>
           <div className={styles.container}>
-                  <ContactFormContainer/>
+                  <ContactFormContainer history={props.history} />
         </div>
       
          

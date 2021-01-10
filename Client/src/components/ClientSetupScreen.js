@@ -7,9 +7,41 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { SimplePaper, SimplePaper2, SimplePaper3 } from './Cards';
 import BasicTable from './tableClients';
+import StickyHeadTable from './tableClients';
+import ContainedButtons from './reuseableButton';
+import Paper from '@material-ui/core/Paper';
 
-const ClientSetup = () => {
 
+
+const useStyles3 = makeStyles((theme) => ({
+    root: {
+      display: 'flex',
+      flexWrap: 'wrap',
+      '& > *': {
+        [theme.breakpoints.down('md')]: {
+          width: theme.spacing(10),
+          height: theme.spacing(40),
+          margin: theme.spacing(3),
+        },
+        [theme.breakpoints.only('lg')]: {
+          width: theme.spacing(135.8),
+          height: theme.spacing(60),
+          margin: theme.spacing(1),
+          position: 'relative'
+        },
+        [theme.breakpoints.only('xl')]: {
+          width: theme.spacing(183.8),
+          height: theme.spacing(70),
+          position: 'relative'
+        },
+  
+      },
+    },
+  
+  }));
+
+const ClientSetup = (props) => {
+    const classes3 = useStyles3();
     const theme = createMuiTheme();
 
     theme.typography.h5 = {
@@ -49,7 +81,16 @@ const ClientSetup = () => {
                 <SimplePaper2 />
             </div>
              <div className={styles.clientsDatabase}>
-                <SimplePaper3/>
+             <div className={classes3.root}>
+      <Paper style={{ backgroundColor: 'white' }} elevation={4}>
+        <StickyHeadTable />
+        <div className={styles.Pagination}>
+          <form>
+            <ContainedButtons onClick={() => props.history.push('/Detail')} className={styles.addBtn} label="ADD NEW" />
+          </form>
+        </div>
+      </Paper>
+    </div>
             </div> 
             
             <Footer />

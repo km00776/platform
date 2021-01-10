@@ -1,19 +1,17 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-import Pagination from '@material-ui/lab/Pagination';
 import styles from '../styles/ClientSetup.module.scss';
 import styles1 from '../styles/ClientDetails.module.scss';
 import SchoolIcon from '@material-ui/icons/School';
-import Divider from '@material-ui/core/Divider';
 import StickyHeadTable from './tableClients';
 import ContainedButtons from './reuseableButton';
 import ImportContactsIcon from '@material-ui/icons/ImportContacts';
 import Calendar from './Calendar';
 import EqualizerIcon from '@material-ui/icons/Equalizer';
-import MenuItem from '@material-ui/core/MenuItem';
-import {ClientDetailsFields} from './SupportForm';
-import {useState } from 'react';  
+import { ClientDetailsFields } from './SupportForm';
+import history from './History'
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -222,9 +220,9 @@ export function SimplePaper2() {
               </select>
             </div>
           </div>
-           <div className={styles.Calender}>
+          <div className={styles.Calender}>
             <Calendar />
-          </div> 
+          </div>
           <div className={styles.btn}>
             <div className={styles.searchBtn}>
               <ContainedButtons className={styles.searchBtn} label="Search" />
@@ -243,14 +241,16 @@ export function SimplePaper2() {
   );
 }
 
-export function SimplePaper3() {
+export const SimplePaper3 = (props) => {
   const classes3 = useStyles3();
   return (
     <div className={classes3.root}>
       <Paper style={{ backgroundColor: 'white' }} elevation={4}>
         <StickyHeadTable />
         <div className={styles.Pagination}>
-        <ContainedButtons className={styles.addBtn} label="ADD NEW" />
+          <form>
+            <ContainedButtons onClick={() => props.history.push('/Detail')} className={styles.addBtn} label="ADD NEW" />
+          </form>
         </div>
       </Paper>
     </div>
@@ -260,21 +260,19 @@ export function SimplePaper3() {
 export function ContactFormContainer(props) {
 
 
-
-
   const contactFormClass = contactFormStyle();
   return (
     <div className={contactFormClass.root}>
       <Paper style={{ backgroundColor: 'white' }} elevation={4}>
-        <div> 
-          <ClientDetailsFields  type="text" label="Name"/>
-          <ContainedButtons className={styles1.saveBtn} label="SAVE" />
-          </div>
-          <div className={styles1.formBtn}>
+        <div>
+          <ClientDetailsFields type="text" label="Name" />
+          <ContainedButtons onClick={() => props.history.push("/Clients")}className={styles1.saveBtn} label="SAVE" />
+        </div>
+        <div className={styles1.formBtn}>
           <ContainedButtons className={styles1.cancelBtn} label="CANCEL" />
           <ContainedButtons className={styles1.saveBtn} label="SAVE" />
-          <ContainedButtons className={styles1.saveNextBtn} label="SAVE & NEXT" />
-          </div>
+          <ContainedButtons  onClick={() => props.history.push("/Clients")} className={styles1.saveNextBtn} label="SAVE & NEXT" />
+        </div>
       </Paper>
     </div>
   );
