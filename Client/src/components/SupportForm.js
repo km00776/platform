@@ -76,7 +76,7 @@ const theme2 = createMuiTheme({
 
 export function ClientDetailsFields(props) {
 
-  const [Name, setName] = useState("");
+  const [Name, setName] = useState("Testing");
 
   const onClickForm = async e => {
     e.preventDefault();
@@ -124,7 +124,7 @@ export function ClientDetailsFields(props) {
 
         </TextField>
         
-        <ContainedButtons  label="SAVE" />
+      
       </ThemeProvider>
     </form>
   );

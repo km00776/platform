@@ -1,63 +1,42 @@
-import styles from '../styles/ClientDetails.module.scss';
-import { PermanentDrawerLeft } from './DrawerComponent';
-import {ContactFormContainer} from './Cards';
-import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import {useState } from 'react';
+  
+import React, { Fragment, useState } from "react";
 
-
-
-
-const ClientDetails = (props) => {
-    const [Name, setName] = useState("");
-    const [Type, setType] = useState("");
-    const [Email, setEmail] = useState("");
-    const [SecondEmail, setSecondEmail] = useState("");
-    const [Address, setAddress] = useState("");
-    const [Country, setCountry] = useState("");
-
-    
-
-
-
-  const theme = createMuiTheme();
-
-  theme.typography.h5 = {
-      fontSize: '2rem',
-      '@media (min-width:600px)': {
-          fontSize: '1rem',
-      },
-      typography: {
-          fontFamily: 'sans-serif',
-          fontWeight: 900,
-          color: '#2e3b55'
-      },
-
-      [theme.breakpoints.up('md')]: {
-          fontSize: '3rem',
-          fontWeight: 400,
-          color: '#2e3b55'
-      },
-  };
+const InputTodo = () => {
+    const [name, setName] = useState("");
+  
+    const onSubmitForm = async (e) => {
+      e.preventDefault();
+      try {
+        const body = { name };
+        //proxy is only use in development so it will be ignored in production
+        //so if there is no http://localhost:5000 then by default it is going to use heroku domain
+        //remember this heroku app is just our server serving the build static content and also holding the restful api
+  
+        //https://pern-todo-app-demo.herokuapp.com/todos
+        const response = await fetch("/clients", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(body),
+        });
+  
+        window.location = "/";
+      } catch (err) {
+        console.error(err.message);
+      }
+    };
     return (
-      <div className={styles.background}>
-          <PermanentDrawerLeft />
-          <div className={styles.Heading}> 
-              <ThemeProvider theme={theme}>
-                    <Typography variant="h4">
-                        Client Details
-                    </Typography>
-                </ThemeProvider>
-                
-          </div>
-          <div className={styles.container}>
-                  <ContactFormContainer history={props.history} />
-        </div>
-      
-         
-      </div>
-    )
-
-}
-
-export default ClientDetails;
+      <Fragment>
+        <h1 className="text-center my-5">Input Todo</h1>
+        <form className="d-flex" onSubmit={onSubmitForm}>
+          <input
+            type="text"
+           
+            onChange={(e) => setName(e.target.value)}
+          />
+          <button className="btn btn-success">Add</button>
+        </form>
+      </Fragment>
+    );
+  };
+  
+  export default InputTodo;
