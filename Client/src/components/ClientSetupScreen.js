@@ -15,30 +15,30 @@ import Paper from '@material-ui/core/Paper';
 
 const useStyles3 = makeStyles((theme) => ({
     root: {
-      display: 'flex',
-      flexWrap: 'wrap',
-      '& > *': {
-        [theme.breakpoints.down('md')]: {
-          width: theme.spacing(10),
-          height: theme.spacing(40),
-          margin: theme.spacing(3),
+        display: 'flex',
+        flexWrap: 'wrap',
+        '& > *': {
+            [theme.breakpoints.down('md')]: {
+                width: theme.spacing(10),
+                height: theme.spacing(40),
+                margin: theme.spacing(3),
+            },
+            [theme.breakpoints.only('lg')]: {
+                width: theme.spacing(135.8),
+                height: theme.spacing(60),
+                margin: theme.spacing(1),
+                position: 'relative'
+            },
+            [theme.breakpoints.only('xl')]: {
+                width: theme.spacing(169),
+                height: theme.spacing(70),
+                position: 'relative'
+            },
+
         },
-        [theme.breakpoints.only('lg')]: {
-          width: theme.spacing(135.8),
-          height: theme.spacing(60),
-          margin: theme.spacing(1),
-          position: 'relative'
-        },
-        [theme.breakpoints.only('xl')]: {
-          width: theme.spacing(183.8),
-          height: theme.spacing(70),
-          position: 'relative'
-        },
-  
-      },
     },
-  
-  }));
+
+}));
 
 const ClientSetup = (props) => {
     const classes3 = useStyles3();
@@ -50,13 +50,15 @@ const ClientSetup = (props) => {
             fontSize: '1rem',
         },
         typography: {
-            fontFamily: 'sans-serif',
-            fontWeight: 600,
+            
+            fontWeight: 800,
         },
 
-        [theme.breakpoints.up('md')]: {
-            fontSize: '3rem',
-            fontWeight: 500,
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '3.2rem',
+            fontWeight: 700,
+            fontFamily: 'sans-serif',
+            color: 'Black'
         },
     };
 
@@ -64,35 +66,35 @@ const ClientSetup = (props) => {
     return (
         <div className={styles.class}>
             <PermanentDrawerLeft />
-        <div className={styles.fullContainer}> 
-            <div className={styles.clientsHeading}>
-                <ThemeProvider theme={theme}>
-                    <Typography variant="h5">
-                        Clients
+            <div className={styles.fullContainer}>
+                <div className={styles.clientsHeading}>
+                    <ThemeProvider theme={theme}>
+                        <Typography variant="h5">
+                            Clients
                     </Typography>
-                </ThemeProvider>
-                
+                    </ThemeProvider>
+
+                </div>
+                <div className={styles.clientsData}>
+                    <SimplePaper />
+                </div>
             </div>
-            <div className={styles.clientsData}>
-                <SimplePaper /> 
-            </div>
-        </div>
-            <div className={styles.clientsData2}>
+            {/* <div className={styles.clientsData2}>
                 <SimplePaper2 />
+            </div> */}
+            <div className={styles.clientsDatabase}>
+                <div className={classes3.root}>
+                    <Paper style={{ backgroundColor: 'white' }} elevation={1}>
+                        <StickyHeadTable />
+                        <div className={styles.Pagination}>
+                            <form>
+                                <ContainedButtons onClick={() => props.history.push('/Detail')} className={styles.addBtn} label="ADD NEW" />
+                            </form>
+                        </div>
+                    </Paper>
+                </div>
             </div>
-             <div className={styles.clientsDatabase}>
-             <div className={classes3.root}>
-      <Paper style={{ backgroundColor: 'white' }} elevation={4}>
-        <StickyHeadTable />
-        <div className={styles.Pagination}>
-          <form>
-            <ContainedButtons onClick={() => props.history.push('/Detail')} className={styles.addBtn} label="ADD NEW" />
-          </form>
-        </div>
-      </Paper>
-    </div>
-            </div> 
-            
+
             <Footer />
         </div>
 

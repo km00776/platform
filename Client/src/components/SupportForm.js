@@ -112,7 +112,7 @@ export function ClientDetailsFields(props) {
   return (
     <form onSubmit={onClickForm} className={classes.root} Validate autoComplete="off">
       <ThemeProvider theme={theme}>
-        <TextField id="outlined-basic" select={props.select} value={Name} onChange={e => setName(e.target.value)} label={props.label} variant="outlined">
+         <TextField id="outlined-basic" select={props.select} value={Name} className="form-control" onChange={e => setName(e.target.value)} label={props.label} variant="outlined">
           {/* {clientType.map((option) => (
             <MenuItem key={option.value} value={option.value}>
               {option.label}
@@ -123,6 +123,7 @@ export function ClientDetailsFields(props) {
 
 
         </TextField>
+        
         <ContainedButtons  label="SAVE" />
       </ThemeProvider>
     </form>

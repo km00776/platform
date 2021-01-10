@@ -31,8 +31,8 @@ const useStyles = makeStyles((theme) => ({
       },
       // this is for 1920 x 1080
       [theme.breakpoints.up('xl')]: {
-        width: theme.spacing(60),
-        height: theme.spacing(20),
+        width: theme.spacing(55),
+        height: theme.spacing(25),
         margin: theme.spacing(1),
         position: 'relative',
       },
@@ -58,7 +58,7 @@ const useStyles2 = makeStyles((theme) => ({
         position: 'relative'
       },
       [theme.breakpoints.only('xl')]: {
-        width: theme.spacing(183.8),
+        width: theme.spacing(55),
         height: theme.spacing(32),
         position: 'relative'
       },
@@ -85,8 +85,8 @@ const useStyles3 = makeStyles((theme) => ({
         position: 'relative'
       },
       [theme.breakpoints.only('xl')]: {
-        width: theme.spacing(183.8),
-        height: theme.spacing(70),
+        width: theme.spacing(55),
+        height: theme.spacing(50),
         position: 'relative'
       },
 
@@ -129,19 +129,19 @@ export function SimplePaper() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Paper style={{ backgroundColor: 'white' }} elevation={4}>
-        <EqualizerIcon style={{ fontSize: 70, color: '#66bb6a' }} />
-        <h2 className={styles.papertext}>10,000</h2>
+      <Paper style={{ backgroundColor: 'rgb(255, 255, 255)' }} elevation={1}>
+        <EqualizerIcon style={{ fontSize: 90, color: '#ffb74d' }} />
+        {/* <h2 className={styles.papertext}>10,000</h2> */}
         {/* <h3 className={styles.totalClients}>Total Clients</h3> */}
       </Paper>
-      <Paper style={{ backgroundColor: 'white' }} elevation={4}>
-        <ImportContactsIcon style={{ fontSize: 60, color: '#536dfe' }} />
-        <h2 className={styles.papertext2}>30,000</h2>
+      <Paper style={{ backgroundColor: 'white' }} elevation={1}>
+        <ImportContactsIcon style={{ fontSize: 80, color: '#536dfe' }} />
+        {/* <h2 className={styles.papertext2}>30,000</h2> */}
         {/* <h3 className={styles.totalUniversityClients}>Total University Clients</h3> */}
       </Paper>
-      <Paper style={{ backgroundColor: 'white' }} elevation={4}>
-        <SchoolIcon style={{ fontSize: 60, color: '#ec407a' }} />
-        <h2 className={styles.papertext3}>54,302</h2>
+      <Paper style={{ backgroundColor: 'white' }} elevation={1}>
+        <SchoolIcon style={{ fontSize: 80, color: '#ec407a' }} />
+        {/* <h2 className={styles.papertext3}>54,302</h2> */}
         {/* <h3 className={styles.totalSchoolClients}>Total School Clients</h3> */}
 
       </Paper>
@@ -155,7 +155,7 @@ export function SimplePaper2() {
 
   return (
     <div className={classes2.root}>
-      <Paper style={{ backgroundColor: 'white' }} elevation={4}>
+      <Paper style={{ backgroundColor: 'white' }} elevation={1}>
         <div className={styles.leftContainer}>
           <div className={styles.find}>
             <div className={styles.labelFind}>
@@ -245,7 +245,7 @@ export const SimplePaper3 = (props) => {
   const classes3 = useStyles3();
   return (
     <div className={classes3.root}>
-      <Paper style={{ backgroundColor: 'white' }} elevation={4}>
+      <Paper style={{ backgroundColor: 'white' }} elevation={1}>
         <StickyHeadTable />
         <div className={styles.Pagination}>
           <form>
@@ -258,7 +258,7 @@ export const SimplePaper3 = (props) => {
 }
 
 export function ContactFormContainer(props) {
-
+  
 
   const contactFormClass = contactFormStyle();
   return (

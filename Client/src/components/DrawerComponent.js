@@ -64,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
   drawer: {
     width: drawerWidth,
     flexShrink: 3,
-
+    fontWeight: 600
 
   },
   icon: {
@@ -77,8 +77,11 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerPaper: {
     width: drawerWidth,
-    backgroundColor: '#357EC7',
+    backgroundColor: '#2196f3',
     color: 'White',
+    fontSize: '1rem',
+    fontFamily: 'roboto',
+ 
 
   },
 
@@ -162,6 +165,7 @@ export function PermanentDrawerLeft() {
 
       <Drawer
         className={classes.drawer}
+        
         variant="permanent"
         classes={{
           paper: classes.drawerPaper,
@@ -173,10 +177,10 @@ export function PermanentDrawerLeft() {
         <Divider />
         <List>
           <ListItem button onClick={() => handleQuestionAuthoringClick()} key='Question Authoring'>
-            <ListItemIcon style={{ color: 'White' }} >
+            <ListItemIcon style={{ color: 'Black' }} >
               <ContactSupportIcon />
             </ListItemIcon>
-            <ListItemText primary='Question Authoring'
+            <ListItemText  primary='Question Authoring'
 
             />
           </ListItem>
@@ -252,7 +256,7 @@ export function PermanentDrawerLeft() {
           </Collapse>
         <br></br>
           <ListItem button onClick={handleTestBuildClick} key='Test Build'>
-            <ListItemIcon style={{ color: 'White' }}>
+            <ListItemIcon style={{ color: 'Black' }}>
               <BuildIcon />
             </ListItemIcon>
             <ListItemText primary='Test Build' />
@@ -279,7 +283,7 @@ export function PermanentDrawerLeft() {
           </Collapse>
           <br></br>
           <ListItem button onClick={handleClientSetupClick} key='Client Setup'>
-            <ListItemIcon style={{ color: 'White' }} >
+            <ListItemIcon style={{ color: 'Black' }} >
               <GroupWorkIcon />
             </ListItemIcon>
             <ListItemText primary='Client Setup' />
@@ -296,21 +300,22 @@ export function PermanentDrawerLeft() {
           </Collapse>
           <br></br>
           <ListItem button key='Test Code Allocation'>
-            <ListItemIcon style={{ color: 'White' }} >
+            <ListItemIcon style={{ color: 'Black' }} >
               <SortByAlphaIcon />
             </ListItemIcon>
             <ListItemText primary='Test Code Allocation' />
           </ListItem>
           <br></br>
           <ListItem button key='Results & Certificates'>
-            <ListItemIcon style={{ color: 'White' }} >
+            <ListItemIcon style={{ color: 'Black' }} >
               <InsertDriveFileIcon />
             </ListItemIcon>
             <ListItemText primary='Results & Certificates' />
           </ListItem>
           <br></br>
+          <Divider />
           <ListItem button onClick={handleReportingClick} key='Reporting'>
-            <ListItemIcon style={{ color: 'White' }} >
+            <ListItemIcon style={{ color: 'Black' }} >
               <ReportIcon />
             </ListItemIcon>
             <ListItemText primary='Reporting' />
@@ -357,7 +362,7 @@ export function PermanentDrawerLeft() {
           </Collapse>
           <br></br>
           <ListItem button onClick={handleCMSClick} key='CMS'>
-            <ListItemIcon style={{ color: 'White' }} >
+            <ListItemIcon style={{ color: 'Black' }} >
               <StorageIcon />
             </ListItemIcon>
             <ListItemText primary='CMS' />
@@ -463,31 +468,31 @@ export function PermanentDrawerLeft() {
             </List>
           </Collapse>
           <br></br>
-          <Divider />
+       
           <ListItem button key='Inbox'>
-            <ListItemIcon style={{ color: 'White' }} >
+            <ListItemIcon style={{ color: 'Black' }} >
               <MailIcon />
             </ListItemIcon>
             <ListItemText primary='Inbox' />
           </ListItem>
           <br></br>
           <ListItem button key='Notes'>
-            <ListItemIcon style={{ color: 'White' }} >
+            <ListItemIcon style={{ color: 'Black' }} >
               <NoteAddIcon />
             </ListItemIcon>
             <ListItemText primary='Notes' />
           </ListItem>
           <br></br>
           <ListItem button key='Invoices'>
-            <ListItemIcon style={{ color: 'White' }} >
+            <ListItemIcon style={{ color: 'Black' }} >
               <ReceiptIcon />
             </ListItemIcon>
             <ListItemText primary='Invoices' />
           </ListItem>
           <br></br>
-          <Divider></Divider>
+          <Divider />
           <ListItem button key='Logout'>
-            <ListItemIcon style={{ color: 'White' }} >
+            <ListItemIcon style={{ color: 'black' }} >
               <CancelPresentationIcon />
             </ListItemIcon>
             <ListItemText primary='Logout' />
