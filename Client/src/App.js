@@ -5,6 +5,7 @@ import AllocationScreen from './components/TestCodeAllocationScreen';
 import LoginScreen from './components/LoginScreen';
 import ContactForm from './components/ContactForm';
 import ClientDetails from './components/ClientDetails';
+import { PermanentDrawerLeft } from './components/DrawerComponent';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
