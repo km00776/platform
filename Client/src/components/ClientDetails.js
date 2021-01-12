@@ -2,19 +2,44 @@
 import React, { Fragment, useState } from "react";
 import styles from '../styles/ClientDetails.module.scss';
 import { PermanentDrawerLeft } from './DrawerComponent';
+import Paper from '@material-ui/core/Paper';
+import { makeStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    '& > *': {
+      margin: theme.spacing(1),
+      width: theme.spacing(134),
+      height: theme.spacing(90),
+    },
+  },
+}));
+
+// for form text field;
+const textUseStyles =   makeStyles((theme) => ({
+  root: {
+    '& .MuiTextField-root': {
+      margin: theme.spacing(3),
+      width: '20ch',
+    },
+  },
+}));
+
 
 const AddClient = () => {
-  const [name, setName] = useState("");
+  const [name, setName] = useState("Platform");
+
+  const classes = useStyles();
 
   const onSubmitForm = async (e) => {
     e.preventDefault();
     try {
       const body = { name };
-      //proxy is only use in development so it will be ignored in production
-      //so if there is no http://localhost:5000 then by default it is going to use heroku domain
-      //remember this heroku app is just our server serving the build static content and also holding the restful api
-
-      //https://pern-todo-app-demo.herokuapp.com/todos
+   
       const response = await fetch("/clients", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -29,8 +54,86 @@ const AddClient = () => {
   return (
     <div className={styles.background}>
       <PermanentDrawerLeft />
-      {/* <h1 className="text-center my-5">Client Details</h1>
-      <form className="d-flex" onSubmit={onSubmitForm}>
+      <div className={styles.HeadingContainer}>
+          <h1 className={styles.Heading}>Client Details</h1>
+      </div>
+      <div className={styles.contactFormContainer}>
+        <div className={classes.root}>
+          <Paper elevation = {7}>
+            <form onSubmit={onSubmitForm}>
+            <TextField
+          id="outlined-helperText"
+          label="Client Name"
+          onChange={(e => setName(e.target.value))}
+          variant="outlined"
+          style={{display: "flex"}}
+        />
+        <br></br>
+        <TextField
+          id="outlined-helperText"
+          label="Client Name"
+          onChange={(e => setName(e.target.value))}
+          variant="outlined"
+          style={{display: "flex"}}
+        />
+         <br></br>
+        <TextField
+          id="outlined-helperText"
+          label="Client Name"
+          onChange={(e => setName(e.target.value))}
+          variant="outlined"
+          style={{display: "flex"}}
+        />
+         <br></br>
+        <TextField
+          id="outlined-helperText"
+          label="Client Name"
+          onChange={(e => setName(e.target.value))}
+          variant="outlined"
+          style={{display: "flex"}}
+        />
+        <br></br>
+         <TextField
+          id="outlined-helperText"
+          label="Client Name"
+          onChange={(e => setName(e.target.value))}
+          variant="outlined"
+          style={{display: "flex"}}
+        />
+        <br></br>
+         <TextField
+          id="outlined-helperText"
+          label="Client Name"
+          onChange={(e => setName(e.target.value))}
+          variant="outlined"
+          style={{display: "flex"}}
+        />
+         <br></br>
+         <TextField
+          id="outlined-helperText"
+          label="Client Name"
+          onChange={(e => setName(e.target.value))}
+          variant="outlined"
+          style={{display: "flex"}}
+        />
+        <br></br>
+         <TextField
+          id="outlined-helperText"
+          label="Client Name"
+          onChange={(e => setName(e.target.value))}
+          variant="outlined"
+          style={{display: "flex"}}
+        />
+        <button> Add</button>
+            </form>
+          </Paper>
+            
+          
+          
+        </div>
+      </div>
+
+      {/* <form className="d-flex" onSubmit={onSubmitForm}>
         <input
           type="text"
           onChange={(e) => setName(e.target.value)}

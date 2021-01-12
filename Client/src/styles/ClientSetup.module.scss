@@ -213,7 +213,7 @@ h2.papertext3 {
   left: 34.6vh;
   color: #2e3b55;
   font-weight: 300;
-  font-family: 'Arial';
+  font-family: "Arial";
 }
 div.clientsData {
   position: absolute;
@@ -242,7 +242,7 @@ div.Pagination {
 // this is for my mac
 @media screen and (max-width: 1440px) {
   div.class {
-    background: white;
+    background: rgb(246, 249, 255);
     min-height: 100vw;
     min-width: 100vw;
     position: absolute;

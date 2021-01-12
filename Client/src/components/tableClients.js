@@ -91,15 +91,14 @@ export default function StickyHeadTable() {
   return (
     <Paper className={classes.root}>
       <TableContainer className={classes.container}>
-        <Table stickyHeader aria-label="sticky table">
-          <TableHead style={{ color: '#ec407a' }}>
-            <TableRow>
-          
-              <StyledTableCell align="left">Name</StyledTableCell>
-              <StyledTableCell align="left">Country</StyledTableCell>
-              <StyledTableCell align="left">Date Created</StyledTableCell>
-              <StyledTableCell align="left">Active</StyledTableCell>
-              <StyledTableCell align="left">Archive</StyledTableCell>
+        <Table  stickyHeader aria-label="sticky table">
+          <TableHead >
+            <TableRow >
+              <StyledTableCell style={{ backgroundColor: '#ff1744' }} align="left">Name</StyledTableCell>
+              <StyledTableCell style={{ backgroundColor: '#ff1744' }} align="left">Country</StyledTableCell>
+              <StyledTableCell style={{ backgroundColor: '#ff1744' }}align="left">Date Created</StyledTableCell>
+              <StyledTableCell style={{ backgroundColor: '#ff1744' }}align="left">Active</StyledTableCell>
+              <StyledTableCell style={{ backgroundColor: '#ff1744' }}align="left">Archive</StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
