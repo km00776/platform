@@ -17,7 +17,7 @@ const pool = new Pool({
 //   host: 'localhost',
 //   database: 'platform',
 //   password: 'root',
-//   port: 5432,
+//   port: 5432
 // });
 
 // const getClients = () => {
