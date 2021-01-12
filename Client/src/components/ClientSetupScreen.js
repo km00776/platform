@@ -79,12 +79,13 @@ const ClientSetup = (props) => {
                     <SimplePaper />
                 </div>
             </div>
-            {/* <div className={styles.clientsData2}>
+            <div className={styles.clientsData2}>
                 <SimplePaper2 />
-            </div> */}
+            </div>
             <div className={styles.clientsDatabase}>
                 <div className={classes3.root}>
-                    <Paper style={{ backgroundColor: 'white' }} elevation={1}>
+                    <Paper style={{ backgroundColor: 'white' }} elevation={7}>
+                        
                         <StickyHeadTable />
                         <div className={styles.Pagination}>
                             <form>

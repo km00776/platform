@@ -1,7 +1,7 @@
   
 import React, { Fragment, useState } from "react";
 
-const InputTodo = () => {
+const AddClient = () => {
     const [name, setName] = useState("");
   
     const onSubmitForm = async (e) => {
@@ -26,11 +26,10 @@ const InputTodo = () => {
     };
     return (
       <Fragment>
-        <h1 className="text-center my-5">Input Todo</h1>
+        <h1 className="text-center my-5">Client Details</h1>
         <form className="d-flex" onSubmit={onSubmitForm}>
           <input
             type="text"
-           
             onChange={(e) => setName(e.target.value)}
           />
           <button className="btn btn-success">Add</button>
@@ -39,4 +38,4 @@ const InputTodo = () => {
     );
   };
   
-  export default InputTodo;
+  export default AddClient;

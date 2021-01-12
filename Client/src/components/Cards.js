@@ -101,17 +101,17 @@ export function SimplePaper() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Paper style={{  backgroundColor: 'rgb(255, 255, 255)' }} elevation={2}>
+      <Paper style={{  backgroundColor: 'rgb(255, 255, 255)' }} elevation={7}>
         <EqualizerIcon style={{ fontSize: 90, color: '#ffb74d' }} />
         {/* <h2 className={styles.papertext}>10,000</h2> */}
         {/* <h3 className={styles.totalClients}>Total Clients</h3> */}
       </Paper>
-      <Paper style={{ backgroundColor: 'white' }} elevation={2}>
+      <Paper style={{ backgroundColor: 'white' }} elevation={7}>
         <ImportContactsIcon style={{ fontSize: 80, color: '#536dfe' }} />
         {/* <h2 className={styles.papertext2}>30,000</h2> */}
         {/* <h3 className={styles.totalUniversityClients}>Total University Clients</h3> */}
       </Paper>
-      <Paper style={{ backgroundColor: 'white' }} elevation={2}>
+      <Paper style={{ backgroundColor: 'white' }} elevation={7}>
         <SchoolIcon style={{ fontSize: 80, color: '#ec407a' }} />
         {/* <h2 className={styles.papertext3}>54,302</h2> */}
         {/* <h3 className={styles.totalSchoolClients}>Total School Clients</h3> */}
@@ -127,7 +127,7 @@ export function SimplePaper2() {
 
   return (
     <div className={classes2.root}>
-      <Paper style={{ backgroundColor: 'white' }} elevation={1}>
+      <Paper style={{ backgroundColor: 'white' }} elevation={7}>
         <div className={styles.leftContainer}>
           <div className={styles.find}>
             <div className={styles.labelFind}>
