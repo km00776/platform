@@ -32,13 +32,15 @@ const textUseStyles =   makeStyles((theme) => ({
 
 const AddClient = () => {
   const [name, setName] = useState("Platform");
+  const [country, setCountry] = useState("United Kingdom");
+  
 
   const classes = useStyles();
 
   const onSubmitForm = async (e) => {
     e.preventDefault();
     try {
-      const body = { name };
+      const body = { name, country };
    
       const response = await fetch("/clients", {
         method: "POST",
@@ -46,7 +48,7 @@ const AddClient = () => {
         body: JSON.stringify(body),
       });
 
-      window.location = "/";
+      window.location = "/Clients";
     } catch (err) {
       console.error(err.message);
     }
@@ -61,7 +63,7 @@ const AddClient = () => {
         <div className={classes.root}>
           <Paper elevation = {7}>
             <form onSubmit={onSubmitForm}>
-            <TextField
+        <TextField
           id="outlined-helperText"
           label="Client Name"
           onChange={(e => setName(e.target.value))}
@@ -70,6 +72,14 @@ const AddClient = () => {
         />
         <br></br>
         <TextField
+          id="outlined-helperText"
+          label="Country"
+          onChange={(e => setCountry(e.target.value))}
+          variant="outlined"
+          style={{display: "flex"}}
+        />
+         <br></br>
+        {/* <TextField
           id="outlined-helperText"
           label="Client Name"
           onChange={(e => setName(e.target.value))}
@@ -84,14 +94,6 @@ const AddClient = () => {
           variant="outlined"
           style={{display: "flex"}}
         />
-         <br></br>
-        <TextField
-          id="outlined-helperText"
-          label="Client Name"
-          onChange={(e => setName(e.target.value))}
-          variant="outlined"
-          style={{display: "flex"}}
-        />
         <br></br>
          <TextField
           id="outlined-helperText"
@@ -123,7 +125,7 @@ const AddClient = () => {
           onChange={(e => setName(e.target.value))}
           variant="outlined"
           style={{display: "flex"}}
-        />
+        /> */}
         <button> Add</button>
             </form>
           </Paper>
