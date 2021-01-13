@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { makeStyles, ThemeProvider, withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -10,6 +10,10 @@ import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 import { Fragment, useEffect, useState } from 'react';
 import { createMuiTheme } from '@material-ui/core/styles';
+import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+import Chip from '@material-ui/core/Chip';
+
+
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -28,6 +32,17 @@ const StyledTableRow = withStyles((theme) => ({
     },
   },
 }))(TableRow);
+
+const tableBadge = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#00e676      '
+    },
+    secondary: {
+      main: '#00e676',
+    },
+  },
+});
 
 const theme = createMuiTheme();
 
@@ -55,6 +70,7 @@ const useStyles = makeStyles({
   }
 
 });
+
 
 export default function StickyHeadTable() {
   const classes = useStyles();
@@ -105,11 +121,11 @@ export default function StickyHeadTable() {
           {clients.map((row) => (
             <StyledTableRow key={row.name}>
               <StyledTableCell component="th" scope="row">
-                {row.name}
+               <a style={{color: 'red'}}href="google"> {row.name} </a>
               </StyledTableCell>
               <StyledTableCell align="left">{row.country}</StyledTableCell>
               <StyledTableCell align="left">{row.datecreated}</StyledTableCell>
-              <StyledTableCell align="left">Active</StyledTableCell>
+              <StyledTableCell align="left"><ThemeProvider theme={tableBadge}><Chip variant="outlined"  color="primary" size="small" label="Active" /></ThemeProvider></StyledTableCell>
               <StyledTableCell align="left">Archive</StyledTableCell>
             </StyledTableRow>
           ))}
