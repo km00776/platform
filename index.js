@@ -17,10 +17,10 @@ console.log(path.join(__dirname, "Client/build"));
 
 app.post("/clients", async(req,res) => {
     try {
-        const {name} = req.body;
+        const {name, country} = req.body;
         const newClient = await pool.query(
-            "INSERT INTO clients (name) VALUES($1) RETURNING *", 
-            [name]
+            "INSERT INTO clients (name, country) VALUES($1, $2) RETURNING *", 
+            [name, country]
         );
         res.json(newClient.rows[0]);
     }
