@@ -36,10 +36,12 @@ const StyledTableRow = withStyles((theme) => ({
 const tableBadge = createMuiTheme({
   palette: {
     primary: {
-      main: '#00e676      '
+      main: '#FFFFFF	',
+    
     },
     secondary: {
-      main: '#00e676',
+      main: '#7f0000',
+      color: 'white'
     },
   },
 });
@@ -121,11 +123,11 @@ export default function StickyHeadTable() {
           {clients.map((row) => (
             <StyledTableRow key={row.name}>
               <StyledTableCell component="th" scope="row">
-               <a style={{color: 'red'}}href="google"> {row.name} </a>
+               <a style={{color: 'Black'}}href="google"> {row.name} </a>
               </StyledTableCell>
               <StyledTableCell align="left">{row.country}</StyledTableCell>
               <StyledTableCell align="left">{row.datecreated}</StyledTableCell>
-              <StyledTableCell align="left"><ThemeProvider theme={tableBadge}><Chip variant="outlined"  color="primary" size="small" label="Active" /></ThemeProvider></StyledTableCell>
+              <StyledTableCell align="left"><ThemeProvider theme={tableBadge}><Chip variant="outlined"  style = {{backgroundColor: '#f05545'}} color="primary" size="small" label="Inactive" /></ThemeProvider></StyledTableCell>
               <StyledTableCell align="left">Archive</StyledTableCell>
             </StyledTableRow>
           ))}
