@@ -11,17 +11,17 @@ div.mailIcon {
 }
 
 .addBtn {
-  left: 2px;
+  left: 11px;
   position: absolute;
-
+  bottom: 16px;
   white-space: nowrap;
   text-align: center;
 }
 
 div.clientsDatabase {
   position: absolute;
-  top: 35.4%;
-  left: 17.8vw;
+  top: 36.6%;
+  left: 20.8vw;
   color: black;
   width: 100%;
 }
@@ -70,7 +70,7 @@ div.inputFind {
 
 div.Calender {
   position: relative;
-  left: 600px;
+  left: 590px;
   bottom: 170px;
 }
 
@@ -104,12 +104,12 @@ div.Archived {
 div.btn {
   position: relative;
   bottom: 50px;
-  left: 740px;
+  left: 640px;
   display: flex;
 }
 
 .searchBtn {
-  left: 30px;
+  left: 25px;
   position: relative;
 }
 .clearBtn {
@@ -137,7 +137,7 @@ div.labelActive {
 div.rightContainer {
   float: right;
   position: relative;
-  right: 679px;
+  right: 609px;
   bottom: 164px;
 }
 
@@ -157,27 +157,32 @@ select {
 h3.totalClients {
   position: relative;
   top: 80px;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   float: right;
-  right: 12px;
+  right: 75px;
+  font-weight: 300;
 
-  color: #2e3b55;
+  color: black;
 }
 h3.totalUniversityClients {
   position: relative;
-  bottom: 25px;
-  font-size: 1.8rem;
+  top: 79px;
+  font-size: 1.7rem;
   float: right;
-  right: 55px;
-  color: #2e3b55;
+  right: 60px;
+  color: black;
+  font-weight: 300;
+
 }
 h3.totalSchoolClients {
   position: relative;
-  bottom: 25px;
-  font-size: 1.8rem;
+  top: 77px;
+  font-size: 1.7rem;
   float: right;
-  right: 220px;
-  color: #2e3b55;
+  right: 90px;
+  color: black;
+  font-weight: 300;
+
 }
 
 h2.papertext {
@@ -187,16 +192,16 @@ h2.papertext {
   float: right;
   right: 185px;
   font-weight: 300;
-  color: #2e3b55;
+  color: black;
 }
 h2.papertext2 {
   position: relative;
   top: 10px;
   font-size: 3rem;
-  right: 138px;
+  right: 190px;
   float: right;
   font-weight: 300;
-  color: #2e3b55;
+  color: black;
 }
 h2.papertext3 {
   position: relative;
@@ -204,13 +209,13 @@ h2.papertext3 {
   font-size: 3rem;
   float: right;
   font-weight: 300;
-  right: 180px;
-  color: #2e3b55;
+  right: 200px;
+  color: black;
 }
 .clientsHeading {
   position: absolute;
   top: 12vh;
-  left: 34.6vh;
+  left: 40.6vh;
   color: #2e3b55;
   font-weight: 300;
   font-family: "Arial";
@@ -218,7 +223,7 @@ h2.papertext3 {
 div.clientsData {
   position: absolute;
   top: 22vh;
-  left: 17.4vw;
+  left: 20.4vw;
   color: black;
   width: 100%;
   margin: auto;
@@ -226,8 +231,8 @@ div.clientsData {
 
 div.clientsData2 {
   position: absolute;
-  top: 21%;
-  left: 17.8vw;
+  top: 22.4%;
+  left: 20.8vw;
   color: black;
   width: 100%;
 }
@@ -247,6 +252,15 @@ div.Pagination {
     min-width: 100vw;
     position: absolute;
   }
+
+  .addBtn {
+    left: 3px;
+    position: absolute;
+    top: 5px;
+    white-space: nowrap;
+    text-align: center;
+  }
+  
 
   .searchBtn {
     left: 30px;

@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
       // this is for 1920 x 1080
       [theme.breakpoints.up('xl')]: {
         width: theme.spacing(55),
-        height: theme.spacing(25),
+        height: theme.spacing(24),
         margin: theme.spacing(1),
         position: 'relative',
       },
@@ -58,7 +58,7 @@ const useStyles2 = makeStyles((theme) => ({
         position: 'relative'
       },
       [theme.breakpoints.only('xl')]: {
-        width: theme.spacing(55),
+        width: theme.spacing(169),
         height: theme.spacing(32),
         position: 'relative'
       },
@@ -86,7 +86,7 @@ const useStyles3 = makeStyles((theme) => ({
       },
       [theme.breakpoints.only('xl')]: {
         width: theme.spacing(55),
-        height: theme.spacing(50),
+        height: theme.spacing(10),
         position: 'relative'
       },
 
@@ -213,18 +213,5 @@ export function SimplePaper2() {
   );
 }
 
-export const SimplePaper3 = (props) => {
-  const classes3 = useStyles3();
-  return (
-    <div className={classes3.root}>
-      <Paper style={{ backgroundColor: 'white' }} elevation={1}>
-        <StickyHeadTable />
-        <div className={styles.Pagination}>
-          <form>
-            <ContainedButtons onClick={() => props.history.push('/Detail')} className={styles.addBtn} label="ADD NEW" />
-          </form>
-        </div>
-      </Paper>
-    </div>
-  );
-}
+
+
