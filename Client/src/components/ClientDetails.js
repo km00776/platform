@@ -47,8 +47,10 @@ const AddClient = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
-
+      const data = await response.json();
+      
       window.location = "/Clients";
+      return data;
     } catch (err) {
       console.error(err.message);
     }

@@ -10,7 +10,7 @@ CREATE TABLE Clients
     email VARCHAR(50),
     secondEmail VARCHAR(50),
     address VARCHAR(255),
-    country VARCHAR(255)
+    country VARCHAR(255),
     datecreated timestamp default current_timestamp
     
     
