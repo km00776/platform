@@ -50,7 +50,7 @@ const AddClient = () => {
       const data = await response.json();
       
       window.location = "/Clients";
-      return data;
+      return console.log(data);
     } catch (err) {
       console.error(err.message);
     }
