@@ -31,7 +31,7 @@ const useStyles3 = makeStyles((theme) => ({
             },
             [theme.breakpoints.only('xl')]: {
                 width: theme.spacing(169),
-                height: theme.spacing(64),
+                height: theme.spacing(69),
                 position: 'relative'
             },
 
