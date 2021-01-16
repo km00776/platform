@@ -15,14 +15,14 @@ if (process.env.NODE_ENV === "production") {
 console.log(__dirname);
 console.log(path.join(__dirname, "Client/build"));
 
-app.post("/clients", async(req,res) => {
+app.post("/clients", async(request,response) => {
     try {
-        const {name, country} = req.body;
+        const {name, country} = request.body;
         const newClient = await pool.query(
-            "INSERT INTO clients (name, country) VALUES($1, $2) RETURNING *", 
+            "INSERT INTO clients (name, country) VALUES($1, $2)", 
             [name, country]
         );
-        res.json(newClient.rows[0]);
+        response.json(newClient.rows[0]);
     }
     catch(err) {
         console.error(err.message);

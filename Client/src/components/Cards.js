@@ -5,7 +5,7 @@ import styles from '../styles/ClientSetup.module.scss';
 import styles1 from '../styles/ClientDetails.module.scss';
 import SchoolIcon from '@material-ui/icons/School';
 import StickyHeadTable from './tableClients';
-import ContainedButtons from './reuseableButton';
+import {ContainedButtons} from './reuseableButton';
 import ImportContactsIcon from '@material-ui/icons/ImportContacts';
 import Calendar from './Calendar';
 import EqualizerIcon from '@material-ui/icons/Equalizer';

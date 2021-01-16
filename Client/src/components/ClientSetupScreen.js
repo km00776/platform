@@ -8,7 +8,7 @@ import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/sty
 import { SimplePaper, SimplePaper2, SimplePaper3 } from './Cards';
 import BasicTable from './tableClients';
 import StickyHeadTable from './tableClients';
-import ContainedButtons from './reuseableButton';
+import {ContainedButtons} from './reuseableButton';
 import Paper from '@material-ui/core/Paper';
 
 

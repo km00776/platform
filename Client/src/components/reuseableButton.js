@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-export default function ContainedButtons(props) {
+export  function ContainedButtons(props) {
   const classes = useStyles();
   return (
     <div className={classes.root}>
@@ -23,5 +23,13 @@ export default function ContainedButtons(props) {
       </Button>
       </div>
     </div>
+  );
+}
+export  function ContainedButtons2(props) {
+  return (
+      <Button  style={{backgroundColor: '#ff1744', color: 'white', width: '100px'}}   variant="contained">
+        {props.label}
+      </Button>
+      
   );
 }

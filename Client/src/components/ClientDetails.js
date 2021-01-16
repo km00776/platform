@@ -6,6 +6,7 @@ import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
+import {ContainedButtons, ContainedButtons2} from './reuseableButton';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -14,8 +15,8 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'wrap',
     '& > *': {
       margin: theme.spacing(1),
-      width: theme.spacing(134),
-      height: theme.spacing(90),
+      width: theme.spacing(120),
+      height: theme.spacing(144),
     },
   },
 }));
@@ -72,14 +73,15 @@ const AddClient = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
-      const data = await response.json();
+      
 
       window.location = "/Clients";
-      return console.log(data);
+    
     } catch (err) {
       console.error(err.message);
     }
   };
+
   return (
     <div className={styles.background}>
       <PermanentDrawerLeft />
@@ -90,12 +92,14 @@ const AddClient = () => {
         <div className={classes.root}>
           <Paper elevation={7}>
             <form onSubmit={onSubmitForm}>
+              <br></br>
               <TextField
                 id="outlined-helperText"
                 label="Client Name"
                 onChange={(e => setName(e.target.value))}
                 variant="outlined"
-                style={{ display: "flex" }}
+                
+                style={{ left:"30px", display: "flex", width:"900px" }}
               />
               <br></br>
               <TextField
@@ -103,7 +107,7 @@ const AddClient = () => {
                 label="Country"
                 onChange={(e => setCountry(e.target.value))}
                 variant="outlined"
-                style={{ display: "flex" }}
+                style={{ left:"30px",display: "flex", width:"900px" }}
               />
               <br></br>
               <TextField
@@ -112,7 +116,7 @@ const AddClient = () => {
                 select
                 onChange={handleChange}
                 variant="outlined"
-                style={{ display: "flex" }}
+                style={{ left:"30px", display: "flex", width:"900px" }}
               >{clientTypes.map((option) => <MenuItem key={option.value} value={option.value}>{option.label}</MenuItem>)}
               </TextField>
               <br></br>
@@ -121,7 +125,7 @@ const AddClient = () => {
                 label="Email"
                 onChange={(e => setName(e.target.value))}
                 variant="outlined"
-                style={{ display: "flex" }}
+                style={{left:"30px", display: "flex" , width:"900px"}}
               />
               <br></br>
               <TextField
@@ -129,7 +133,7 @@ const AddClient = () => {
                 label="Email 2"
                 onChange={(e => setName(e.target.value))}
                 variant="outlined"
-                style={{ display: "flex" }}
+                style={{ left:"30px",display: "flex" , width:"900px"}}
               />
               <br></br>
               <TextField
@@ -137,7 +141,7 @@ const AddClient = () => {
                 label="Address"
                 onChange={(e => setName(e.target.value))}
                 variant="outlined"
-                style={{ display: "flex" }}
+                style={{left:"30px", display: "flex" , width:"900px"}}
               />
               <br></br>
               <TextField
@@ -145,7 +149,7 @@ const AddClient = () => {
                 label="Town"
                 onChange={(e => setName(e.target.value))}
                 variant="outlined"
-                style={{ display: "flex" }}
+                style={{ left:"30px",display: "flex", width:"900px" }}
               />
               <br></br>
               <TextField
@@ -153,7 +157,7 @@ const AddClient = () => {
                 label="Postcode"
                 onChange={(e => setName(e.target.value))}
                 variant="outlined"
-                style={{ display: "flex" }}
+                style={{ left:"30px",display: "flex" , width:"900px"}}
               />
               <br></br>
               <TextField
@@ -161,7 +165,7 @@ const AddClient = () => {
                 label="Contact First Name"
                 onChange={(e => setName(e.target.value))}
                 variant="outlined"
-                style={{ display: "flex" }}
+                style={{ left:"30px",display: "flex", width:"900px" }}
               />
               <br></br>
               <TextField
@@ -169,7 +173,7 @@ const AddClient = () => {
                 label="Contact Last Name"
                 onChange={(e => setName(e.target.value))}
                 variant="outlined"
-                style={{ display: "flex" }}
+                style={{ left:"30px",display: "flex", width:"900px" }}
               />
               <br></br>
               <TextField
@@ -177,7 +181,7 @@ const AddClient = () => {
                 label="Job title"
                 onChange={(e => setName(e.target.value))}
                 variant="outlined"
-                style={{ display: "flex" }}
+                style={{ left:"30px",display: "flex", width:"900px" }}
               />
               <br></br>
               <TextField
@@ -185,7 +189,7 @@ const AddClient = () => {
                 label="Contact phone"
                 onChange={(e => setName(e.target.value))}
                 variant="outlined"
-                style={{ display: "flex" }}
+                style={{ left:"30px",display: "flex", width:"900px" }}
               />
               <br></br>
               <TextField
@@ -193,7 +197,7 @@ const AddClient = () => {
                 label="Login"
                 onChange={(e => setName(e.target.value))}
                 variant="outlined"
-                style={{ display: "flex" }}
+                style={{ left:"30px",display: "flex", width:"900px" }}
               />
               <br></br>
               <TextField
@@ -201,7 +205,7 @@ const AddClient = () => {
                 label="Password"
                 onChange={(e => setName(e.target.value))}
                 variant="outlined"
-                style={{ display: "flex" }}
+                style={{ left:"30px",display: "flex", width:"900px" }}
               />
               <br></br>
               <TextField
@@ -209,10 +213,11 @@ const AddClient = () => {
                 label="Confirm Password"
                 onChange={(e => setName(e.target.value))}
                 variant="outlined"
-                style={{ display: "flex" }}
+                style={{ left:"30px",display: "flex", width:"900px" }}
               />
-              <button> Add</button>
+               <ContainedButtons2 className={styles.addBtn} label="CANCEL"></ContainedButtons2>
             </form>
+            <ContainedButtons className={styles.addBtn} label="CANCEL"></ContainedButtons>
           </Paper>
 
 
