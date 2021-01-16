@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 // for form text field;
-const textUseStyles =   makeStyles((theme) => ({
+const textUseStyles = makeStyles((theme) => ({
   root: {
     '& .MuiTextField-root': {
       margin: theme.spacing(3),
@@ -34,23 +34,23 @@ const textUseStyles =   makeStyles((theme) => ({
 const AddClient = () => {
   const [name, setName] = useState("Platform");
   const [country, setCountry] = useState("United Kingdom");
-  const[type, setType] = useState("All");
+  const [type, setType] = useState("All");
 
   const clientTypes = [
     {
-      value:'All',
+      value: 'All',
       label: 'All'
     },
     {
-      value:'University',
+      value: 'University',
       label: 'University'
     },
     {
-      value:'School',
+      value: 'School',
       label: 'School'
     },
     {
-      value:'Test Centre',
+      value: 'Test Centre',
       label: 'Test Centre'
     },
 
@@ -66,14 +66,14 @@ const AddClient = () => {
     e.preventDefault();
     try {
       const body = { name, country };
-   
+
       const response = await fetch("/clients", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
       const data = await response.json();
-      
+
       window.location = "/Clients";
       return console.log(data);
     } catch (err) {
@@ -84,144 +84,139 @@ const AddClient = () => {
     <div className={styles.background}>
       <PermanentDrawerLeft />
       <div className={styles.HeadingContainer}>
-          <h1 className={styles.Heading}>Client Details</h1>
+        <h1 className={styles.Heading}>Client Details</h1>
       </div>
       <div className={styles.contactFormContainer}>
         <div className={classes.root}>
-          <Paper elevation = {7}>
+          <Paper elevation={7}>
             <form onSubmit={onSubmitForm}>
-        <TextField
-          id="outlined-helperText"
-          label="Client Name"
-          onChange={(e => setName(e.target.value))}
-          variant="outlined"
-          style={{display: "flex"}}
-        />
-        <br></br>
-        <TextField
-          id="outlined-helperText"
-          label="Country"
-          onChange={(e => setCountry(e.target.value))}
-          variant="outlined"
-          style={{display: "flex"}}
-        />
-         <br></br>
-        <TextField
-          id="outlined-helperText"
-          label="Type"
-          select
-          onChange={handleChange}
-          variant="outlined"
-          style={{display: "flex"}}
-        >{clientTypes.map((option) => <MenuItem key={option.value} value={option.value}>{option.label}</MenuItem>)}
-        </TextField>
-         <br></br>
-        <TextField
-          id="outlined-helperText"
-          label="Email"
-          onChange={(e => setName(e.target.value))}
-          variant="outlined"
-          style={{display: "flex"}}
-        />
-        <br></br>
-         <TextField
-          id="outlined-helperText"
-          label="Email 2"
-          onChange={(e => setName(e.target.value))}
-          variant="outlined"
-          style={{display: "flex"}}
-        />
-        <br></br>
-         <TextField
-          id="outlined-helperText"
-          label="Client Name"
-          onChange={(e => setName(e.target.value))}
-          variant="Address"
-          style={{display: "flex"}}
-        />
-         <br></br>
-         <TextField
-          id="outlined-helperText"
-          label="Town"
-          onChange={(e => setName(e.target.value))}
-          variant="outlined"
-          style={{display: "flex"}}
-        />
-        <br></br>
-         <TextField
-          id="outlined-helperText"
-          label="Postcode"
-          onChange={(e => setName(e.target.value))}
-          variant="outlined"
-          style={{display: "flex"}}
-        />
-         <br></br>
-         <TextField
-          id="outlined-helperText"
-          label="Contact First Name"
-          onChange={(e => setName(e.target.value))}
-          variant="outlined"
-          style={{display: "flex"}}
-        />
-         <br></br>
-         <TextField
-          id="outlined-helperText"
-          label="Contact Second Name"
-          onChange={(e => setName(e.target.value))}
-          variant="outlined"
-          style={{display: "flex"}}
-        />
-        <br></br>
-        <TextField
-          id="outlined-helperText"
-          label="Job Title"
-          onChange={(e => setName(e.target.value))}
-          variant="outlined"
-          style={{display: "flex"}}
-        />
-         <br></br>
-         <TextField
-          id="outlined-helperText"
-          label="Contact Phone"
-          onChange={(e => setName(e.target.value))}
-          variant="outlined"
-          style={{display: "flex"}}
-        />
-        <br></br>
-         <TextField
-          id="outlined-helperText"
-          label="Login"
-          onChange={(e => setName(e.target.value))}
-          variant="outlined"
-          style={{display: "flex"}}
-        />
-         <br></br>
-         <TextField
-          id="outlined-helperText"
-          label="Password"
-          onChange={(e => setName(e.target.value))}
-          variant="outlined"
-          style={{display: "flex"}}
-        />
-          <br></br>
-         <TextField
-          id="outlined-helperText"
-          label="Confirm Password"
-          onChange={(e => setName(e.target.value))}
-          variant="outlined"
-          style={{display: "flex"}}
-        />
-      
-        
-
-
-
-        <button> Add</button>
+              <TextField
+                id="outlined-helperText"
+                label="Client Name"
+                onChange={(e => setName(e.target.value))}
+                variant="outlined"
+                style={{ display: "flex" }}
+              />
+              <br></br>
+              <TextField
+                id="outlined-helperText"
+                label="Country"
+                onChange={(e => setCountry(e.target.value))}
+                variant="outlined"
+                style={{ display: "flex" }}
+              />
+              <br></br>
+              <TextField
+                id="outlined-helperText"
+                label="Type"
+                select
+                onChange={handleChange}
+                variant="outlined"
+                style={{ display: "flex" }}
+              >{clientTypes.map((option) => <MenuItem key={option.value} value={option.value}>{option.label}</MenuItem>)}
+              </TextField>
+              <br></br>
+              <TextField
+                id="outlined-helperText"
+                label="Email"
+                onChange={(e => setName(e.target.value))}
+                variant="outlined"
+                style={{ display: "flex" }}
+              />
+              <br></br>
+              <TextField
+                id="outlined-helperText"
+                label="Email 2"
+                onChange={(e => setName(e.target.value))}
+                variant="outlined"
+                style={{ display: "flex" }}
+              />
+              <br></br>
+              <TextField
+                id="outlined-helperText"
+                label="Address"
+                onChange={(e => setName(e.target.value))}
+                variant="outlined"
+                style={{ display: "flex" }}
+              />
+              <br></br>
+              <TextField
+                id="outlined-helperText"
+                label="Town"
+                onChange={(e => setName(e.target.value))}
+                variant="outlined"
+                style={{ display: "flex" }}
+              />
+              <br></br>
+              <TextField
+                id="outlined-helperText"
+                label="Postcode"
+                onChange={(e => setName(e.target.value))}
+                variant="outlined"
+                style={{ display: "flex" }}
+              />
+              <br></br>
+              <TextField
+                id="outlined-helperText"
+                label="Contact First Name"
+                onChange={(e => setName(e.target.value))}
+                variant="outlined"
+                style={{ display: "flex" }}
+              />
+              <br></br>
+              <TextField
+                id="outlined-helperText"
+                label="Contact Last Name"
+                onChange={(e => setName(e.target.value))}
+                variant="outlined"
+                style={{ display: "flex" }}
+              />
+              <br></br>
+              <TextField
+                id="outlined-helperText"
+                label="Job title"
+                onChange={(e => setName(e.target.value))}
+                variant="outlined"
+                style={{ display: "flex" }}
+              />
+              <br></br>
+              <TextField
+                id="outlined-helperText"
+                label="Contact phone"
+                onChange={(e => setName(e.target.value))}
+                variant="outlined"
+                style={{ display: "flex" }}
+              />
+              <br></br>
+              <TextField
+                id="outlined-helperText"
+                label="Login"
+                onChange={(e => setName(e.target.value))}
+                variant="outlined"
+                style={{ display: "flex" }}
+              />
+              <br></br>
+              <TextField
+                id="outlined-helperText"
+                label="Password"
+                onChange={(e => setName(e.target.value))}
+                variant="outlined"
+                style={{ display: "flex" }}
+              />
+              <br></br>
+              <TextField
+                id="outlined-helperText"
+                label="Confirm Password"
+                onChange={(e => setName(e.target.value))}
+                variant="outlined"
+                style={{ display: "flex" }}
+              />
+              <button> Add</button>
             </form>
           </Paper>
-            
-          
-          
+
+
+
         </div>
       </div>
 
