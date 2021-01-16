@@ -115,8 +115,8 @@ export function SimplePaper() {
         <SchoolIcon style={{ fontSize: 80, color: '#ffa733' }} />
         <h2 className={styles.papertext3}>52</h2>
         <h3 className={styles.totalSchoolClients}>School Clients</h3>
-
       </Paper>
+    
     </div>
 
   );

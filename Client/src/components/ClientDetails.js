@@ -5,6 +5,7 @@ import { PermanentDrawerLeft } from './DrawerComponent';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
+import MenuItem from '@material-ui/core/MenuItem';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -33,7 +34,31 @@ const textUseStyles =   makeStyles((theme) => ({
 const AddClient = () => {
   const [name, setName] = useState("Platform");
   const [country, setCountry] = useState("United Kingdom");
-  
+  const[type, setType] = useState("All");
+
+  const clientTypes = [
+    {
+      value:'All',
+      label: 'All'
+    },
+    {
+      value:'University',
+      label: 'University'
+    },
+    {
+      value:'School',
+      label: 'School'
+    },
+    {
+      value:'Test Centre',
+      label: 'Test Centre'
+    },
+
+  ]
+
+  const handleChange = (event) => {
+    setType(event.target.value);
+  };
 
   const classes = useStyles();
 
@@ -81,17 +106,27 @@ const AddClient = () => {
           style={{display: "flex"}}
         />
          <br></br>
-        {/* <TextField
+        <TextField
           id="outlined-helperText"
-          label="Client Name"
-          onChange={(e => setName(e.target.value))}
+          label="Type"
+          select
+          onChange={handleChange}
           variant="outlined"
           style={{display: "flex"}}
-        />
+        >{clientTypes.map((option) => <MenuItem key={option.value} value={option.value}>{option.label}</MenuItem>)}
+        </TextField>
          <br></br>
         <TextField
           id="outlined-helperText"
-          label="Client Name"
+          label="Email"
+          onChange={(e => setName(e.target.value))}
+          variant="outlined"
+          style={{display: "flex"}}
+        />
+        <br></br>
+         <TextField
+          id="outlined-helperText"
+          label="Email 2"
           onChange={(e => setName(e.target.value))}
           variant="outlined"
           style={{display: "flex"}}
@@ -101,13 +136,21 @@ const AddClient = () => {
           id="outlined-helperText"
           label="Client Name"
           onChange={(e => setName(e.target.value))}
+          variant="Address"
+          style={{display: "flex"}}
+        />
+         <br></br>
+         <TextField
+          id="outlined-helperText"
+          label="Town"
+          onChange={(e => setName(e.target.value))}
           variant="outlined"
           style={{display: "flex"}}
         />
         <br></br>
          <TextField
           id="outlined-helperText"
-          label="Client Name"
+          label="Postcode"
           onChange={(e => setName(e.target.value))}
           variant="outlined"
           style={{display: "flex"}}
@@ -115,7 +158,31 @@ const AddClient = () => {
          <br></br>
          <TextField
           id="outlined-helperText"
-          label="Client Name"
+          label="Contact First Name"
+          onChange={(e => setName(e.target.value))}
+          variant="outlined"
+          style={{display: "flex"}}
+        />
+         <br></br>
+         <TextField
+          id="outlined-helperText"
+          label="Contact Second Name"
+          onChange={(e => setName(e.target.value))}
+          variant="outlined"
+          style={{display: "flex"}}
+        />
+        <br></br>
+        <TextField
+          id="outlined-helperText"
+          label="Job Title"
+          onChange={(e => setName(e.target.value))}
+          variant="outlined"
+          style={{display: "flex"}}
+        />
+         <br></br>
+         <TextField
+          id="outlined-helperText"
+          label="Contact Phone"
           onChange={(e => setName(e.target.value))}
           variant="outlined"
           style={{display: "flex"}}
@@ -123,11 +190,31 @@ const AddClient = () => {
         <br></br>
          <TextField
           id="outlined-helperText"
-          label="Client Name"
+          label="Login"
           onChange={(e => setName(e.target.value))}
           variant="outlined"
           style={{display: "flex"}}
-        /> */}
+        />
+         <br></br>
+         <TextField
+          id="outlined-helperText"
+          label="Password"
+          onChange={(e => setName(e.target.value))}
+          variant="outlined"
+          style={{display: "flex"}}
+        />
+          <br></br>
+         <TextField
+          id="outlined-helperText"
+          label="Confirm Password"
+          onChange={(e => setName(e.target.value))}
+          variant="outlined"
+          style={{display: "flex"}}
+        />
+      
+
+
+
         <button> Add</button>
             </form>
           </Paper>

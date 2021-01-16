@@ -127,7 +127,7 @@ export default function StickyHeadTable() {
               </StyledTableCell>
               <StyledTableCell align="left">{row.country}</StyledTableCell>
               <StyledTableCell align="left">{row.datecreated}</StyledTableCell>
-              <StyledTableCell align="left"><ThemeProvider theme={tableBadge}><Chip variant="outlined"  style = {{backgroundColor: '#f05545'}} color="primary" size="small" label="Inactive" /></ThemeProvider></StyledTableCell>
+              <StyledTableCell align="left"><ThemeProvider theme={tableBadge}><Chip variant="outlined"  style = {{backgroundColor: '#b2102f'}} color="primary" size="small" label="Inactive" /></ThemeProvider></StyledTableCell>
               <StyledTableCell align="left">Archive</StyledTableCell>
             </StyledTableRow>
           ))}
