@@ -5,26 +5,39 @@ import { Fragment } from 'react';
 import { useState, useEffect } from 'react';
 import ContactForm from './ContactForm';
 import DisableElevation from './PersonalButton';
+import React, { Component } from 'react';
 
-const LoginScreen = (props) => {
-    const [visiblility, setVisiblility] = useState(false);
+class LoginScreen extends React.Component {
+    constructor(props) {
+        super(props);
 
-    function handleClick(visiblility) {
-        if (visiblility === false) {
-            setVisiblility(true);
+        this.state = {
+            visiblility: false,
+        }
+        this.handleClick = this.handleClick.bind(this);
+    }
+    // const [visiblility, setVisiblility] = useState(false);
+
+     handleClick() {
+        if (this.state.visiblility === false) {
+             this.setState({
+                visiblility: true
+            })
             console.log("hello");
         }
         else {
-            setVisiblility(false);
+            this.setState({
+                visiblility: false
+            })
             console.log("bye");
         }
     }
 
-
+render () {
     return (
         <Fragment>
             <body id="LoginScreen">
-                <div>
+                <form>
                     <header>
                         <h1 className={styles.heading}>PASSWORD | <span className={styles.h1heading}>PLATFORM</span></h1>
                         <img className={styles.image} alt="nothing" src="https://www.englishlanguagetesting.co.uk/wp-content/uploads/2018/04/Password_CMYKxxxhdpi.png" height="200"></img>
@@ -34,6 +47,7 @@ const LoginScreen = (props) => {
                         <h2 className={styles.message}>
                             <i class="lock icon"></i> LOGIN
                     </h2>
+                   
                         <div className={styles.inputBox}>
                             <div className={styles.login}>
                                 <label className={styles.Label}><i class="info circle icon"></i>Login</label>
@@ -48,26 +62,27 @@ const LoginScreen = (props) => {
                             </div>
                         </div>
                         <div className={styles.b1}>
-                            <form>
-                                <DisableElevation onClick={() => props.history.push("/Clients")} className={styles.loginButton} label="Login"></DisableElevation>
+                            
+                                <DisableElevation onClick={() => this.props.history.push("/Clients")} className={styles.loginButton} label="Login"></DisableElevation>
                                 <DisableElevation className={styles.testsRemainingButton} label="Check Tests Remaining"></DisableElevation>
-                            </form>
+                           
                         </div>
+                       
                         <br></br>
                         <br></br>
                         <br></br>
                         <br></br>
                         <Terms />
                     </div>
-                </div>
+                </form>
 
-                <ContactForm onClick={() => handleClick(visiblility)} visiblility={visiblility} />
+                <ContactForm onClick={this.handleClick} visiblility={this.state.visiblility} />
             </body>
         </Fragment>
 
     );
 
-
+    }
 }
 
 
