@@ -17,8 +17,12 @@ export default class App extends Component {
                 <Fragment>
                     <Switch>
                         <Route path="/" exact component={LoginScreen} />
+                        <Switch>
+                     
                         <Route path="/Clients" exact component={ClientSetup} />
                         <Route path="/Detail"  component = {ClientDetails} />
+                        </Switch>
+                     
                     </Switch>
                 </Fragment>
             </Router>

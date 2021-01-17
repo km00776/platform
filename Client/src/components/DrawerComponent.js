@@ -102,7 +102,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-export function PermanentDrawerLeft() {
+export function PermanentDrawerLeft(props) {
 
   const classes = useStyles();
 
@@ -165,7 +165,6 @@ export function PermanentDrawerLeft() {
 
       <Drawer
         className={classes.drawer}
-        
         variant="permanent"
         classes={{
           paper: classes.drawerPaper,
@@ -180,9 +179,7 @@ export function PermanentDrawerLeft() {
             <ListItemIcon style={{ color: 'Black' }} >
               <ContactSupportIcon />
             </ListItemIcon>
-            <ListItemText  primary='Question Authoring'
-
-            />
+            <ListItemText  primary='Question Authoring'/>
           </ListItem>
           <Collapse in={questionAuthoring} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
@@ -289,8 +286,8 @@ export function PermanentDrawerLeft() {
             <ListItemText primary='Client Setup' />
           </ListItem>
           <Collapse in={ClientSetup} timeout="auto" unmountOnExit>
-            <List component="div" disablePadding>
-              <ListItem button className={classes.nested}>
+            <List onClick={props.history} component="div" disablePadding>
+              <ListItem button  className={classes.nested}>
                 <ListItemIcon>
                   <DescriptionIcon />
                 </ListItemIcon>

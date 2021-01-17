@@ -7,6 +7,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
 import {ContainedButtons, ContainedButtons2} from './reuseableButton';
+import Button from '@material-ui/core/Button';
+import { useHistory } from 'react-router-dom';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -32,7 +34,7 @@ const textUseStyles = makeStyles((theme) => ({
 }));
 
 
-const AddClient = () => {
+const AddClient = (props) => {
   const [name, setName] = useState("Platform");
   const [country, setCountry] = useState("United Kingdom");
   const [type, setType] = useState("All");
@@ -81,10 +83,10 @@ const AddClient = () => {
       console.error(err.message);
     }
   };
-
+  let history = useHistory();
   return (
     <div className={styles.background}>
-      <PermanentDrawerLeft />
+      <PermanentDrawerLeft history={() => history.push('/Clients')} />
       <div className={styles.HeadingContainer}>
         <h1 className={styles.Heading}>Client Details</h1>
       </div>
@@ -215,9 +217,19 @@ const AddClient = () => {
                 variant="outlined"
                 style={{ left:"30px",display: "flex", width:"900px" }}
               />
-               <ContainedButtons2 className={styles.addBtn} label="CANCEL"></ContainedButtons2>
-            </form>
-            <ContainedButtons className={styles.addBtn} label="CANCEL"></ContainedButtons>
+          <div className={styles.btn}>
+            <div className={styles.searchBtn}>
+              <ContainedButtons onClick= {() => props.history.push('/Clients')}className={styles.searchBtn} label="CANCEL" />
+            </div>
+            <div className={styles.clearBtn}>
+              <ContainedButtons type="submit" className={styles.clearBtn} label="SAVE" />
+            </div>
+            <div className={styles.clearBtn}>
+              <ContainedButtons className={styles.clearBtn} label="SAVENEXT" />
+            </div>
+          </div>
+              </form>
+    
           </Paper>
 
 

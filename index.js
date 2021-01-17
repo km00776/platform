@@ -29,7 +29,7 @@ app.post("/clients", async(request,response) => {
     }
 });
 
-
+// Make a get request (get all the data from the table) when a get request is made on the Clients page
 app.get("/clients", async (req, res) => {
     try {
         const allClients = await pool.query("SELECT * FROM clients");

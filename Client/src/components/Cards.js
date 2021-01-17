@@ -202,7 +202,6 @@ export function SimplePaper2() {
             <div className={styles.clearBtn}>
               <ContainedButtons className={styles.clearBtn} label="Clear" />
             </div>
-
           </div>
         </div>
       </Paper>
