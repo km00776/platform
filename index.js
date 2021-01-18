@@ -30,6 +30,7 @@ app.post("/clients", async(request,response) => {
 });
 
 // Make a get request (get all the data from the table) when a get request is made on the Clients page
+// the first parameter "/clients" can be called anything, Localhost 5000
 app.get("/clients", async (req, res) => {
     try {
         const allClients = await pool.query("SELECT * FROM clients");

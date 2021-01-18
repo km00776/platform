@@ -21,7 +21,5 @@ CREATE TABLE Users
     user_id BIGSERIAL,
     name VARCHAR(255),
     login VARCHAR(255),
-    password VARCHAR()
-    
-    
+    password VARCHAR(255)  
 );
