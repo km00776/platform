@@ -21,9 +21,9 @@ router.post("/login", async(req,res) => {
 
              // if(validPassowrd)
         // 2. does user exist, if not throw error
-        const validPassowrd = await bcrypt.compare(password, user.rows[0].password);
+        const validPassword = await bcrypt.compare(password, user.rows[0].password);
 
-        if(!validPassowrd) {
+        if(!validPassword) {
             return res.status(401).json("Password or Login Invalid");
         }
 
