@@ -17,8 +17,8 @@ class LoginScreen extends React.Component {
             password: ""
         }
         this.handleClick = this.handleClick.bind(this);
-        this.handleOnChange = this.handleOnChangeLogin.bind(this);
-        this.handleOnChangePassword = this.handleOnChangePassword(this);
+        this.handleOnChangeLogin = this.handleOnChangeLogin.bind(this);
+        this.handleOnChangePassword = this.handleOnChangePassword.bind(this);
     }
     // const [visiblility, setVisiblility] = useState(false);
 
