@@ -6,17 +6,64 @@ import { useState, useEffect } from 'react';
 import ContactForm from './ContactForm';
 import DisableElevation from './PersonalButton';
 import React, { Component } from 'react';
+import { Link, Redirect } from "react-router-dom";
 
+import { toast } from "react-toastify";
 class LoginScreen extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
             visiblility: false,
+            login: "",
+            password: ""
         }
         this.handleClick = this.handleClick.bind(this);
-    }
+        this.handleOnChangeLogin = this.handleOnChangeLogin.bind(this);
+        this.handleOnChangePassword = this.handleOnChangePassword.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+    }   
     // const [visiblility, setVisiblility] = useState(false);
+
+    handleOnChangeLogin(e) {
+      
+        this.setState({login: e.target.value });
+    }
+
+     onSubmit = async (e) =>  {
+        e.preventDefault();
+        const {login, password} = this.state;
+        try {
+            const body = {login, password}
+            const response = await fetch("/authentication/verify", {
+                method: "POST",
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify(body)
+            }
+            );
+
+            const parseRes = await response.json();
+
+            if(parseRes.jwtToken) {
+                localStorage.setItem("token", parseRes.jwtToken);
+                this.props.setAuth(true);
+                toast.success("Logged In Successfully");
+            } else {
+                this.props.setAuth(false);
+                toast.error(parseRes);
+            }
+        }
+        catch(error) {
+            console.error(e.message)
+        }
+    }
+
+    handleOnChangePassword(e) {
+
+        this.setState({password: e.target.value})
+    }
 
      handleClick() {
         if (this.state.visiblility === false) {
@@ -37,7 +84,7 @@ render () {
     return (
         <Fragment>
             <body id="LoginScreen">
-                <form>
+                <form onSubmit= {this.onSubmit}>
                     <header>
                         <h1 className={styles.heading}>PASSWORD | <span className={styles.h1heading}>PLATFORM</span></h1>
                         <img className={styles.image} alt="nothing" src="https://www.englishlanguagetesting.co.uk/wp-content/uploads/2018/04/Password_CMYKxxxhdpi.png" height="200"></img>
@@ -52,18 +99,19 @@ render () {
                             <div className={styles.login}>
                                 <label className={styles.Label}><i class="info circle icon"></i>Login</label>
                                 <br></br>
-                                <input className={styles.Input}></input>
+                                <input onChangeText = {this.handleOnChangeLogin}  type="text" name= "login"className={styles.Input}></input>
                             </div>
                             <br></br>
                             <div className={styles.Password}>
                                 <label className={styles.Label}><i class="info circle icon"></i>Password</label>
                                 <br></br>
-                                <input type="password" className={styles.Input}></input>
+                                <input name="password" onChangeText={ this.handleOnChangePassword} type="password" className={styles.Input}></input>
                             </div>
                         </div>
                         <div className={styles.b1}>
-                            
-                                <DisableElevation onClick={() => this.props.history.push("/Clients")} className={styles.loginButton} label="Login"></DisableElevation>
+                        <button class="btn btn-success btn-block">Submit</button>
+
+                                {/* <DisableElevation submit= "submit"className={styles.loginButton} label="Login"></DisableElevation> */}
                                 <DisableElevation className={styles.testsRemainingButton} label="Check Tests Remaining"></DisableElevation>
                            
                         </div>

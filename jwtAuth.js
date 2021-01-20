@@ -4,11 +4,12 @@ const bcrypt = require("bcrypt");
 const pool = require('./platformdb.js');
 const jwtGenerator = require('./jwtGenerator');
 const authorize = require("./authorize.js");
+const validInfo = require("./validInfo");
 
 
 // login   route;
 
-router.post("/login", async (req, res) => {
+router.post("/login", validInfo, async (req, res) => {
     try {
         // 1. destrutcure req.body
 
@@ -22,9 +23,9 @@ router.post("/login", async (req, res) => {
 
         // if(validPassowrd)
         // 2. does user exist, if not throw error
-        const validPassowrd = await bcrypt.compare(password, user.rows[0].password);
+        const validPassword = await bcrypt.compare(password, user.rows[0].password);
 
-        if (!validPassowrd) {
+        if (!validPassword) {
             return res.status(401).json("Password or Login Invalid");
         }
 
