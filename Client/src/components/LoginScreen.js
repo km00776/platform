@@ -13,10 +13,24 @@ class LoginScreen extends React.Component {
 
         this.state = {
             visiblility: false,
+            login: "",
+            password: ""
         }
         this.handleClick = this.handleClick.bind(this);
+        this.handleOnChange = this.handleOnChangeLogin.bind(this);
+        this.handleOnChangePassword = this.handleOnChangePassword(this);
     }
     // const [visiblility, setVisiblility] = useState(false);
+
+    handleOnChangeLogin(e) {
+      
+        this.setState({login: e.target.value });
+    }
+
+    handleOnChangePassword(e) {
+
+        this.setState({password: e.target.value})
+    }
 
      handleClick() {
         if (this.state.visiblility === false) {
@@ -52,18 +66,18 @@ render () {
                             <div className={styles.login}>
                                 <label className={styles.Label}><i class="info circle icon"></i>Login</label>
                                 <br></br>
-                                <input className={styles.Input}></input>
+                                <input onChangeText = {this.handleOnChangeLogin}type="text" name= "login"className={styles.Input}></input>
                             </div>
                             <br></br>
                             <div className={styles.Password}>
                                 <label className={styles.Label}><i class="info circle icon"></i>Password</label>
                                 <br></br>
-                                <input type="password" className={styles.Input}></input>
+                                <input name="password" onChangeText={ this.handleOnChangePassword} type="password" className={styles.Input}></input>
                             </div>
                         </div>
                         <div className={styles.b1}>
                             
-                                <DisableElevation onClick={() => this.props.history.push("/Clients")} className={styles.loginButton} label="Login"></DisableElevation>
+                                <DisableElevation submit= "submit"   className={styles.loginButton} label="Login"></DisableElevation>
                                 <DisableElevation className={styles.testsRemainingButton} label="Check Tests Remaining"></DisableElevation>
                            
                         </div>
