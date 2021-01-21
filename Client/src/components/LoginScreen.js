@@ -9,6 +9,7 @@ import React, { Component } from 'react';
 import { Link, Redirect } from "react-router-dom";
 
 import { toast } from "react-toastify";
+
 class LoginScreen extends React.Component {
     constructor(props) {
         super(props);
@@ -35,14 +36,14 @@ class LoginScreen extends React.Component {
         const {login, password} = this.state;
         try {
             const body = {login, password}
-            const response = await fetch("/authentication/verify", {
+            const response = await fetch("/auth/login", {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json"
                 },
                 body: JSON.stringify(body)
             }
-            );
+            );  
 
             const parseRes = await response.json();
 
@@ -56,7 +57,7 @@ class LoginScreen extends React.Component {
             }
         }
         catch(error) {
-            console.error(e.message)
+            console.error(error.message)
         }
     }
 
@@ -109,9 +110,9 @@ render () {
                             </div>
                         </div>
                         <div className={styles.b1}>
-                        <button class="btn btn-success btn-block">Submit</button>
+                  ?
 
-                                {/* <DisableElevation submit= "submit"className={styles.loginButton} label="Login"></DisableElevation> */}
+                                <DisableElevation type= "submit"className={styles.loginButton} label="Login"></DisableElevation> 
                                 <DisableElevation className={styles.testsRemainingButton} label="Check Tests Remaining"></DisableElevation>
                            
                         </div>
