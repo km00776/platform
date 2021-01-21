@@ -4,11 +4,12 @@ const bcrypt = require("bcrypt");
 const pool = require('./platformdb.js');
 const jwtGenerator = require('./jwtGenerator');
 const authorize = require("./authorize.js");
+const validInfo = require("./validInfo");
 
 
 // login   route;
 
-router.post("/login", async (req, res) => {
+router.post("/login", validInfo, async (req, res) => {
     try {
         // 1. destrutcure req.body
 

@@ -109,8 +109,9 @@ render () {
                             </div>
                         </div>
                         <div className={styles.b1}>
-                            
-                                <DisableElevation submit= "submit"className={styles.loginButton} label="Login"></DisableElevation>
+                        <button class="btn btn-success btn-block">Submit</button>
+
+                                {/* <DisableElevation submit= "submit"className={styles.loginButton} label="Login"></DisableElevation> */}
                                 <DisableElevation className={styles.testsRemainingButton} label="Check Tests Remaining"></DisableElevation>
                            
                         </div>
