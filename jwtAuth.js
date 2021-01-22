@@ -9,7 +9,7 @@ const validInfo = require("./validinfo");
 
 // login   route;
 // from the next() in authorise, we
-router.post("/login", validInfo, async (req, res) => {
+router.post("/login", async (req, res) => {
 
     const { login, password } = req.body;
     try {
@@ -20,7 +20,7 @@ router.post("/login", validInfo, async (req, res) => {
 
         const user = await pool.query("SELECT * FROM users WHERE login = $1", [login]);
 
-        if (login !== user.rows[0].login) {
+        if (user.rows.length === 0 ) {
             return res.status(401).json("User doesn't exist");
         }
 
