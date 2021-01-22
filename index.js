@@ -19,6 +19,9 @@ console.log(path.join(__dirname, "Client/build"));
 app.use("/", require("./jwtAuth"));
 
 
+
+
+
 // with routing we use /client/clients, so if you do / to clients
 app.use("/", require("./ClientsPage"));
 

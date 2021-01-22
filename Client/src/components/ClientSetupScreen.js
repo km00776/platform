@@ -85,7 +85,6 @@ const ClientSetup = (props) => {
             <div className={styles.clientsDatabase}>
                 <div className={classes3.root}>
                     <Paper style={{ backgroundColor: 'white' }} elevation={7}>
-                        
                         <StickyHeadTable />
                         <div className={styles.Pagination}>
                             <form>

@@ -35,7 +35,7 @@ class LoginScreen extends React.Component {
         const {login, password} = this.state;
         try {
             const body = {login, password}
-            const response = await fetch("/authentication/verify", {
+            const response = await fetch("/verify", {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json"
@@ -99,19 +99,19 @@ render () {
                             <div className={styles.login}>
                                 <label className={styles.Label}><i class="info circle icon"></i>Login</label>
                                 <br></br>
-                                <input onChangeText = {this.handleOnChangeLogin}  type="text" name= "login"className={styles.Input}></input>
+                                <input onChange= {this.handleOnChangeLogin} value={this.state.login}  type="text" name= "login"className={styles.Input}></input>
                             </div>
                             <br></br>
                             <div className={styles.Password}>
                                 <label className={styles.Label}><i class="info circle icon"></i>Password</label>
                                 <br></br>
-                                <input name="password" onChangeText={ this.handleOnChangePassword} type="password" className={styles.Input}></input>
+                                <input name="password" onChange={this.handleOnChangePassword} value = {this.state.password} type="password" className={styles.Input}></input>
                             </div>
                         </div>
                         <div className={styles.b1}>
-                        <button class="btn btn-success btn-block">Submit</button>
+                     
 
-                                {/* <DisableElevation submit= "submit"className={styles.loginButton} label="Login"></DisableElevation> */}
+                                <DisableElevation type= "submit" className={styles.loginButton} label="Login"></DisableElevation>
                                 <DisableElevation className={styles.testsRemainingButton} label="Check Tests Remaining"></DisableElevation>
                            
                         </div>
