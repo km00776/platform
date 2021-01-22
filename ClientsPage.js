@@ -1,5 +1,4 @@
 const router = require("express").Router();
-const authorize = require("./authorize");
 const pool = require('./platformdb.js');
 
 router.post("/clients",  async(request,response) => {

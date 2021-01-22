@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 const pool = require('./platformdb.js');
 const jwtGenerator = require('./jwtGenerator');
 const authorize = require("./authorize.js");
-const validInfo = require("./validInfo");
+const validInfo = require("./validinfo");
 
 
 // login   route;
