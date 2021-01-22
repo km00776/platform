@@ -16,7 +16,7 @@ console.log(__dirname);
 console.log(path.join(__dirname, "Client/build"));
 
 
-app.use("/", require("./jwtAuth"));
+app.use("/auth", require("./jwtAuth"));
 
 
 

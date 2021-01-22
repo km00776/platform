@@ -8,30 +8,38 @@ const validInfo = require("./validInfo");
 
 
 // login   route;
-
+// from the next() in authorise, we
 router.post("/login", validInfo, async (req, res) => {
+
+    const { login, password } = req.body;
     try {
         // 1. destrutcure req.body
 
-        const { login, password } = req.body;
+      
+        
 
-        const users = await pool.query("SELECT * FROM users WHERE login = $1", [login])
+        const user = await pool.query("SELECT * FROM users WHERE login = $1", [login])
 
-        if (users.rows.length === 0) {
+        if (user.rows.length === 0) {
             return res.status(401).json("Login or Password Invalid");
         }
 
         // if(validPassowrd)
         // 2. does user exist, if not throw error
+
+        // Why are we comparing user.rows[0].password and not any other rows? 
         const validPassword = await bcrypt.compare(password, user.rows[0].password);
 
         if (!validPassword) {
             return res.status(401).json("Password or Login Invalid");
         }
 
-        const token = jwtGenerator(user.rows[0].login);
+        const jwtToken = jwtGenerator(user.rows[0].user_id);
+        
 
-        return res.json({ token });
+
+        // need to watch a video on this again 
+        return res.json({ jwtToken });
 
         // if(validPassowrd)
         // 2. does user exist, if not throw error
@@ -39,20 +47,20 @@ router.post("/login", validInfo, async (req, res) => {
 
     }
     catch (error) {
-        console.log(error.message);
+        console.error(error.message);
         res.status(500).send("Server Flopped");
     }
 });
 
 router.post("/verify", authorize, (req, res) => {
     try {
-        res.json(true)
+        res.json(true);
     }
     catch(error) {
-        console.log(error.message)
+        console.error(error.message);
         res.status(500).send("Server error");
 
     }
-})
+});
 
 module.exports = router;
