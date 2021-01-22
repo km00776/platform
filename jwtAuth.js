@@ -18,20 +18,26 @@ router.post("/login", validInfo, async (req, res) => {
       
         
 
-        const user = await pool.query("SELECT * FROM users WHERE login = $1", [login])
+        const user = await pool.query("SELECT * FROM users WHERE login = $1", [login]);
 
-        if (user.rows.length === 0) {
-            return res.status(401).json("Login or Password Invalid");
+        if (login !== user.rows[0].login) {
+            return res.status(401).json("User doesn't exist");
         }
 
         // if(validPassowrd)
         // 2. does user exist, if not throw error
 
         // Why are we comparing user.rows[0].password and not any other rows? 
-        const validPassword = await bcrypt.compare(password, user.rows[0].password);
+        // const validPassword = await bcrypt.compare(password, user.rows[0].password);
 
-        if (!validPassword) {
-            return res.status(401).json("Password or Login Invalid");
+        // if (!validPassword) {
+        //     return res.status(401).json("Password invalid");
+        // }
+            // we are using 0 because
+
+            // password label is first row (0)
+        if(password !== user.rows[0].password) {
+            return res.status(401).json("Password invalid"); 
         }
 
         const jwtToken = jwtGenerator(user.rows[0].user_id);
