@@ -94,7 +94,7 @@ render () {
 
                         <h2 className={styles.message}>
                             <i class="lock icon"></i> LOGIN
-                    </h2>
+                        </h2>
                    
                         <div className={styles.inputBox}>
                             <div className={styles.login}>
