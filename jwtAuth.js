@@ -9,7 +9,7 @@ const validInfo = require("./validinfo");
 
 // login   route;
 // from the next() in authorise, we
-router.post("/login", async (req, res) => {
+router.post("/login", validInfo, async (req, res) => {
 
     const { login, password } = req.body;
     try {
