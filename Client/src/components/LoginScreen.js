@@ -94,7 +94,7 @@ render () {
 
                         <h2 className={styles.message}>
                             <i class="lock icon"></i> LOGIN
-                    </h2>
+                        </h2>
                    
                         <div className={styles.inputBox}>
                             <div className={styles.login}>
@@ -142,7 +142,7 @@ const Terms = () => {
         <div className={styles.termsContainer}>
             <br></br>
             <span className={styles.info}>
-                <input className={styles.termsBox} type="checkbox" id="box1" name="box1" value="All">
+                <input className={styles.termsBox} required type="checkbox" id="box1" name="box1" value="All">
                 </input>
                 <i class="exclamation circle icon"></i>
                 <a className={styles.link} target="_blank" href="https://alpha.englishlanguagetesting.co.uk/terms-and-conditions-for-a-password-test/">English Language Testing Ltd’s terms and conditions for taking a Password test</a>

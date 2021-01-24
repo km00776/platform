@@ -5,7 +5,7 @@ div.intro {
   top: 10rem;
   right: 0;
   left: 0;
-  color: #00324d;
+  background-image: "https://i.imgur.com/O3hSK8E.jpg";
 }
 
 h2.font {
@@ -15,9 +15,13 @@ h2.font {
 
 html,
 body {
-  background: #004c8c;
   height: 100%;
   width: 100%;
+  background-color: #001b3a;
+  background-image: url("https://i.imgur.com/fegLXwL.png");
+  background-position: right 920px top 450px;
+  background-repeat: no-repeat;
+  background-size: 600px;
 }
 
 button.testsRemainingButton {
@@ -180,7 +184,6 @@ h1.heading {
   top: 60px;
   position: fixed;
   font-weight: 800;
-  font-family: sans-serif;
   color: black;
   font-size: 28px;
   width: 100%;

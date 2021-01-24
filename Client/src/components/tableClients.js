@@ -112,11 +112,11 @@ export default function StickyHeadTable() {
         <Table  stickyHeader aria-label="sticky table">
           <TableHead >
             <TableRow >
-              <StyledTableCell style={{ backgroundColor: '#ff1744' }} align="left">Name</StyledTableCell>
-              <StyledTableCell style={{ backgroundColor: '#ff1744' }} align="left">Country</StyledTableCell>
-              <StyledTableCell style={{ backgroundColor: '#ff1744' }}align="left">Date Created</StyledTableCell>
-              <StyledTableCell style={{ backgroundColor: '#ff1744' }}align="left">Active</StyledTableCell>
-              <StyledTableCell style={{ backgroundColor: '#ff1744' }}align="left">Archive</StyledTableCell>
+              <StyledTableCell style={{ backgroundColor: '#002155' }} align="left">Name</StyledTableCell>
+              <StyledTableCell style={{ backgroundColor: '#002155' }} align="left">Country</StyledTableCell>
+              <StyledTableCell style={{ backgroundColor: '#002155' }}align="left">Date Created</StyledTableCell>
+              <StyledTableCell style={{ backgroundColor: '#002155' }}align="left">Active</StyledTableCell>
+              <StyledTableCell style={{ backgroundColor: '#002155' }}align="left">Archive</StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>

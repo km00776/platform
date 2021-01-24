@@ -45,8 +45,8 @@ function App() {
                  
                         <Switch>
                             <Route exact path="/" render = {props => !isAuthenticated ? (<LoginScreen  {...props} setAuth = {setAuth} />) : (<Redirect to= "/Clients" />)  } />
-                            <Route exact path="/Clients" render = {props => !isAuthenticated ? (<ClientSetup {...props} setAuth = {setAuth} />) : (<Redirect to= "/" />)  } />
-
+                            <Route exact path="/Clients" render = {props => isAuthenticated ? (<ClientSetup {...props} setAuth = {setAuth} />) : (<Redirect to= "/" />)  } />
+                            <Route exact path="/Detail" render={props => isAuthenticated ? (<ClientDetails {...props} setAuth = {setAuth} />) : (<Redirect to="/" />) } />
                         </Switch>
                 
             </Router>
