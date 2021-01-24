@@ -7,8 +7,40 @@ import ContactForm from './ContactForm';
 import DisableElevation from './PersonalButton';
 import React, { Component } from 'react';
 import { Link, Redirect } from "react-router-dom";
+import Tooltip from '@material-ui/core/Tooltip';
+import DeleteIcon from '@material-ui/icons/Delete';
+import IconButton from '@material-ui/core/IconButton';
+import { makeStyles } from '@material-ui/core/styles';
 
 import { toast } from "react-toastify";
+
+
+const useStyles = makeStyles((theme) => ({
+    fab: {
+      margin: theme.spacing(2),
+    },
+    absolute: {
+      position: 'absolute',
+      bottom: theme.spacing(2),
+      right: theme.spacing(3),
+    },
+  }));
+
+  export function SimpleTooltips() {
+    const classes = useStyles();
+  
+    return (
+      <div classes = {classes}>
+        <Tooltip title="Delete">
+          <IconButton aria-label="delete">
+            <DeleteIcon />
+          </IconButton>
+        </Tooltip>
+        
+      </div>
+    );
+  }
+
 
 class LoginScreen extends React.Component {
     constructor(props) {
@@ -17,25 +49,41 @@ class LoginScreen extends React.Component {
         this.state = {
             visiblility: false,
             login: "",
-            password: ""
+            password: "",
+            infoLogin: false,
+            infoPassword: false
         }
         this.handleClick = this.handleClick.bind(this);
         this.handleOnChangeLogin = this.handleOnChangeLogin.bind(this);
         this.handleOnChangePassword = this.handleOnChangePassword.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
-    }   
+        this.handleInfoLogin = this.handleInfoLogin.bind(this);
+        this.handleInfoPassword = this.handleInfoPassword.bind(this);
+    }
+
+    handleInfoLogin() {
+        if (this.state.infoLogin === true) {
+         return(
+            <SimpleTooltips />);
+        }
+      
+       
+    }
+
+    handleInfoPassword() {
+
+    }
     // const [visiblility, setVisiblility] = useState(false);
 
     handleOnChangeLogin(e) {
-      
-        this.setState({login: e.target.value });
+        this.setState({ login: e.target.value });
     }
 
-     onSubmit = async (e) =>  {
+    onSubmit = async (e) => {
         e.preventDefault();
-        const {login, password} = this.state;
+        const { login, password } = this.state;
         try {
-            const body = {login, password}
+            const body = { login, password }
             const response = await fetch("/auth/login", {
                 method: "POST",
                 headers: {
@@ -43,32 +91,32 @@ class LoginScreen extends React.Component {
                 },
                 body: JSON.stringify(body)
             }
-            );  
+            );
 
-            const parseRes = await response.json(); 
+            const parseRes = await response.json();
 
-            if(parseRes.jwtToken) {
+            if (parseRes.jwtToken) {
                 localStorage.setItem("token", parseRes.jwtToken);
                 this.props.setAuth(true);
                 toast.success("Logged In Successfully");
             } else {
-                this.props.setAuth(false);  
+                this.props.setAuth(false);
                 toast.error(parseRes);
             }
         }
-        catch(error) {
+        catch (error) {
             console.error(error.message)
         }
     }
 
     handleOnChangePassword(e) {
 
-        this.setState({password: e.target.value})
+        this.setState({ password: e.target.value })
     }
 
-     handleClick() {
+    handleClick() {
         if (this.state.visiblility === false) {
-             this.setState({
+            this.setState({
                 visiblility: true
             })
             console.log("hello");
@@ -81,55 +129,55 @@ class LoginScreen extends React.Component {
         }
     }
 
-render () {
-    return (
-        <Fragment>
-            <body id="LoginScreen">
-                <form onSubmit= {this.onSubmit}>
-                    <header>
-                        <h1 className={styles.heading}>PASSWORD | <span className={styles.h1heading}>PLATFORM</span></h1>
-                        <img className={styles.image} alt="nothing" src="https://www.englishlanguagetesting.co.uk/wp-content/uploads/2018/04/Password_CMYKxxxhdpi.png" height="200"></img>
-                    </header>
-                    <div className={styles.container}>
+    render() {
+        return (
+            <Fragment>
+                <body id="LoginScreen">
+                    <form onSubmit={this.onSubmit}>
+                        <header>
+                            <h1 className={styles.heading}>PASSWORD | <span className={styles.h1heading}>PLATFORM</span></h1>
+                            <img className={styles.image} alt="nothing" src="https://www.englishlanguagetesting.co.uk/wp-content/uploads/2018/04/Password_CMYKxxxhdpi.png" height="200"></img>
+                        </header>
+                        <div className={styles.container}>
 
-                        <h2 className={styles.message}>
-                            <i class="lock icon"></i> LOGIN
+                            <h2 className={styles.message}>
+                                <i class="lock icon"></i> LOGIN
                         </h2>
-                   
-                        <div className={styles.inputBox}>
-                            <div className={styles.login}>
-                                <label className={styles.Label}><i class="info circle icon"></i>Login</label>
-                                <br></br>
-                                <input onChange= {this.handleOnChangeLogin} value={this.state.login}  type="text" name= "login"className={styles.Input}></input>
-                            </div>
-                            <br></br>
-                            <div className={styles.Password}>
-                                <label className={styles.Label}><i class="info circle icon"></i>Password</label>
-                                <br></br>
-                                <input name="password" onChange={this.handleOnChangePassword} value = {this.state.password} type="password" className={styles.Input}></input>
-                            </div>
-                        </div>
-                        <div className={styles.b1}>
-                  
 
-                                <DisableElevation type= "submit" className={styles.loginButton} label="Login"></DisableElevation> 
+                            <div className={styles.inputBox}>
+                                <div className={styles.login}>
+                                    <label  className={styles.Label}><i onClick={this.handleInfoLogin} class="info circle icon"></i>Login</label>
+                                    <br></br>
+                                    <input onChange={this.handleOnChangeLogin} value={this.state.login} type="text" name="login" className={styles.Input}></input>
+                                </div>
+                                <br></br>
+                                <div className={styles.Password}>
+                                    <label className={styles.Label}><i onClick={this.handleInfoPassword} class="info circle icon"></i>Password</label>
+                                    <br></br>
+                                    <input name="password" onChange={this.handleOnChangePassword} value={this.state.password} type="password" className={styles.Input}></input>
+                                </div>
+                            </div>
+                            <div className={styles.b1}>
+
+
+                                <DisableElevation type="submit" className={styles.loginButton} label="Login"></DisableElevation>
                                 <DisableElevation className={styles.testsRemainingButton} label="Check Tests Remaining"></DisableElevation>
-                           
+
+                            </div>
+
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <Terms />
                         </div>
-                       
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <Terms />
-                    </div>
-                </form>
+                    </form>
 
-                <ContactForm onClick={this.handleClick} visiblility={this.state.visiblility} />
-            </body>
-        </Fragment>
+                    <ContactForm onClick={this.handleClick} visiblility={this.state.visiblility} />
+                </body>
+            </Fragment>
 
-    );
+        );
 
     }
 }
