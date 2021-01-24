@@ -1,5 +1,5 @@
 div.class {
-  background: rgb(246, 249, 255);
+  background-color: #f2f2f2;
   min-height: 100vw;
   min-width: 100vw;
   position: absolute;
@@ -216,7 +216,7 @@ h2.papertext3 {
   left: 40.6vh;
   color: #2e3b55;
   font-weight: 300;
-  font-family: "Arial";
+  font-family: Lato, sans-serif;
 }
 div.clientsData {
   position: absolute;
@@ -245,7 +245,7 @@ div.Pagination {
 // this is for my mac
 @media screen and (max-width: 1440px) {
   div.class {
-    background: rgb(246, 249, 255);
+    background-color: #f2f2f2;
     min-height: 100vw;
     min-width: 100vw;
     position: absolute;
@@ -304,6 +304,7 @@ div.Pagination {
     right: 27px;
     color: black;
     font-weight: 300;
+    font-family: Lato, sans-serif;
   }
   h3.totalUniversityClients {
     position: relative;
@@ -360,7 +361,8 @@ div.Pagination {
     top: 12vh;
     left: 21%;
     color: black;
-    font-weight: 300;
+    font-weight: 100;
+    font-family: Lato, sans-serif;
   }
   div.clientsData {
     position: absolute;

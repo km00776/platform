@@ -77,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerPaper: {
     width: drawerWidth,
-    backgroundColor: '#2196f3',
+    backgroundColor: '#002155 ',
     color: 'White',
     fontSize: '1rem',
     fontFamily: 'roboto',
@@ -137,21 +137,21 @@ export function PermanentDrawerLeft(props) {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar style={{ background: 'rgb(246, 249, 255)',  }}>
+      <AppBar style={{ backgroundColor: '#f2f2f2',  }}>
         <Toolbar>
           <Box display='flex' flexGrow={1}>
           </Box>
           <div className={styles.mailIcon} >
             <ListItem button>
-              <Badge badgeContent={5} color = 'secondary'>
-                <MailIcon style={{color: 'black'}}  />
+              <Badge badgeContent={5} color = 'primary'>
+                <MailIcon style={{color: '#002155'}}  />
               </Badge>
             </ListItem>
           </div>
           <div>
             <ListItem button>
-            <Badge badgeContent={9} color = 'secondary'>
-              <NotificationsIcon style={{color: 'black'}} />
+            <Badge badgeContent={9} color = 'primary'>
+              <NotificationsIcon style={{color: '#002155'}} />
               </Badge>
             </ListItem>
           </div>

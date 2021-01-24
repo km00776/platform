@@ -56,8 +56,8 @@ const ClientSetup = (props) => {
 
         [theme.breakpoints.up('lg')]: {
             fontSize: '3.2rem',
-            fontWeight: 700,
-            fontFamily: 'sans-serif',
+            fontWeight: 550,
+            fontFamily: 'Lato,sans-serif',
             color: 'Black'
         },
     };
