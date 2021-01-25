@@ -26,19 +26,14 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-  export function SimpleTooltips() {
-    const classes = useStyles();
+  const SimpleTooltips = () =>  {
+
   
     return (
-      <div classes = {classes}>
-        <Tooltip title="Delete">
-          <IconButton aria-label="delete">
-            <DeleteIcon />
-          </IconButton>
+        <Tooltip title="Add" arrow>
+          <h1> hi</h1>
         </Tooltip>
-        
-      </div>
-    );
+      );    
   }
 
 
@@ -62,12 +57,13 @@ class LoginScreen extends React.Component {
     }
 
     handleInfoLogin() {
-        if (this.state.infoLogin === true) {
+        if (this.state.infoLogin === false) {
          return(
             <SimpleTooltips />);
         }
-      
-       
+        else {
+            return <SimpleTooltips />;
+        }
     }
 
     handleInfoPassword() {
@@ -130,6 +126,8 @@ class LoginScreen extends React.Component {
     }
 
     render() {
+        
+
         return (
             <Fragment>
                 <body id="LoginScreen">
@@ -146,15 +144,15 @@ class LoginScreen extends React.Component {
 
                             <div className={styles.inputBox}>
                                 <div className={styles.login}>
-                                    <label  className={styles.Label}><i onClick={this.handleInfoLogin} class="info circle icon"></i>Login</label>
+                                    <label  className={styles.Label}><i class="info circle icon" onClick={this.handleInfoLogin} title="Login should be provided by University/Institute"></i>Login</label>
                                     <br></br>
                                     <input onChange={this.handleOnChangeLogin} value={this.state.login} type="text" name="login" className={styles.Input}></input>
                                 </div>
                                 <br></br>
                                 <div className={styles.Password}>
-                                    <label className={styles.Label}><i onClick={this.handleInfoPassword} class="info circle icon"></i>Password</label>
+                                    <label className={styles.Label}><i title="Edit" class="info circle icon"></i>Password</label>
                                     <br></br>
-                                    <input name="password" onChange={this.handleOnChangePassword} value={this.state.password} type="password" className={styles.Input}></input>
+                                    <input name="password" title="Login should be provided by University/Institute" onChange={this.handleOnChangePassword} value={this.state.password} type="password" className={styles.Input}></input>
                                 </div>
                             </div>
                             <div className={styles.b1}>
