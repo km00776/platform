@@ -11,30 +11,27 @@ import Tooltip from '@material-ui/core/Tooltip';
 import DeleteIcon from '@material-ui/icons/Delete';
 import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
-
+import LiveHelpIcon from '@material-ui/icons/LiveHelp';
 import { toast } from "react-toastify";
 
 
-const useStyles = makeStyles((theme) => ({
-    fab: {
-      margin: theme.spacing(2),
-    },
-    absolute: {
-      position: 'absolute',
-      bottom: theme.spacing(2),
-      right: theme.spacing(3),
-    },
-  }));
 
-  const SimpleTooltips = () =>  {
 
-  
+const SimpleTooltips = (props) => {
     return (
-        <Tooltip title="Add" arrow>
-          <h1> hi</h1>
-        </Tooltip>
-      );    
-  }
+    <Fragment>
+        <label className={styles.Label}>
+            <Tooltip className={styles.Label} title={props.arialabel}>
+                <IconButton aria-label={props.arialabel}>
+                    <LiveHelpIcon />
+                </IconButton>
+            </Tooltip>
+            {props.label}
+        </label>
+         <br></br>
+    </Fragment>
+    )
+}
 
 
 class LoginScreen extends React.Component {
@@ -44,31 +41,16 @@ class LoginScreen extends React.Component {
         this.state = {
             visiblility: false,
             login: "",
-            password: "",
-            infoLogin: false,
-            infoPassword: false
+            password: ""
         }
         this.handleClick = this.handleClick.bind(this);
         this.handleOnChangeLogin = this.handleOnChangeLogin.bind(this);
         this.handleOnChangePassword = this.handleOnChangePassword.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
-        this.handleInfoLogin = this.handleInfoLogin.bind(this);
-        this.handleInfoPassword = this.handleInfoPassword.bind(this);
+      
     }
 
-    handleInfoLogin() {
-        if (this.state.infoLogin === false) {
-         return(
-            <SimpleTooltips />);
-        }
-        else {
-            return <SimpleTooltips />;
-        }
-    }
-
-    handleInfoPassword() {
-
-    }
+  
     // const [visiblility, setVisiblility] = useState(false);
 
     handleOnChangeLogin(e) {
@@ -126,7 +108,7 @@ class LoginScreen extends React.Component {
     }
 
     render() {
-        
+
 
         return (
             <Fragment>
@@ -144,15 +126,15 @@ class LoginScreen extends React.Component {
 
                             <div className={styles.inputBox}>
                                 <div className={styles.login}>
-                                    <label  className={styles.Label}><i class="info circle icon" onClick={this.handleInfoLogin} title="Login should be provided by University/Institute"></i>Login</label>
-                                    <br></br>
+                                    <SimpleTooltips arialabel = "Login needs to be provided by University/Institution" label = "Login"/>
+                                   
                                     <input onChange={this.handleOnChangeLogin} value={this.state.login} type="text" name="login" className={styles.Input}></input>
                                 </div>
                                 <br></br>
                                 <div className={styles.Password}>
-                                    <label className={styles.Label}><i title="Edit" class="info circle icon"></i>Password</label>
-                                    <br></br>
-                                    <input name="password" title="Login should be provided by University/Institute" onChange={this.handleOnChangePassword} value={this.state.password} type="password" className={styles.Input}></input>
+                                    <SimpleTooltips className={styles.tooltip} label = "Password"/>                                   
+                                
+                                    <input name="password" onChange={this.handleOnChangePassword} value={this.state.password} type="password" className={styles.Input}></input>
                                 </div>
                             </div>
                             <div className={styles.b1}>

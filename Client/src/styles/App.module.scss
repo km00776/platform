@@ -70,6 +70,7 @@ a.link {
 
 p.termsMessage {
   color: gray;
+ 
 }
 
 img.image {
@@ -110,13 +111,13 @@ button.testsRemainingButton:hover {
 
 div.b1 {
   position: relative;
-  top: 12%;
+  top: 4%;
   left: 25%;
 }
 
 h2.message {
   text-align: center;
-  top: 3vh;
+  top:0.4vh;
   position: relative;
   font-family: sans-serif;
   font-size: 24px;
@@ -129,7 +130,7 @@ div.inputBox {
   position: relative;
   left: 20%;
   right: 50%;
-  top: 10%;
+  top:3%;
 }
 
 input.Input {
@@ -152,11 +153,20 @@ p.terms {
   float: left;
 }
 
-label.Label {
+.Label {
   font-weight: 800;
   color: #001b3a;
   position: relative;
-  right: 20%;
+  right: 11%;
+  font-size: 15px;
+  top: 3%;
+}
+.tooltip {
+  font-weight: 800;
+  color: #001b3a;
+  position: relative;
+  right: 12%;
+  top: 10%;
   font-size: 15px;
 }
 
@@ -239,7 +249,7 @@ div.termsContainer {
   position: absolute;
   color: Black;
   text-align: justify;
-  padding: 1px 20px 20px 15px;
+  padding: 1px 20px 20px 17px;
   background-color: #fafafa;
   border-radius: 15px;
   bottom: 30px;
