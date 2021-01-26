@@ -144,14 +144,14 @@ export function PermanentDrawerLeft(props) {
           <div className={styles.mailIcon} >
             <ListItem button>
               <Badge badgeContent={5} color = 'primary'>
-                <MailIcon style={{color: '#002155'}}  />
+                <MailIcon style={{color: 'black'}}  />
               </Badge>
             </ListItem>
           </div>
           <div>
             <ListItem button>
             <Badge badgeContent={9} color = 'primary'>
-              <NotificationsIcon style={{color: '#002155'}} />
+              <NotificationsIcon style={{color: 'black'}} />
               </Badge>
             </ListItem>
           </div>

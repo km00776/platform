@@ -8,10 +8,9 @@ import DisableElevation from './PersonalButton';
 import React, { Component } from 'react';
 import { Link, Redirect } from "react-router-dom";
 import Tooltip from '@material-ui/core/Tooltip';
-import DeleteIcon from '@material-ui/icons/Delete';
 import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
-import LiveHelpIcon from '@material-ui/icons/LiveHelp';
+import InfoIcon from '@material-ui/icons/Info';
 import { toast } from "react-toastify";
 
 
@@ -19,15 +18,13 @@ import { toast } from "react-toastify";
 
 const SimpleTooltips = (props) => {
     return (
-    <Fragment>
-        <label className={styles.Label}>
-            <Tooltip className={styles.Label} title={props.arialabel}>
-                <IconButton aria-label={props.arialabel}>
-                    <LiveHelpIcon />
+    <Fragment> 
+        <Tooltip style={{color:'#00224b'}} className={styles.Label} title={props.arialabel}>
+                <IconButton style={{color: '#00224b', top: '7px'}}>
+                     <InfoIcon style={{color: '#00224b ', top: '40px'}}/>
                 </IconButton>
-            </Tooltip>
-            {props.label}
-        </label>
+        </Tooltip>
+        <label className={styles.Label}>{props.label}</label>
          <br></br>
     </Fragment>
     )
@@ -121,9 +118,8 @@ class LoginScreen extends React.Component {
                         <div className={styles.container}>
 
                             <h2 className={styles.message}>
-                                <i class="lock icon"></i> LOGIN
-                        </h2>
-
+                                <i class="lock icon"></i>LOGIN
+                            </h2>
                             <div className={styles.inputBox}>
                                 <div className={styles.login}>
                                     <SimpleTooltips arialabel = "Login needs to be provided by University/Institution" label = "Login"/>
@@ -132,7 +128,7 @@ class LoginScreen extends React.Component {
                                 </div>
                                 <br></br>
                                 <div className={styles.Password}>
-                                    <SimpleTooltips className={styles.tooltip} label = "Password"/>                                   
+                                    <SimpleTooltips arialabel = "Password needs to be provided by University/Institution" className={styles.tooltip} label = "Password"/>                                   
                                 
                                     <input name="password" onChange={this.handleOnChangePassword} value={this.state.password} type="password" className={styles.Input}></input>
                                 </div>
