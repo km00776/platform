@@ -16,7 +16,7 @@ import styles from '../styles/ClientSetup.module.scss';
 import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
 import MailIcon from '@material-ui/icons/Mail';
 import {makeStyles, ThemeProvider, createMuiTheme} from '@material-ui/core/styles';
-import CancelPresentationIcon from '@material-ui/icons/CancelPresentation';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import ReportIcon from '@material-ui/icons/Report';
 import InsertDriveFileIcon from '@material-ui/icons/InsertDriveFile';
 import StorageIcon from '@material-ui/icons/Storage';
@@ -157,7 +157,7 @@ export function PermanentDrawerLeft(props) {
           </div>
           <div>
           <ListItem button>
-            <CancelPresentationIcon style={{color: 'black'}} />
+            <ExitToAppIcon style={{color: 'black'}} />
           </ListItem>
           </div>
         </Toolbar>
@@ -176,7 +176,7 @@ export function PermanentDrawerLeft(props) {
         <Divider />
         <List>
           <ListItem button onClick={() => handleQuestionAuthoringClick()} key='Question Authoring'>
-            <ListItemIcon style={{ color: 'Black' }} >
+            <ListItemIcon style={{ color: 'white' }} >
               <ContactSupportIcon />
             </ListItemIcon>
             <ListItemText  primary='Question Authoring'/>
@@ -253,7 +253,7 @@ export function PermanentDrawerLeft(props) {
           </Collapse>
         <br></br>
           <ListItem button onClick={handleTestBuildClick} key='Test Build'>
-            <ListItemIcon style={{ color: 'Black' }}>
+            <ListItemIcon style={{ color: 'White' }}>
               <BuildIcon />
             </ListItemIcon>
             <ListItemText primary='Test Build' />
@@ -280,7 +280,7 @@ export function PermanentDrawerLeft(props) {
           </Collapse>
           <br></br>
           <ListItem button onClick={handleClientSetupClick} key='Client Setup'>
-            <ListItemIcon style={{ color: 'Black' }} >
+            <ListItemIcon style={{ color: 'White' }} >
               <GroupWorkIcon />
             </ListItemIcon>
             <ListItemText primary='Client Setup' />
@@ -297,14 +297,14 @@ export function PermanentDrawerLeft(props) {
           </Collapse>
           <br></br>
           <ListItem button key='Test Code Allocation'>
-            <ListItemIcon style={{ color: 'Black' }} >
+            <ListItemIcon style={{ color: 'white' }} >
               <SortByAlphaIcon />
             </ListItemIcon>
             <ListItemText primary='Test Code Allocation' />
           </ListItem>
           <br></br>
           <ListItem button key='Results & Certificates'>
-            <ListItemIcon style={{ color: 'Black' }} >
+            <ListItemIcon style={{ color: 'white' }} >
               <InsertDriveFileIcon />
             </ListItemIcon>
             <ListItemText primary='Results & Certificates' />
@@ -312,7 +312,7 @@ export function PermanentDrawerLeft(props) {
           <br></br>
           <Divider />
           <ListItem button onClick={handleReportingClick} key='Reporting'>
-            <ListItemIcon style={{ color: 'Black' }} >
+            <ListItemIcon style={{ color: 'White' }} >
               <ReportIcon />
             </ListItemIcon>
             <ListItemText primary='Reporting' />
@@ -359,7 +359,7 @@ export function PermanentDrawerLeft(props) {
           </Collapse>
           <br></br>
           <ListItem button onClick={handleCMSClick} key='CMS'>
-            <ListItemIcon style={{ color: 'Black' }} >
+            <ListItemIcon style={{ color: 'White' }} >
               <StorageIcon />
             </ListItemIcon>
             <ListItemText primary='CMS' />
@@ -467,21 +467,21 @@ export function PermanentDrawerLeft(props) {
           <br></br>
        
           <ListItem button key='Inbox'>
-            <ListItemIcon style={{ color: 'Black' }} >
+            <ListItemIcon style={{ color: 'White' }} >
               <MailIcon />
             </ListItemIcon>
             <ListItemText primary='Inbox' />
           </ListItem>
           <br></br>
           <ListItem button key='Notes'>
-            <ListItemIcon style={{ color: 'Black' }} >
+            <ListItemIcon style={{ color: 'White' }} >
               <NoteAddIcon />
             </ListItemIcon>
             <ListItemText primary='Notes' />
           </ListItem>
           <br></br>
           <ListItem button key='Invoices'>
-            <ListItemIcon style={{ color: 'Black' }} >
+            <ListItemIcon style={{ color: 'White' }} >
               <ReceiptIcon />
             </ListItemIcon>
             <ListItemText primary='Invoices' />
@@ -489,8 +489,8 @@ export function PermanentDrawerLeft(props) {
           <br></br>
           <Divider />
           <ListItem button key='Logout'>
-            <ListItemIcon style={{ color: 'black' }} >
-              <CancelPresentationIcon />
+            <ListItemIcon style={{ color: 'White' }} >
+              <ExitToAppIcon />
             </ListItemIcon>
             <ListItemText primary='Logout' />
 
