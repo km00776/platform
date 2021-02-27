@@ -76,10 +76,11 @@ const useStyles = makeStyles({
 
 export default function StickyHeadTable() {
   const classes = useStyles();
-  const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(6);
-
+  const [page, setPage] = React.useState(1);
   const [clients, setClients] = useState([]);
+  const [rowsPerPage, setRowsPerPage] = React.useState(4);
+
+
 
     const getClients = async () => {
         try {
@@ -87,6 +88,7 @@ export default function StickyHeadTable() {
             const jsonData = await response.json();
 
             setClients(jsonData);
+          
         }
         catch (err) {
             console.error(err.message);
@@ -102,9 +104,12 @@ export default function StickyHeadTable() {
   };
 
   const handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(4);
-    setPage(event.target.value);
+    setRowsPerPage(parseInt(event.target.value, 10));
+    setPage(0);
+
+    
   };
+  
 
   return (
     <Paper className={classes.root}>
@@ -120,8 +125,8 @@ export default function StickyHeadTable() {
             </TableRow>
           </TableHead>
           <TableBody>
-          {clients.map((row) => (
-            <StyledTableRow key={row.name}>
+          {clients.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row, index) => (
+            <StyledTableRow key={index}>
               <StyledTableCell component="th" scope="row">
                <a style={{color: 'Black'}}href="google"> {row.name} </a>
               </StyledTableCell>
@@ -135,9 +140,9 @@ export default function StickyHeadTable() {
         </Table>
       </TableContainer>
       <TablePagination
-        rowsPerPageOptions={[5, 8]}
+        rowsPerPageOptions={[0, 4, 5, 8]}
         component="div"
-        count={clients.length}
+        count={clients.length}  
         rowsPerPage={rowsPerPage}
         page={page}
         onChangePage={handleChangePage}

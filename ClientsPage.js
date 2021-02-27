@@ -15,11 +15,24 @@ router.post("/clients",  async(request,response) => {
     }
 });
 
+router.post("/clients", async(request, response) => {
+    const {Name, Country} = req.body; 
+
+    const name = await pool.query("SELECT * FROM clients WHERE name= $1", [Name])
+
+    try {
+
+    }
+    catch(error) {
+
+    }
+});
+
 // Make a get request (get all the data from the table) when a get request is made on the Clients page
 // the first parameter "/clients" can be called anything, Localhost 5000
 router.get("/clients", async (req, res) => {
     try {
-        const allClients = await pool.query("SELECT * FROM clients");
+        const allClients = await pool.query("SELECT * FROM clients ORDER BY datecreated");
         res.json(allClients.rows);
     } catch (err) {
         console.error(err.message);
