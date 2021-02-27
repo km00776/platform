@@ -43,7 +43,7 @@ const useStyles3 = makeStyles((theme) => ({
 const ClientSetup = (props) => {
     const classes3 = useStyles3();
     const theme = createMuiTheme();
-
+  
     theme.typography.h5 = {
         fontSize: '2rem',
         '@media (min-width:600px)': {
@@ -73,7 +73,6 @@ const ClientSetup = (props) => {
                             Clients
                     </Typography>
                     </ThemeProvider>
-
                 </div>
                 <div className={styles.clientsData}>
                     <SimplePaper />

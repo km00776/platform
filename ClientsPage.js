@@ -16,15 +16,19 @@ router.post("/clients",  async(request,response) => {
 });
 
 router.post("/clients", async(request, response) => {
-    const {Name, Country} = req.body; 
+    const {Name} = req.body; 
 
-    const name = await pool.query("SELECT * FROM clients WHERE name= $1", [Name])
+    const name = await pool.query("SELECT * FROM clients WHERE name= $1", [Name]);
 
     try {
-
+        if(name.rows.length === 0) {
+            return res.status(401).json("Client doesn't exist");
+        }
+        return res.json(name.rows[0].client_id);
     }
     catch(error) {
-
+        console.error(error.message);
+        res.status(500).send("Server has interrupted");
     }
 });
 

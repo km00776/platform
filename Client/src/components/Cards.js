@@ -97,6 +97,8 @@ const useStyles3 = makeStyles((theme) => ({
 
 
 
+
+
 export function SimplePaper() {
   const classes = useStyles();
   return (
@@ -124,11 +126,36 @@ export function SimplePaper() {
 
 export function SimplePaper2() {
   const classes2 = useStyles2();
+  const [Name, setName] = React.useState('');
+  const [Country, setCountry] = React.useState('');
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+ 
+    try {
+      const body = {Name};
+
+      const response = await fetch("/clients", {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json"
+          },
+          body: JSON.stringify(body)
+      
+    }
+    );
+  }
+    catch(error) {
+        console.error(error.message);
+    }
+}
 
   return (
     <div className={classes2.root}>
+      {/* <form onSubmit={e => onSubmit(e)}>  */}
       <Paper style={{ backgroundColor: 'white' }} elevation={7}>
         <div className={styles.leftContainer}>
+        {/* <form onSubmit={e => onSubmit(e)}> */}
           <div className={styles.find}>
             <div className={styles.labelFind}>
               <label>Find</label>
@@ -142,7 +169,7 @@ export function SimplePaper2() {
               <label>Name</label>
             </div>
             <div className={styles.inputName}>
-              <input></input>
+              <input value= {Name} onChange={e => setName(e.target.value)}></input>
             </div>
           </div>
           <div className={styles.active}>
@@ -156,7 +183,6 @@ export function SimplePaper2() {
                 <option value="2">No</option>
               </select>
             </div>
-
           </div>
         </div>
         <div className={styles.rightContainer}>
@@ -165,7 +191,7 @@ export function SimplePaper2() {
               <label>Country</label>
             </div>
             <div className={styles.inputCountry}>
-              <input></input>
+              <input value="country" onChange={e => setCountry(e.target.value)}></input>
             </div>
           </div>
           <div className={styles.Type}>
@@ -197,16 +223,18 @@ export function SimplePaper2() {
           </div>
           <div className={styles.btn}>
             <div className={styles.searchBtn}>
-              <ContainedButtons className={styles.searchBtn} label="Search" />
+              <ContainedButtons type = "submit" className={styles.searchBtn} label="Search" />
             </div>
             <div className={styles.clearBtn}>
               <ContainedButtons className={styles.clearBtn} label="Clear" />
             </div>
           </div>
+          
         </div>
+
       </Paper>
 
-
+      {/* </form> */}
 
     </div>
   );
