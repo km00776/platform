@@ -48,6 +48,7 @@ const ClientSetup = (props) => {
         fontSize: '2rem',
         '@media (min-width:600px)': {
             fontSize: '1rem',
+            color: 'Black'
         },
         typography: {
             

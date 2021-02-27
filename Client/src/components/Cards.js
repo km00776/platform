@@ -141,8 +141,8 @@ export function SimplePaper2() {
             "Content-type": "application/json"
           },
           body: JSON.stringify(body)
-      
     }
+    
     );
   }
     catch(error) {
