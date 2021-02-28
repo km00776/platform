@@ -15,22 +15,22 @@ router.post("/clients",  async(request,response) => {
     }
 });
 
-// router.get("/clients", async(request, response) => {
-//     try {
-//         const {name} = req.query;
+router.get("/client", async(request, response) => {
+    try {
+        const {name} = request.query;
 
-//         const client = await pool.query(
-//             "SELECT * FROM clients WHERE name || ' ' || country ILIKE $1",
-//             [`%${name}%`]
-//           );
+        const client = await pool.query(
+            "SELECT * FROM clients WHERE name || ' ' || country ILIKE $1",
+            [`%${name}%`]
+          );
 
-//           res.json(client.rows);
+          response.json(client.rows);
 
-//     }
-//     catch(error) {
-//         console.error(error.message);
-//     }
-// });
+    }
+    catch(error) {
+        console.error(error.message);
+    }
+});
 
 // Make a get request (get all the data from the table) when a get request is made on the Clients page
 // the first parameter "/clients" can be called anything, Localhost 5000

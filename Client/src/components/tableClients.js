@@ -80,16 +80,23 @@ export default function StickyHeadTable(props) {
   const [page, setPage] = React.useState(1);
   const [clients, setClients] = useState([]);
   const [rowsPerPage, setRowsPerPage] = React.useState(2);
-  const [name, setName] = React.useState('');
+
 
 // need to adjust this data
     const getClients = async () => {
-        try {
-            const response = await fetch("/clients");
-            const jsonData = await response.json();
-            // all the data
-            setClients(jsonData);
+        try { 
+          if(props.clients.length === 0) {
+             const response = await fetch("/clients");
+             const jsonData = await response.json();
+             setClients(props.clients);
+          }
+          else {
+            setClients(props.clients);
 
+          }
+          
+              
+          
             console.log(clients); 
           
         }
@@ -105,7 +112,7 @@ export default function StickyHeadTable(props) {
 
     useEffect(() => {
         getClients();
-        
+
     }, [])
 
    

@@ -10,7 +10,7 @@ import ImportContactsIcon from '@material-ui/icons/ImportContacts';
 import Calendar from './Calendar';
 import EqualizerIcon from '@material-ui/icons/Equalizer';
 import { ClientDetailsFields } from './SupportForm';
-import axios from 'axios';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -131,15 +131,15 @@ export function SimplePaper2({history}) {
   const classes3 = useStyles3();
   const [name, setName] = React.useState('');
   const [Country, setCountry] = React.useState('');
-  const [searchedClients, setSearchedClients] = React.useState([]);
+  const [clients, setClients] = React.useState([]);
 
-  const handleSearch = async e => {
+  const handleSearch = async (e) => {
     e.preventDefault();
-
       try {
         const response = await fetch(`/client/?name=${name}`);
         const parseResponse = await response.json();
-        setSearchedClients(parseResponse);
+        console.log(parseResponse);
+        setClients(parseResponse);
       }
       catch(error) {
         console.error(error.message);
@@ -147,12 +147,12 @@ export function SimplePaper2({history}) {
   }; 
 
   return (
-   <form onSubmit= {handleSearch}>  
+  
     <div className={classes2.root}>
       {/* <form onSubmit={e => onSubmit(e)}>  */}
       <Paper style={{ backgroundColor: 'white' }} elevation={7}>
+      
         <div className={styles.leftContainer}>
-        
           <div className={styles.find}>
             <div className={styles.labelFind}>
               <label>Find</label>
@@ -166,7 +166,10 @@ export function SimplePaper2({history}) {
               <label>Name</label>
             </div>
             <div className={styles.inputName}>
-              <input value= {name} onChange={e => setName(e.target.value)}></input>
+            <form onSubmit= {handleSearch}>  
+              <input type="text" name="name"  value= {name} onChange={e => setName(e.target.value)}></input>
+              <button>hi</button>
+              </form>
             </div>
           </div>
           <div className={styles.active}>
@@ -220,27 +223,26 @@ export function SimplePaper2({history}) {
           </div>
           <div className={styles.btn}>
             <div className={styles.searchBtn}>
-              <ContainedButtons type = "submit" className={styles.searchBtn} label="Search" />
+              <ContainedButtons className={styles.searchBtn} label="Search" />
             </div>
             <div className={styles.clearBtn}>
               <ContainedButtons className={styles.clearBtn} label="Clear" />
             </div>
-
+           
           </div>
-        
+
         </div>
+        
       </Paper>
-      <StickyHeadTable searchedClients = {searchedClients}/>
+      <StickyHeadTable clients = {clients} />
       <div className={styles.Pagination}>
                             <form>
                                 <ContainedButtons onClick={() => history.push('/Detail')} className={styles.addBtn} label="ADD NEW" />
                             </form>
                         </div>
 
-    
-
     </div>
-      </form> 
+      
   );
 }
 
