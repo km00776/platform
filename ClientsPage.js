@@ -15,22 +15,22 @@ router.post("/clients",  async(request,response) => {
     }
 });
 
-router.post("/clients", async(request, response) => {
-    const {Name} = req.body; 
+// router.get("/clients", async(request, response) => {
+//     try {
+//         const {name} = req.query;
 
-    const name = await pool.query("SELECT * FROM clients WHERE name= $1", [Name]);
+//         const client = await pool.query(
+//             "SELECT * FROM clients WHERE name || ' ' || country ILIKE $1",
+//             [`%${name}%`]
+//           );
 
-    try {
-        if(name.rows.length === 0) {
-            return res.status(401).json("Client doesn't exist");
-        }
-        return res.json(name.rows[0].client_id);
-    }
-    catch(error) {
-        console.error(error.message);
-        res.status(500).send("Server has interrupted");
-    }
-});
+//           res.json(client.rows);
+
+//     }
+//     catch(error) {
+//         console.error(error.message);
+//     }
+// });
 
 // Make a get request (get all the data from the table) when a get request is made on the Clients page
 // the first parameter "/clients" can be called anything, Localhost 5000

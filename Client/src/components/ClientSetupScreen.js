@@ -10,6 +10,7 @@ import BasicTable from './tableClients';
 import StickyHeadTable from './tableClients';
 import {ContainedButtons} from './reuseableButton';
 import Paper from '@material-ui/core/Paper';
+import history from './History';
 
 
 
@@ -43,6 +44,8 @@ const useStyles3 = makeStyles((theme) => ({
 const ClientSetup = (props) => {
     const classes3 = useStyles3();
     const theme = createMuiTheme();
+
+    
   
     theme.typography.h5 = {
         fontSize: '2rem',
@@ -80,9 +83,9 @@ const ClientSetup = (props) => {
                 </div>
             </div>
             <div className={styles.clientsData2}>
-                <SimplePaper2 />
+                <SimplePaper2 history = {props.history}/>
             </div>
-            <div className={styles.clientsDatabase}>
+            {/* <div className={styles.clientsDatabase}>
                 <div className={classes3.root}>
                     <Paper style={{ backgroundColor: 'white' }} elevation={7}>
                         <StickyHeadTable />
@@ -93,7 +96,7 @@ const ClientSetup = (props) => {
                         </div>
                     </Paper>
                 </div>
-            </div>
+            </div> */}
 
             <Footer />
         </div>

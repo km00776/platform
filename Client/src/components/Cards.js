@@ -10,7 +10,8 @@ import ImportContactsIcon from '@material-ui/icons/ImportContacts';
 import Calendar from './Calendar';
 import EqualizerIcon from '@material-ui/icons/Equalizer';
 import { ClientDetailsFields } from './SupportForm';
-import history from './History'
+import axios from 'axios';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -70,27 +71,27 @@ const useStyles2 = makeStyles((theme) => ({
 }));
 const useStyles3 = makeStyles((theme) => ({
   root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    '& > *': {
-      [theme.breakpoints.down('md')]: {
-        width: theme.spacing(10),
-        height: theme.spacing(40),
-        margin: theme.spacing(3),
-      },
-      [theme.breakpoints.only('lg')]: {
-        width: theme.spacing(135.8),
-        height: theme.spacing(60),
-        margin: theme.spacing(1),
-        position: 'relative'
-      },
-      [theme.breakpoints.only('xl')]: {
-        width: theme.spacing(55),
-        height: theme.spacing(10),
-        position: 'relative'
-      },
+      display: 'flex',
+      flexWrap: 'wrap',
+      '& > *': {
+          [theme.breakpoints.down('md')]: {
+              width: theme.spacing(10),
+              height: theme.spacing(40),
+              margin: theme.spacing(3),
+          },
+          [theme.breakpoints.only('lg')]: {
+              width: theme.spacing(135.8),
+              height: theme.spacing(60),
+              margin: theme.spacing(1),
+              position: 'relative'
+          },
+          [theme.breakpoints.only('xl')]: {
+              width: theme.spacing(169),
+              height: theme.spacing(69),
+              position: 'relative'
+          },
 
-    },
+      },
   },
 
 }));
@@ -101,6 +102,7 @@ const useStyles3 = makeStyles((theme) => ({
 
 export function SimplePaper() {
   const classes = useStyles();
+
   return (
     <div className={classes.root}>
       <Paper style={{  backgroundColor: 'rgb(255, 255, 255)' }} elevation={7}>
@@ -124,38 +126,33 @@ export function SimplePaper() {
   );
 }
 
-export function SimplePaper2() {
+export function SimplePaper2({history}) {
   const classes2 = useStyles2();
-  const [Name, setName] = React.useState('');
+  const classes3 = useStyles3();
+  const [name, setName] = React.useState('');
   const [Country, setCountry] = React.useState('');
+  const [searchedClients, setSearchedClients] = React.useState([]);
 
-  const onSubmit = async (e) => {
+  const handleSearch = async e => {
     e.preventDefault();
- 
-    try {
-      const body = {Name};
 
-      const response = await fetch("/clients", {
-          method: "POST",
-          headers: {
-            "Content-type": "application/json"
-          },
-          body: JSON.stringify(body)
-    }
-    
-    );
-  }
-    catch(error) {
+      try {
+        const response = await fetch(`/client/?name=${name}`);
+        const parseResponse = await response.json();
+        setSearchedClients(parseResponse);
+      }
+      catch(error) {
         console.error(error.message);
-    }
-}
+      }
+  }; 
 
   return (
+   <form onSubmit= {handleSearch}>  
     <div className={classes2.root}>
       {/* <form onSubmit={e => onSubmit(e)}>  */}
       <Paper style={{ backgroundColor: 'white' }} elevation={7}>
         <div className={styles.leftContainer}>
-        {/* <form onSubmit={e => onSubmit(e)}> */}
+        
           <div className={styles.find}>
             <div className={styles.labelFind}>
               <label>Find</label>
@@ -169,7 +166,7 @@ export function SimplePaper2() {
               <label>Name</label>
             </div>
             <div className={styles.inputName}>
-              <input value= {Name} onChange={e => setName(e.target.value)}></input>
+              <input value= {name} onChange={e => setName(e.target.value)}></input>
             </div>
           </div>
           <div className={styles.active}>
@@ -191,7 +188,7 @@ export function SimplePaper2() {
               <label>Country</label>
             </div>
             <div className={styles.inputCountry}>
-              <input value="country" onChange={e => setCountry(e.target.value)}></input>
+              <input value={Country} onChange={e => setCountry(e.target.value)}></input>
             </div>
           </div>
           <div className={styles.Type}>
@@ -228,15 +225,22 @@ export function SimplePaper2() {
             <div className={styles.clearBtn}>
               <ContainedButtons className={styles.clearBtn} label="Clear" />
             </div>
+
           </div>
-          
+        
         </div>
-
       </Paper>
+      <StickyHeadTable searchedClients = {searchedClients}/>
+      <div className={styles.Pagination}>
+                            <form>
+                                <ContainedButtons onClick={() => history.push('/Detail')} className={styles.addBtn} label="ADD NEW" />
+                            </form>
+                        </div>
 
-      {/* </form> */}
+    
 
     </div>
+      </form> 
   );
 }
 

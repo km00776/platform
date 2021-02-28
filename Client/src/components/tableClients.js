@@ -13,6 +13,7 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import Chip from '@material-ui/core/Chip';
 
+import {ContainedButtons} from './reuseableButton';
 
 
 const StyledTableCell = withStyles((theme) => ({
@@ -74,12 +75,12 @@ const useStyles = makeStyles({
 });
 
 
-export default function StickyHeadTable() {
+export default function StickyHeadTable(props) {
   const classes = useStyles();
   const [page, setPage] = React.useState(1);
   const [clients, setClients] = useState([]);
-  const [rowsPerPage, setRowsPerPage] = React.useState(4);
-
+  const [rowsPerPage, setRowsPerPage] = React.useState(2);
+  const [name, setName] = React.useState('');
 
 // need to adjust this data
     const getClients = async () => {
@@ -88,16 +89,26 @@ export default function StickyHeadTable() {
             const jsonData = await response.json();
             // all the data
             setClients(jsonData);
+
+            console.log(clients); 
           
         }
         catch (err) {
             console.error(err.message);
         }
-    }
+  }
+
+
+  
+
+  
 
     useEffect(() => {
         getClients();
+        
     }, [])
+
+   
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -105,7 +116,7 @@ export default function StickyHeadTable() {
 
   const handleChangeRowsPerPage = (event) => {
     setRowsPerPage(parseInt(event.target.value, 10));
-    setPage(0);
+    setPage(1);
 
     
   };
@@ -138,6 +149,7 @@ export default function StickyHeadTable() {
           ))}
         </TableBody>
         </Table>
+      
       </TableContainer>
       <TablePagination
         rowsPerPageOptions={[0, 4, 5, 8]}
@@ -148,6 +160,7 @@ export default function StickyHeadTable() {
         onChangePage={handleChangePage}
         onChangeRowsPerPage={handleChangeRowsPerPage}
       />
+ 
     </Paper>
   );
 }
