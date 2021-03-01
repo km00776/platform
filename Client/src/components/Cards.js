@@ -138,8 +138,10 @@ export function SimplePaper2({history}) {
       try {
         const response = await fetch(`/client/?name=${name}`);
         const parseResponse = await response.json();
-        console.log(parseResponse);
         setClients(parseResponse);
+        console.log(parseResponse);
+       
+      
       }
       catch(error) {
         console.error(error.message);
@@ -147,102 +149,102 @@ export function SimplePaper2({history}) {
   }; 
 
   return (
-  
+    <form onSubmit= {handleSearch}>  
     <div className={classes2.root}>
-      {/* <form onSubmit={e => onSubmit(e)}>  */}
-      <Paper style={{ backgroundColor: 'white' }} elevation={7}>
-      
-        <div className={styles.leftContainer}>
-          <div className={styles.find}>
-            <div className={styles.labelFind}>
-              <label>Find</label>
-            </div>
-            <div className={styles.inputFind}>
-              <input></input>
-            </div>
+    {/* <form onSubmit={e => onSubmit(e)}>  */}
+    <Paper style={{ backgroundColor: 'white' }} elevation={7}>
+    
+      <div className={styles.leftContainer}>
+        <div className={styles.find}>
+          <div className={styles.labelFind}>
+            <label>Find</label>
           </div>
-          <div className={styles.name}>
-            <div className={styles.labelName}>
-              <label>Name</label>
-            </div>
-            <div className={styles.inputName}>
-            <form onSubmit= {handleSearch}>  
-              <input type="text" name="name"  value= {name} onChange={e => setName(e.target.value)}></input>
-              <button>hi</button>
-              </form>
-            </div>
-          </div>
-          <div className={styles.active}>
-            <div className={styles.labelActive}>
-              <label>Active</label>
-            </div>
-            <div classname={styles.inputActive}>
-              <select>
-                <option value="0">All</option>
-                <option value="1">Yes</option>
-                <option value="2">No</option>
-              </select>
-            </div>
+          <div className={styles.inputFind}>
+            <input></input>
           </div>
         </div>
-        <div className={styles.rightContainer}>
-          <div className={styles.country}>
-            <div className={styles.labelCountry}>
-              <label>Country</label>
-            </div>
-            <div className={styles.inputCountry}>
-              <input value={Country} onChange={e => setCountry(e.target.value)}></input>
-            </div>
+        <div className={styles.name}>
+          <div className={styles.labelName}>
+            <label>Name</label>
           </div>
-          <div className={styles.Type}>
-            <div className={styles.labelType}>
-              <label>Type</label>
-            </div>
-            <div className={styles.inputType}>
-              <select>
-                <option test="0">All</option>
-                <option test="1">Yes</option>
-                <option test="2">No</option>
-              </select>
-            </div>
+          <div className={styles.inputName}>
+         
+            <input type="text" name="name"  value= {name} onChange={e => setName(e.target.value)}></input>
+  
+            
           </div>
-          <div className={styles.Archived}>
-            <div className={styles.labelArchived}>
-              <label>Archived</label>
-            </div>
-            <div className={styles.inputArchived}>
-              <select>
-                <option value="0">All</option>
-                <option value="1">Yes</option>
-                <option value="2">No</option>
-              </select>
-            </div>
-          </div>
-          <div className={styles.Calender}>
-            <Calendar />
-          </div>
-          <div className={styles.btn}>
-            <div className={styles.searchBtn}>
-              <ContainedButtons className={styles.searchBtn} label="Search" />
-            </div>
-            <div className={styles.clearBtn}>
-              <ContainedButtons className={styles.clearBtn} label="Clear" />
-            </div>
-           
-          </div>
-
         </div>
-        
-      </Paper>
-      <StickyHeadTable clients = {clients} />
-      <div className={styles.Pagination}>
-                            <form>
-                                <ContainedButtons onClick={() => history.push('/Detail')} className={styles.addBtn} label="ADD NEW" />
-                            </form>
-                        </div>
+        <div className={styles.active}>
+          <div className={styles.labelActive}>
+            <label>Active</label>
+          </div>
+          <div classname={styles.inputActive}>
+            <select>
+              <option value="0">All</option>
+              <option value="1">Yes</option>
+              <option value="2">No</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div className={styles.rightContainer}>
+        <div className={styles.country}>
+          <div className={styles.labelCountry}>
+            <label>Country</label>
+          </div>
+          <div className={styles.inputCountry}>
+            <input value={Country} onChange={e => setCountry(e.target.value)}></input>
+          </div>
+        </div>
+        <div className={styles.Type}>
+          <div className={styles.labelType}>
+            <label>Type</label>
+          </div>
+          <div className={styles.inputType}>
+            <select>
+              <option test="0">All</option>
+              <option test="1">Yes</option>
+              <option test="2">No</option>
+            </select>
+          </div>
+        </div>
+        <div className={styles.Archived}>
+          <div className={styles.labelArchived}>
+            <label>Archived</label>
+          </div>
+          <div className={styles.inputArchived}>
+            <select>
+              <option value="0">All</option>
+              <option value="1">Yes</option>
+              <option value="2">No</option>
+            </select>
+          </div>
+        </div>
+        <div className={styles.Calender}>
+          <Calendar />
+        </div>
+        <div className={styles.btn}>
+          <div className={styles.searchBtn}>
+            <ContainedButtons type="submit" className={styles.searchBtn} label="Search" />
+          </div>
+          <div className={styles.clearBtn}>
+            <ContainedButtons className={styles.clearBtn} label="Clear" />
+          </div>
+         
+        </div>
 
-    </div>
+      </div>
       
+    </Paper>
+    <StickyHeadTable clients = {clients} />
+    <div className={styles.Pagination}>
+                          <form>
+                              <ContainedButtons onClick={() => history.push('/Detail')} className={styles.addBtn} label="ADD NEW" />
+                          </form>
+                      </div>
+
+  </div>
+      </form>
   );
 }
 
