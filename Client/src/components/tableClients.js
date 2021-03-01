@@ -16,6 +16,9 @@ import Chip from '@material-ui/core/Chip';
 import {ContainedButtons} from './reuseableButton';
 
 
+
+
+
 const StyledTableCell = withStyles((theme) => ({
   head: {
     backgroundColor: '#ec407a',
@@ -77,7 +80,7 @@ const useStyles = makeStyles({
 
 export default function StickyHeadTable(props) {
   const classes = useStyles();
-  const [page, setPage] = React.useState(1);
+  const [page, setPage] = React.useState(0);
   const [clients, setClients] = useState([]);
   const [rowsPerPage, setRowsPerPage] = React.useState(2);
 
@@ -120,7 +123,7 @@ export default function StickyHeadTable(props) {
 
   const handleChangeRowsPerPage = (event) => {
     setRowsPerPage(parseInt(event.target.value, 10));
-    setPage(1);
+    setPage(0);
 
     
   };

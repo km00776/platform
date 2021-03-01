@@ -140,13 +140,19 @@ export function SimplePaper2({history}) {
         const parseResponse = await response.json();
         setClients(parseResponse);
         console.log(parseResponse);
-       
-      
       }
       catch(error) {
         console.error(error.message);
       }
   }; 
+
+  const resetSearch = async (e) => {
+    e.preventDefault();
+     if(clients.length !== 0) {
+      setClients([]);
+      }
+    }
+  
 
   return (
     <form onSubmit= {handleSearch}>  
@@ -228,7 +234,7 @@ export function SimplePaper2({history}) {
             <ContainedButtons type="submit" className={styles.searchBtn} label="Search" />
           </div>
           <div className={styles.clearBtn}>
-            <ContainedButtons className={styles.clearBtn} label="Clear" />
+            <ContainedButtons onClick={resetSearch}className={styles.clearBtn} label="Clear" />
           </div>
          
         </div>
@@ -238,9 +244,7 @@ export function SimplePaper2({history}) {
     </Paper>
     <StickyHeadTable clients = {clients} />
     <div className={styles.Pagination}>
-                          <form>
                               <ContainedButtons onClick={() => history.push('/Detail')} className={styles.addBtn} label="ADD NEW" />
-                          </form>
                       </div>
 
   </div>
