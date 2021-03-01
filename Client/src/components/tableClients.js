@@ -85,25 +85,21 @@ export default function StickyHeadTable(props) {
 // need to adjust this data
     const getClients = async () => {
         try { 
-          if(props.clients.length === 0) {
+        
              const response = await fetch("/clients");
              const jsonData = await response.json();
-             setClients(props.clients);
-          }
-          else {
-            setClients(props.clients);
+             setClients(jsonData);
 
-          }
-          
-              
-          
-            console.log(clients); 
-          
+      
+
+         
         }
         catch (err) {
             console.error(err.message);
         }
   }
+
+ 
 
 
   
@@ -111,7 +107,8 @@ export default function StickyHeadTable(props) {
   
 
     useEffect(() => {
-        getClients();
+       getClients();
+    
 
     }, [])
 
@@ -143,7 +140,18 @@ export default function StickyHeadTable(props) {
             </TableRow>
           </TableHead>
           <TableBody>
-          {clients.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row, index) => (
+          {props.clients.length === 0 ? 
+            clients.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row, index) => (
+              <StyledTableRow key={index}>
+                <StyledTableCell component="th" scope="row">
+                 <a style={{color: 'Black'}}href="google"> {row.name} </a>
+                </StyledTableCell>
+                <StyledTableCell align="left">{row.country}</StyledTableCell>
+                <StyledTableCell align="left">{row.datecreated}</StyledTableCell>
+                <StyledTableCell align="left"><ThemeProvider theme={tableBadge}><Chip variant="outlined"  style = {{backgroundColor: '#4caf50'}} color="primary" size="small" label="Active" /></ThemeProvider></StyledTableCell>
+                <StyledTableCell align="left">Archive</StyledTableCell>
+              </StyledTableRow>
+            )) : props.clients.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row, index) => (
             <StyledTableRow key={index}>
               <StyledTableCell component="th" scope="row">
                <a style={{color: 'Black'}}href="google"> {row.name} </a>
@@ -156,12 +164,12 @@ export default function StickyHeadTable(props) {
           ))}
         </TableBody>
         </Table>
-      
+           
       </TableContainer>
       <TablePagination
         rowsPerPageOptions={[0, 4, 5, 8]}
         component="div"
-        count={clients.length}  
+        count={props.clients.length === 0 ? clients.length : props.clients.length}  
         rowsPerPage={rowsPerPage}
         page={page}
         onChangePage={handleChangePage}
