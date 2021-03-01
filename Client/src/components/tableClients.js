@@ -88,14 +88,13 @@ export default function StickyHeadTable(props) {
           if(props.clients.length === 0) {
              const response = await fetch("/clients");
              const jsonData = await response.json();
-             setClients(props.clients);
+             setClients(jsonData);
           }
           else {
+            console.log(props.clients);
             setClients(props.clients);
 
           }
-          
-              
           
             console.log(clients); 
           
@@ -113,7 +112,7 @@ export default function StickyHeadTable(props) {
     useEffect(() => {
         getClients();
 
-    }, [])
+    },)
 
    
 
